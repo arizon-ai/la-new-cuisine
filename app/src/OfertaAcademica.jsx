@@ -13,12 +13,13 @@ const Slide = ({ children, className = '', id }) => (
             display: 'flex',
             flexDirection: 'column',
             fontFamily: "'Arimo', sans-serif",
-            height: '720px',
+            minHeight: '500px',
             justifyContent: 'center',
             overflow: 'hidden',
-            padding: '0',
+            padding: '40px 20px',
             position: 'relative',
-            width: '1280px',
+            width: '100%',
+            maxWidth: '1280px',
         }}
     >
         {/* Barra superior negra */}
@@ -92,12 +93,13 @@ export default function OfertaAcademica() {
                         left: 0
                     }}
                 />
-                <div style={{
+                <div className="responsive-card" style={{
                     position: 'relative',
                     zIndex: 10,
                     backgroundColor: 'rgba(255, 255, 255, 0.95)',
                     padding: '40px 60px',
                     width: '500px',
+                    maxWidth: '90%',
                     textAlign: 'center',
                     border: '2px solid #000',
                     boxShadow: '15px 15px 0px rgba(0,0,0,1)'
@@ -106,7 +108,8 @@ export default function OfertaAcademica() {
                     <img
                         src="/logo.png"
                         alt="La New Cuisine"
-                        style={{ width: '320px', height: 'auto', margin: '0 auto 15px' }}
+                        className="responsive-logo"
+                        style={{ width: '320px', maxWidth: '80%', height: 'auto', margin: '0 auto 15px' }}
                     />
                     <h2 style={{ fontSize: '24px', color: '#333', fontWeight: 400, marginTop: 0, letterSpacing: '2px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase' }}>
                         OFERTA ACADÉMICA & PREINSCRIPCIONES
@@ -119,14 +122,15 @@ export default function OfertaAcademica() {
             </Slide>
 
             {/* Slide 2: Cocina Internacional */}
-            <div style={{
+            <div className="slide-container" style={{
                 display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
                 padding: 0,
                 alignItems: 'center',
                 backgroundColor: '#fff',
-                height: '720px',
-                width: '1280px',
+                minHeight: '500px',
+                width: '100%',
+                maxWidth: '1280px',
                 boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5)',
                 position: 'relative',
                 overflow: 'hidden'
