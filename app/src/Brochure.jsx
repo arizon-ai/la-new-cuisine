@@ -335,17 +335,14 @@ export default function Brochure() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20 text-left md:text-center">
 
-                        {/* Teléfonos */}
+                        {/* WhatsApp */}
                         <div className="group cursor-default flex flex-col items-center">
                             <div className="inline-block border-2 border-black p-4 mb-4 rounded-full group-hover:bg-black group-hover:text-white transition-colors">
                                 <Phone className="w-6 h-6" />
                             </div>
-                            <p className="font-bold text-sm uppercase tracking-widest mb-3">Llámanos</p>
+                            <p className="font-bold text-sm uppercase tracking-widest mb-3">WhatsApp</p>
                             <div className="text-base text-gray-500 space-y-1">
-                                <p>+58 241-9350635</p>
-                                <p>+58 241-8254476</p>
-                                <p>+58 414-4197356</p>
-                                <p>+58 424-4635196</p>
+                                <p className="text-lg font-semibold text-black">+58 424-4635196</p>
                             </div>
                         </div>
 
@@ -373,6 +370,33 @@ export default function Brochure() {
                             <div className="border-t border-gray-200 w-16 mx-auto my-2"></div>
                             <p className="text-xs text-gray-400">Reg. Ministerio de Educación No. R-0129-08</p>
                         </div>
+                    </div>
+
+                    {/* Mapa de ubicación */}
+                    <div className="mt-12 mb-8">
+                        <h3 className="text-center font-bold text-lg uppercase tracking-widest mb-6">📍 Nuestra Ubicación</h3>
+                        <div style={{
+                            width: '100%',
+                            height: '350px',
+                            borderRadius: '12px',
+                            overflow: 'hidden',
+                            border: '3px solid #000',
+                            boxShadow: '8px 8px 0px rgba(0,0,0,1)'
+                        }}>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.5!2d-68.0058!3d10.18!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDEwJzQ4LjAiTiA2OMKwMDAnMjAuOSJX!5e0!3m2!1ses!2sve!4v1705312000000!5m2!1ses!2sve"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen=""
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title="Ubicación La New Cuisine"
+                            ></iframe>
+                        </div>
+                        <p className="text-center text-sm text-gray-500 mt-4">
+                            Av. 107, Casa 128-11, Urb. Sabana Larga • Frente al C.C. Mediterranean Plaza
+                        </p>
                     </div>
 
                     <div className="border-t border-black pt-8 flex flex-col md:flex-row justify-between items-center text-xs uppercase tracking-widest font-bold text-gray-500">

@@ -63,7 +63,7 @@ const Tag = ({ variant = 'outline', children }) => {
 export default function OfertaAcademica() {
     return (
         <div style={{
-            backgroundColor: '#111',
+            backgroundColor: '#fff',
             margin: 0,
             padding: '32px',
             display: 'grid',

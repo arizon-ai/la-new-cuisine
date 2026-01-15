@@ -88,7 +88,7 @@ la-new-cuisine/
 
 **La New Cuisine - Escuela de Gastronomía**
 - 📍 Valencia, Venezuela - Urb. Sabana Larga
-- 📱 WhatsApp: 0414-4197356
+- 📱 WhatsApp: +58 424-4635196
 
 ---
 

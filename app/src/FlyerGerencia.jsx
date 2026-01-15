@@ -264,7 +264,7 @@ export default function FlyerGerencia() {
                         opacity: 0.8,
                         fontFamily: "'Azeret Mono', monospace"
                     }}>
-                        <i className="fa-brands fa-whatsapp"></i> 0414-4197356 &nbsp;|&nbsp; Valencia, Vzla.
+                        <i className="fa-brands fa-whatsapp"></i> +58 424-4635196 &nbsp;|&nbsp; Valencia, Vzla.
                     </div>
                 </div>
 
