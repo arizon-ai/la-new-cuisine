@@ -293,13 +293,25 @@ export default function OfertaAcademica() {
                         {/* Junior Chef */}
                         <div style={{ background: 'white', padding: '30px', border: '1px solid #000', boxShadow: '10px 10px 0px rgba(0,0,0,0.1)' }}>
                             <h3 style={{ marginTop: 0, display: 'flex', alignItems: 'center', gap: '10px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase', color: '#000', letterSpacing: '-0.5px' }}>
-                                <i className="fa-solid fa-child" style={{ color: '#000' }}></i> JUNIOR CHEF
+                                <i className="fa-solid fa-child" style={{ color: '#000' }}></i> CHEF JUNIOR
                             </h3>
                             <p style={{ color: '#666', fontStyle: 'italic', lineHeight: 1.6 }}>Programa especial para jóvenes.</p>
+
                             <div style={{ background: '#f4f4f4', padding: '15px', borderLeft: '3px solid #000', marginTop: '20px' }}>
-                                <strong>Viernes (Tarde)</strong><br />
-                                2:00 pm - 5:30 pm
+                                <strong>Duración:</strong> 4 meses (1 clase por semana)
                             </div>
+
+                            <ul style={{ listStyle: 'none', padding: 0, marginTop: '20px', fontSize: '14px', color: '#333' }}>
+                                <li style={{ marginBottom: '10px', display: 'flex', justifyContent: 'space-between' }}>
+                                    <span><strong>Mensualidad:</strong></span>
+                                    <span>150 € <small style={{ color: '#666' }}>(incluye ingredientes, recetas y certificado)</small></span>
+                                </li>
+                                <li style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                    <span><strong>Inscripción:</strong></span>
+                                    <span>50 € <small style={{ color: '#666' }}>(incluye uniforme)</small></span>
+                                </li>
+                            </ul>
+
                             <div style={{ marginTop: '20px' }}>
                                 <Tag variant="outline">Preinscripción Abierta</Tag>
                             </div>
