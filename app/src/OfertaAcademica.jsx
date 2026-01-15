@@ -190,14 +190,15 @@ export default function OfertaAcademica() {
             </div>
 
             {/* Slide 3: Pastelería */}
-            <div style={{
+            <div className="slide-container" style={{
                 display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
                 padding: 0,
                 alignItems: 'center',
                 backgroundColor: '#fff',
-                height: '720px',
-                width: '1280px',
+                minHeight: '500px',
+                width: '100%',
+                maxWidth: '1280px',
                 boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5)',
                 position: 'relative',
                 overflow: 'hidden'
@@ -322,14 +323,15 @@ export default function OfertaAcademica() {
             </Slide>
 
             {/* Slide 5: Diplomado */}
-            <div style={{
+            <div className="slide-container" style={{
                 display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
                 padding: 0,
                 alignItems: 'center',
                 backgroundColor: '#fff',
-                height: '720px',
-                width: '1280px',
+                minHeight: '500px',
+                width: '100%',
+                maxWidth: '1280px',
                 boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5)',
                 position: 'relative',
                 overflow: 'hidden'
