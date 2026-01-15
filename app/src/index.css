@@ -126,8 +126,70 @@
 
 @media (max-width: 768px) {
   .slide-container {
-    padding: 30px !important;
+    padding: 20px !important;
     min-height: auto;
+  }
+
+  /* Contenido de slides responsive */
+  .slide-content {
+    padding: 30px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Ocultar imágenes en slides de grid en móvil para mejor lectura */
+  .slide-container img[style*="objectFit"] {
+    display: none !important;
+  }
+
+  /* Hacer el contenido ocupe todo el ancho */
+  .slide-container>div[style*="padding: '80px'"],
+  .slide-container>div[style*="padding: 80px"] {
+    padding: 30px !important;
+    width: 100% !important;
+  }
+
+  /* Tablas responsive */
+  .slide-container table {
+    font-size: 14px !important;
+    width: 100% !important;
+  }
+
+  .slide-container table th,
+  .slide-container table td {
+    padding: 12px 8px !important;
+    font-size: 13px !important;
+  }
+
+  /* Títulos más pequeños en móvil */
+  .slide-container h2 {
+    font-size: 24px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Listas responsive */
+  .slide-container ul {
+    padding: 0 !important;
+  }
+
+  .slide-container li {
+    padding: 10px 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-container {
+    padding: 15px !important;
+  }
+
+  .slide-container h2 {
+    font-size: 20px !important;
+  }
+
+  .slide-container table th,
+  .slide-container table td {
+    padding: 10px 6px !important;
+    font-size: 12px !important;
   }
 }
 

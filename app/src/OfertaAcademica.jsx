@@ -138,7 +138,7 @@ export default function OfertaAcademica() {
                 {/* Barra superior */}
                 <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '12px', backgroundColor: '#000', zIndex: 2 }} />
 
-                <div style={{ padding: '80px', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
+                <div className="slide-content" style={{ padding: '80px', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
                     <h2 style={{ fontSize: '42px', fontWeight: 700, marginBottom: '10px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase', color: '#000', letterSpacing: '-0.5px' }}>
                         COCINA INTERNACIONAL
                     </h2>
@@ -183,6 +183,7 @@ export default function OfertaAcademica() {
                     </p>
                 </div>
                 <img
+                    className="hide-mobile"
                     src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=2670&auto=format&fit=crop"
                     alt="Sushi gourmet nivel michelin"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
@@ -206,12 +207,13 @@ export default function OfertaAcademica() {
                 <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '12px', backgroundColor: '#000', zIndex: 2 }} />
 
                 <img
+                    className="hide-mobile"
                     src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=2589&auto=format&fit=crop"
                     alt="Decoración pastelería fina"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
 
-                <div style={{ padding: '80px', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
+                <div className="slide-content" style={{ padding: '80px', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
                     <h2 style={{ fontSize: '38px', fontWeight: 700, marginBottom: '20px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase', color: '#000', letterSpacing: '-0.5px' }}>
                         PASTELERÍA: INICIOS
                     </h2>
@@ -338,7 +340,7 @@ export default function OfertaAcademica() {
             }} id="slide5">
                 <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '12px', backgroundColor: '#000', zIndex: 2 }} />
 
-                <div style={{ padding: '80px', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
+                <div className="slide-content" style={{ padding: '80px', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
                     <h2 style={{ fontSize: '40px', fontWeight: 700, marginBottom: '20px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase', color: '#000', letterSpacing: '-0.5px' }}>
                         DIPLOMADO EN GERENCIA
                     </h2>
@@ -364,6 +366,7 @@ export default function OfertaAcademica() {
                 </div>
 
                 <img
+                    className="hide-mobile"
                     src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=2670&auto=format&fit=crop"
                     alt="Gerente de restaurante con tablet"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
