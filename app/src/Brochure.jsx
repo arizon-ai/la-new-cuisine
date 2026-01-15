@@ -325,6 +325,98 @@ export default function Brochure() {
                 </div>
             </section>
 
+            {/* --- PROTOCOLO DE PREINSCRIPCIÓN --- */}
+            <section className="bg-neutral-100 py-20 px-6">
+                <div className="max-w-4xl mx-auto">
+                    <div className="text-center mb-12">
+                        <span className="text-xs uppercase tracking-widest text-gray-500 mb-4 block">Proceso Oficial</span>
+                        <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">Protocolo de Preinscripción</h2>
+                        <p className="text-gray-600">Formalización de Inscripción Administrativa y Académica</p>
+                    </div>
+
+                    <div className="space-y-6">
+                        {/* Paso 1 */}
+                        <div className="bg-white p-6 border-l-4 border-black shadow-sm">
+                            <div className="flex items-start gap-4">
+                                <div className="bg-black text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
+                                <div>
+                                    <h3 className="font-bold text-lg mb-2">Enviar Datos de Preinscripción</h3>
+                                    <p className="text-gray-600 mb-3">Envía los datos del aspirante preinscrito junto con el soporte de pago a los siguientes correos:</p>
+                                    <div className="space-y-1 text-sm">
+                                        <p><strong>📧 Administración:</strong> <a href="mailto:administracion@lanewcuisine.com.ve" className="text-blue-600 hover:underline">administracion@lanewcuisine.com.ve</a></p>
+                                        <p><strong>📧 Gerencia:</strong> <a href="mailto:gerencia.escuela@gmail.com" className="text-blue-600 hover:underline">gerencia.escuela@gmail.com</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Paso 2 */}
+                        <div className="bg-white p-6 border-l-4 border-black shadow-sm">
+                            <div className="flex items-start gap-4">
+                                <div className="bg-black text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
+                                <div>
+                                    <h3 className="font-bold text-lg mb-2">Formalizar Inscripción</h3>
+                                    <div className="space-y-3 text-gray-600">
+                                        <div className="pl-4 border-l-2 border-gray-200">
+                                            <p className="font-semibold text-black">2.1 Inscripción Administrativa</p>
+                                            <p className="text-sm">Administración valida el pago, registra en el sistema y remite listado a la gerencia de escuela.</p>
+                                        </div>
+                                        <div className="pl-4 border-l-2 border-gray-200">
+                                            <p className="font-semibold text-black">2.2 Inscripción Académica</p>
+                                            <p className="text-sm">Se cargan datos en el sistema, se crea el usuario dentro del sistema LNC y el aula virtual, se coloca en estatus activo después de completar el proceso de admisión.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Paso 3 */}
+                        <div className="bg-white p-6 border-l-4 border-black shadow-sm">
+                            <div className="flex items-start gap-4">
+                                <div className="bg-black text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
+                                <div>
+                                    <h3 className="font-bold text-lg mb-2">Acudir a la Escuela</h3>
+                                    <p className="text-gray-600 mb-3">Los aspirantes deben acudir a la escuela para formalizar el proceso de admisión:</p>
+                                    <div className="space-y-2 text-sm">
+                                        <p className="flex items-center gap-2">
+                                            <span className="text-lg">🕐</span>
+                                            <strong>Horario:</strong> Lunes a Viernes de 9:00 a 11:00 am y de 2:00 a 4:00 pm
+                                        </p>
+                                        <p className="flex items-center gap-2">
+                                            <span className="text-lg">📄</span>
+                                            <strong>Documentos:</strong> Copia de cédula de identidad
+                                        </p>
+                                        <p className="flex items-center gap-2">
+                                            <span className="text-lg">✍️</span>
+                                            <strong>Firmar:</strong> Planilla de inscripción
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Botón de descarga */}
+                    <div className="text-center mt-10">
+                        <a
+                            href="/planilla-inscripcion-2026.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-3 bg-black text-white px-8 py-4 font-bold uppercase tracking-widest text-sm hover:bg-gray-800 transition-colors shadow-lg"
+                            style={{ boxShadow: '5px 5px 0px rgba(0,0,0,0.3)' }}
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Descargar Planilla de Inscripción 2026
+                        </a>
+                        <p className="text-gray-500 text-xs mt-3">Formato PDF • Imprimir y llenar antes de acudir</p>
+                    </div>
+                </div>
+            </section>
+
             {/* --- FOOTER / CONTRAPORTADA --- */}
             <footer className="bg-white py-24 px-6 text-center">
                 <div className="max-w-4xl mx-auto">
