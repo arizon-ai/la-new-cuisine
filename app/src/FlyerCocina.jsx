@@ -147,7 +147,8 @@ export default function FlyerCocina() {
                         <img
                             src="/logo.png"
                             alt="La New Cuisine"
-                            style={{ width: '320px', height: 'auto', margin: '0 auto 15px' }}
+                            className="responsive-logo"
+                            style={{ width: '320px', maxWidth: '80%', height: 'auto', margin: '0 auto 15px' }}
                         />
                         <h2 style={{ fontSize: '24px', color: '#333', fontWeight: 400, marginTop: 0, letterSpacing: '2px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase' }}>
                             CARRERA CHEF EN COCINA INTERNACIONAL

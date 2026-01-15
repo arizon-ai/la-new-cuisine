@@ -216,7 +216,7 @@ export default function Brochure() {
                         src="/logo.png"
                         alt="La New Cuisine"
                         className="mx-auto mb-8 animate-in fade-in duration-1000"
-                        style={{ width: '480px', height: 'auto' }}
+                        style={{ width: '480px', maxWidth: '90%', height: 'auto' }}
                     />
                     <h2 className="text-2xl md:text-3xl font-serif font-bold tracking-tighter leading-none mb-12 text-gray-600">
                         Escuela de Alta Cocina
@@ -377,7 +377,9 @@ export default function Brochure() {
                         <h3 className="text-center font-bold text-lg uppercase tracking-widest mb-6">📍 Nuestra Ubicación</h3>
                         <div style={{
                             width: '100%',
+                            minHeight: '250px',
                             height: '350px',
+                            maxHeight: '50vh',
                             borderRadius: '12px',
                             overflow: 'hidden',
                             border: '3px solid #000',
