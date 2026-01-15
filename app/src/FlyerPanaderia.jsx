@@ -85,14 +85,13 @@ export default function FlyerPanaderia() {
             <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700;800&family=Azeret+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-            <div style={{
+            <div className="responsive-container" style={{
                 maxWidth: '1280px',
                 margin: '0 auto',
                 backgroundColor: '#fff'
             }}>
 
-                {/* PORTADA ESTILO OFERTA ACADÉMICA */}
-                <div style={{
+                <div className="responsive-hero" style={{
                     position: 'relative',
                     height: '720px',
                     display: 'flex',
@@ -127,7 +126,7 @@ export default function FlyerPanaderia() {
                     />
 
                     {/* Cuadro central REDUCIDO */}
-                    <div style={{
+                    <div className="responsive-card" style={{
                         position: 'relative',
                         zIndex: 10,
                         backgroundColor: 'rgba(255, 255, 255, 0.95)',

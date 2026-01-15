@@ -5,21 +5,192 @@
 
 :root {
   font-family: 'Inter', system-ui, sans-serif;
+
+  /* Variables responsive - Desktop por defecto */
+  --container-max-width: 1280px;
+  --hero-height: 720px;
+  --card-width: 500px;
+  --card-padding: 40px 60px;
+  --logo-width: 320px;
+  --title-size: 24px;
+  --subtitle-size: 14px;
+  --shadow-offset: 15px;
+  --content-padding: 30px;
+}
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  :root {
+    --container-max-width: 100%;
+    --hero-height: 600px;
+    --card-width: 420px;
+    --card-padding: 30px 40px;
+    --logo-width: 280px;
+    --title-size: 22px;
+    --subtitle-size: 13px;
+    --shadow-offset: 12px;
+    --content-padding: 25px;
+  }
+}
+
+/* Móvil (menos de 768px) */
+@media (max-width: 768px) {
+  :root {
+    --container-max-width: 100%;
+    --hero-height: 500px;
+    --card-width: 90%;
+    --card-padding: 25px 30px;
+    --logo-width: 220px;
+    --title-size: 18px;
+    --subtitle-size: 12px;
+    --shadow-offset: 8px;
+    --content-padding: 20px;
+  }
+}
+
+/* Móvil pequeño (menos de 480px) */
+@media (max-width: 480px) {
+  :root {
+    --container-max-width: 100%;
+    --hero-height: 450px;
+    --card-width: 95%;
+    --card-padding: 20px 25px;
+    --logo-width: 180px;
+    --title-size: 16px;
+    --subtitle-size: 11px;
+    --shadow-offset: 6px;
+    --content-padding: 15px;
+  }
 }
 
 .font-serif {
   font-family: 'Playfair Display', Georgia, serif;
 }
 
-/* Tailwind animate-in utilities */
+/* ========================================
+   CLASES RESPONSIVE PARA COMPONENTES
+   ======================================== */
+
+/* Contenedor principal responsive */
+.responsive-container {
+  max-width: var(--container-max-width) !important;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Hero/Portada responsive */
+.responsive-hero {
+  height: var(--hero-height) !important;
+  min-height: 400px;
+}
+
+/* Cuadro central responsive */
+.responsive-card {
+  width: var(--card-width) !important;
+  max-width: 95%;
+  padding: var(--card-padding) !important;
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0px rgba(0, 0, 0, 1) !important;
+}
+
+/* Logo responsive */
+.responsive-logo {
+  width: var(--logo-width) !important;
+  max-width: 80%;
+  height: auto;
+}
+
+/* Títulos responsive */
+.responsive-title {
+  font-size: var(--title-size) !important;
+}
+
+.responsive-subtitle {
+  font-size: var(--subtitle-size) !important;
+}
+
+/* Contenido responsive */
+.responsive-content {
+  padding: var(--content-padding) !important;
+}
+
+/* ========================================
+   FIXES PARA SLIDES DE OFERTA ACADÉMICA
+   ======================================== */
+
+.slide-container {
+  width: 100% !important;
+  max-width: 1280px;
+  height: auto !important;
+  min-height: var(--hero-height);
+}
+
+@media (max-width: 768px) {
+  .slide-container {
+    padding: 30px !important;
+    min-height: auto;
+  }
+}
+
+/* ========================================
+   GRID RESPONSIVE PARA DATE CARDS
+   ======================================== */
+
+@media (max-width: 768px) {
+
+  /* Hacer las cards de fecha stack en móvil */
+  div[style*="display: grid"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ========================================
+   NAVEGACIÓN RESPONSIVE
+   ======================================== */
+
+@media (max-width: 900px) {
+  nav[style*="position: fixed"] {
+    flex-wrap: wrap !important;
+    max-width: calc(100% - 40px) !important;
+    gap: 4px !important;
+  }
+
+  nav a {
+    font-size: 8px !important;
+    padding: 4px 6px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  nav[style*="position: fixed"] {
+    top: 10px !important;
+    right: 10px !important;
+    left: 10px !important;
+    justify-content: center !important;
+  }
+}
+
+/* ========================================
+   ANIMACIONES
+   ======================================== */
+
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideInFromBottom {
-  from { transform: translateY(1rem); }
-  to { transform: translateY(0); }
+  from {
+    transform: translateY(1rem);
+  }
+
+  to {
+    transform: translateY(0);
+  }
 }
 
 .animate-in {
@@ -36,4 +207,31 @@
 
 .duration-1000 {
   animation-duration: 1s;
+}
+
+/* ========================================
+   UTILIDADES ADICIONALES
+   ======================================== */
+
+/* Ocultar en móvil */
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+/* Ocultar en desktop */
+@media (min-width: 769px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+/* Texto responsive */
+.text-responsive {
+  font-size: clamp(14px, 2.5vw, 18px);
+}
+
+.heading-responsive {
+  font-size: clamp(20px, 4vw, 32px);
 }
