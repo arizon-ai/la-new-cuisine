@@ -200,43 +200,42 @@ export default function FlyerPasteleria() {
                         />
                     </div>
 
-                    {/* WAITLIST */}
+                    {/* INVERSIÓN */}
                     <div style={{
-                        marginTop: '30px',
-                        backgroundColor: '#f4f4f4',
+                        marginTop: '25px',
+                        backgroundColor: '#f9f9f9',
                         padding: '20px',
-                        border: '1px dashed #000'
+                        border: '1px solid #000'
                     }}>
                         <div style={{
                             fontSize: '14px',
                             fontWeight: 800,
                             textTransform: 'uppercase',
-                            marginBottom: '10px',
+                            marginBottom: '15px',
                             display: 'flex',
                             alignItems: 'center',
                             gap: '8px'
                         }}>
-                            <i className="fa-solid fa-clipboard-list" style={{ color: '#000' }}></i>
-                            Próximas Aperturas & Espera
+                            <i className="fa-solid fa-coins" style={{ color: '#000' }}></i>
+                            Inversión Nivel Básico
                         </div>
-                        <p style={{ fontSize: '12px', lineHeight: 1.6, color: '#333', margin: 0 }}>
-                            • <strong>Sábado Mañana:</strong> Cupo se libera en Marzo (Atentos).<br />
-                            • <strong>Otros Turnos:</strong> Lunes (8am/2pm) y Mié/Jue (2pm).
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
+                            <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
+                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>50 €</div>
+                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
+                            </div>
+                            <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
+                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>140 €</div>
+                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Mensualidad</div>
+                            </div>
+                            <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
+                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>90 €</div>
+                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Kit Estudio</div>
+                            </div>
+                        </div>
+                        <p style={{ fontSize: '10px', color: '#666', marginTop: '10px', marginBottom: 0 }}>
+                            *Kit: filipina, gorro, delantal. Financiamiento 2 cuotas.
                         </p>
-
-                        {/* Junior Chef Banner */}
-                        <div style={{
-                            background: '#000',
-                            color: '#fff',
-                            fontFamily: "'Azeret Mono', monospace",
-                            fontSize: '10px',
-                            textAlign: 'center',
-                            padding: '5px',
-                            marginTop: '10px',
-                            textTransform: 'uppercase'
-                        }}>
-                            También disponible: Junior Chef (Viernes Tarde)
-                        </div>
                     </div>
                 </div>
 

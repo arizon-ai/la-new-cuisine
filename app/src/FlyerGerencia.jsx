@@ -187,52 +187,53 @@ export default function FlyerGerencia() {
                         />
                     </div>
 
-                    {/* VALUE PROPOSITION */}
+                    {/* INVERSIÓN */}
                     <div style={{
-                        marginTop: '30px',
+                        marginTop: '25px',
                         backgroundColor: '#f9f9f9',
                         padding: '20px',
-                        borderLeft: '4px solid #000'
+                        border: '1px solid #000'
                     }}>
                         <div style={{
                             fontSize: '14px',
                             fontWeight: 800,
                             textTransform: 'uppercase',
-                            marginBottom: '10px',
+                            marginBottom: '15px',
                             display: 'flex',
                             alignItems: 'center',
                             gap: '8px'
                         }}>
-                            <i className="fa-solid fa-chart-line" style={{ color: '#000' }}></i>
-                            Enfoque del Programa
+                            <i className="fa-solid fa-coins" style={{ color: '#000' }}></i>
+                            Inversión
                         </div>
-                        <ul style={{
-                            listStyle: 'none',
-                            fontSize: '12px',
-                            lineHeight: 1.6,
-                            color: '#333',
-                            padding: 0,
-                            margin: 0
-                        }}>
-                            {[
-                                'Modelo Canvas y Plan de Negocios',
-                                'Marketing y Neuromarketing Gastronómico',
-                                'Liderazgo y Capital Humano',
-                                'Ingeniería del Menú y Catering',
-                                'Manejo y Control Gastronómico',
-                                'Higiene y Salud Ocupacional'
-                            ].map((item, i) => (
-                                <li key={i} style={{
-                                    marginBottom: '5px',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '8px'
-                                }}>
-                                    <i className="fa-solid fa-square" style={{ fontSize: '6px', color: '#000' }}></i>
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
+                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>50 €</div>
+                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
+                            </div>
+                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
+                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>130 €</div>
+                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Mensualidad</div>
+                            </div>
+                        </div>
+                        <p style={{ fontSize: '10px', color: '#666', marginTop: '10px', marginBottom: 0 }}>
+                            Duración: 4 meses intensivos. Formación integral para chefs, emprendedores y profesionales.
+                        </p>
+                    </div>
+
+                    {/* CONTENIDOS */}
+                    <div style={{
+                        marginTop: '15px',
+                        backgroundColor: '#fff',
+                        padding: '15px',
+                        borderLeft: '4px solid #000'
+                    }}>
+                        <div style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', marginBottom: '8px' }}>
+                            Contenido del Programa:
+                        </div>
+                        <p style={{ fontSize: '11px', color: '#333', margin: 0, lineHeight: 1.5 }}>
+                            Modelo Canvas • Marketing Gastronómico • Neuromarketing • Liderazgo • Ingeniería del Menú • Higiene y Salud Ocupacional
+                        </p>
                     </div>
                 </div>
 

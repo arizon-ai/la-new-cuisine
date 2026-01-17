@@ -215,18 +215,42 @@ export default function FlyerCocina() {
                         />
                     </div>
 
-                    {/* LOCATION BADGE */}
+                    {/* INVERSIÓN */}
                     <div style={{
-                        backgroundColor: '#000',
-                        color: '#fff',
-                        fontFamily: "'Azeret Mono', monospace",
-                        fontSize: '10px',
-                        textAlign: 'center',
-                        padding: '8px',
                         marginTop: '25px',
-                        textTransform: 'uppercase'
+                        backgroundColor: '#f9f9f9',
+                        padding: '20px',
+                        border: '1px solid #000'
                     }}>
-                        <i className="fa-solid fa-location-dot"></i> Sede: Cocina Planta Baja • Urb. Sabana Larga
+                        <div style={{
+                            fontSize: '14px',
+                            fontWeight: 800,
+                            textTransform: 'uppercase',
+                            marginBottom: '15px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '8px'
+                        }}>
+                            <i className="fa-solid fa-coins" style={{ color: '#000' }}></i>
+                            Inversión Nivel Básico
+                        </div>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
+                            <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
+                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>50 €</div>
+                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
+                            </div>
+                            <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
+                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>140 €</div>
+                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Mensualidad</div>
+                            </div>
+                            <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
+                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>130 €</div>
+                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Kit Estudio</div>
+                            </div>
+                        </div>
+                        <p style={{ fontSize: '10px', color: '#666', marginTop: '10px', marginBottom: 0 }}>
+                            *Kit: filipina, gorro, delantal, set 2 cuchillos. Financiamiento 2 cuotas.
+                        </p>
                     </div>
                 </div>
 
