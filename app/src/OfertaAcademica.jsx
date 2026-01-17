@@ -171,10 +171,17 @@ export default function OfertaAcademica() {
                             </tr>
                             <tr>
                                 <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>
-                                    <strong>Sábado</strong><br /><span style={{ fontSize: '12px', color: '#666' }}>Básico</span>
+                                    <strong>Sábado</strong><br /><span style={{ fontSize: '12px', color: '#666' }}>Turno Mañana</span>
                                 </td>
                                 <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>8:00 - 12:30 pm</td>
-                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}><Tag variant="outline">31 ENE</Tag></td>
+                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}><Tag variant="gray">Fecha Est.</Tag></td>
+                            </tr>
+                            <tr>
+                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>
+                                    <strong>Lunes Nocturno</strong><br /><span style={{ fontSize: '12px', color: '#666' }}>Turno Noche</span>
+                                </td>
+                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>6:00 - 9:30 pm</td>
+                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}><Tag variant="gray">Fecha Est.</Tag></td>
                             </tr>
                         </tbody>
                     </table>
