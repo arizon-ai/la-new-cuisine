@@ -178,8 +178,33 @@ export default function OfertaAcademica() {
                             </tr>
                         </tbody>
                     </table>
-                    <p style={{ marginTop: '20px', fontSize: '12px', color: '#666', borderLeft: '2px solid #000', paddingLeft: '10px', lineHeight: 1.6 }}>
-                        *Nota para ventas: Informar como "Fecha Estimada" según documento oficial.
+
+                    {/* Inversión */}
+                    <div style={{ marginTop: '25px', backgroundColor: '#f9f9f9', padding: '20px', border: '1px solid #000' }}>
+                        <h4 style={{ margin: '0 0 15px 0', fontSize: '14px', textTransform: 'uppercase', fontWeight: 700, letterSpacing: '1px' }}>
+                            💰 Inversión Nivel Básico
+                        </h4>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '15px' }}>
+                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
+                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>50 €</div>
+                                <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
+                            </div>
+                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
+                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>140 €</div>
+                                <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Mensualidad</div>
+                            </div>
+                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
+                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>130 €</div>
+                                <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Kit de Estudio</div>
+                            </div>
+                        </div>
+                        <p style={{ fontSize: '11px', color: '#666', marginTop: '10px', marginBottom: 0 }}>
+                            *Kit incluye: filipina, gorro, delantal, set de 2 cuchillos (puntilla y cebollero). Financiamiento 2 cuotas.
+                        </p>
+                    </div>
+
+                    <p style={{ marginTop: '15px', fontSize: '12px', color: '#666', borderLeft: '2px solid #000', paddingLeft: '10px', lineHeight: 1.6 }}>
+                        Duración: 15 meses + pasantías. Se ofertan 3 turnos para su comodidad.
                     </p>
                 </div>
                 <img
@@ -254,20 +279,28 @@ export default function OfertaAcademica() {
                         </li>
                     </ul>
 
-                    <div style={{
-                        backgroundColor: '#f9f9f9',
-                        border: '1px solid #000',
-                        padding: '20px',
-                        marginTop: '25px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '15px'
-                    }}>
-                        <i className="fa-solid fa-star" style={{ fontSize: '20px', color: '#000' }}></i>
-                        <div>
-                            <p style={{ margin: 0, fontSize: '12px', textTransform: 'uppercase', fontWeight: 700, lineHeight: 1.6 }}>Oportunidad Premium</p>
-                            <p style={{ margin: 0, fontSize: '14px', color: '#333', lineHeight: 1.6 }}>El curso de Sábado (Mañana) finaliza en Febrero. Preparar lista de espera.</p>
+                    {/* Inversión Pastelería */}
+                    <div style={{ marginTop: '25px', backgroundColor: '#f9f9f9', padding: '20px', border: '1px solid #000' }}>
+                        <h4 style={{ margin: '0 0 15px 0', fontSize: '14px', textTransform: 'uppercase', fontWeight: 700, letterSpacing: '1px' }}>
+                            💰 Inversión Nivel Básico
+                        </h4>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '15px' }}>
+                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
+                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>50 €</div>
+                                <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
+                            </div>
+                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
+                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>140 €</div>
+                                <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Mensualidad</div>
+                            </div>
+                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
+                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>90 €</div>
+                                <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Kit de Estudio</div>
+                            </div>
                         </div>
+                        <p style={{ fontSize: '11px', color: '#666', marginTop: '10px', marginBottom: 0 }}>
+                            *Kit incluye: filipina, gorro, delantal. Financiamiento 2 cuotas.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -320,19 +353,35 @@ export default function OfertaAcademica() {
                             </div>
                         </div>
 
-                        {/* Lista de Espera Pastelería */}
+                        {/* Chef Panadero */}
                         <div style={{ background: 'white', padding: '30px', border: '1px solid #000', boxShadow: '10px 10px 0px rgba(0,0,0,0.1)' }}>
                             <h3 style={{ marginTop: 0, display: 'flex', alignItems: 'center', gap: '10px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase', color: '#000', letterSpacing: '-0.5px' }}>
-                                <i className="fa-solid fa-clipboard-list" style={{ color: '#000' }}></i> ESPERA: PASTELERÍA
+                                <i className="fa-solid fa-bread-slice" style={{ color: '#000' }}></i> CHEF PANADERO
                             </h3>
-                            <p style={{ color: '#333', lineHeight: 1.6 }}>Turnos disponibles para conformar grupo:</p>
-                            <ul style={{ paddingLeft: '20px', fontSize: '16px', marginTop: '20px', color: '#333' }}>
-                                <li style={{ marginBottom: '10px' }}><strong>Lunes:</strong> 8:00 am y 2:00 pm</li>
-                                <li style={{ marginBottom: '10px' }}><strong>Miércoles:</strong> 2:00 pm</li>
-                                <li style={{ marginBottom: '10px' }}><strong>Jueves:</strong> 2:00 pm</li>
+                            <p style={{ color: '#666', fontStyle: 'italic', lineHeight: 1.6 }}>Transforma tu pasión por el pan en una profesión.</p>
+
+                            <div style={{ background: '#f4f4f4', padding: '15px', borderLeft: '3px solid #000', marginTop: '20px' }}>
+                                <strong>Inicio:</strong> Lunes 9 de Febrero 2026<br />
+                                <span style={{ fontSize: '12px', color: '#666' }}>Tarde: 2:00 - 5:30 pm | Nocturno: 6:00 - 9:30 pm</span>
+                            </div>
+
+                            <ul style={{ listStyle: 'none', padding: 0, marginTop: '20px', fontSize: '14px', color: '#333' }}>
+                                <li style={{ marginBottom: '10px', display: 'flex', justifyContent: 'space-between' }}>
+                                    <span><strong>Inscripción:</strong></span>
+                                    <span>50 €</span>
+                                </li>
+                                <li style={{ marginBottom: '10px', display: 'flex', justifyContent: 'space-between' }}>
+                                    <span><strong>Mensualidad:</strong></span>
+                                    <span>140 €</span>
+                                </li>
+                                <li style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                    <span><strong>Kit de Estudio:</strong></span>
+                                    <span>90 € <small style={{ color: '#666' }}>(filipina, gorro, delantal)</small></span>
+                                </li>
                             </ul>
+
                             <div style={{ marginTop: '20px' }}>
-                                <Tag variant="gray">Sin fecha definida</Tag>
+                                <Tag variant="black">Inscripciones Abiertas</Tag>
                             </div>
                         </div>
                     </div>
@@ -377,6 +426,26 @@ export default function OfertaAcademica() {
                         <div style={{ marginTop: '10px' }}>
                             <Tag variant="outline">INICIO: 28 FEBRERO</Tag>
                         </div>
+                    </div>
+
+                    {/* Inversión Diplomado */}
+                    <div style={{ marginTop: '25px', backgroundColor: '#f9f9f9', padding: '20px', border: '1px solid #000' }}>
+                        <h4 style={{ margin: '0 0 15px 0', fontSize: '14px', textTransform: 'uppercase', fontWeight: 700, letterSpacing: '1px' }}>
+                            💰 Inversión
+                        </h4>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
+                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
+                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>50 €</div>
+                                <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
+                            </div>
+                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
+                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>130 €</div>
+                                <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Mensualidad</div>
+                            </div>
+                        </div>
+                        <p style={{ fontSize: '11px', color: '#666', marginTop: '10px', marginBottom: 0 }}>
+                            Duración: 4 meses intensivos. Formación integral para chefs, emprendedores y profesionales del sector.
+                        </p>
                     </div>
                 </div>
 
