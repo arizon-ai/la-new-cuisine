@@ -10,7 +10,7 @@ const courses = [
         title: 'Chef en Cocina Internacional',
         subtitle: 'CARRERA LARGA',
         image: 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&q=80',
-        description: 'Nuestra formación insignia. Un recorrido integral desde las técnicas fundamentales hasta la vanguardia molecular.',
+        description: 'Nuestra formación insignia. Un recorrido integral desde las técnicas fundamentales hasta la vanguardia molecular. Duración: 15 meses más pasantías.',
         details: {
             duration: '15 Meses + Pasantías',
             start: 'Lunes 26 y Martes 27 Enero 2026',
@@ -22,16 +22,20 @@ const courses = [
             investment: [
                 { label: 'Inscripción Básico', price: '50 €' },
                 { label: 'Mensualidad Básico', price: '140 €' },
-                { label: 'Kit de Estudio', price: '130 €', note: '*Incluye filipina, gorro, delantal, set de cuchillos. Financiamiento 2 cuotas' }
+                { label: 'Kit de Estudio', price: '130 €', note: '*Incluye filipina, gorro, delantal, set de 2 cuchillos (puntilla y cebollero). Financiamiento 2 cuotas' }
             ]
         },
         syllabus: [
             'Técnicas de Cortes y Buenas Prácticas',
             'Fondos, Caldos, Sopas y Cremas',
             'Salsas Madres y Aderezos',
-            'Aves, Carnes, Pescados y Mariscos',
-            'Cocina Internacional y Venezolana',
-            'Charcutería, Panadería y Molecular'
+            'Cereales, Hortalizas, Tubérculos',
+            'Setas, Hierbas y Especias',
+            'Lácteos, Grasas y Pastas',
+            'Masas I, Costos I',
+            'Técnicas de Emplatado',
+            'Etiqueta y Protocolo',
+            'Oratoria y Expresión Corporal'
         ]
     },
     {
@@ -39,13 +43,13 @@ const courses = [
         title: 'Chef Panadero',
         subtitle: 'ESPECIALIZACIÓN',
         image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80',
-        description: 'El arte de la masa madre y el horno. Domina la panadería artesanal, comercial y de autor.',
+        description: 'Transforma tu pasión por el pan en una profesión con aroma a éxito. Formación integral para chefs, emprendedores y profesionales del sector alimentario.',
         details: {
             duration: 'Niveles Progresivos',
-            start: '9 de Febrero 2026',
+            start: 'Lunes 9 de Febrero 2026',
             schedule: [
                 'Lunes (Tarde): 2:00 PM - 5:30 PM',
-                'Lunes (Noche): 6:00 PM - 9:30 PM'
+                'Lunes (Nocturno): 6:00 PM - 9:30 PM'
             ],
             investment: [
                 { label: 'Inscripción Básico', price: '50 €' },
@@ -54,12 +58,16 @@ const courses = [
             ]
         },
         syllabus: [
-            'Matemáticas Panaderas y Oratoria',
-            'Masas Madre y Química de Panificación',
-            'Clásicos: Canilla, Campesino, Francés, Guayaba',
-            'Especiales: Ciabatta, Focaccia, Mantequilla',
-            'Dulce: Piñita, Cinnamon, Golfeados, Donas',
-            'Pizza, Bagels y Fine Dining'
+            'Principios Básicos de Panificación',
+            'Clases de Harina y Fórmulas Panaderas',
+            'Matemáticas Panaderas',
+            'Pan Campesino, Canilla, Piñita',
+            'Cinnamon, Pizza, Bagels, Golfeados',
+            'Cachitos, Pan de Jamón, Donas',
+            'Hojaldre, Pan de Coco, Pan de Queso',
+            'Ciabatta, Focaccia, Masa Madre',
+            'Técnicas de Emplatado',
+            'Etiqueta y Protocolo'
         ]
     },
     {
@@ -67,7 +75,7 @@ const courses = [
         title: 'Chef Pastelero',
         subtitle: 'ESPECIALIZACIÓN',
         image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80',
-        description: 'Precisión y dulzura. Especialízate en las técnicas de la pastelería francesa y chocolatería fina.',
+        description: 'Precisión y dulzura. Especialízate en las técnicas de la pastelería francesa, chocolatería fina y arte del emplatado.',
         details: {
             duration: 'Niveles Progresivos',
             start: '25-26 Febrero 2026',
@@ -84,26 +92,29 @@ const courses = [
             ]
         },
         syllabus: [
-            'Masas Quebradas, Hojaldre y Merengues',
-            'Pastelería Francesa, Austriaca e Italiana',
-            'Panadería I y II (Transversal)',
-            'Bombonería, Temperado y Postres de Vitrina',
-            'Etiqueta, Protocolo y Oratoria',
-            'Pastelería Venezolana y Fine Dining'
+            'Mangueado y Merengues',
+            'Bizcochos y Masas Livianas',
+            'Sablé, Cakes, Masas Quebradas',
+            'Pastelería Clásica y Comercial',
+            'Butter Cream y Fondant',
+            'Petit Four Variados',
+            'Masas Choux, Brioche, Croissant',
+            'Bombonería I y II',
+            'Pastelería Francesa, Alemana, Italiana',
+            'Técnicas de Emplatado y Maridaje'
         ]
     },
     {
         id: 'gerencia',
-        title: 'Diplomado en Gerencia',
+        title: 'Diplomado en Gerencia Gastronómica',
         subtitle: 'NEGOCIOS',
-        // Nueva imagen estable para Gerencia (Reunión de negocios)
         image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80',
-        description: 'Visión estratégica. Herramientas esenciales para emprender y gestionar negocios gastronómicos rentables.',
+        description: 'Formación integral para chefs, emprendedores y profesionales del sector alimentario. Visión estratégica para gestionar negocios gastronómicos rentables.',
         details: {
             duration: '4 Meses Intensivos',
             start: 'Martes 3 de Febrero 2026',
             schedule: [
-                'Martes: 2:00 PM - 6:00 PM',
+                'Martes (Tarde): 2:00 PM - 6:00 PM',
                 'Sábados: 8:00 AM - 12:30 PM (28 Feb)'
             ],
             investment: [
@@ -113,12 +124,14 @@ const courses = [
             ]
         },
         syllabus: [
-            'Modelo Canvas y Plan de Negocios',
-            'Marketing, Neuromarketing y Neurogastronomía',
+            'Emprendimiento y Modelo Canvas',
+            'Marketing Gastronómico',
+            'Neuromarketing y Neurogastronomía',
+            'Capital Humano, Liderazgo y Coaching',
             'Ingeniería del Menú y Catering',
-            'Liderazgo, Coaching y Capital Humano',
-            'Legislación y Salud Ocupacional',
-            'Costos y Control de Gestión'
+            'Manejo y Control Gastronómico',
+            'Higiene y Salud Ocupacional',
+            'Plan de Negocios Final'
         ]
     }
 ];

@@ -219,34 +219,37 @@ export default function OfertaAcademica() {
                     </h2>
 
                     <ul style={{ listStyle: 'none', padding: 0, width: '100%' }}>
-                        {/* Enero */}
-                        <li style={{ marginBottom: '20px', borderBottom: '1px solid #eee', paddingBottom: '15px' }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                <strong style={{ color: '#000', fontSize: '20px' }}>ENERO</strong>
-                                <Tag variant="black">CONFIRMADO</Tag>
-                            </div>
-                            <div style={{ fontSize: '16px', marginTop: '5px', color: '#333', lineHeight: 1.6 }}>
-                                Martes 2:00 pm | <strong>Inicio: 13 Ene</strong>
-                            </div>
-                        </li>
-                        {/* Febrero */}
+                        {/* Febrero - Mañana/Tarde */}
                         <li style={{ marginBottom: '20px', borderBottom: '1px solid #eee', paddingBottom: '15px' }}>
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                 <strong style={{ color: '#000', fontSize: '20px' }}>FEBRERO</strong>
                                 <Tag variant="outline">ESTIMADO</Tag>
                             </div>
                             <div style={{ fontSize: '16px', marginTop: '5px', color: '#333', lineHeight: 1.6 }}>
-                                Mié/Jue 8:00 am | <strong>Inicio: 25 Feb</strong>
+                                Mié/Jue 8:00 - 12:30 pm | <strong>Inicio: 25-26 Feb</strong>
+                            </div>
+                            <div style={{ fontSize: '14px', marginTop: '5px', color: '#555', lineHeight: 1.6 }}>
+                                Mié/Jue 2:00 - 5:30 pm (Turno Tarde)
                             </div>
                         </li>
-                        {/* Marzo */}
+                        {/* Febrero - Sábado */}
                         <li style={{ marginBottom: '20px', borderBottom: '1px solid #eee', paddingBottom: '15px' }}>
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                <strong style={{ color: '#000', fontSize: '20px' }}>MARZO</strong>
-                                <Tag variant="black">PROGRAMADO</Tag>
+                                <strong style={{ color: '#000', fontSize: '20px' }}>SÁBADO</strong>
+                                <Tag variant="outline">ESTIMADO</Tag>
                             </div>
                             <div style={{ fontSize: '16px', marginTop: '5px', color: '#333', lineHeight: 1.6 }}>
-                                Viernes 8:00 am | <strong>Inicio: 20 Mar</strong>
+                                8:00 - 12:30 pm | <strong>Inicio: 28 Feb</strong>
+                            </div>
+                        </li>
+                        {/* Febrero - Nocturno */}
+                        <li style={{ marginBottom: '20px', borderBottom: '1px solid #eee', paddingBottom: '15px' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                <strong style={{ color: '#000', fontSize: '20px' }}>NOCTURNO</strong>
+                                <Tag variant="outline">ESTIMADO</Tag>
+                            </div>
+                            <div style={{ fontSize: '16px', marginTop: '5px', color: '#333', lineHeight: 1.6 }}>
+                                Lunes 6:00 - 9:30 pm | <strong>Inicio: 23 Feb</strong>
                             </div>
                         </li>
                     </ul>
@@ -361,10 +364,10 @@ export default function OfertaAcademica() {
                     </p>
 
                     <div style={{ background: 'white', padding: '25px', border: '1px solid #000', marginBottom: '20px', boxShadow: '5px 5px 0px #000' }}>
-                        <strong style={{ fontSize: '20px', display: 'block', textTransform: 'uppercase' }}>Martes (Noche)</strong>
-                        <span style={{ fontSize: '16px', color: '#333' }}>5:00 pm - 9:00 pm</span><br />
+                        <strong style={{ fontSize: '20px', display: 'block', textTransform: 'uppercase' }}>Martes (Tarde)</strong>
+                        <span style={{ fontSize: '16px', color: '#333' }}>2:00 pm - 6:00 pm</span><br />
                         <div style={{ marginTop: '10px' }}>
-                            <Tag variant="black">CÓDIGO: DP27587</Tag>
+                            <Tag variant="black">INICIO: 3 FEBRERO</Tag>
                         </div>
                     </div>
 
@@ -372,7 +375,7 @@ export default function OfertaAcademica() {
                         <strong style={{ fontSize: '20px', display: 'block', textTransform: 'uppercase' }}>Sábado (Mañana)</strong>
                         <span style={{ fontSize: '16px', color: '#333' }}>8:00 am - 12:30 pm</span><br />
                         <div style={{ marginTop: '10px' }}>
-                            <Tag variant="outline">DIPLOMADO</Tag>
+                            <Tag variant="outline">INICIO: 28 FEBRERO</Tag>
                         </div>
                     </div>
                 </div>
