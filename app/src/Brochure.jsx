@@ -282,23 +282,44 @@ export default function Brochure() {
 
             {/* --- SECCIÓN EXTRA: TALLERES Y JOVENES --- */}
             <section className="grid grid-cols-1 md:grid-cols-2 border-b border-black">
-                {/* Junior Chef */}
+                {/* Junior Chef - Cocina para Niños y Adolescentes */}
                 <div className="p-12 lg:p-16 border-b md:border-b-0 md:border-r border-black bg-neutral-100 flex flex-col justify-between">
                     <div>
                         <div className="flex justify-between items-start mb-6">
                             <h3 className="text-5xl font-serif">Junior Chef</h3>
-                            <span className="border border-black text-black text-xs px-3 py-1 font-bold uppercase tracking-widest">Jóvenes</span>
+                            <span className="border border-black text-black text-xs px-3 py-1 font-bold uppercase tracking-widest">Niños y Jóvenes</span>
                         </div>
-                        <p className="mb-8 text-gray-600 text-xl">Programa especial y continuo diseñado exclusivamente para el desarrollo de nuevos talentos gastronómicos.</p>
+                        <p className="mb-4 text-gray-600 text-xl">Programa especial diseñado para el desarrollo de nuevos talentos gastronómicos.</p>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                            <span className="px-2 py-1 bg-white text-xs text-gray-700 rounded-sm">Técnicas de cortes</span>
+                            <span className="px-2 py-1 bg-white text-xs text-gray-700 rounded-sm">Salsas</span>
+                            <span className="px-2 py-1 bg-white text-xs text-gray-700 rounded-sm">Pastas</span>
+                            <span className="px-2 py-1 bg-white text-xs text-gray-700 rounded-sm">Cocina Italiana</span>
+                            <span className="px-2 py-1 bg-white text-xs text-gray-700 rounded-sm">Japonesa</span>
+                            <span className="px-2 py-1 bg-white text-xs text-gray-700 rounded-sm">Venezolana</span>
+                            <span className="px-2 py-1 bg-white text-xs text-gray-700 rounded-sm">Arroz Chino</span>
+                        </div>
                     </div>
                     <div className="bg-white p-6 border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                         <h4 className="font-bold text-base uppercase mb-3">Ficha Técnica</h4>
                         <div className="space-y-2 text-base text-gray-700">
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Horario:</span> <span className="font-bold">Viernes 2:00 PM - 5:30 PM</span>
+                                <span>Inicio:</span> <span className="font-bold">Viernes 6 de Febrero 2026</span>
                             </p>
-                            <p className="flex justify-between pt-1">
-                                <span>Requisito:</span> <span className="font-bold">Pasión por la cocina</span>
+                            <p className="flex justify-between border-b border-gray-100 pb-1">
+                                <span>Horario:</span> <span className="font-bold">Viernes 2:00 PM - 6:00 PM</span>
+                            </p>
+                            <p className="flex justify-between border-b border-gray-100 pb-1">
+                                <span>Duración:</span> <span className="font-bold">4 meses</span>
+                            </p>
+                            <p className="flex justify-between border-b border-gray-100 pb-1">
+                                <span>Inscripción:</span> <span className="font-bold">50 € (incluye uniforme)</span>
+                            </p>
+                            <p className="flex justify-between border-b border-gray-100 pb-1">
+                                <span>Mensualidad:</span> <span className="font-bold">150 €</span>
+                            </p>
+                            <p className="text-xs text-gray-500 pt-2 italic">
+                                *Incluye ingredientes, recetas y certificado. 2 platos salados + 1 postre por clase.
                             </p>
                         </div>
                     </div>
