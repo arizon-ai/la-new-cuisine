@@ -175,15 +175,16 @@ export default function FlyerGerencia() {
                             day="Martes 3 Febrero"
                             time="2:00 pm - 6:00 pm"
                             location="Salón de Teoría"
-                            code="INICIO CONFIRMADO"
+                            code="INSCRIPCIONES ABIERTAS"
                             isOpen
                         />
                         <ScheduleCard
                             label="Turno Sabatino"
-                            day="Sábado 28 Febrero"
+                            day="Sábado 31 Enero"
                             time="8:00 am - 12:30 pm"
                             location="Salón de Teoría"
-                            code="FECHA ESTIMADA"
+                            code="INSCRIPCIONES ABIERTAS"
+                            isOpen
                         />
                     </div>
 

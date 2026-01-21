@@ -13,11 +13,11 @@ const courses = [
         description: 'Nuestra formación insignia. Un recorrido integral desde las técnicas fundamentales hasta la vanguardia molecular. Duración: 15 meses más pasantías.',
         details: {
             duration: '15 Meses + Pasantías',
-            start: 'Lunes 26 y Martes 27 Enero 2026',
+            start: 'Lunes 26 Ene / Martes 10 Feb 2026',
             schedule: [
                 'Lunes y Martes: 2:00 PM - 5:30 PM',
                 'Sábados: 8:00 AM - 12:30 PM',
-                'Nocturno Lunes: 6:00 PM - 9:30 PM'
+                'Nocturno Lunes: 6:00 PM - 9:30 PM (23 Feb)'
             ],
             investment: [
                 { label: 'Inscripción Básico', price: '50 €' },
@@ -43,10 +43,10 @@ const courses = [
         title: 'Chef Panadero',
         subtitle: 'ESPECIALIZACIÓN',
         image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80',
-        description: 'Transforma tu pasión por el pan en una profesión con aroma a éxito. Formación integral para chefs, emprendedores y profesionales del sector alimentario.',
+        description: 'Transforma tu pasión por el pan en una profesión con aroma a éxito. Formación integral para chefs, emprendedores y profesionales del sector alimentario. Duración: 8 meses.',
         details: {
-            duration: 'Niveles Progresivos',
-            start: 'Lunes 9 de Febrero 2026',
+            duration: '8 Meses',
+            start: 'Fecha Estimada',
             schedule: [
                 'Lunes (Tarde): 2:00 PM - 5:30 PM',
                 'Lunes (Nocturno): 6:00 PM - 9:30 PM'
@@ -78,7 +78,7 @@ const courses = [
         description: 'Precisión y dulzura. Especialízate en las técnicas de la pastelería francesa, chocolatería fina y arte del emplatado.',
         details: {
             duration: 'Niveles Progresivos',
-            start: '25-26 Febrero 2026',
+            start: 'Mié/Jue 25-26 Feb 2026',
             schedule: [
                 'Mié/Jue: 8:00 AM - 12:30 PM',
                 'Mié/Jue: 2:00 PM - 5:30 PM',
@@ -112,10 +112,10 @@ const courses = [
         description: 'Formación integral para chefs, emprendedores y profesionales del sector alimentario. Visión estratégica para gestionar negocios gastronómicos rentables.',
         details: {
             duration: '4 Meses Intensivos',
-            start: 'Martes 3 de Febrero 2026',
+            start: 'Martes 3 Feb / Sábado 31 Ene 2026',
             schedule: [
                 'Martes (Tarde): 2:00 PM - 6:00 PM',
-                'Sábados: 8:00 AM - 12:30 PM (28 Feb)'
+                'Sábados: 8:00 AM - 12:30 PM'
             ],
             investment: [
                 { label: 'Inscripción', price: '50 €' },
@@ -128,8 +128,10 @@ const courses = [
             'Marketing Gastronómico',
             'Neuromarketing y Neurogastronomía',
             'Capital Humano, Liderazgo y Coaching',
+            'Diseño y Ambientación de Espacios',
             'Ingeniería del Menú y Catering',
             'Manejo y Control Gastronómico',
+            'Marco Jurídico Gastronómico',
             'Higiene y Salud Ocupacional',
             'Plan de Negocios Final'
         ]
@@ -304,7 +306,7 @@ export default function Brochure() {
                         <h4 className="font-bold text-base uppercase mb-3">Ficha Técnica</h4>
                         <div className="space-y-2 text-base text-gray-700">
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Inicio:</span> <span className="font-bold">Viernes 6 de Febrero 2026</span>
+                                <span>Inicio:</span> <span className="font-bold">Viernes 20 de Febrero 2026</span>
                             </p>
                             <p className="flex justify-between border-b border-gray-100 pb-1">
                                 <span>Horario:</span> <span className="font-bold">Viernes 2:00 PM - 6:00 PM</span>
@@ -343,7 +345,8 @@ export default function Brochure() {
                         <div className="grid grid-cols-2 gap-4 text-base">
                             <div>
                                 <p className="text-gray-400 text-xs uppercase mb-1">Fecha</p>
-                                <p className="font-bold text-lg">3 de Febrero</p>
+                                <p className="font-bold text-lg">3 de Febrero 2026</p>
+                                <p className="text-gray-400 text-sm">2:00 PM - 6:00 PM</p>
                             </div>
                             <div>
                                 <p className="text-gray-400 text-xs uppercase mb-1">Inversión</p>
@@ -352,6 +355,77 @@ export default function Brochure() {
                             <div className="col-span-2 pt-4 border-t border-white/20">
                                 <p className="flex items-center text-gray-300">
                                     <Check className="w-4 h-4 mr-2" /> Incluye Certificado e Insumos
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* --- SECCIÓN EXTRA: ASISTENTE CHEF E INTENSIVO --- */}
+            <section className="grid grid-cols-1 md:grid-cols-2 border-b border-black">
+                {/* Asistente de Chef */}
+                <div className="p-12 lg:p-16 border-b md:border-b-0 md:border-r border-black bg-white flex flex-col justify-between">
+                    <div>
+                        <div className="flex justify-between items-start mb-6">
+                            <h3 className="text-4xl font-serif">Asistente de Chef</h3>
+                            <span className="border border-black text-black text-xs px-3 py-1 font-bold uppercase tracking-widest">4 Meses</span>
+                        </div>
+                        <p className="mb-4 text-gray-600 text-lg">Programa práctico para quienes desean iniciarse en el mundo culinario profesional.</p>
+                    </div>
+                    <div className="bg-neutral-50 p-6 border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                        <h4 className="font-bold text-base uppercase mb-3">Ficha Técnica</h4>
+                        <div className="space-y-2 text-base text-gray-700">
+                            <p className="flex justify-between border-b border-gray-100 pb-1">
+                                <span>Inicio:</span> <span className="font-bold">Viernes 18 de Febrero 2026</span>
+                            </p>
+                            <p className="flex justify-between border-b border-gray-100 pb-1">
+                                <span>Horario:</span> <span className="font-bold">Viernes 6:00 PM - 9:30 PM</span>
+                            </p>
+                            <p className="flex justify-between border-b border-gray-100 pb-1">
+                                <span>Inscripción:</span> <span className="font-bold">50 €</span>
+                            </p>
+                            <p className="flex justify-between border-b border-gray-100 pb-1">
+                                <span>Mensualidad:</span> <span className="font-bold">120 €</span>
+                            </p>
+                            <p className="flex justify-between border-b border-gray-100 pb-1">
+                                <span>Kit de Estudio:</span> <span className="font-bold">130 €</span>
+                            </p>
+                            <p className="text-xs text-gray-500 pt-2 italic">
+                                *Kit incluye filipina, gorro, delantal, set de 2 cuchillos. Financiamiento 2 cuotas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Intensivo Cocina Internacional */}
+                <div className="p-12 lg:p-16 bg-neutral-900 text-white flex flex-col justify-between relative overflow-hidden">
+                    <div className="absolute top-0 right-0 p-12 opacity-10">
+                        <Award className="w-40 h-40 text-white" />
+                    </div>
+                    <div className="relative z-10">
+                        <div className="flex justify-between items-start mb-6">
+                            <h3 className="text-4xl font-serif">Cocina Internacional Intensivo</h3>
+                            <span className="bg-white text-black text-xs px-3 py-1 font-bold uppercase tracking-widest">Intensivo</span>
+                        </div>
+                        <p className="mb-8 text-gray-400 text-lg">Formación acelerada de martes a viernes. Ideal para quienes buscan una inmersión total en las artes culinarias.</p>
+                    </div>
+
+                    <div className="relative z-10 border border-white/30 p-6 bg-white/5 backdrop-blur-sm">
+                        <div className="grid grid-cols-2 gap-4 text-base">
+                            <div>
+                                <p className="text-gray-400 text-xs uppercase mb-1">Inicio</p>
+                                <p className="font-bold text-lg">24 de Febrero 2026</p>
+                                <p className="text-gray-400 text-sm">Mar-Vie 6:00 PM - 9:30 PM</p>
+                            </div>
+                            <div>
+                                <p className="text-gray-400 text-xs uppercase mb-1">Inversión</p>
+                                <p className="font-bold text-lg">100 € Inscripción</p>
+                                <p className="text-gray-400 text-sm">2 cuotas de 1.320 €</p>
+                            </div>
+                            <div className="col-span-2 pt-4 border-t border-white/20">
+                                <p className="flex items-center text-gray-300">
+                                    <Check className="w-4 h-4 mr-2" /> Programa completo: Básico + Intermedio + Avanzado
                                 </p>
                             </div>
                         </div>

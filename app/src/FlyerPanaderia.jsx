@@ -178,18 +178,18 @@ export default function FlyerPanaderia() {
                     {/* DATES GRID */}
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                         <DateCard
-                            month="Feb"
-                            schedule="Lunes (Tarde)"
+                            month="Lun"
+                            schedule="Turno Tarde"
                             time="2:00 pm - 5:30 pm"
-                            startDate="9 Feb"
-                            status="CONFIRMADO"
+                            startDate="Fecha Est."
+                            status="ABIERTO"
                         />
                         <DateCard
-                            month="Feb"
-                            schedule="Lunes Nocturno"
+                            month="Lun"
+                            schedule="Turno Nocturno"
                             time="6:00 pm - 9:30 pm"
-                            startDate="9 Feb"
-                            status="CONFIRMADO"
+                            startDate="Fecha Est."
+                            status="ABIERTO"
                         />
                     </div>
 

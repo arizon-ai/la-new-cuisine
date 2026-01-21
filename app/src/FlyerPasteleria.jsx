@@ -181,22 +181,22 @@ export default function FlyerPasteleria() {
                             month="Feb"
                             schedule="Miércoles / Jueves"
                             time="8:00 am - 12:30 pm / 2:00 - 5:30 pm"
-                            startDate="25-26 Feb"
-                            status="ESTIMADO"
+                            startDate="25-26 Feb (Est.)"
+                            status="ABIERTO"
                         />
                         <DateCard
                             month="Feb"
                             schedule="Sábados (Mañana)"
                             time="8:00 am - 12:30 pm"
-                            startDate="28 Feb"
-                            status="ESTIMADO"
+                            startDate="28 Feb (Est.)"
+                            status="ABIERTO"
                         />
                         <DateCard
                             month="Feb"
                             schedule="Lunes Nocturno"
                             time="6:00 pm - 9:30 pm"
-                            startDate="23 Feb"
-                            status="CONFIRMADO"
+                            startDate="23 Feb (Est.)"
+                            status="ABIERTO"
                         />
                     </div>
 
