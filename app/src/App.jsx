@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Brochure from './Brochure'
 import OfertaAcademica from './OfertaAcademica'
 import FlyerPasteleria from './FlyerPasteleria'
@@ -7,168 +7,185 @@ import FlyerPanaderia from './FlyerPanaderia'
 import FlyerGerencia from './FlyerGerencia'
 import FlyerCocina from './FlyerCocina'
 
-// Card Grid Navigation
+// Sticky Header Navigation
 function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const menuItems = [
-    { path: '/', label: 'Home', icon: '🏠', description: 'Inicio y Brochure', color: '#1a1a2e' },
-    { path: '/oferta', label: 'Oferta Académica', icon: '📚', description: 'Todas nuestras carreras', color: '#16213e' },
-    { path: '/flyer-cocina', label: 'Cocina Internacional', icon: '🍳', description: 'Chef en Cocina Internacional', color: '#e94560' },
-    { path: '/flyer-pasteleria', label: 'Chef Pastelero', icon: '🍰', description: 'Arte en Pastelería', color: '#ff6b6b' },
-    { path: '/flyer-panaderia', label: 'Chef Panadero', icon: '🥖', description: 'Maestría en Panadería', color: '#c9a227' },
-    { path: '/flyer-gerencia', label: 'Gerencia Gastronómica', icon: '💼', description: 'Diplomado Gerencial', color: '#0f3460' },
+    { path: '/', label: 'Home' },
+    { path: '/oferta', label: 'Oferta Académica' },
+    { path: '/flyer-cocina', label: 'Cocina Internacional' },
+    { path: '/flyer-pasteleria', label: 'Chef Pastelero' },
+    { path: '/flyer-panaderia', label: 'Chef Panadero' },
+    { path: '/flyer-gerencia', label: 'Gerencia Gastronómica' },
   ];
 
   return (
-    <>
-      {/* Botón Hamburguesa */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        style={{
-          position: 'fixed',
-          top: '20px',
-          right: '20px',
-          zIndex: 1100,
-          width: '56px',
-          height: '56px',
-          borderRadius: '50%',
-          border: 'none',
-          background: isOpen ? '#e94560' : 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)',
-          color: '#fff',
-          fontSize: '24px',
-          cursor: 'pointer',
-          boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
-          transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          fontFamily: "'Inter', sans-serif",
-        }}
-        onMouseEnter={(e) => {
-          e.target.style.transform = 'scale(1.1)';
-          e.target.style.boxShadow = '0 6px 25px rgba(0,0,0,0.4)';
-        }}
-        onMouseLeave={(e) => {
-          e.target.style.transform = 'scale(1)';
-          e.target.style.boxShadow = '0 4px 20px rgba(0,0,0,0.3)';
-        }}
-      >
-        {isOpen ? '✕' : '☰'}
-      </button>
-
-      {/* Overlay con Card Grid */}
+    <header
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 1000,
+        background: scrolled
+          ? 'rgba(255, 255, 255, 0.95)'
+          : 'rgba(255, 255, 255, 1)',
+        backdropFilter: scrolled ? 'blur(10px)' : 'none',
+        borderBottom: '2px solid #000',
+        transition: 'all 0.3s ease',
+        padding: scrolled ? '8px 0' : '16px 0',
+      }}
+    >
       <div
         style={{
-          position: 'fixed',
-          inset: 0,
-          zIndex: 1050,
-          background: 'linear-gradient(135deg, rgba(26,26,46,0.98) 0%, rgba(22,33,62,0.98) 100%)',
-          backdropFilter: 'blur(10px)',
-          opacity: isOpen ? 1 : 0,
-          visibility: isOpen ? 'visible' : 'hidden',
-          transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+          maxWidth: '1400px',
+          margin: '0 auto',
+          padding: '0 24px',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center',
-          padding: '20px',
+          justifyContent: 'space-between',
         }}
       >
-        <div
+        {/* Logo */}
+        <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
+          <img
+            src="/logo.png"
+            alt="La New Cuisine"
+            style={{
+              height: scrolled ? '40px' : '55px',
+              width: 'auto',
+              transition: 'height 0.3s ease',
+            }}
+          />
+        </Link>
+
+        {/* Desktop Navigation */}
+        <nav
           style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '20px',
-            maxWidth: '1000px',
-            width: '100%',
-            transform: isOpen ? 'translateY(0) scale(1)' : 'translateY(30px) scale(0.95)',
-            transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-            transitionDelay: isOpen ? '0.1s' : '0s',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '4px',
+            fontFamily: "'Inter', sans-serif",
           }}
+          className="hide-mobile"
         >
-          {menuItems.map((item, index) => (
+          {menuItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}
-              onClick={() => setIsOpen(false)}
               style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                padding: '30px 20px',
-                borderRadius: '20px',
-                background: location.pathname === item.path
-                  ? `linear-gradient(135deg, ${item.color} 0%, ${item.color}dd 100%)`
-                  : 'rgba(255,255,255,0.05)',
-                border: location.pathname === item.path
-                  ? '2px solid rgba(255,255,255,0.3)'
-                  : '1px solid rgba(255,255,255,0.1)',
+                padding: scrolled ? '8px 14px' : '10px 16px',
+                backgroundColor: location.pathname === item.path ? '#000' : 'transparent',
+                color: location.pathname === item.path ? '#fff' : '#000',
                 textDecoration: 'none',
-                color: '#fff',
-                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                cursor: 'pointer',
-                transform: isOpen ? 'translateY(0)' : 'translateY(20px)',
-                opacity: isOpen ? 1 : 0,
-                transitionDelay: isOpen ? `${0.1 + index * 0.05}s` : '0s',
+                fontWeight: 600,
+                fontSize: scrolled ? '11px' : '12px',
+                letterSpacing: '0.02em',
+                transition: 'all 0.2s ease',
+                borderRadius: '0',
+                border: location.pathname === item.path ? '2px solid #000' : '2px solid transparent',
+                textTransform: 'uppercase',
               }}
               onMouseEnter={(e) => {
                 if (location.pathname !== item.path) {
-                  e.currentTarget.style.background = `linear-gradient(135deg, ${item.color}99 0%, ${item.color}66 100%)`;
-                  e.currentTarget.style.transform = 'translateY(-5px) scale(1.02)';
-                  e.currentTarget.style.boxShadow = `0 10px 40px ${item.color}44`;
+                  e.currentTarget.style.backgroundColor = '#f5f5f5';
+                  e.currentTarget.style.border = '2px solid #000';
                 }
               }}
               onMouseLeave={(e) => {
                 if (location.pathname !== item.path) {
-                  e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
-                  e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                  e.currentTarget.style.boxShadow = 'none';
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                  e.currentTarget.style.border = '2px solid transparent';
                 }
               }}
             >
-              <span style={{ fontSize: '48px', marginBottom: '15px' }}>{item.icon}</span>
-              <span style={{
-                fontSize: '18px',
-                fontWeight: 700,
-                marginBottom: '8px',
-                fontFamily: "'Inter', sans-serif",
-                textAlign: 'center',
-              }}>
-                {item.label}
-              </span>
-              <span style={{
-                fontSize: '13px',
-                opacity: 0.7,
-                fontFamily: "'Inter', sans-serif",
-                textAlign: 'center',
-              }}>
-                {item.description}
-              </span>
-              {location.pathname === item.path && (
-                <span style={{
-                  marginTop: '12px',
-                  padding: '4px 12px',
-                  background: 'rgba(255,255,255,0.2)',
-                  borderRadius: '20px',
-                  fontSize: '11px',
-                  fontWeight: 600,
-                }}>
-                  ACTUAL
-                </span>
-              )}
+              {item.label}
             </Link>
           ))}
-        </div>
+        </nav>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="hide-desktop"
+          style={{
+            background: mobileMenuOpen ? '#000' : 'transparent',
+            color: mobileMenuOpen ? '#fff' : '#000',
+            border: '2px solid #000',
+            padding: '10px 14px',
+            fontSize: '18px',
+            cursor: 'pointer',
+            fontFamily: "'Inter', sans-serif",
+            transition: 'all 0.2s ease',
+          }}
+        >
+          {mobileMenuOpen ? '✕' : '☰'}
+        </button>
       </div>
-    </>
+
+      {/* Mobile Menu Dropdown */}
+      <div
+        className="hide-desktop"
+        style={{
+          maxHeight: mobileMenuOpen ? '400px' : '0',
+          overflow: 'hidden',
+          transition: 'max-height 0.3s ease',
+          background: '#fff',
+          borderTop: mobileMenuOpen ? '1px solid #eee' : 'none',
+        }}
+      >
+        <nav
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            padding: mobileMenuOpen ? '16px 24px' : '0 24px',
+            gap: '8px',
+            fontFamily: "'Inter', sans-serif",
+          }}
+        >
+          {menuItems.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              onClick={() => setMobileMenuOpen(false)}
+              style={{
+                padding: '14px 16px',
+                backgroundColor: location.pathname === item.path ? '#000' : '#f9f9f9',
+                color: location.pathname === item.path ? '#fff' : '#000',
+                textDecoration: 'none',
+                fontWeight: 600,
+                fontSize: '13px',
+                letterSpacing: '0.02em',
+                border: '2px solid #000',
+                textTransform: 'uppercase',
+                textAlign: 'center',
+              }}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+      </div>
+    </header>
   );
 }
 
 function App() {
   return (
     <BrowserRouter>
+      {/* Spacer for fixed header */}
+      <div style={{ height: '89px' }} />
       <Navigation />
       <Routes>
         <Route path="/" element={<Brochure />} />
@@ -183,6 +200,3 @@ function App() {
 }
 
 export default App
-
-
-
