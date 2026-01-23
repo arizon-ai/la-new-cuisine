@@ -7,177 +7,231 @@ import FlyerPanaderia from './FlyerPanaderia'
 import FlyerGerencia from './FlyerGerencia'
 import FlyerCocina from './FlyerCocina'
 
-// Sticky Header Navigation
+// Glassmorphism Navigation
 function Navigation() {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 30);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const menuItems = [
-    { path: '/', label: 'Home' },
-    { path: '/oferta', label: 'Oferta Académica' },
-    { path: '/flyer-cocina', label: 'Cocina Internacional' },
-    { path: '/flyer-pasteleria', label: 'Chef Pastelero' },
-    { path: '/flyer-panaderia', label: 'Chef Panadero' },
-    { path: '/flyer-gerencia', label: 'Gerencia Gastronómica' },
+    { path: '/', label: 'Home', icon: '🏠' },
+    { path: '/oferta', label: 'Oferta Académica', icon: '📚' },
+    { path: '/flyer-cocina', label: 'Cocina Internacional', icon: '🍳' },
+    { path: '/flyer-pasteleria', label: 'Chef Pastelero', icon: '🍰' },
+    { path: '/flyer-panaderia', label: 'Chef Panadero', icon: '🥖' },
+    { path: '/flyer-gerencia', label: 'Gerencia Gastronómica', icon: '💼' },
   ];
 
   return (
-    <header
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 1000,
-        background: scrolled
-          ? 'rgba(255, 255, 255, 0.95)'
-          : 'rgba(255, 255, 255, 1)',
-        backdropFilter: scrolled ? 'blur(10px)' : 'none',
-        borderBottom: '2px solid #000',
-        transition: 'all 0.3s ease',
-        padding: scrolled ? '8px 0' : '16px 0',
-      }}
-    >
-      <div
+    <>
+      {/* Desktop Glassmorphism Nav */}
+      <nav
+        className="hide-mobile"
         style={{
-          maxWidth: '1400px',
-          margin: '0 auto',
-          padding: '0 24px',
+          position: 'fixed',
+          top: '20px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          zIndex: 1000,
+          background: scrolled
+            ? 'rgba(255, 255, 255, 0.75)'
+            : 'rgba(255, 255, 255, 0.85)',
+          backdropFilter: 'blur(20px)',
+          WebkitBackdropFilter: 'blur(20px)',
+          borderRadius: '50px',
+          padding: '8px 12px',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'space-between',
+          gap: '6px',
+          boxShadow: scrolled
+            ? '0 8px 32px rgba(0, 0, 0, 0.15), inset 0 0 0 1px rgba(255,255,255,0.5)'
+            : '0 4px 24px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255,255,255,0.5)',
+          border: '1px solid rgba(0, 0, 0, 0.08)',
+          fontFamily: "'Inter', sans-serif",
+          transition: 'all 0.3s ease',
         }}
       >
-        {/* Logo */}
-        <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
+        {/* Logo pequeño */}
+        <Link
+          to="/"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            marginRight: '8px',
+            padding: '4px 8px',
+          }}
+        >
           <img
             src="/logo.png"
             alt="La New Cuisine"
             style={{
-              height: scrolled ? '40px' : '55px',
+              height: '32px',
               width: 'auto',
-              transition: 'height 0.3s ease',
             }}
           />
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '4px',
-            fontFamily: "'Inter', sans-serif",
-          }}
-          className="hide-mobile"
-        >
-          {menuItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              style={{
-                padding: scrolled ? '8px 14px' : '10px 16px',
-                backgroundColor: location.pathname === item.path ? '#000' : 'transparent',
-                color: location.pathname === item.path ? '#fff' : '#000',
-                textDecoration: 'none',
-                fontWeight: 600,
-                fontSize: scrolled ? '11px' : '12px',
-                letterSpacing: '0.02em',
-                transition: 'all 0.2s ease',
-                borderRadius: '0',
-                border: location.pathname === item.path ? '2px solid #000' : '2px solid transparent',
-                textTransform: 'uppercase',
-              }}
-              onMouseEnter={(e) => {
-                if (location.pathname !== item.path) {
-                  e.currentTarget.style.backgroundColor = '#f5f5f5';
-                  e.currentTarget.style.border = '2px solid #000';
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (location.pathname !== item.path) {
-                  e.currentTarget.style.backgroundColor = 'transparent';
-                  e.currentTarget.style.border = '2px solid transparent';
-                }
-              }}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+        {/* Separador */}
+        <div style={{
+          width: '1px',
+          height: '24px',
+          background: 'rgba(0,0,0,0.15)',
+          marginRight: '6px',
+        }} />
 
-        {/* Mobile Menu Button */}
+        {menuItems.map((item) => (
+          <Link
+            key={item.path}
+            to={item.path}
+            style={{
+              padding: '10px 16px',
+              backgroundColor: location.pathname === item.path
+                ? 'rgba(0, 0, 0, 0.9)'
+                : 'transparent',
+              color: location.pathname === item.path ? '#fff' : '#333',
+              textDecoration: 'none',
+              fontWeight: 600,
+              fontSize: '12px',
+              letterSpacing: '0.01em',
+              transition: 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
+              borderRadius: '30px',
+              whiteSpace: 'nowrap',
+            }}
+            onMouseEnter={(e) => {
+              if (location.pathname !== item.path) {
+                e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.08)';
+              }
+            }}
+            onMouseLeave={(e) => {
+              if (location.pathname !== item.path) {
+                e.currentTarget.style.backgroundColor = 'transparent';
+              }
+            }}
+          >
+            {item.label}
+          </Link>
+        ))}
+      </nav>
+
+      {/* Mobile Glassmorphism Nav */}
+      <div className="hide-desktop">
+        {/* Floating Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="hide-desktop"
           style={{
-            background: mobileMenuOpen ? '#000' : 'transparent',
+            position: 'fixed',
+            top: '20px',
+            right: '20px',
+            zIndex: 1100,
+            width: '52px',
+            height: '52px',
+            borderRadius: '50%',
+            border: 'none',
+            background: mobileMenuOpen
+              ? 'rgba(0, 0, 0, 0.9)'
+              : 'rgba(255, 255, 255, 0.85)',
+            backdropFilter: 'blur(20px)',
+            WebkitBackdropFilter: 'blur(20px)',
             color: mobileMenuOpen ? '#fff' : '#000',
-            border: '2px solid #000',
-            padding: '10px 14px',
-            fontSize: '18px',
+            fontSize: '20px',
             cursor: 'pointer',
+            boxShadow: '0 4px 24px rgba(0, 0, 0, 0.15)',
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
             fontFamily: "'Inter', sans-serif",
-            transition: 'all 0.2s ease',
           }}
         >
           {mobileMenuOpen ? '✕' : '☰'}
         </button>
-      </div>
 
-      {/* Mobile Menu Dropdown */}
-      <div
-        className="hide-desktop"
-        style={{
-          maxHeight: mobileMenuOpen ? '400px' : '0',
-          overflow: 'hidden',
-          transition: 'max-height 0.3s ease',
-          background: '#fff',
-          borderTop: mobileMenuOpen ? '1px solid #eee' : 'none',
-        }}
-      >
-        <nav
+        {/* Mobile Menu Overlay */}
+        <div
           style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 1050,
+            background: 'rgba(255, 255, 255, 0.9)',
+            backdropFilter: 'blur(25px)',
+            WebkitBackdropFilter: 'blur(25px)',
+            opacity: mobileMenuOpen ? 1 : 0,
+            visibility: mobileMenuOpen ? 'visible' : 'hidden',
+            transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
             display: 'flex',
             flexDirection: 'column',
-            padding: mobileMenuOpen ? '16px 24px' : '0 24px',
-            gap: '8px',
-            fontFamily: "'Inter', sans-serif",
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '20px',
           }}
         >
-          {menuItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              onClick={() => setMobileMenuOpen(false)}
-              style={{
-                padding: '14px 16px',
-                backgroundColor: location.pathname === item.path ? '#000' : '#f9f9f9',
-                color: location.pathname === item.path ? '#fff' : '#000',
-                textDecoration: 'none',
-                fontWeight: 600,
-                fontSize: '13px',
-                letterSpacing: '0.02em',
-                border: '2px solid #000',
-                textTransform: 'uppercase',
-                textAlign: 'center',
-              }}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+          {/* Logo en overlay */}
+          <img
+            src="/logo.png"
+            alt="La New Cuisine"
+            style={{
+              height: '60px',
+              width: 'auto',
+              marginBottom: '40px',
+              opacity: mobileMenuOpen ? 1 : 0,
+              transform: mobileMenuOpen ? 'translateY(0)' : 'translateY(-20px)',
+              transition: 'all 0.4s ease',
+              transitionDelay: '0.1s',
+            }}
+          />
+
+          <nav
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '12px',
+              width: '100%',
+              maxWidth: '300px',
+            }}
+          >
+            {menuItems.map((item, index) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                onClick={() => setMobileMenuOpen(false)}
+                style={{
+                  width: '100%',
+                  padding: '18px 24px',
+                  backgroundColor: location.pathname === item.path
+                    ? 'rgba(0, 0, 0, 0.9)'
+                    : 'rgba(255, 255, 255, 0.6)',
+                  color: location.pathname === item.path ? '#fff' : '#333',
+                  textDecoration: 'none',
+                  fontWeight: 600,
+                  fontSize: '15px',
+                  fontFamily: "'Inter', sans-serif",
+                  borderRadius: '16px',
+                  textAlign: 'center',
+                  boxShadow: '0 2px 12px rgba(0,0,0,0.08)',
+                  border: '1px solid rgba(0,0,0,0.05)',
+                  opacity: mobileMenuOpen ? 1 : 0,
+                  transform: mobileMenuOpen ? 'translateY(0)' : 'translateY(20px)',
+                  transition: 'all 0.4s ease',
+                  transitionDelay: mobileMenuOpen ? `${0.15 + index * 0.05}s` : '0s',
+                }}
+              >
+                <span style={{ marginRight: '10px' }}>{item.icon}</span>
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
       </div>
-    </header>
+    </>
   );
 }
 
@@ -185,7 +239,7 @@ function App() {
   return (
     <BrowserRouter>
       {/* Spacer for fixed header */}
-      <div style={{ height: '89px' }} />
+      <div style={{ height: '90px' }} className="hide-mobile" />
       <Navigation />
       <Routes>
         <Route path="/" element={<Brochure />} />
