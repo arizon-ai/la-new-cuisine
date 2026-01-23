@@ -2,7 +2,7 @@ import React from 'react';
 import {
     ChefHat, GraduationCap, Clock, Calendar, MapPin, Phone, Mail,
     Award, Users, Utensils, Star, ArrowRight, Check, Sparkles,
-    BookOpen, Building, Home as HomeIcon
+    BookOpen, Building, Home as HomeIcon, DollarSign, Package
 } from 'lucide-react';
 
 // ============================================
@@ -131,62 +131,130 @@ export default function PresentacionBrochure() {
 
                     <div className="grid md:grid-cols-3 gap-0 border-2 border-black">
                         {/* Chef Cocina Internacional */}
-                        <div className="border-b md:border-b-0 md:border-r border-black p-8 lg:p-12 group hover:bg-black hover:text-white transition-all duration-500">
-                            <div className="flex items-center gap-3 mb-6">
-                                <Utensils className="w-8 h-8" />
-                                <span className="text-xs uppercase tracking-widest">Carrera Larga</span>
+                        <div className="border-b md:border-b-0 md:border-r border-black p-8 lg:p-10">
+                            <div className="flex items-center gap-3 mb-4">
+                                <Utensils className="w-7 h-7" />
+                                <span className="text-xs uppercase tracking-widest bg-black text-white px-2 py-1">Carrera Larga</span>
                             </div>
-                            <h3 className="text-3xl font-serif font-bold mb-4">Chef en Cocina Internacional</h3>
-                            <p className="text-gray-600 group-hover:text-gray-300 mb-6">
-                                Formación integral desde técnicas fundamentales hasta la vanguardia molecular.
+                            <h3 className="text-2xl font-serif font-bold mb-3">Chef en Cocina Internacional</h3>
+                            <p className="text-gray-600 mb-4 text-sm">
+                                Formación integral desde técnicas fundamentales hasta la vanguardia molecular. 3 niveles: Básico, Intermedio y Avanzado.
                             </p>
-                            <div className="space-y-3 text-sm">
-                                <p className="flex items-center gap-2"><Clock className="w-4 h-4" /> 15 meses + pasantías</p>
-                                <p className="flex items-center gap-2"><Calendar className="w-4 h-4" /> Inicio: 26 Enero 2026</p>
+
+                            {/* Horarios */}
+                            <div className="bg-neutral-50 p-4 mb-4 text-sm">
+                                <p className="font-bold mb-2 flex items-center gap-2"><Clock className="w-4 h-4" /> Horarios Disponibles:</p>
+                                <ul className="space-y-1 text-gray-600">
+                                    <li>• Lunes 26/01 y Martes 10/02: 2:00-5:30 PM</li>
+                                    <li>• Sábados: 8:00 AM - 12:30 PM</li>
+                                    <li>• Nocturno (23 Feb): Lunes 6:00-9:30 PM</li>
+                                </ul>
                             </div>
-                            <div className="mt-8 pt-6 border-t border-gray-200 group-hover:border-gray-700">
-                                <p className="text-xs uppercase tracking-widest mb-2">Inversión mensual</p>
-                                <p className="text-4xl font-bold">140 €</p>
+
+                            {/* Inversión */}
+                            <div className="border-t pt-4 space-y-2 text-sm">
+                                <div className="flex justify-between">
+                                    <span>Inscripción</span>
+                                    <span className="font-bold">50 €</span>
+                                </div>
+                                <div className="flex justify-between">
+                                    <span>Mensualidad</span>
+                                    <span className="font-bold text-xl">140 €</span>
+                                </div>
+                                <div className="flex justify-between text-gray-500">
+                                    <span>Kit de estudio</span>
+                                    <span>130 €</span>
+                                </div>
+                                <p className="text-xs text-gray-400 mt-2">*Kit: filipina, gorro, delantal, 2 cuchillos. Financiamiento 2 cuotas</p>
+                            </div>
+
+                            <div className="mt-4 pt-4 border-t">
+                                <p className="text-xs text-gray-500"><Clock className="w-3 h-3 inline mr-1" /> 15 meses + pasantías</p>
                             </div>
                         </div>
 
                         {/* Chef Pastelero */}
-                        <div className="border-b md:border-b-0 md:border-r border-black p-8 lg:p-12 group hover:bg-black hover:text-white transition-all duration-500">
-                            <div className="flex items-center gap-3 mb-6">
-                                <Sparkles className="w-8 h-8" />
-                                <span className="text-xs uppercase tracking-widest">Especialización</span>
+                        <div className="border-b md:border-b-0 md:border-r border-black p-8 lg:p-10">
+                            <div className="flex items-center gap-3 mb-4">
+                                <Sparkles className="w-7 h-7" />
+                                <span className="text-xs uppercase tracking-widest bg-black text-white px-2 py-1">Especialización</span>
                             </div>
-                            <h3 className="text-3xl font-serif font-bold mb-4">Chef Pastelero</h3>
-                            <p className="text-gray-600 group-hover:text-gray-300 mb-6">
-                                Técnicas de pastelería francesa, chocolatería fina y arte del emplatado.
+                            <h3 className="text-2xl font-serif font-bold mb-3">Chef Pastelero</h3>
+                            <p className="text-gray-600 mb-4 text-sm">
+                                Técnicas de pastelería francesa, chocolatería fina, bombonería y arte del emplatado profesional.
                             </p>
-                            <div className="space-y-3 text-sm">
-                                <p className="flex items-center gap-2"><Clock className="w-4 h-4" /> Niveles progresivos</p>
-                                <p className="flex items-center gap-2"><Calendar className="w-4 h-4" /> Inicio: 25-26 Feb 2026</p>
+
+                            {/* Horarios */}
+                            <div className="bg-neutral-50 p-4 mb-4 text-sm">
+                                <p className="font-bold mb-2 flex items-center gap-2"><Clock className="w-4 h-4" /> Horarios Disponibles:</p>
+                                <ul className="space-y-1 text-gray-600">
+                                    <li>• Mié/Jue 25-26 Feb: 8:00-12:30 / 2:00-5:30 PM</li>
+                                    <li>• Sábado 28 Feb: 8:00 AM - 12:30 PM</li>
+                                    <li>• Nocturno Lunes 23 Feb: 6:00-9:30 PM</li>
+                                </ul>
                             </div>
-                            <div className="mt-8 pt-6 border-t border-gray-200 group-hover:border-gray-700">
-                                <p className="text-xs uppercase tracking-widest mb-2">Inversión mensual</p>
-                                <p className="text-4xl font-bold">140 €</p>
+
+                            {/* Inversión */}
+                            <div className="border-t pt-4 space-y-2 text-sm">
+                                <div className="flex justify-between">
+                                    <span>Inscripción</span>
+                                    <span className="font-bold">50 €</span>
+                                </div>
+                                <div className="flex justify-between">
+                                    <span>Mensualidad</span>
+                                    <span className="font-bold text-xl">140 €</span>
+                                </div>
+                                <div className="flex justify-between text-gray-500">
+                                    <span>Kit de estudio</span>
+                                    <span>90 €</span>
+                                </div>
+                                <p className="text-xs text-gray-400 mt-2">*Kit: filipina, gorro, delantal. Financiamiento 2 cuotas</p>
+                            </div>
+
+                            <div className="mt-4 pt-4 border-t">
+                                <p className="text-xs text-gray-500"><Clock className="w-3 h-3 inline mr-1" /> Niveles progresivos</p>
                             </div>
                         </div>
 
                         {/* Chef Panadero */}
-                        <div className="p-8 lg:p-12 group hover:bg-black hover:text-white transition-all duration-500">
-                            <div className="flex items-center gap-3 mb-6">
-                                <ChefHat className="w-8 h-8" />
-                                <span className="text-xs uppercase tracking-widest">Especialización</span>
+                        <div className="p-8 lg:p-10">
+                            <div className="flex items-center gap-3 mb-4">
+                                <ChefHat className="w-7 h-7" />
+                                <span className="text-xs uppercase tracking-widest bg-black text-white px-2 py-1">Especialización</span>
                             </div>
-                            <h3 className="text-3xl font-serif font-bold mb-4">Chef Panadero</h3>
-                            <p className="text-gray-600 group-hover:text-gray-300 mb-6">
-                                Transforma tu pasión por el pan en una profesión con aroma a éxito.
+                            <h3 className="text-2xl font-serif font-bold mb-3">Chef Panadero</h3>
+                            <p className="text-gray-600 mb-4 text-sm">
+                                Transforma tu pasión por el pan en una profesión. Desde pan campesino hasta masa madre y ciabatta.
                             </p>
-                            <div className="space-y-3 text-sm">
-                                <p className="flex items-center gap-2"><Clock className="w-4 h-4" /> 8 meses</p>
-                                <p className="flex items-center gap-2"><Calendar className="w-4 h-4" /> Turno tarde y nocturno</p>
+
+                            {/* Horarios */}
+                            <div className="bg-neutral-50 p-4 mb-4 text-sm">
+                                <p className="font-bold mb-2 flex items-center gap-2"><Clock className="w-4 h-4" /> Horarios Disponibles:</p>
+                                <ul className="space-y-1 text-gray-600">
+                                    <li>• Lunes Tarde: 2:00-5:30 PM</li>
+                                    <li>• Lunes Nocturno: 6:00-9:30 PM</li>
+                                </ul>
                             </div>
-                            <div className="mt-8 pt-6 border-t border-gray-200 group-hover:border-gray-700">
-                                <p className="text-xs uppercase tracking-widest mb-2">Inversión mensual</p>
-                                <p className="text-4xl font-bold">140 €</p>
+
+                            {/* Inversión */}
+                            <div className="border-t pt-4 space-y-2 text-sm">
+                                <div className="flex justify-between">
+                                    <span>Inscripción</span>
+                                    <span className="font-bold">50 €</span>
+                                </div>
+                                <div className="flex justify-between">
+                                    <span>Mensualidad</span>
+                                    <span className="font-bold text-xl">140 €</span>
+                                </div>
+                                <div className="flex justify-between text-gray-500">
+                                    <span>Kit de estudio</span>
+                                    <span>90 €</span>
+                                </div>
+                                <p className="text-xs text-gray-400 mt-2">*Kit: filipina, gorro, delantal. Financiamiento 2 cuotas</p>
+                            </div>
+
+                            <div className="mt-4 pt-4 border-t">
+                                <p className="text-xs text-gray-500"><Clock className="w-3 h-3 inline mr-1" /> 8 meses de duración</p>
                             </div>
                         </div>
                     </div>
@@ -203,38 +271,69 @@ export default function PresentacionBrochure() {
 
                     <div className="grid md:grid-cols-3 gap-8">
                         {/* Junior Chef */}
-                        <div className="bg-white/5 backdrop-blur border border-white/10 p-8 hover:bg-white/10 transition-all">
+                        <div className="bg-white/5 backdrop-blur border border-white/10 p-8">
                             <div className="w-16 h-16 bg-white text-black flex items-center justify-center mb-6 text-3xl">
                                 👨‍🍳
                             </div>
-                            <h3 className="text-2xl font-serif font-bold mb-3">Junior Chef</h3>
-                            <p className="text-gray-400 mb-4">Cocina para niños y adolescentes de 6 a 16 años.</p>
+                            <h3 className="text-2xl font-serif font-bold mb-2">Junior Chef</h3>
+                            <p className="text-sm text-gray-300 mb-4">Cocina para niños (6-12 años) y adolescentes (13-16 años)</p>
+
+                            <div className="bg-white/5 p-4 mb-4 text-sm">
+                                <p className="font-bold mb-2">📅 Viernes 20 de Febrero 2026</p>
+                                <p className="text-gray-400">2:00 PM - 6:00 PM • 4 meses</p>
+                            </div>
+
                             <ul className="space-y-2 text-sm text-gray-300 mb-6">
-                                <li>• Viernes 2:00 PM - 6:00 PM</li>
-                                <li>• 4 meses de duración</li>
-                                <li>• Incluye ingredientes y recetas</li>
+                                <li className="flex items-center gap-2"><Check className="w-4 h-4" /> 2 platos salados + 1 postre por clase</li>
+                                <li className="flex items-center gap-2"><Check className="w-4 h-4" /> Ingredientes y recetas incluidos</li>
+                                <li className="flex items-center gap-2"><Check className="w-4 h-4" /> Certificado al finalizar</li>
                             </ul>
-                            <div className="flex items-baseline gap-2">
-                                <span className="text-3xl font-bold">150 €</span>
-                                <span className="text-gray-500">/mes</span>
+
+                            <div className="border-t border-white/20 pt-4 space-y-2">
+                                <div className="flex justify-between text-sm">
+                                    <span className="text-gray-400">Inscripción</span>
+                                    <span>50 € <span className="text-xs text-gray-500">(incluye uniforme)</span></span>
+                                </div>
+                                <div className="flex justify-between">
+                                    <span className="text-gray-400">Mensualidad</span>
+                                    <span className="text-2xl font-bold">150 €</span>
+                                </div>
                             </div>
                         </div>
 
                         {/* Asistente de Chef */}
-                        <div className="bg-white/5 backdrop-blur border border-white/10 p-8 hover:bg-white/10 transition-all">
+                        <div className="bg-white/5 backdrop-blur border border-white/10 p-8">
                             <div className="w-16 h-16 bg-white text-black flex items-center justify-center mb-6 text-3xl">
                                 🍴
                             </div>
-                            <h3 className="text-2xl font-serif font-bold mb-3">Asistente de Chef</h3>
-                            <p className="text-gray-400 mb-4">Iniciación al mundo culinario profesional.</p>
+                            <h3 className="text-2xl font-serif font-bold mb-2">Asistente de Chef</h3>
+                            <p className="text-sm text-gray-300 mb-4">Iniciación al mundo culinario profesional</p>
+
+                            <div className="bg-white/5 p-4 mb-4 text-sm">
+                                <p className="font-bold mb-2">📅 Viernes 18 de Febrero 2026</p>
+                                <p className="text-gray-400">6:00 PM - 9:30 PM • 4 meses</p>
+                            </div>
+
                             <ul className="space-y-2 text-sm text-gray-300 mb-6">
-                                <li>• Viernes 6:00 PM - 9:30 PM</li>
-                                <li>• 4 meses de duración</li>
-                                <li>• Kit de estudio incluido</li>
+                                <li className="flex items-center gap-2"><Check className="w-4 h-4" /> Cortes, fondos, salsas madres</li>
+                                <li className="flex items-center gap-2"><Check className="w-4 h-4" /> Carnes, pescados, mariscos</li>
+                                <li className="flex items-center gap-2"><Check className="w-4 h-4" /> Pastas, panes, pizzas</li>
                             </ul>
-                            <div className="flex items-baseline gap-2">
-                                <span className="text-3xl font-bold">120 €</span>
-                                <span className="text-gray-500">/mes</span>
+
+                            <div className="border-t border-white/20 pt-4 space-y-2">
+                                <div className="flex justify-between text-sm">
+                                    <span className="text-gray-400">Inscripción</span>
+                                    <span>50 €</span>
+                                </div>
+                                <div className="flex justify-between">
+                                    <span className="text-gray-400">Mensualidad</span>
+                                    <span className="text-2xl font-bold">120 €</span>
+                                </div>
+                                <div className="flex justify-between text-sm">
+                                    <span className="text-gray-400">Kit de estudio</span>
+                                    <span>130 €</span>
+                                </div>
+                                <p className="text-xs text-gray-500">*Kit: filipina, gorro, delantal, 2 cuchillos</p>
                             </div>
                         </div>
 
@@ -246,16 +345,30 @@ export default function PresentacionBrochure() {
                             <div className="w-16 h-16 bg-black text-white flex items-center justify-center mb-6 text-3xl">
                                 🚀
                             </div>
-                            <h3 className="text-2xl font-serif font-bold mb-3">Cocina Internacional Intensivo</h3>
-                            <p className="text-gray-600 mb-4">Formación acelerada de martes a viernes.</p>
+                            <h3 className="text-2xl font-serif font-bold mb-2">Cocina Internacional Intensivo</h3>
+                            <p className="text-sm text-gray-600 mb-4">Formación acelerada completa</p>
+
+                            <div className="bg-neutral-100 p-4 mb-4 text-sm">
+                                <p className="font-bold mb-2">📅 24 de Febrero 2026</p>
+                                <p className="text-gray-600">Mar-Vie 6:00 PM - 9:30 PM</p>
+                            </div>
+
                             <ul className="space-y-2 text-sm text-gray-600 mb-6">
-                                <li>• Mar-Vie 6:00 PM - 9:30 PM</li>
-                                <li>• Básico + Intermedio + Avanzado</li>
-                                <li>• Inicio: 24 Feb 2026</li>
+                                <li className="flex items-center gap-2"><Check className="w-4 h-4" /> Nivel Básico completo</li>
+                                <li className="flex items-center gap-2"><Check className="w-4 h-4" /> Nivel Intermedio completo</li>
+                                <li className="flex items-center gap-2"><Check className="w-4 h-4" /> Nivel Avanzado completo</li>
                             </ul>
-                            <div className="flex items-baseline gap-2">
-                                <span className="text-3xl font-bold">1,320 €</span>
-                                <span className="text-gray-500">x2 cuotas</span>
+
+                            <div className="border-t pt-4 space-y-2">
+                                <div className="flex justify-between text-sm">
+                                    <span className="text-gray-500">Inscripción</span>
+                                    <span className="font-bold">100 €</span>
+                                </div>
+                                <div className="flex justify-between">
+                                    <span className="text-gray-500">Inversión total</span>
+                                    <span className="text-2xl font-bold">2,640 €</span>
+                                </div>
+                                <p className="text-xs text-gray-500">*Pagadero en 2 cuotas de 1,320 €</p>
                             </div>
                         </div>
                     </div>
@@ -265,9 +378,14 @@ export default function PresentacionBrochure() {
             {/* ========== SLIDE 5: DIPLOMADOS Y TALLERES ========== */}
             <section className="py-24 bg-neutral-50">
                 <div className="max-w-7xl mx-auto px-8">
-                    <div className="grid md:grid-cols-2 gap-16">
+                    <div className="text-center mb-16">
+                        <span className="text-xs uppercase tracking-[0.3em] text-gray-500 mb-4 block">Formación Especializada</span>
+                        <h2 className="text-5xl md:text-6xl font-serif font-bold">Diplomados y Talleres</h2>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-12">
                         {/* Diplomado */}
-                        <div className="bg-white p-12 border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                        <div className="bg-white p-10 border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
                             <div className="flex items-center gap-3 mb-6">
                                 <GraduationCap className="w-10 h-10" />
                                 <span className="text-xs uppercase tracking-widest bg-black text-white px-3 py-1">Diplomado</span>
@@ -277,34 +395,53 @@ export default function PresentacionBrochure() {
                                 Formación integral para chefs, emprendedores y profesionales del sector alimentario.
                             </p>
 
-                            <div className="grid grid-cols-2 gap-4 mb-8">
-                                <div className="bg-neutral-100 p-4">
+                            {/* Horarios */}
+                            <div className="bg-neutral-50 p-4 mb-6 text-sm">
+                                <p className="font-bold mb-2">📅 Horarios Disponibles:</p>
+                                <ul className="space-y-1 text-gray-600">
+                                    <li>• Martes 3 Feb: 2:00-6:00 PM</li>
+                                    <li>• Sábado 31 Ene: 8:00-12:30</li>
+                                </ul>
+                            </div>
+
+                            <div className="grid grid-cols-3 gap-3 mb-6">
+                                <div className="bg-neutral-100 p-3 text-center">
                                     <p className="text-xs uppercase text-gray-500">Duración</p>
                                     <p className="font-bold">4 meses</p>
                                 </div>
-                                <div className="bg-neutral-100 p-4">
+                                <div className="bg-neutral-100 p-3 text-center">
+                                    <p className="text-xs uppercase text-gray-500">Inscripción</p>
+                                    <p className="font-bold">50 €</p>
+                                </div>
+                                <div className="bg-neutral-100 p-3 text-center">
                                     <p className="text-xs uppercase text-gray-500">Mensualidad</p>
                                     <p className="font-bold">130 €</p>
                                 </div>
                             </div>
 
+                            <h4 className="font-bold text-sm uppercase tracking-widest mb-3">Contenido:</h4>
                             <ul className="space-y-2 text-sm">
                                 {[
-                                    'Emprendimiento y Modelo Canvas',
+                                    'Emprendimiento y Modelo CANVAS',
                                     'Marketing Gastronómico',
                                     'Neuromarketing y Neurogastronomía',
-                                    'Ingeniería del Menú',
-                                    'Plan de Negocios Final'
+                                    'Capital humano, liderazgo y coaching',
+                                    'Diseño de espacios gastronómicos',
+                                    'Ingeniería del menú y catering',
+                                    'Presupuestos y control gastronómico',
+                                    'Marco jurídico gastronómico',
+                                    'Higiene y salud ocupacional',
+                                    'Plan de Negocio Final'
                                 ].map((item, i) => (
-                                    <li key={i} className="flex items-center gap-2">
-                                        <Check className="w-4 h-4" /> {item}
+                                    <li key={i} className="flex items-start gap-2">
+                                        <Check className="w-4 h-4 mt-0.5 flex-shrink-0" /> {item}
                                     </li>
                                 ))}
                             </ul>
                         </div>
 
                         {/* Taller Molecular */}
-                        <div className="bg-black text-white p-12 relative overflow-hidden">
+                        <div className="bg-black text-white p-10 relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
                             <div className="relative z-10">
                                 <div className="flex items-center gap-3 mb-6">
@@ -313,24 +450,38 @@ export default function PresentacionBrochure() {
                                 </div>
                                 <h3 className="text-3xl font-serif font-bold mb-4">ABC Cocina Molecular</h3>
                                 <p className="text-gray-400 mb-6">
-                                    Esferificaciones que estallan sabor, espumas etéreas y geles que desafían la gravedad.
+                                    ¡Revuelve la ciencia en tu cocina! Esferificaciones que estallan sabor, espumas etéreas y geles que desafían la gravedad.
                                 </p>
 
-                                <div className="bg-white/10 p-6 mb-8">
-                                    <p className="text-sm text-gray-400 mb-2">Con el Chef Jesús Gil</p>
-                                    <p className="text-2xl font-bold">3 de Febrero 2026</p>
-                                    <p className="text-gray-400">2:00 PM - 6:00 PM</p>
+                                <div className="bg-white/10 p-6 mb-6">
+                                    <p className="text-sm text-gray-400 mb-1">Con el Chef</p>
+                                    <p className="text-2xl font-bold mb-4">Jesús Gil</p>
+                                    <div className="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <p className="text-xs text-gray-400 uppercase">Fecha</p>
+                                            <p className="font-bold">3 de Febrero 2026</p>
+                                        </div>
+                                        <div>
+                                            <p className="text-xs text-gray-400 uppercase">Horario</p>
+                                            <p className="font-bold">2:00 - 6:00 PM</p>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div className="flex items-center justify-between">
+                                <div className="flex items-center justify-between mb-6">
                                     <div>
                                         <p className="text-xs uppercase text-gray-400">Inversión</p>
                                         <p className="text-4xl font-bold">40 €</p>
                                     </div>
-                                    <div className="flex items-center gap-2 text-sm">
-                                        <Check className="w-4 h-4" /> Certificado incluido
+                                    <div className="text-right">
+                                        <p className="flex items-center gap-2 text-sm"><Check className="w-4 h-4" /> Certificado</p>
+                                        <p className="flex items-center gap-2 text-sm"><Check className="w-4 h-4" /> Insumos incluidos</p>
                                     </div>
                                 </div>
+
+                                <p className="text-sm text-gray-400 italic">
+                                    "¡Cupo limitado! Inscríbete YA y crea magia gastronómica"
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -341,64 +492,61 @@ export default function PresentacionBrochure() {
             <section className="py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-8">
                     <div className="text-center mb-16">
-                        <span className="text-xs uppercase tracking-[0.3em] text-gray-500 mb-4 block">Para Empresas</span>
+                        <span className="text-xs uppercase tracking-[0.3em] text-gray-500 mb-4 block">Para Empresas y Particulares</span>
                         <h2 className="text-5xl md:text-6xl font-serif font-bold">Nuestros Servicios</h2>
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {/* Asesorías */}
-                        <div className="group">
-                            <div className="aspect-square bg-neutral-100 flex items-center justify-center mb-6 group-hover:bg-black group-hover:text-white transition-all">
-                                <Building className="w-16 h-16" />
-                            </div>
-                            <h3 className="text-xl font-bold mb-3">Asesorías Gastronómica</h3>
-                            <ul className="text-sm text-gray-600 space-y-1">
+                        <div className="group p-6 border-2 border-black hover:bg-black hover:text-white transition-all duration-300">
+                            <Building className="w-12 h-12 mb-4" />
+                            <h3 className="text-xl font-bold mb-4">Asesorías Gastronómica</h3>
+                            <ul className="text-sm space-y-2 text-gray-600 group-hover:text-gray-300">
                                 <li>• Diseño de propuesta gastronómica</li>
-                                <li>• Costeo y fichas técnicas</li>
+                                <li>• Diseño y carta de menú</li>
+                                <li>• Costeo, estandarización, fichas técnicas</li>
                                 <li>• Capacitación de personal</li>
                                 <li>• Ingeniería del menú</li>
+                                <li>• Diseño de espacios (neurogastronomía)</li>
+                                <li>• Equipamiento de cocina</li>
+                                <li>• Acompañamiento post apertura</li>
                             </ul>
                         </div>
 
                         {/* Chef at Home */}
-                        <div className="group">
-                            <div className="aspect-square bg-neutral-100 flex items-center justify-center mb-6 group-hover:bg-black group-hover:text-white transition-all">
-                                <HomeIcon className="w-16 h-16" />
-                            </div>
-                            <h3 className="text-xl font-bold mb-3">Chef at Home</h3>
-                            <ul className="text-sm text-gray-600 space-y-1">
+                        <div className="group p-6 border-2 border-black hover:bg-black hover:text-white transition-all duration-300">
+                            <HomeIcon className="w-12 h-12 mb-4" />
+                            <h3 className="text-xl font-bold mb-4">Chef at Home</h3>
+                            <ul className="text-sm space-y-2 text-gray-600 group-hover:text-gray-300">
                                 <li>• Planificación del menú</li>
-                                <li>• Compra de ingredientes</li>
-                                <li>• Ejecución a domicilio</li>
-                                <li>• Servicio personalizado</li>
+                                <li>• Servicio de compra de ingredientes</li>
+                                <li>• Ejecución y servicio a domicilio</li>
                             </ul>
                         </div>
 
                         {/* Catering */}
-                        <div className="group">
-                            <div className="aspect-square bg-neutral-100 flex items-center justify-center mb-6 group-hover:bg-black group-hover:text-white transition-all">
-                                <Utensils className="w-16 h-16" />
-                            </div>
-                            <h3 className="text-xl font-bold mb-3">Catering</h3>
-                            <ul className="text-sm text-gray-600 space-y-1">
+                        <div className="group p-6 border-2 border-black hover:bg-black hover:text-white transition-all duration-300">
+                            <Utensils className="w-12 h-12 mb-4" />
+                            <h3 className="text-xl font-bold mb-4">Catering</h3>
+                            <ul className="text-sm space-y-2 text-gray-600 group-hover:text-gray-300">
                                 <li>• Brunch y desayunos</li>
                                 <li>• Eventos sociales y corporativos</li>
-                                <li>• Buffets y mesas temáticas</li>
-                                <li>• Pasapalos y postres</li>
+                                <li>• Pasapalos y postres listos</li>
+                                <li>• Buffets</li>
+                                <li>• Mesas de quesos y dulces</li>
+                                <li>• Mesas temáticas</li>
                             </ul>
                         </div>
 
-                        {/* Espacios */}
-                        <div className="group">
-                            <div className="aspect-square bg-neutral-100 flex items-center justify-center mb-6 group-hover:bg-black group-hover:text-white transition-all">
-                                <Users className="w-16 h-16" />
-                            </div>
-                            <h3 className="text-xl font-bold mb-3">Alquiler de Espacios</h3>
-                            <ul className="text-sm text-gray-600 space-y-1">
+                        {/* Alquiler y Servicios */}
+                        <div className="group p-6 border-2 border-black hover:bg-black hover:text-white transition-all duration-300">
+                            <Users className="w-12 h-12 mb-4" />
+                            <h3 className="text-xl font-bold mb-4">Alquiler y Más</h3>
+                            <ul className="text-sm space-y-2 text-gray-600 group-hover:text-gray-300">
                                 <li>• Cocina para producción</li>
-                                <li>• Eventos y celebraciones</li>
+                                <li>• Espacios para cumpleaños</li>
+                                <li>• Eventos sociales y corporativos</li>
                                 <li>• Colocación de talento</li>
-                                <li>• Formulación de recetas</li>
                             </ul>
                         </div>
                     </div>
@@ -425,24 +573,25 @@ export default function PresentacionBrochure() {
                         <div className="bg-white/5 p-8 border border-white/10">
                             <MapPin className="w-8 h-8 mx-auto mb-4" />
                             <p className="text-sm text-gray-400 uppercase tracking-widest mb-2">Ubicación</p>
-                            <p className="text-lg">Av. 107, Casa 128-11<br />Frente a Mediterranean Plaza</p>
+                            <p className="text-lg">Av. 107, Casa 128-11<br />Urb. Sabana Larga<br />Frente a Mediterranean Plaza</p>
                         </div>
                         <div className="bg-white/5 p-8 border border-white/10">
                             <Mail className="w-8 h-8 mx-auto mb-4" />
                             <p className="text-sm text-gray-400 uppercase tracking-widest mb-2">Email</p>
                             <p className="text-lg">info@lanewcuisine.com</p>
+                            <p className="text-sm text-gray-500 mt-2">administracion@lanewcuisine.com.ve</p>
                         </div>
                     </div>
 
                     {/* Social */}
-                    <div className="flex justify-center gap-8 mb-12">
-                        <a href="#" className="flex items-center gap-2 text-gray-400 hover:text-white transition">
+                    <div className="flex flex-wrap justify-center gap-8 mb-12">
+                        <a href="https://facebook.com/lanewcuisine" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:text-white transition">
                             <span className="text-2xl">📘</span> La New Cuisine
                         </a>
-                        <a href="#" className="flex items-center gap-2 text-gray-400 hover:text-white transition">
+                        <a href="https://instagram.com/lanewcuisine" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:text-white transition">
                             <span className="text-2xl">📸</span> @lanewcuisine
                         </a>
-                        <a href="#" className="flex items-center gap-2 text-gray-400 hover:text-white transition">
+                        <a href="https://tiktok.com/@lanewcuisine" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:text-white transition">
                             <span className="text-2xl">🎵</span> @lanewcuisine
                         </a>
                     </div>
