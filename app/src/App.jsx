@@ -46,7 +46,7 @@ function Navigation() {
             : 'rgba(255, 255, 255, 0.85)',
           backdropFilter: 'blur(20px)',
           WebkitBackdropFilter: 'blur(20px)',
-          borderRadius: '50px',
+          borderRadius: '0',
           padding: '8px 12px',
           display: 'flex',
           alignItems: 'center',
@@ -102,7 +102,7 @@ function Navigation() {
               fontSize: '12px',
               letterSpacing: '0.01em',
               transition: 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
-              borderRadius: '30px',
+              borderRadius: '0',
               whiteSpace: 'nowrap',
             }}
             onMouseEnter={(e) => {
