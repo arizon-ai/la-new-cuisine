@@ -160,7 +160,7 @@ export default function OfertaAcademica() {
                                     <strong>Lunes</strong><br /><span style={{ fontSize: '12px', color: '#666' }}>Cód: CR 1655</span>
                                 </td>
                                 <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>2:00 - 5:30 pm</td>
-                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}><Tag variant="outline">26 ENE</Tag></td>
+                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}><Tag variant="outline">2 FEB</Tag></td>
                             </tr>
                             <tr>
                                 <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>

@@ -189,7 +189,7 @@ export default function FlyerCocina() {
                             day="Lun"
                             schedule="Turno Tarde"
                             time="2:00 pm - 5:30 pm"
-                            startDate="26 Ene (Est.)"
+                            startDate="2 Feb (Est.)"
                             status="ABIERTO"
                         />
                         <DateCard

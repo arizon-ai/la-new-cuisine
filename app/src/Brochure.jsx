@@ -13,7 +13,7 @@ const courses = [
         description: 'Nuestra formación insignia. Un recorrido integral desde las técnicas fundamentales hasta la vanguardia molecular. Duración: 15 meses más pasantías.',
         details: {
             duration: '15 Meses + Pasantías',
-            start: 'Lunes 26 Ene / Martes 10 Feb 2026',
+            start: 'Lunes 2 Feb / Martes 10 Feb 2026',
             schedule: [
                 'Lunes y Martes: 2:00 PM - 5:30 PM',
                 'Sábados: 8:00 AM - 12:30 PM',

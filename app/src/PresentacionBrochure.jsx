@@ -163,7 +163,7 @@ export default function PresentacionBrochure() {
                                         </div>
                                     </div>
                                     <div className="flex gap-6 text-sm text-gray-600">
-                                        <span>📅 Lun 26/01 • Mar 10/02</span>
+                                        <span>📅 Lun 02/02 • Mar 10/02</span>
                                         <span>🌙 Nocturno 23 Feb</span>
                                         <span>📦 Kit: 130€</span>
                                     </div>
