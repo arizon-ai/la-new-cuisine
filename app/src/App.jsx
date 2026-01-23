@@ -6,6 +6,7 @@ import FlyerPasteleria from './FlyerPasteleria'
 import FlyerPanaderia from './FlyerPanaderia'
 import FlyerGerencia from './FlyerGerencia'
 import FlyerCocina from './FlyerCocina'
+import PresentacionBrochure from './PresentacionBrochure'
 
 // Glassmorphism Navigation
 function Navigation() {
@@ -28,6 +29,7 @@ function Navigation() {
     { path: '/flyer-pasteleria', label: 'Chef Pastelero', icon: '🍰' },
     { path: '/flyer-panaderia', label: 'Chef Panadero', icon: '🥖' },
     { path: '/flyer-gerencia', label: 'Gerencia Gastronómica', icon: '💼' },
+    { path: '/presentacion', label: 'Presentación', icon: '📄' },
   ];
 
   return (
@@ -248,6 +250,7 @@ function App() {
         <Route path="/flyer-pasteleria" element={<FlyerPasteleria />} />
         <Route path="/flyer-panaderia" element={<FlyerPanaderia />} />
         <Route path="/flyer-gerencia" element={<FlyerGerencia />} />
+        <Route path="/presentacion" element={<PresentacionBrochure />} />
       </Routes>
     </BrowserRouter>
   )
