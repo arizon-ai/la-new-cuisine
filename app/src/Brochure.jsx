@@ -593,8 +593,8 @@ export default function Brochure() {
                 </div>
 
                 {/* Celebración de Cumpleaños */}
-                <div className="p-12 lg:p-16 bg-gradient-to-br from-pink-50 to-purple-50 flex flex-col justify-between relative overflow-hidden">
-                    <div className="absolute top-4 right-4 text-6xl opacity-20">🎂</div>
+                <div className="p-12 lg:p-16 bg-neutral-100 flex flex-col justify-between relative overflow-hidden">
+                    <div className="absolute top-4 right-4 text-6xl opacity-10">🎂</div>
                     <div className="relative z-10">
                         <div className="flex justify-between items-start mb-6">
                             <h3 className="text-4xl font-serif">Celebración de Cumpleaños</h3>
@@ -602,7 +602,7 @@ export default function Brochure() {
                         </div>
                         <p className="mb-6 text-gray-600 text-lg">Celebra tu día especial en nuestras instalaciones con una experiencia culinaria única.</p>
                     </div>
-                    <div className="relative z-10 bg-white p-6 border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)]">
+                    <div className="relative z-10 bg-white p-6 border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                         <h4 className="font-bold text-base uppercase mb-4">¿Qué incluye?</h4>
                         <ul className="space-y-2 text-gray-700">
                             <li className="flex items-center gap-2">
