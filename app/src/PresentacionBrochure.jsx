@@ -1,28 +1,134 @@
-import React, { useState, useRef } from 'react';
-import { ChefHat, Clock, MapPin, Phone, Mail, ArrowRight, ArrowLeft, Printer, ChevronDown } from 'lucide-react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
+import { ChefHat, Clock, MapPin, Phone, Mail, ArrowRight, ArrowLeft, Printer, ChevronDown, Maximize, Minimize, X, Quote, Camera, History, Star, Users, Award, Building } from 'lucide-react';
 
 // ============================================
 // PRESENTACIÓN BROCHURE - LA NEW CUISINE
 // Diseño: Moderno, Minimalista, Impactante
+// Versión 2.0 - Con animaciones y mejoras UX
 // ============================================
+
+// Componente para números animados
+const AnimatedCounter = ({ target, duration = 2000, suffix = '' }) => {
+    const [count, setCount] = useState(0);
+    const [isVisible, setIsVisible] = useState(false);
+    const ref = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting && !isVisible) {
+                    setIsVisible(true);
+                }
+            },
+            { threshold: 0.5 }
+        );
+        if (ref.current) observer.observe(ref.current);
+        return () => observer.disconnect();
+    }, [isVisible]);
+
+    useEffect(() => {
+        if (!isVisible) return;
+        let start = 0;
+        const increment = target / (duration / 16);
+        const timer = setInterval(() => {
+            start += increment;
+            if (start >= target) {
+                setCount(target);
+                clearInterval(timer);
+            } else {
+                setCount(Math.floor(start));
+            }
+        }, 16);
+        return () => clearInterval(timer);
+    }, [isVisible, target, duration]);
+
+    return <span ref={ref}>{count}{suffix}</span>;
+};
+
+// Slide names para mini preview
+const slideNames = [
+    'Portada', 'Quiénes Somos', 'Carreras', 'Intensivo', 'Programas Cortos',
+    'Diplomado', 'Servicios', 'Talleres', 'Syllabus Cocina', 'Syllabus Pastelería',
+    'Testimonios', 'Galería', 'Timeline', 'Contacto'
+];
 
 export default function PresentacionBrochure() {
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [isFullscreen, setIsFullscreen] = useState(false);
+    const [showPreview, setShowPreview] = useState(false);
+    const [isAnimating, setIsAnimating] = useState(false);
     const containerRef = useRef(null);
 
-    const totalSlides = 11;
+    const totalSlides = 14; // Añadimos testimonios, galería y timeline
 
-    const nextSlide = () => setCurrentSlide((prev) => Math.min(prev + 1, totalSlides - 1));
-    const prevSlide = () => setCurrentSlide((prev) => Math.max(prev - 1, 0));
-    const goToSlide = (index) => setCurrentSlide(index);
+    const nextSlide = useCallback(() => {
+        if (isAnimating) return;
+        setIsAnimating(true);
+        setCurrentSlide((prev) => Math.min(prev + 1, totalSlides - 1));
+        setTimeout(() => setIsAnimating(false), 700);
+    }, [isAnimating, totalSlides]);
+
+    const prevSlide = useCallback(() => {
+        if (isAnimating) return;
+        setIsAnimating(true);
+        setCurrentSlide((prev) => Math.max(prev - 1, 0));
+        setTimeout(() => setIsAnimating(false), 700);
+    }, [isAnimating]);
+
+    const goToSlide = (index) => {
+        if (isAnimating) return;
+        setIsAnimating(true);
+        setCurrentSlide(index);
+        setTimeout(() => setIsAnimating(false), 700);
+    };
+
+    // Navegación con teclado
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                e.preventDefault();
+                prevSlide();
+            } else if (e.key === 'Escape') {
+                if (isFullscreen) toggleFullscreen();
+                if (showPreview) setShowPreview(false);
+            } else if (e.key === 'f' || e.key === 'F') {
+                toggleFullscreen();
+            }
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [nextSlide, prevSlide, isFullscreen, showPreview]);
+
+    const toggleFullscreen = () => {
+        if (!document.fullscreenElement) {
+            containerRef.current?.requestFullscreen?.();
+            setIsFullscreen(true);
+        } else {
+            document.exitFullscreen?.();
+            setIsFullscreen(false);
+        }
+    };
+
+    useEffect(() => {
+        const handleFullscreenChange = () => {
+            setIsFullscreen(!!document.fullscreenElement);
+        };
+        document.addEventListener('fullscreenchange', handleFullscreenChange);
+        return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
+    }, []);
 
     const handlePrint = () => {
         window.print();
     };
 
+    const progress = ((currentSlide + 1) / totalSlides) * 100;
+
     return (
         <>
-            {/* Print Styles */}
+            {/* Print Styles + Animations */}
             <style>{`
         @media print {
           body { margin: 0; }
@@ -45,51 +151,190 @@ export default function PresentacionBrochure() {
           size: A4 landscape;
           margin: 0;
         }
+        
+        /* Slide Animations */
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        @keyframes fadeInLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        
+        @keyframes fadeInRight {
+          from {
+            opacity: 0;
+            transform: translateX(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        
+        @keyframes scaleIn {
+          from {
+            opacity: 0;
+            transform: scale(0.9);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+        
+        .animate-fade-up {
+          animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .animate-fade-left {
+          animation: fadeInLeft 0.8s ease-out forwards;
+        }
+        
+        .animate-fade-right {
+          animation: fadeInRight 0.8s ease-out forwards;
+        }
+        
+        .animate-scale {
+          animation: scaleIn 0.6s ease-out forwards;
+        }
+        
+        .delay-100 { animation-delay: 0.1s; opacity: 0; }
+        .delay-200 { animation-delay: 0.2s; opacity: 0; }
+        .delay-300 { animation-delay: 0.3s; opacity: 0; }
+        .delay-400 { animation-delay: 0.4s; opacity: 0; }
+        .delay-500 { animation-delay: 0.5s; opacity: 0; }
+        
+        /* Parallax effect */
+        .parallax-slow {
+          transition: transform 0.5s ease-out;
+        }
+        
+        /* Hover effects */
+        .hover-lift {
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
       `}</style>
 
             {/* Navigation Controls - No Print */}
-            <div className="no-print fixed top-6 right-6 z-50 flex items-center gap-4">
+            <div className="no-print fixed top-6 right-6 z-50 flex items-center gap-3">
+                <button
+                    onClick={() => setShowPreview(!showPreview)}
+                    className="flex items-center gap-2 bg-white border border-black px-4 py-3 text-sm font-bold uppercase tracking-widest hover:bg-black hover:text-white transition-all"
+                    title="Ver todas las slides (P)"
+                >
+                    <Camera className="w-4 h-4" />
+                </button>
+                <button
+                    onClick={toggleFullscreen}
+                    className="flex items-center gap-2 bg-white border border-black px-4 py-3 text-sm font-bold uppercase tracking-widest hover:bg-black hover:text-white transition-all"
+                    title="Pantalla completa (F)"
+                >
+                    {isFullscreen ? <Minimize className="w-4 h-4" /> : <Maximize className="w-4 h-4" />}
+                </button>
                 <button
                     onClick={handlePrint}
                     className="flex items-center gap-2 bg-black text-white px-6 py-3 text-sm font-bold uppercase tracking-widest hover:bg-gray-800 transition-all"
                 >
                     <Printer className="w-4 h-4" />
-                    Imprimir PDF
+                    PDF
                 </button>
             </div>
 
+            {/* Progress Bar - No Print */}
+            <div className="no-print fixed top-0 left-0 right-0 z-40 h-1 bg-gray-200">
+                <div
+                    className="h-full bg-black transition-all duration-500 ease-out"
+                    style={{ width: `${progress}%` }}
+                />
+            </div>
+
+            {/* Mini Preview Panel - No Print */}
+            {showPreview && (
+                <div className="no-print fixed inset-0 z-[100] bg-black/90 backdrop-blur-lg overflow-auto p-8">
+                    <button
+                        onClick={() => setShowPreview(false)}
+                        className="fixed top-6 right-6 p-3 bg-white text-black hover:bg-gray-200 transition-colors"
+                    >
+                        <X className="w-6 h-6" />
+                    </button>
+                    <h2 className="text-white text-3xl font-serif font-bold mb-8 text-center">Vista Previa de Slides</h2>
+                    <div className="grid grid-cols-4 gap-6 max-w-6xl mx-auto">
+                        {slideNames.map((name, i) => (
+                            <button
+                                key={i}
+                                onClick={() => { goToSlide(i); setShowPreview(false); }}
+                                className={`p-4 text-left transition-all ${currentSlide === i
+                                    ? 'bg-white text-black scale-105'
+                                    : 'bg-white/10 text-white hover:bg-white/20'
+                                    }`}
+                            >
+                                <span className="text-xs font-mono opacity-60">{String(i + 1).padStart(2, '0')}</span>
+                                <p className="font-bold mt-1">{name}</p>
+                            </button>
+                        ))}
+                    </div>
+                    <p className="text-center text-gray-400 mt-8 text-sm">
+                        Usa ← → para navegar • F para fullscreen • ESC para cerrar
+                    </p>
+                </div>
+            )}
+
             {/* Slide Navigation - No Print */}
-            <div className="no-print fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-6 bg-white/90 backdrop-blur-lg px-8 py-4 border border-black/10">
+            <div className="no-print fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-6 bg-white/95 backdrop-blur-lg px-8 py-4 border border-black/10 shadow-2xl">
                 <button
                     onClick={prevSlide}
-                    disabled={currentSlide === 0}
+                    disabled={currentSlide === 0 || isAnimating}
                     className="p-2 hover:bg-black hover:text-white transition-all disabled:opacity-30 disabled:cursor-not-allowed"
                 >
                     <ArrowLeft className="w-5 h-5" />
                 </button>
 
-                <div className="flex gap-2">
+                <div className="flex gap-1.5">
                     {Array.from({ length: totalSlides }).map((_, i) => (
                         <button
                             key={i}
                             onClick={() => goToSlide(i)}
-                            className={`w-3 h-3 rounded-full transition-all ${currentSlide === i ? 'bg-black scale-125' : 'bg-gray-300 hover:bg-gray-500'
+                            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${currentSlide === i
+                                ? 'bg-black scale-150'
+                                : 'bg-gray-300 hover:bg-gray-500'
                                 }`}
+                            title={slideNames[i]}
                         />
                     ))}
                 </div>
 
                 <button
                     onClick={nextSlide}
-                    disabled={currentSlide === totalSlides - 1}
+                    disabled={currentSlide === totalSlides - 1 || isAnimating}
                     className="p-2 hover:bg-black hover:text-white transition-all disabled:opacity-30 disabled:cursor-not-allowed"
                 >
                     <ArrowRight className="w-5 h-5" />
                 </button>
 
-                <span className="text-sm font-mono text-gray-500 ml-4">
-                    {String(currentSlide + 1).padStart(2, '0')} / {String(totalSlides).padStart(2, '0')}
-                </span>
+                <div className="border-l border-gray-300 pl-4 ml-2">
+                    <span className="text-sm font-mono text-gray-500">
+                        {String(currentSlide + 1).padStart(2, '0')} / {String(totalSlides).padStart(2, '0')}
+                    </span>
+                </div>
             </div>
 
             {/* Brochure Container */}
@@ -110,11 +355,13 @@ export default function PresentacionBrochure() {
                             <img
                                 src="/logo.png"
                                 alt="La New Cuisine"
-                                className="mx-auto mb-12 w-[400px] max-w-[80vw]"
+                                className="mx-auto mb-12 w-[400px] max-w-[80vw] animate-scale"
                             />
-                            <div className="flex items-center justify-center gap-8">
+                            <div className="flex items-center justify-center gap-8 animate-fade-up delay-200">
                                 <div className="text-right text-black pr-8 border-r-2 border-black">
-                                    <p className="text-6xl font-serif font-bold">22+</p>
+                                    <p className="text-6xl font-serif font-bold">
+                                        <AnimatedCounter target={22} suffix="+" />
+                                    </p>
                                     <p className="text-xs uppercase tracking-[0.3em] mt-2">Años</p>
                                 </div>
                                 <div className="text-left text-white pl-8">
@@ -730,7 +977,142 @@ export default function PresentacionBrochure() {
                         </div>
                     </section>
 
-                    {/* ========== SLIDE 11: CONTACTO ========== */}
+                    {/* ========== SLIDE 11: TESTIMONIOS ========== */}
+                    <section className="print-page h-screen flex bg-neutral-50">
+                        <div className="w-full p-16 flex flex-col justify-center">
+                            <div className="max-w-6xl mx-auto">
+                                <div className="text-center mb-16">
+                                    <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">09</p>
+                                    <h2 className="text-5xl font-serif font-bold">Lo que dicen nuestros egresados</h2>
+                                </div>
+
+                                <div className="grid grid-cols-3 gap-8">
+                                    {[
+                                        {
+                                            quote: "La New Cuisine me dio las bases sólidas para emprender mi propio restaurante. Los instructores son excelentes profesionales.",
+                                            name: "Carlos Mendoza",
+                                            role: "Chef Ejecutivo",
+                                            year: "Egresado 2019"
+                                        },
+                                        {
+                                            quote: "La formación práctica y la pasantía fueron fundamentales para mi desarrollo profesional. Hoy trabajo en un hotel 5 estrellas.",
+                                            name: "María González",
+                                            role: "Chef Pastelera",
+                                            year: "Egresada 2021"
+                                        },
+                                        {
+                                            quote: "El diplomado en gerencia me ayudó a entender el negocio gastronómico desde una perspectiva empresarial.",
+                                            name: "Andrés Ramírez",
+                                            role: "Empresario Gastronómico",
+                                            year: "Egresado 2020"
+                                        }
+                                    ].map((testimonial, i) => (
+                                        <div key={i} className="bg-white p-8 border-l-4 border-black relative">
+                                            <Quote className="absolute top-4 right-4 w-8 h-8 text-gray-200" />
+                                            <p className="text-gray-600 italic mb-6 leading-relaxed">"{testimonial.quote}"</p>
+                                            <div className="border-t pt-4">
+                                                <p className="font-bold">{testimonial.name}</p>
+                                                <p className="text-sm text-gray-500">{testimonial.role}</p>
+                                                <p className="text-xs text-gray-400 mt-1">{testimonial.year}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* ========== SLIDE 12: GALERÍA ========== */}
+                    <section className="print-page h-screen flex bg-black text-white">
+                        <div className="w-2/5 p-16 flex flex-col justify-center">
+                            <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">10</p>
+                            <h2 className="text-5xl font-serif font-bold leading-tight mb-8">
+                                Nuestras<br /><span className="italic">Instalaciones</span>
+                            </h2>
+                            <p className="text-gray-400 leading-relaxed mb-8">
+                                Espacios diseñados especialmente para la formación de profesionales culinarios, equipados con tecnología de vanguardia.
+                            </p>
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="text-center p-4 border border-white/20">
+                                    <p className="text-3xl font-bold">3</p>
+                                    <p className="text-xs text-gray-400 uppercase">Cocinas profesionales</p>
+                                </div>
+                                <div className="text-center p-4 border border-white/20">
+                                    <p className="text-3xl font-bold">1</p>
+                                    <p className="text-xs text-gray-400 uppercase">Aula teórica</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="w-3/5 grid grid-cols-2 gap-1 p-1">
+                            {[
+                                { title: 'Cocina Principal', desc: 'Estaciones individuales' },
+                                { title: 'Área de Pastelería', desc: 'Equipos especializados' },
+                                { title: 'Zona de Panadería', desc: 'Hornos profesionales' },
+                                { title: 'Aula de Clases', desc: 'Formación teórica' }
+                            ].map((area, i) => (
+                                <div key={i} className="bg-neutral-800 p-8 flex flex-col justify-end hover:bg-neutral-700 transition-colors">
+                                    <Camera className="w-8 h-8 mb-4 opacity-30" />
+                                    <h3 className="font-bold text-lg">{area.title}</h3>
+                                    <p className="text-sm text-gray-400">{area.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    {/* ========== SLIDE 13: TIMELINE ========== */}
+                    <section className="print-page h-screen flex bg-white">
+                        <div className="w-full p-16 flex flex-col justify-center">
+                            <div className="max-w-6xl mx-auto">
+                                <div className="text-center mb-16">
+                                    <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">11</p>
+                                    <h2 className="text-5xl font-serif font-bold">Nuestra Historia</h2>
+                                    <p className="text-gray-500 mt-4">Más de dos décadas formando artistas culinarios</p>
+                                </div>
+
+                                <div className="relative">
+                                    {/* Timeline line */}
+                                    <div className="absolute left-1/2 top-0 bottom-0 w-px bg-black" />
+
+                                    <div className="grid grid-cols-2 gap-8">
+                                        {[
+                                            { year: '2002', title: 'Fundación', desc: 'Nace La New Cuisine en Valencia, Venezuela' },
+                                            { year: '2008', title: 'Certificación MPPE', desc: 'Registro oficial No. R-0129-08' },
+                                            { year: '2012', title: 'Expansión', desc: 'Nuevas instalaciones y programas' },
+                                            { year: '2018', title: 'Internacionalización', desc: 'Alianzas con hoteles y restaurantes' },
+                                            { year: '2022', title: '20 Años', desc: 'Celebración de dos décadas de excelencia' },
+                                            { year: '2026', title: 'Innovación', desc: 'Nuevos programas y tecnología' }
+                                        ].map((event, i) => (
+                                            <div key={i} className={`flex items-center gap-4 ${i % 2 === 0 ? 'pr-12 justify-end text-right' : 'pl-12'}`}>
+                                                {i % 2 === 0 && (
+                                                    <>
+                                                        <div>
+                                                            <p className="text-2xl font-bold">{event.year}</p>
+                                                            <p className="font-bold text-lg">{event.title}</p>
+                                                            <p className="text-sm text-gray-500">{event.desc}</p>
+                                                        </div>
+                                                        <div className="w-4 h-4 bg-black rounded-full flex-shrink-0 relative z-10" />
+                                                    </>
+                                                )}
+                                                {i % 2 === 1 && (
+                                                    <>
+                                                        <div className="w-4 h-4 bg-black rounded-full flex-shrink-0 relative z-10" />
+                                                        <div>
+                                                            <p className="text-2xl font-bold">{event.year}</p>
+                                                            <p className="font-bold text-lg">{event.title}</p>
+                                                            <p className="text-sm text-gray-500">{event.desc}</p>
+                                                        </div>
+                                                    </>
+                                                )}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* ========== SLIDE 14: CONTACTO ========== */}
                     <section className="print-page h-screen flex bg-white">
                         <div className="w-1/2 bg-black text-white p-20 flex flex-col justify-center">
                             <h2 className="text-6xl font-serif font-bold leading-tight mb-12">
