@@ -10,7 +10,7 @@ export default function PresentacionBrochure() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const containerRef = useRef(null);
 
-    const totalSlides = 8;
+    const totalSlides = 11;
 
     const nextSlide = () => setCurrentSlide((prev) => Math.min(prev + 1, totalSlides - 1));
     const prevSlide = () => setCurrentSlide((prev) => Math.max(prev - 1, 0));
@@ -136,7 +136,61 @@ export default function PresentacionBrochure() {
                         </div>
                     </section>
 
-                    {/* ========== SLIDE 2: CARRERAS ========== */}
+                    {/* ========== SLIDE 2: QUIÉNES SOMOS ========== */}
+                    <section className="print-page h-screen flex bg-white">
+                        <div className="w-2/5 bg-black text-white p-16 flex flex-col justify-center">
+                            <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">Desde 2002</p>
+                            <h2 className="text-5xl font-serif font-bold leading-tight mb-8">
+                                Formando<br />Artistas<br /><span className="italic">Culinarios</span>
+                            </h2>
+                            <p className="text-gray-400 leading-relaxed mb-8">
+                                Centro de Capacitación Gastronómica reconocido por el Ministerio de Educación bajo el registro No. R-0129-08.
+                            </p>
+                            <div className="grid grid-cols-2 gap-4 mt-auto">
+                                <div className="text-center p-4 border border-white/20">
+                                    <p className="text-3xl font-bold">22+</p>
+                                    <p className="text-xs text-gray-400 uppercase">Años</p>
+                                </div>
+                                <div className="text-center p-4 border border-white/20">
+                                    <p className="text-3xl font-bold">4</p>
+                                    <p className="text-xs text-gray-400 uppercase">Carreras</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="w-3/5 p-16 flex flex-col justify-center">
+                            <div className="grid grid-cols-2 gap-8 mb-12">
+                                {/* Misión */}
+                                <div className="p-8 border border-black">
+                                    <h3 className="text-2xl font-serif font-bold mb-4">Misión</h3>
+                                    <p className="text-gray-600 text-sm leading-relaxed">
+                                        Formar profesionales de la gastronomía con competencias para la industria gastronómica y el turismo, aplicando métodos y tecnología de vanguardia.
+                                    </p>
+                                </div>
+                                {/* Visión */}
+                                <div className="p-8 bg-black text-white">
+                                    <h3 className="text-2xl font-serif font-bold mb-4">Visión</h3>
+                                    <p className="text-gray-300 text-sm leading-relaxed">
+                                        Ser el centro de capacitación gastronómico líder en Venezuela y Latino América en la formación de cocineros, panaderos y pasteleros.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Valores */}
+                            <div>
+                                <p className="text-xs uppercase tracking-widest text-gray-400 mb-4">Nuestros Valores</p>
+                                <div className="flex flex-wrap gap-3">
+                                    {['Responsabilidad', 'Honestidad', 'Compromiso', 'Lealtad', 'Ética', 'Innovación'].map((valor, i) => (
+                                        <span key={i} className="px-4 py-2 bg-neutral-100 text-sm font-bold uppercase tracking-wider">
+                                            {valor}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* ========== SLIDE 3: CARRERAS ========== */}
                     <section className="print-page h-screen flex bg-white">
                         <div className="w-1/3 bg-black text-white p-16 flex flex-col justify-center">
                             <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">01</p>
@@ -429,47 +483,69 @@ export default function PresentacionBrochure() {
                         <div className="w-full p-20 flex flex-col justify-center">
                             <div className="max-w-6xl mx-auto">
                                 <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">06</p>
-                                <h2 className="text-5xl font-serif font-bold mb-16">Servicios</h2>
+                                <h2 className="text-5xl font-serif font-bold mb-12">Servicios Adicionales</h2>
 
-                                <div className="grid grid-cols-4 gap-8">
-                                    <div className="p-8 bg-white border-t-4 border-black">
-                                        <h3 className="text-xl font-bold mb-4">Asesorías</h3>
-                                        <ul className="text-sm text-gray-600 space-y-2">
-                                            <li>• Propuesta gastronómica</li>
-                                            <li>• Diseño de menú</li>
-                                            <li>• Costeo & fichas técnicas</li>
-                                            <li>• Capacitación</li>
-                                            <li>• Ingeniería del menú</li>
-                                            <li>• Diseño de espacios</li>
+                                <div className="grid grid-cols-3 gap-8">
+                                    <div className="p-8 bg-white border-l-4 border-black">
+                                        <h3 className="text-xl font-bold mb-4">Asesorías Gastronómicas</h3>
+                                        <ul className="text-sm text-gray-600 space-y-2 mb-6">
+                                            <li>• Formulación de productos</li>
+                                            <li>• Maquila de productos</li>
+                                            <li>• Consultoría operativa</li>
+                                            <li>• Desarrollo de menús</li>
+                                            <li>• Fichas técnicas</li>
                                         </ul>
+                                        <p className="text-xs text-gray-400 italic">Cotización personalizada</p>
                                     </div>
 
-                                    <div className="p-8 bg-white border-t-4 border-black">
+                                    <div className="p-8 bg-white border-l-4 border-black">
+                                        <h3 className="text-xl font-bold mb-4">Celebración de Cumpleaños</h3>
+                                        <ul className="text-sm text-gray-600 space-y-2 mb-6">
+                                            <li>• Experiencia de cocina grupal</li>
+                                            <li>• Espacio exclusivo</li>
+                                            <li>• Menú personalizado</li>
+                                            <li>• Certificado participación</li>
+                                        </ul>
+                                        <p className="text-xs text-gray-400 italic">Consulta disponibilidad</p>
+                                    </div>
+
+                                    <div className="p-8 bg-white border-l-4 border-black">
                                         <h3 className="text-xl font-bold mb-4">Chef at Home</h3>
-                                        <ul className="text-sm text-gray-600 space-y-2">
+                                        <ul className="text-sm text-gray-600 space-y-2 mb-6">
                                             <li>• Planificación de menú</li>
                                             <li>• Compra de ingredientes</li>
                                             <li>• Servicio a domicilio</li>
+                                            <li>• Eventos privados</li>
                                         </ul>
+                                        <p className="text-xs text-gray-400 italic">Servicio premium</p>
                                     </div>
+                                </div>
 
-                                    <div className="p-8 bg-white border-t-4 border-black">
+                                <div className="grid grid-cols-3 gap-8 mt-8">
+                                    <div className="p-8 bg-white border-l-4 border-black">
                                         <h3 className="text-xl font-bold mb-4">Catering</h3>
                                         <ul className="text-sm text-gray-600 space-y-2">
-                                            <li>• Brunch & desayunos</li>
                                             <li>• Eventos corporativos</li>
                                             <li>• Pasapalos & postres</li>
-                                            <li>• Buffets</li>
-                                            <li>• Mesas temáticas</li>
+                                            <li>• Buffets & mesas temáticas</li>
                                         </ul>
                                     </div>
 
-                                    <div className="p-8 bg-white border-t-4 border-black">
-                                        <h3 className="text-xl font-bold mb-4">Alquiler</h3>
+                                    <div className="p-8 bg-white border-l-4 border-black">
+                                        <h3 className="text-xl font-bold mb-4">Alquiler de Espacios</h3>
                                         <ul className="text-sm text-gray-600 space-y-2">
                                             <li>• Cocina para producción</li>
                                             <li>• Espacios para eventos</li>
                                             <li>• Colocación de talento</li>
+                                        </ul>
+                                    </div>
+
+                                    <div className="p-8 bg-black text-white">
+                                        <h3 className="text-xl font-bold mb-4">Pasantías</h3>
+                                        <ul className="text-sm text-gray-300 space-y-2">
+                                            <li>• Restaurantes aliados</li>
+                                            <li>• Hoteles 5 estrellas</li>
+                                            <li>• Experiencia real</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -477,7 +553,184 @@ export default function PresentacionBrochure() {
                         </div>
                     </section>
 
-                    {/* ========== SLIDE 8: CONTACTO ========== */}
+                    {/* ========== SLIDE 8: TALLERES ========== */}
+                    <section className="print-page h-screen flex bg-white">
+                        <div className="w-2/5 bg-black text-white p-16 flex flex-col justify-center">
+                            <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">07</p>
+                            <h2 className="text-5xl font-serif font-bold leading-tight mb-8">
+                                Talleres<br /><span className="italic">Gastronómicos</span>
+                            </h2>
+                            <p className="text-gray-400 leading-relaxed mb-8">
+                                Capacitación intensiva en talleres prácticos de un día. Incluye certificado e insumos.
+                            </p>
+                            <div className="text-center p-6 border border-white/20">
+                                <p className="text-4xl font-bold">18+</p>
+                                <p className="text-xs text-gray-400 uppercase mt-2">Talleres disponibles</p>
+                            </div>
+                        </div>
+
+                        <div className="w-3/5 p-12 flex flex-col justify-center">
+                            <div className="grid grid-cols-2 gap-x-12 gap-y-4 text-sm">
+                                <div className="mb-6">
+                                    <p className="text-xs uppercase tracking-widest text-gray-400 mb-3 font-bold">Cocina Internacional</p>
+                                    <ul className="space-y-1 text-gray-600">
+                                        <li>• Italiana</li>
+                                        <li>• Asiática</li>
+                                        <li>• Sushi</li>
+                                        <li>• China</li>
+                                        <li>• Tailandesa</li>
+                                        <li>• Mediterránea</li>
+                                        <li>• Española</li>
+                                        <li>• Mexicana</li>
+                                        <li>• Árabe</li>
+                                    </ul>
+                                </div>
+                                <div className="mb-6">
+                                    <p className="text-xs uppercase tracking-widest text-gray-400 mb-3 font-bold">Panadería & Repostería</p>
+                                    <ul className="space-y-1 text-gray-600">
+                                        <li>• Panadería artesanal</li>
+                                        <li>• Repostería francesa</li>
+                                    </ul>
+                                </div>
+                                <div className="mb-6">
+                                    <p className="text-xs uppercase tracking-widest text-gray-400 mb-3 font-bold">Cocina Latinoamericana</p>
+                                    <ul className="space-y-1 text-gray-600">
+                                        <li>• Venezolana</li>
+                                        <li>• Navideña</li>
+                                    </ul>
+                                </div>
+                                <div className="mb-6">
+                                    <p className="text-xs uppercase tracking-widest text-gray-400 mb-3 font-bold">Especialidades</p>
+                                    <ul className="space-y-1 text-gray-600">
+                                        <li>• Pasapalos</li>
+                                        <li>• Conservas</li>
+                                        <li>• Molecular</li>
+                                        <li>• Emplatados</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p className="text-xs uppercase tracking-widest text-gray-400 mb-3 font-bold">Programa Juvenil</p>
+                                    <ul className="space-y-1 text-gray-600">
+                                        <li>• Mini Chef (niños y adolescentes)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* ========== SLIDE 9: SYLLABUS COCINA ========== */}
+                    <section className="print-page h-screen flex bg-neutral-50">
+                        <div className="w-full p-16 flex flex-col justify-center">
+                            <div className="max-w-6xl mx-auto">
+                                <div className="flex justify-between items-start mb-12">
+                                    <div>
+                                        <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">08</p>
+                                        <h2 className="text-4xl font-serif font-bold">Chef Cocina Internacional</h2>
+                                        <p className="text-gray-500 mt-2">15 meses • 3 niveles + pasantía</p>
+                                    </div>
+                                </div>
+
+                                <div className="grid grid-cols-3 gap-8">
+                                    <div className="p-6 bg-white border-t-4 border-black">
+                                        <span className="bg-black text-white text-xs px-3 py-1 font-bold">BÁSICO</span>
+                                        <ul className="mt-4 text-sm text-gray-600 space-y-1">
+                                            <li>• Técnicas de Cortes</li>
+                                            <li>• Fondos, Caldos, Sopas</li>
+                                            <li>• Salsas Madres</li>
+                                            <li>• Cereales, Hortalizas</li>
+                                            <li>• Setas, Hierbas, Especias</li>
+                                            <li>• Lácteos, Grasas, Pastas</li>
+                                            <li>• Técnicas de Emplatado</li>
+                                            <li>• Etiqueta y Protocolo</li>
+                                        </ul>
+                                    </div>
+
+                                    <div className="p-6 bg-white border-t-4 border-gray-400">
+                                        <span className="bg-gray-600 text-white text-xs px-3 py-1 font-bold">INTERMEDIO</span>
+                                        <ul className="mt-4 text-sm text-gray-600 space-y-1">
+                                            <li>• Aves I y II</li>
+                                            <li>• Pato y Pavo</li>
+                                            <li>• Conejo, Cordero, Chivo</li>
+                                            <li>• Cerdo y Bovino</li>
+                                            <li>• Pescados (blancos, azules)</li>
+                                            <li>• Mariscos I y II</li>
+                                            <li>• Costos II</li>
+                                            <li>• Inglés Gastronómico</li>
+                                        </ul>
+                                    </div>
+
+                                    <div className="p-6 bg-black text-white">
+                                        <span className="bg-white text-black text-xs px-3 py-1 font-bold">AVANZADO</span>
+                                        <ul className="mt-4 text-sm text-gray-300 space-y-1">
+                                            <li>• Charcutería</li>
+                                            <li>• Panadería</li>
+                                            <li>• Postres I y II</li>
+                                            <li>• Cocina Molecular</li>
+                                            <li>• Chocolate</li>
+                                            <li>• Cocina Internacional</li>
+                                            <li>• Cocina Venezolana</li>
+                                            <li>• Nutrición y Dietética</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* ========== SLIDE 10: SYLLABUS PASTELERÍA ========== */}
+                    <section className="print-page h-screen flex bg-white">
+                        <div className="w-full p-16 flex flex-col justify-center">
+                            <div className="max-w-6xl mx-auto">
+                                <div className="grid grid-cols-2 gap-16">
+                                    {/* Chef Pastelero */}
+                                    <div>
+                                        <h3 className="text-3xl font-serif font-bold mb-2">Chef Pastelero</h3>
+                                        <p className="text-gray-500 mb-6">3 Niveles + Pasantía</p>
+                                        <div className="space-y-4">
+                                            <div className="p-4 bg-neutral-50 border-l-4 border-black">
+                                                <span className="text-xs font-bold uppercase">Básico</span>
+                                                <p className="text-sm text-gray-600 mt-1">Pastelería base, Cremas, Decoración, Brownies, Cheesecake</p>
+                                            </div>
+                                            <div className="p-4 bg-neutral-50 border-l-4 border-gray-400">
+                                                <span className="text-xs font-bold uppercase">Intermedio</span>
+                                                <p className="text-sm text-gray-600 mt-1">Hojaldre, Bombonería, Chocolate, Tortas clásicas</p>
+                                            </div>
+                                            <div className="p-4 bg-black text-white">
+                                                <span className="text-xs font-bold uppercase">Avanzado</span>
+                                                <p className="text-sm text-gray-300 mt-1">Pastelería Internacional, Entremets, Técnicas avanzadas</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Chef Panadero */}
+                                    <div>
+                                        <h3 className="text-3xl font-serif font-bold mb-2">Chef Panadero</h3>
+                                        <p className="text-gray-500 mb-6">2 Niveles</p>
+                                        <div className="space-y-4">
+                                            <div className="p-4 bg-neutral-50 border-l-4 border-black">
+                                                <span className="text-xs font-bold uppercase">Básico</span>
+                                                <p className="text-sm text-gray-600 mt-1">Principios de panificación, Harinas, Pan canilla, Ciabatta, Croissants</p>
+                                            </div>
+                                            <div className="p-4 bg-neutral-50 border-l-4 border-gray-400">
+                                                <span className="text-xs font-bold uppercase">Intermedio</span>
+                                                <p className="text-sm text-gray-600 mt-1">Masa madre, Focaccia, Brioche, Panes especiales, Pan de ajo</p>
+                                            </div>
+                                        </div>
+
+                                        <h3 className="text-2xl font-serif font-bold mb-2 mt-10">Diplomado Gerencia</h3>
+                                        <p className="text-gray-500 mb-4">4 meses • 3 niveles</p>
+                                        <div className="flex flex-wrap gap-2 text-xs">
+                                            {['Canvas', 'Marketing', 'Neuromarketing', 'Liderazgo', 'Ingeniería Menú', 'Higiene'].map((item, i) => (
+                                                <span key={i} className="px-2 py-1 bg-neutral-100">{item}</span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* ========== SLIDE 11: CONTACTO ========== */}
                     <section className="print-page h-screen flex bg-white">
                         <div className="w-1/2 bg-black text-white p-20 flex flex-col justify-center">
                             <h2 className="text-6xl font-serif font-bold leading-tight mb-12">
