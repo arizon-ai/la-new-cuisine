@@ -7,6 +7,8 @@ import FlyerPanaderia from './FlyerPanaderia'
 import FlyerGerencia from './FlyerGerencia'
 import FlyerCocina from './FlyerCocina'
 import PresentacionBrochure from './PresentacionBrochure'
+import QuienesSomos from './QuienesSomos'
+import Talleres from './Talleres'
 
 // Glassmorphism Navigation
 function Navigation() {
@@ -24,7 +26,9 @@ function Navigation() {
 
   const menuItems = [
     { path: '/', label: 'Home', icon: '🏠' },
+    { path: '/quienes-somos', label: 'Quiénes Somos', icon: '🏢' },
     { path: '/oferta', label: 'Oferta Académica', icon: '📚' },
+    { path: '/talleres', label: 'Talleres', icon: '👨‍🍳' },
     { path: '/flyer-cocina', label: 'Cocina Internacional', icon: '🍳' },
     { path: '/flyer-pasteleria', label: 'Chef Pastelero', icon: '🍰' },
     { path: '/flyer-panaderia', label: 'Chef Panadero', icon: '🥖' },
@@ -245,7 +249,9 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<Brochure />} />
+        <Route path="/quienes-somos" element={<QuienesSomos />} />
         <Route path="/oferta" element={<OfertaAcademica />} />
+        <Route path="/talleres" element={<Talleres />} />
         <Route path="/flyer-cocina" element={<FlyerCocina />} />
         <Route path="/flyer-pasteleria" element={<FlyerPasteleria />} />
         <Route path="/flyer-panaderia" element={<FlyerPanaderia />} />

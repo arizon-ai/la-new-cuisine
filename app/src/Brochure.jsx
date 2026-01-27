@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    Calendar, Clock, MapPin, Star, Phone, Mail, Quote, Check, Award, Scissors
+    Calendar, Clock, MapPin, Star, Phone, Mail, Quote, Check, Award, Scissors, Facebook, Instagram, Video
 } from 'lucide-react';
 
 // --- DATA ---
@@ -25,7 +25,7 @@ const courses = [
                 { label: 'Kit de Estudio', price: '130 €', note: '*Incluye filipina, gorro, delantal, set de 2 cuchillos (puntilla y cebollero). Financiamiento 2 cuotas' }
             ]
         },
-        syllabus: [
+        syllabusBasico: [
             'Técnicas de Cortes y Buenas Prácticas',
             'Fondos, Caldos, Sopas y Cremas',
             'Salsas Madres y Aderezos',
@@ -36,6 +36,34 @@ const courses = [
             'Técnicas de Emplatado',
             'Etiqueta y Protocolo',
             'Oratoria y Expresión Corporal'
+        ],
+        syllabusIntermedio: [
+            'Aves I y II',
+            'Pato y Pavo',
+            'Conejo, Cordero y Chivo',
+            'Cerdo',
+            'Bovino I y II',
+            'Pescados I (blancos)',
+            'Pescados II (azules)',
+            'Pescados III (rosados y cartilaginosos)',
+            'Mariscos I y II',
+            'Costos II',
+            'Inglés Gastronómico I',
+            'Francés Gastronómico I'
+        ],
+        syllabusAvanzado: [
+            'Charcutería',
+            'Panadería',
+            'Postres I y II',
+            'Masas II',
+            'Cocina Molecular',
+            'Chocolate',
+            'Cocina Internacional I y II',
+            'Cocina Venezolana',
+            'Cocina Mediterránea',
+            'Nutrición y Dietética',
+            'Inglés Gastronómico II',
+            'Francés Gastronómico II'
         ]
     },
     {
@@ -43,10 +71,10 @@ const courses = [
         title: 'Chef Panadero',
         subtitle: 'ESPECIALIZACIÓN',
         image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80',
-        description: 'Transforma tu pasión por el pan en una profesión con aroma a éxito. Formación integral para chefs, emprendedores y profesionales del sector alimentario. Duración: 8 meses.',
+        description: 'Transforma tu pasión por el pan en una profesión con aroma a éxito. Formación integral para chefs, emprendedores y profesionales del sector alimentario.',
         details: {
-            duration: '8 Meses',
-            start: 'Fecha Estimada',
+            duration: '2 Niveles',
+            start: 'Lunes 9 Febrero 2026',
             schedule: [
                 'Lunes (Tarde): 2:00 PM - 5:30 PM',
                 'Lunes (Nocturno): 6:00 PM - 9:30 PM'
@@ -57,17 +85,39 @@ const courses = [
                 { label: 'Kit de Estudio', price: '90 €', note: '*Incluye filipina, gorro, delantal. Financiamiento 2 cuotas' }
             ]
         },
-        syllabus: [
+        syllabusBasico: [
             'Principios Básicos de Panificación',
-            'Clases de Harina y Fórmulas Panaderas',
+            'Clases de Harina',
+            'Fórmulas Panaderas',
+            'Ingredientes',
+            'Oratoria y Expresión Corporal',
             'Matemáticas Panaderas',
             'Pan Campesino, Canilla, Piñita',
             'Cinnamon, Pizza, Bagels, Golfeados',
-            'Cachitos, Pan de Jamón, Donas',
-            'Hojaldre, Pan de Coco, Pan de Queso',
-            'Ciabatta, Focaccia, Masa Madre',
+            'Cachitos, Pan de Jamón, Pan Dulce',
+            'Donas, Hojaldre, Pan de Coco',
+            'Pan de Queso y Tocineta',
             'Técnicas de Emplatado',
-            'Etiqueta y Protocolo'
+            'Etiqueta y Protocolo',
+            'Costos I'
+        ],
+        syllabusIntermedio: [
+            'Pan Guayaba',
+            'Pan de Hamburguesa',
+            'Pan de Sándwich',
+            'Pan Francés',
+            'Pan sin Amasar',
+            'Pan de Mantequilla',
+            'Ciabatta',
+            'Focaccia',
+            'Masa Madre',
+            'Costos II',
+            'Nutrición y Dietética',
+            'Inglés Gastronómico II',
+            'Francés Gastronómico II',
+            'Pasantía',
+            'Fine Dining',
+            'Informe Final'
         ]
     },
     {
@@ -77,7 +127,7 @@ const courses = [
         image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80',
         description: 'Precisión y dulzura. Especialízate en las técnicas de la pastelería francesa, chocolatería fina y arte del emplatado.',
         details: {
-            duration: 'Niveles Progresivos',
+            duration: '3 Niveles + Pasantía',
             start: 'Mié/Jue 25-26 Feb 2026',
             schedule: [
                 'Mié/Jue: 8:00 AM - 12:30 PM',
@@ -91,17 +141,49 @@ const courses = [
                 { label: 'Kit de Estudio', price: '90 €', note: '*Incluye filipina, gorro, delantal. Financiamiento 2 cuotas' }
             ]
         },
-        syllabus: [
+        syllabusBasico: [
             'Mangueado y Merengues',
             'Bizcochos y Masas Livianas',
-            'Sablé, Cakes, Masas Quebradas',
-            'Pastelería Clásica y Comercial',
+            'Sablé, Cakes',
+            'Masas Quebradas I y II',
+            'Oratoria y Expresión Corporal',
+            'Etiqueta y Protocolo',
+            'Pastelería Clásica',
             'Butter Cream y Fondant',
+            'Pastelería Comercial',
             'Petit Four Variados',
             'Masas Choux, Brioche, Croissant',
-            'Bombonería I y II',
-            'Pastelería Francesa, Alemana, Italiana',
-            'Técnicas de Emplatado y Maridaje'
+            'Costos I',
+            'Técnicas de Emplatado'
+        ],
+        syllabusIntermedio: [
+            'Panadería Saludable I',
+            'Inglés Gastronómico I',
+            'Francés Gastronómico I',
+            'Hojaldre I y II',
+            'Postres de Vitrina',
+            'Costos I',
+            'Bombonería I',
+            'Bombonería II',
+            'Técnicas de Maridaje',
+            'Panadería I y II'
+        ],
+        syllabusAvanzado: [
+            'Pastelería Francesa I y II',
+            'Pastelería Alemana y Austríaca',
+            'Pastelería Italiana',
+            'Pastelería Medio Oriente',
+            'Costos II',
+            'Nutrición y Dietética',
+            'Mousse',
+            'Pastelería Latinoamericana',
+            'Pastelería Argentina y Estados Unidos',
+            'Inglés Gastronómico II',
+            'Pastelería Venezolana',
+            'Francés Gastronómico II',
+            'Pasantía',
+            'Fine Dining',
+            'Informe Final'
         ]
     },
     {
@@ -112,7 +194,7 @@ const courses = [
         description: 'Formación integral para chefs, emprendedores y profesionales del sector alimentario. Visión estratégica para gestionar negocios gastronómicos rentables.',
         details: {
             duration: '4 Meses Intensivos',
-            start: 'Martes 3 Feb / Sábado 31 Ene 2026',
+            start: 'Martes 3 Feb / Sábado 28 Feb 2026',
             schedule: [
                 'Martes (Tarde): 2:00 PM - 6:00 PM',
                 'Sábados: 8:00 AM - 12:30 PM'
@@ -123,20 +205,25 @@ const courses = [
                 { label: 'Material Digital', price: 'Incluido' }
             ]
         },
-        syllabus: [
-            'Emprendimiento y Modelo Canvas',
-            'Marketing Gastronómico',
+        syllabusBasico: [
+            'Emprendimiento del Modelo de Negocios Gastronómico',
+            'Lienzo Canvas',
+            'Marketing Gastronómico'
+        ],
+        syllabusIntermedio: [
             'Neuromarketing y Neurogastronomía',
-            'Capital Humano, Liderazgo y Coaching',
-            'Diseño y Ambientación de Espacios',
-            'Ingeniería del Menú y Catering',
+            'Capital Humano, Liderazgo y Coaching Organizacional',
+            'Ingeniería del Menú y Catering'
+        ],
+        syllabusAvanzado: [
             'Manejo y Control Gastronómico',
-            'Marco Jurídico Gastronómico',
-            'Higiene y Salud Ocupacional',
+            'Educación Gastronómica en Higiene y Salud Ocupacional',
+            'Manipulación de Alimentos',
             'Plan de Negocios Final'
         ]
     }
 ];
+
 
 // --- COMPONENTES ---
 
@@ -204,14 +291,55 @@ const CourseCard = ({ course, index }) => {
                 </div>
 
                 <div>
-                    <h4 className="font-bold text-sm uppercase tracking-widest mb-3">Contenido Académico (Resumen)</h4>
-                    <div className="flex flex-wrap gap-2">
-                        {course.syllabus.map((topic, i) => (
-                            <span key={i} className="px-3 py-1.5 bg-neutral-100 text-sm text-gray-700 rounded-sm">
-                                {topic}
-                            </span>
-                        ))}
-                    </div>
+                    <h4 className="font-bold text-sm uppercase tracking-widest mb-3">Contenido Académico por Nivel</h4>
+
+                    {/* Nivel Básico */}
+                    {course.syllabusBasico && (
+                        <div className="mb-4">
+                            <div className="flex items-center gap-2 mb-2">
+                                <span className="bg-black text-white text-xs px-2 py-1 font-bold">BÁSICO</span>
+                            </div>
+                            <div className="flex flex-wrap gap-2">
+                                {course.syllabusBasico.map((topic, i) => (
+                                    <span key={i} className="px-3 py-1.5 bg-neutral-100 text-sm text-gray-700 rounded-sm">
+                                        {topic}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Nivel Intermedio */}
+                    {course.syllabusIntermedio && (
+                        <div className="mb-4">
+                            <div className="flex items-center gap-2 mb-2">
+                                <span className="bg-gray-600 text-white text-xs px-2 py-1 font-bold">INTERMEDIO</span>
+                            </div>
+                            <div className="flex flex-wrap gap-2">
+                                {course.syllabusIntermedio.map((topic, i) => (
+                                    <span key={i} className="px-3 py-1.5 bg-gray-200 text-sm text-gray-700 rounded-sm">
+                                        {topic}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Nivel Avanzado */}
+                    {course.syllabusAvanzado && (
+                        <div className="mb-4">
+                            <div className="flex items-center gap-2 mb-2">
+                                <span className="bg-neutral-800 text-white text-xs px-2 py-1 font-bold">AVANZADO</span>
+                            </div>
+                            <div className="flex flex-wrap gap-2">
+                                {course.syllabusAvanzado.map((topic, i) => (
+                                    <span key={i} className="px-3 py-1.5 bg-gray-300 text-sm text-gray-700 rounded-sm">
+                                        {topic}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
         </article>
@@ -433,6 +561,68 @@ export default function Brochure() {
                 </div>
             </section>
 
+            {/* --- SERVICIOS ADICIONALES --- */}
+            <section className="grid grid-cols-1 md:grid-cols-2 border-b border-black">
+                {/* Asesorías Gastronómicas */}
+                <div className="p-12 lg:p-16 border-b md:border-b-0 md:border-r border-black bg-white flex flex-col justify-between">
+                    <div>
+                        <div className="flex justify-between items-start mb-6">
+                            <h3 className="text-4xl font-serif">Asesorías Gastronómicas</h3>
+                            <span className="border border-black text-black text-xs px-3 py-1 font-bold uppercase tracking-widest">Servicios</span>
+                        </div>
+                        <p className="mb-6 text-gray-600 text-lg">Potencia tu negocio gastronómico con nuestra asesoría especializada.</p>
+                    </div>
+                    <div className="bg-neutral-50 p-6 border border-black">
+                        <h4 className="font-bold text-base uppercase mb-4">Nuestros Servicios</h4>
+                        <ul className="space-y-3 text-gray-700">
+                            <li className="flex items-start gap-2">
+                                <Check className="w-5 h-5 mt-0.5 text-black flex-shrink-0" />
+                                <span><strong>Formulación de Productos:</strong> Desarrollo de recetas y fichas técnicas</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <Check className="w-5 h-5 mt-0.5 text-black flex-shrink-0" />
+                                <span><strong>Maquila de Productos:</strong> Producción a escala de tus creaciones</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <Check className="w-5 h-5 mt-0.5 text-black flex-shrink-0" />
+                                <span><strong>Consultoría:</strong> Optimización de operaciones y menús</span>
+                            </li>
+                        </ul>
+                        <p className="text-sm text-gray-500 mt-4 italic">Contáctanos para cotización personalizada</p>
+                    </div>
+                </div>
+
+                {/* Celebración de Cumpleaños */}
+                <div className="p-12 lg:p-16 bg-gradient-to-br from-pink-50 to-purple-50 flex flex-col justify-between relative overflow-hidden">
+                    <div className="absolute top-4 right-4 text-6xl opacity-20">🎂</div>
+                    <div className="relative z-10">
+                        <div className="flex justify-between items-start mb-6">
+                            <h3 className="text-4xl font-serif">Celebración de Cumpleaños</h3>
+                            <span className="bg-black text-white text-xs px-3 py-1 font-bold uppercase tracking-widest">Eventos</span>
+                        </div>
+                        <p className="mb-6 text-gray-600 text-lg">Celebra tu día especial en nuestras instalaciones con una experiencia culinaria única.</p>
+                    </div>
+                    <div className="relative z-10 bg-white p-6 border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)]">
+                        <h4 className="font-bold text-base uppercase mb-4">¿Qué incluye?</h4>
+                        <ul className="space-y-2 text-gray-700">
+                            <li className="flex items-center gap-2">
+                                <span className="text-lg">👨‍🍳</span>
+                                <span>Experiencia de cocina grupal</span>
+                            </li>
+                            <li className="flex items-center gap-2">
+                                <span className="text-lg">🎉</span>
+                                <span>Espacio exclusivo para tu evento</span>
+                            </li>
+                            <li className="flex items-center gap-2">
+                                <span className="text-lg">🍽️</span>
+                                <span>Menú personalizado</span>
+                            </li>
+                        </ul>
+                        <p className="text-sm text-gray-500 mt-4 italic">Consulta disponibilidad y paquetes</p>
+                    </div>
+                </div>
+            </section>
+
             {/* --- PROTOCOLO DE PREINSCRIPCIÓN --- */}
             <section className="bg-neutral-100 py-20 px-6">
                 <div className="max-w-4xl mx-auto">
@@ -570,6 +760,28 @@ export default function Brochure() {
                             <div className="border-t border-gray-200 w-16 mx-auto my-2"></div>
                             <p className="text-xs text-gray-400">Reg. Ministerio de Educación No. R-0129-08</p>
                         </div>
+                    </div>
+
+                    {/* Redes Sociales */}
+                    <div className="flex justify-center gap-8 mb-12">
+                        <a href="#" className="group flex flex-col items-center" title="Facebook">
+                            <div className="border-2 border-black p-4 rounded-full group-hover:bg-black group-hover:text-white transition-colors mb-2">
+                                <Facebook className="w-6 h-6" />
+                            </div>
+                            <span className="text-xs uppercase tracking-wider">Facebook</span>
+                        </a>
+                        <a href="https://www.instagram.com/lanewcuisine" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center" title="Instagram">
+                            <div className="border-2 border-black p-4 rounded-full group-hover:bg-black group-hover:text-white transition-colors mb-2">
+                                <Instagram className="w-6 h-6" />
+                            </div>
+                            <span className="text-xs uppercase tracking-wider">Instagram</span>
+                        </a>
+                        <a href="#" className="group flex flex-col items-center" title="TikTok">
+                            <div className="border-2 border-black p-4 rounded-full group-hover:bg-black group-hover:text-white transition-colors mb-2">
+                                <Video className="w-6 h-6" />
+                            </div>
+                            <span className="text-xs uppercase tracking-wider">TikTok</span>
+                        </a>
                     </div>
 
                     {/* Mapa de ubicación */}
