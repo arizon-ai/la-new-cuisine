@@ -6,8 +6,6 @@ export default function Talleres() {
         {
             titulo: 'Panadería & Repostería',
             icono: Cake,
-            color: 'bg-amber-50',
-            borderColor: 'border-amber-400',
             talleres: [
                 { nombre: 'Taller de Panadería', descripcion: 'Aprende las bases de la panificación artesanal' },
                 { nombre: 'Taller de Repostería', descripcion: 'Técnicas de pastelería básica y decoración' }
@@ -16,8 +14,6 @@ export default function Talleres() {
         {
             titulo: 'Cocina Internacional',
             icono: Globe,
-            color: 'bg-blue-50',
-            borderColor: 'border-blue-400',
             talleres: [
                 { nombre: 'Taller de Cocina Italiana', descripcion: 'Pastas frescas, risottos y salsas tradicionales' },
                 { nombre: 'Taller de Cocina Asiática', descripcion: 'Técnicas y sabores del Lejano Oriente' },
@@ -33,8 +29,6 @@ export default function Talleres() {
         {
             titulo: 'Cocina Latinoamericana',
             icono: Utensils,
-            color: 'bg-green-50',
-            borderColor: 'border-green-400',
             talleres: [
                 { nombre: 'Taller de Cocina Venezolana', descripcion: 'Arepas, pabellón y tradiciones locales' },
                 { nombre: 'Taller de Cocina Navideña', descripcion: 'Hallacas, pan de jamón y delicias decembrinas' }
@@ -43,8 +37,6 @@ export default function Talleres() {
         {
             titulo: 'Especialidades',
             icono: FlameKindling,
-            color: 'bg-purple-50',
-            borderColor: 'border-purple-400',
             talleres: [
                 { nombre: 'Taller de Pasapalos', descripcion: 'Bocadillos perfectos para eventos' },
                 { nombre: 'Taller de Alimentos en Conserva', descripcion: 'Técnicas de preservación y envasado' },
@@ -55,8 +47,6 @@ export default function Talleres() {
         {
             titulo: 'Programa Juvenil',
             icono: Users,
-            color: 'bg-pink-50',
-            borderColor: 'border-pink-400',
             talleres: [
                 { nombre: 'Taller de Mini Chef', descripcion: 'Cocina divertida para niños y adolescentes' }
             ]
@@ -88,7 +78,7 @@ export default function Talleres() {
                             <div key={catIndex} className="mb-16 last:mb-0">
                                 {/* Categoría Header */}
                                 <div className="flex items-center gap-4 mb-8 border-b-2 border-black pb-4">
-                                    <div className={`p-3 rounded-full ${categoria.color} border-2 ${categoria.borderColor}`}>
+                                    <div className="p-3 rounded-full bg-black text-white">
                                         <IconComponent className="w-6 h-6" />
                                     </div>
                                     <h2 className="text-3xl font-serif font-bold">{categoria.titulo}</h2>
@@ -102,7 +92,7 @@ export default function Talleres() {
                                     {categoria.talleres.map((taller, tallerIndex) => (
                                         <div
                                             key={tallerIndex}
-                                            className={`p-6 ${categoria.color} border-l-4 ${categoria.borderColor} hover:shadow-lg transition-shadow duration-300`}
+                                            className="p-6 bg-white border-l-4 border-black hover:bg-neutral-50 hover:shadow-lg transition-all duration-300"
                                         >
                                             <h3 className="font-bold text-lg mb-2">{taller.nombre}</h3>
                                             <p className="text-gray-600 text-sm leading-relaxed">{taller.descripcion}</p>
