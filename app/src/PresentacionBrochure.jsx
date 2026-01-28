@@ -49,7 +49,7 @@ const AnimatedCounter = ({ target, duration = 2000, suffix = '' }) => {
 const slideNames = [
     'Portada', 'Quiénes Somos', 'Carreras', 'Intensivo', 'Programas Cortos',
     'Diplomado', 'ABC Molecular', 'Servicios', 'Talleres', 'Syllabus Cocina', 'Syllabus Pastelería',
-    'Asistente Chef', 'Junior Chef', 'Por Qué Elegirnos', 'Calendario 2026',
+    'Syllabus Panadería', 'Asistente Chef', 'Junior Chef', 'Por Qué Elegirnos', 'Calendario 2026',
     'Testimonios', 'Galería', 'Timeline', 'Contacto'
 ];
 
@@ -60,7 +60,7 @@ export default function PresentacionBrochure() {
     const [isAnimating, setIsAnimating] = useState(false);
     const containerRef = useRef(null);
 
-    const totalSlides = 19; // Incluye nuevas slides: Asistente Chef, Junior Chef, Por Qué Elegirnos, Calendario
+    const totalSlides = 20; // Incluye Syllabus Panadería
 
     const nextSlide = useCallback(() => {
         if (isAnimating) return;
@@ -978,10 +978,110 @@ export default function PresentacionBrochure() {
                         </div>
                     </section>
 
-                    {/* ========== SLIDE 11: ASISTENTE DE CHEF ========== */}
+                    {/* ========== SLIDE 12: SYLLABUS PANADERÍA ========== */}
                     <section className="print-page h-screen flex bg-white">
                         <div className="w-2/5 bg-black text-white p-16 flex flex-col justify-center">
-                            <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">11</p>
+                            <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">12</p>
+                            <h2 className="text-5xl font-serif font-bold leading-tight mb-8">
+                                Chef<br /><span className="italic">Panadero</span>
+                            </h2>
+                            <p className="text-gray-400 leading-relaxed mb-8">
+                                Domina el arte de la panificación artesanal. Desde técnicas básicas hasta masas madres y fermentación natural.
+                            </p>
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="text-center p-4 border border-white/20">
+                                    <p className="text-3xl font-bold">2</p>
+                                    <p className="text-xs text-gray-400 uppercase">Niveles</p>
+                                </div>
+                                <div className="text-center p-4 border border-white/20">
+                                    <p className="text-3xl font-bold">10</p>
+                                    <p className="text-xs text-gray-400 uppercase">Meses</p>
+                                </div>
+                                <div className="text-center p-4 border border-white/20">
+                                    <p className="text-3xl font-bold">240h</p>
+                                    <p className="text-xs text-gray-400 uppercase">Pasantías</p>
+                                </div>
+                                <div className="text-center p-4 border border-white/20">
+                                    <p className="text-3xl font-bold">42</p>
+                                    <p className="text-xs text-gray-400 uppercase">Temas</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="w-3/5 p-12 flex flex-col justify-center overflow-hidden">
+                            <div className="grid grid-cols-2 gap-8">
+                                {/* Nivel Básico */}
+                                <div>
+                                    <h3 className="text-xl font-bold uppercase mb-4 pb-2 border-b-2 border-black">Nivel Básico</h3>
+                                    <p className="text-xs text-gray-500 mb-4">20 temas • 5 meses</p>
+                                    <div className="space-y-1 text-xs text-gray-600">
+                                        {[
+                                            'Principios de panificación',
+                                            'Métodos de masas con levadura',
+                                            'Fórmulas panaderas',
+                                            'Pan campesino y canilla',
+                                            'Pan piñita y lácteo',
+                                            'Tortas y ponqués comerciales',
+                                            'Cachitos y derivados',
+                                            'Masas Choux y Brioche',
+                                            'Cinnamon y variaciones',
+                                            'Croissant y hojaldrado'
+                                        ].map((item, i) => (
+                                            <div key={i} className="flex items-center gap-2 py-0.5">
+                                                <span className="w-1 h-1 bg-black rounded-full flex-shrink-0"></span>
+                                                {item}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Nivel Avanzado */}
+                                <div>
+                                    <h3 className="text-xl font-bold uppercase mb-4 pb-2 border-b-2 border-black">Nivel Avanzado</h3>
+                                    <p className="text-xs text-gray-500 mb-4">22 temas • 5 meses</p>
+                                    <div className="space-y-1 text-xs text-gray-600">
+                                        {[
+                                            'Hojaldre y aplicaciones',
+                                            'Pizzas y focaccias',
+                                            'Pan de coco y jamón',
+                                            'Pan de queso y guayaba',
+                                            'Pan hamburguesa y hot dog',
+                                            'Pan francés tradicional',
+                                            'Pan sin amasar',
+                                            'Pan Ciabatta',
+                                            'Masas madres y fermentación',
+                                            'Fine Dining y pasantías'
+                                        ].map((item, i) => (
+                                            <div key={i} className="flex items-center gap-2 py-0.5">
+                                                <span className="w-1 h-1 bg-black rounded-full flex-shrink-0"></span>
+                                                {item}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="grid grid-cols-3 gap-4 pt-6 mt-6 border-t border-gray-200">
+                                <div className="text-center p-3 bg-black text-white">
+                                    <p className="text-xl font-bold">50€</p>
+                                    <p className="text-xs uppercase">Inscripción</p>
+                                </div>
+                                <div className="text-center p-3 border border-black">
+                                    <p className="text-xl font-bold">140€</p>
+                                    <p className="text-xs uppercase">Mensualidad</p>
+                                </div>
+                                <div className="text-center p-3 border border-black">
+                                    <p className="text-xl font-bold">90€</p>
+                                    <p className="text-xs uppercase">Kit</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* ========== SLIDE 13: ASISTENTE DE CHEF ========== */}
+                    <section className="print-page h-screen flex bg-white">
+                        <div className="w-2/5 bg-black text-white p-16 flex flex-col justify-center">
+                            <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">13</p>
                             <h2 className="text-5xl font-serif font-bold leading-tight mb-8">
                                 Asistente<br />de <span className="italic">Chef</span>
                             </h2>
@@ -1044,12 +1144,12 @@ export default function PresentacionBrochure() {
                         </div>
                     </section>
 
-                    {/* ========== SLIDE 12: JUNIOR CHEF ========== */}
+                    {/* ========== SLIDE 14: JUNIOR CHEF ========== */}
                     <section className="print-page h-screen flex bg-neutral-50">
                         <div className="w-full p-16 flex flex-col justify-center">
                             <div className="max-w-6xl mx-auto">
                                 <div className="text-center mb-12">
-                                    <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">12</p>
+                                    <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">14</p>
                                     <h2 className="text-5xl font-serif font-bold">Junior Chef</h2>
                                     <p className="text-xl text-gray-500 mt-4">Cocina para Niños y Adolescentes</p>
                                 </div>
@@ -1123,10 +1223,10 @@ export default function PresentacionBrochure() {
                         </div>
                     </section>
 
-                    {/* ========== SLIDE 13: POR QUÉ ELEGIRNOS ========== */}
+                    {/* ========== SLIDE 15: POR QUÉ ELEGIRNOS ========== */}
                     <section className="print-page h-screen flex bg-black text-white">
                         <div className="w-1/2 p-20 flex flex-col justify-center">
-                            <p className="text-xs uppercase tracking-[0.3em] text-gray-500 mb-4">13</p>
+                            <p className="text-xs uppercase tracking-[0.3em] text-gray-500 mb-4">15</p>
                             <h2 className="text-6xl font-serif font-bold leading-tight mb-8">
                                 ¿Por qué<br /><span className="italic">elegirnos?</span>
                             </h2>
@@ -1174,12 +1274,12 @@ export default function PresentacionBrochure() {
                         </div>
                     </section>
 
-                    {/* ========== SLIDE 14: CALENDARIO 2026 ========== */}
+                    {/* ========== SLIDE 16: CALENDARIO 2026 ========== */}
                     <section className="print-page h-screen flex bg-white">
                         <div className="w-full p-16 flex flex-col justify-center">
                             <div className="max-w-6xl mx-auto">
                                 <div className="text-center mb-12">
-                                    <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">14</p>
+                                    <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">16</p>
                                     <h2 className="text-5xl font-serif font-bold">Calendario 2026</h2>
                                     <p className="text-gray-500 mt-4">Próximas fechas de inicio</p>
                                 </div>
@@ -1256,12 +1356,12 @@ export default function PresentacionBrochure() {
                         </div>
                     </section>
 
-                    {/* ========== SLIDE 15: TESTIMONIOS ========== */}
+                    {/* ========== SLIDE 17: TESTIMONIOS ========== */}
                     <section className="print-page h-screen flex bg-neutral-50">
                         <div className="w-full p-16 flex flex-col justify-center">
                             <div className="max-w-6xl mx-auto">
                                 <div className="text-center mb-16">
-                                    <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">15</p>
+                                    <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">17</p>
                                     <h2 className="text-5xl font-serif font-bold">Lo que dicen nuestros egresados</h2>
                                 </div>
 
@@ -1301,10 +1401,10 @@ export default function PresentacionBrochure() {
                         </div>
                     </section>
 
-                    {/* ========== SLIDE 16: GALERÍA ========== */}
+                    {/* ========== SLIDE 18: GALERÍA ========== */}
                     <section className="print-page h-screen flex bg-black text-white">
                         <div className="w-2/5 p-16 flex flex-col justify-center">
-                            <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">16</p>
+                            <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">18</p>
                             <h2 className="text-5xl font-serif font-bold leading-tight mb-8">
                                 Nuestras<br /><span className="italic">Instalaciones</span>
                             </h2>
@@ -1339,12 +1439,12 @@ export default function PresentacionBrochure() {
                         </div>
                     </section>
 
-                    {/* ========== SLIDE 17: TIMELINE ========== */}
+                    {/* ========== SLIDE 19: TIMELINE ========== */}
                     <section className="print-page h-screen flex bg-white">
                         <div className="w-full p-16 flex flex-col justify-center">
                             <div className="max-w-6xl mx-auto">
                                 <div className="text-center mb-16">
-                                    <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">17</p>
+                                    <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">19</p>
                                     <h2 className="text-5xl font-serif font-bold">Nuestra Historia</h2>
                                     <p className="text-gray-500 mt-4">Más de dos décadas formando artistas culinarios</p>
                                 </div>
@@ -1391,7 +1491,7 @@ export default function PresentacionBrochure() {
                         </div>
                     </section>
 
-                    {/* ========== SLIDE 18: CONTACTO ========== */}
+                    {/* ========== SLIDE 20: CONTACTO ========== */}
                     <section className="print-page h-screen flex bg-white">
                         <div className="w-1/2 bg-black text-white p-20 flex flex-col justify-center">
                             <h2 className="text-6xl font-serif font-bold leading-tight mb-12">
