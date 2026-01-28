@@ -82,7 +82,7 @@ const ContentItem = ({ children }) => (
         borderBottom: '1px solid #eee',
         fontSize: '14px'
     }}>
-        <i className="fa-solid fa-check" style={{ color: '#2a9d8f', fontSize: '12px' }}></i>
+        <i className="fa-solid fa-check" style={{ color: '#000', fontSize: '12px' }}></i>
         <span>{children}</span>
     </div>
 );
@@ -256,7 +256,7 @@ export default function FlyerAsistenteChef() {
                             alignItems: 'center',
                             gap: '10px'
                         }}>
-                            <i className="fa-solid fa-utensils" style={{ color: '#2a9d8f' }}></i>
+                            <i className="fa-solid fa-utensils" style={{ color: '#000' }}></i>
                             Detalle del Contenido
                         </h3>
                         <div style={{
@@ -280,7 +280,7 @@ export default function FlyerAsistenteChef() {
                         alignItems: 'center',
                         gap: '10px'
                     }}>
-                        <i className="fa-regular fa-calendar-check" style={{ color: '#e76f51' }}></i>
+                        <i className="fa-regular fa-calendar-check" style={{ color: '#000' }}></i>
                         Próximas Fechas
                     </h3>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>

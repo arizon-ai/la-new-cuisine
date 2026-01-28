@@ -27,17 +27,17 @@ function Navigation() {
   }, []);
 
   const menuItems = [
-    { path: '/', label: 'Home', icon: '🏠' },
-    { path: '/quienes-somos', label: 'Quiénes Somos', icon: '🏢' },
-    { path: '/oferta', label: 'Oferta Académica', icon: '📚' },
-    { path: '/talleres', label: 'Talleres', icon: '👨‍🍳' },
-    { path: '/flyer-cocina', label: 'Cocina Internacional', icon: '🍳' },
-    { path: '/flyer-pasteleria', label: 'Chef Pastelero', icon: '🍰' },
-    { path: '/flyer-panaderia', label: 'Chef Panadero', icon: '🥖' },
-    { path: '/flyer-gerencia', label: 'Gerencia Gastronómica', icon: '💼' },
-    { path: '/flyer-asistente-chef', label: 'Asistente de Chef', icon: '👨‍🍳' },
-    { path: '/flyer-cocina-ninos', label: 'Cocina Niños', icon: '🧑‍🍳' },
-    { path: '/presentacion', label: 'Presentación', icon: '📄' },
+    { path: '/', label: 'Home' },
+    { path: '/quienes-somos', label: 'Quiénes Somos' },
+    { path: '/oferta', label: 'Oferta Académica' },
+    { path: '/talleres', label: 'Talleres' },
+    { path: '/flyer-cocina', label: 'Cocina Internacional' },
+    { path: '/flyer-pasteleria', label: 'Chef Pastelero' },
+    { path: '/flyer-panaderia', label: 'Chef Panadero' },
+    { path: '/flyer-gerencia', label: 'Gerencia Gastronómica' },
+    { path: '/flyer-asistente-chef', label: 'Asistente de Chef' },
+    { path: '/flyer-cocina-ninos', label: 'Cocina Niños' },
+    { path: '/presentacion', label: 'Presentación' },
   ];
 
   return (
@@ -234,7 +234,6 @@ function Navigation() {
                   transitionDelay: mobileMenuOpen ? `${0.15 + index * 0.05}s` : '0s',
                 }}
               >
-                <span style={{ marginRight: '10px' }}>{item.icon}</span>
                 {item.label}
               </Link>
             ))}

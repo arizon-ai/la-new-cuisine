@@ -17,14 +17,14 @@ const StatusBadge = ({ children, dark = false }) => (
     </span>
 );
 
-// Level Tab Component
-const LevelTab = ({ level, title, active, onClick, color }) => (
+// Level Tab Component - Black/White style
+const LevelTab = ({ level, title, active, onClick }) => (
     <button
         onClick={onClick}
         style={{
             flex: 1,
             padding: '15px 20px',
-            backgroundColor: active ? color : '#f5f5f5',
+            backgroundColor: active ? '#000' : '#f5f5f5',
             color: active ? '#fff' : '#333',
             border: 'none',
             cursor: 'pointer',
@@ -41,7 +41,7 @@ const LevelTab = ({ level, title, active, onClick, color }) => (
     </button>
 );
 
-// Content Item
+// Content Item - Black style
 const ContentItem = ({ number, children }) => (
     <div style={{
         display: 'flex',
@@ -71,13 +71,13 @@ const ContentItem = ({ number, children }) => (
     </div>
 );
 
-// Feature Card
+// Feature Card - Black/White with emoji
 const FeatureCard = ({ icon, value, label }) => (
     <div style={{
         textAlign: 'center',
         padding: '20px 15px',
         backgroundColor: '#fff',
-        border: '1px solid #ddd'
+        border: '1px solid #000'
     }}>
         <div style={{ fontSize: '24px', marginBottom: '8px' }}>{icon}</div>
         <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>{value}</div>
@@ -182,15 +182,6 @@ export default function FlyerCocina() {
         }
     };
 
-    const getLevelColor = () => {
-        switch (activeLevel) {
-            case 'basico': return '#2a9d8f';
-            case 'intermedio': return '#e76f51';
-            case 'avanzado': return '#264653';
-            default: return '#000';
-        }
-    };
-
     return (
         <div style={{
             minHeight: '100vh',
@@ -242,16 +233,6 @@ export default function FlyerCocina() {
                             left: 0
                         }}
                     />
-
-                    {/* Overlay */}
-                    <div style={{
-                        position: 'absolute',
-                        width: '100%',
-                        height: '100%',
-                        background: 'linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.5))',
-                        top: 0,
-                        left: 0
-                    }} />
 
                     {/* Cuadro central */}
                     <div className="responsive-card" style={{
@@ -308,17 +289,19 @@ export default function FlyerCocina() {
                         backgroundColor: '#f8f9fa',
                         padding: '25px',
                         marginBottom: '25px',
-                        border: '1px solid #e0e0e0'
+                        border: '1px solid #000'
                     }}>
                         <h3 style={{
                             fontSize: '14px',
                             fontWeight: 700,
                             textTransform: 'uppercase',
                             marginBottom: '15px',
-                            marginTop: 0
+                            marginTop: 0,
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '10px'
                         }}>
-                            <i className="fa-solid fa-graduation-cap" style={{ marginRight: '10px' }}></i>
-                            Estructura de la Carrera
+                            🎓 Estructura de la Carrera
                         </h3>
                         <p style={{ fontSize: '14px', lineHeight: 1.7, color: '#333', margin: 0 }}>
                             La carrera consta de <strong>tres niveles</strong> (Básico, Intermedio y Avanzado), cada uno con duración de <strong>5 meses (20 semanas)</strong>. Las clases son <strong>teórico-prácticas</strong> con evaluación continua, 3 evaluaciones por nivel, y en el nivel avanzado: examen técnico, presentación del <em>Fine Dining</em>, y cumplimiento de <strong>240 horas de pasantías</strong>.
@@ -346,28 +329,25 @@ export default function FlyerCocina() {
                                 title="Básico"
                                 active={activeLevel === 'basico'}
                                 onClick={() => setActiveLevel('basico')}
-                                color="#2a9d8f"
                             />
                             <LevelTab
                                 level="Nivel 2"
                                 title="Intermedio"
                                 active={activeLevel === 'intermedio'}
                                 onClick={() => setActiveLevel('intermedio')}
-                                color="#e76f51"
                             />
                             <LevelTab
                                 level="Nivel 3"
                                 title="Avanzado"
                                 active={activeLevel === 'avanzado'}
                                 onClick={() => setActiveLevel('avanzado')}
-                                color="#264653"
                             />
                         </div>
 
                         {/* Contenido del nivel activo */}
                         <div style={{
                             border: '2px solid #000',
-                            borderTop: `4px solid ${getLevelColor()}`,
+                            borderTop: '4px solid #000',
                             padding: '25px'
                         }}>
                             {/* Duración del nivel */}
@@ -377,10 +357,10 @@ export default function FlyerCocina() {
                                 gap: '20px',
                                 marginBottom: '20px',
                                 padding: '15px',
-                                backgroundColor: getLevelColor(),
+                                backgroundColor: '#000',
                                 color: '#fff'
                             }}>
-                                <i className="fa-regular fa-clock" style={{ fontSize: '24px' }}></i>
+                                <span style={{ fontSize: '24px' }}>🕐</span>
                                 <div>
                                     <div style={{ fontSize: '12px', opacity: 0.9 }}>Duración del nivel</div>
                                     <div style={{ fontSize: '18px', fontWeight: 700 }}>5 Meses (20 semanas)</div>
@@ -395,7 +375,7 @@ export default function FlyerCocina() {
                                 marginBottom: '20px',
                                 padding: '15px',
                                 backgroundColor: '#f9f9f9',
-                                borderLeft: `4px solid ${getLevelColor()}`
+                                borderLeft: '4px solid #000'
                             }}>
                                 {getLevelDescription()}
                             </p>
@@ -410,8 +390,7 @@ export default function FlyerCocina() {
                                 alignItems: 'center',
                                 gap: '10px'
                             }}>
-                                <i className="fa-solid fa-list-check" style={{ color: getLevelColor() }}></i>
-                                Detalle del Contenido
+                                📋 Detalle del Contenido
                             </h4>
                             <div>
                                 {getActiveContent().map((item, index) => (
@@ -424,23 +403,20 @@ export default function FlyerCocina() {
                     {/* REQUISITOS NIVEL AVANZADO */}
                     {activeLevel === 'avanzado' && (
                         <div style={{
-                            backgroundColor: '#fff3cd',
+                            backgroundColor: '#f5f5f5',
                             padding: '20px',
                             marginBottom: '25px',
-                            border: '1px solid #ffc107',
-                            borderRadius: '4px'
+                            border: '2px solid #000'
                         }}>
                             <h4 style={{
                                 fontSize: '14px',
                                 fontWeight: 700,
                                 marginTop: 0,
-                                marginBottom: '10px',
-                                color: '#856404'
+                                marginBottom: '10px'
                             }}>
-                                <i className="fa-solid fa-star" style={{ marginRight: '8px' }}></i>
-                                Requisitos para Graduación
+                                ⭐ Requisitos para Graduación
                             </h4>
-                            <ul style={{ margin: 0, paddingLeft: '20px', color: '#856404', fontSize: '13px', lineHeight: 1.8 }}>
+                            <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '13px', lineHeight: 1.8 }}>
                                 <li>Aprobación del examen técnico individual</li>
                                 <li>Presentación del Fine Dining</li>
                                 <li>Cumplimiento de 240 horas de pasantías</li>
@@ -465,19 +441,18 @@ export default function FlyerCocina() {
                             alignItems: 'center',
                             gap: '8px'
                         }}>
-                            <i className="fa-solid fa-coins" style={{ color: '#000' }}></i>
-                            Inversión por Nivel
+                            💰 Inversión por Nivel
                         </div>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
-                            <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
+                            <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
                                 <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>50 €</div>
                                 <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
                             </div>
-                            <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
+                            <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
                                 <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>160 €</div>
                                 <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Mensualidad</div>
                             </div>
-                            <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
+                            <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
                                 <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>90 €</div>
                                 <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Kit Estudio</div>
                             </div>

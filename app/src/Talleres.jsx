@@ -17,7 +17,7 @@ export default function Talleres() {
             talleres: [
                 { nombre: 'Taller de Cocina Italiana', descripcion: 'Pastas frescas, risottos y salsas tradicionales' },
                 { nombre: 'Taller de Cocina Asiática', descripcion: 'Técnicas y sabores del Lejano Oriente' },
-                { nombre: 'Taller de Sushi', descripcion: 'Arte japonés del sushi y sashimi' },
+                { nombre: 'Taller de comida Japonesa', descripcion: 'Arte japonés del sushi y sashimi' },
                 { nombre: 'Taller de Cocina China', descripcion: 'Wok, dim sum y técnicas orientales' },
                 { nombre: 'Taller de Cocina Tailandesa', descripcion: 'Curry, pad thai y sabores exóticos' },
                 { nombre: 'Taller de Cocina Mediterránea', descripcion: 'Sabores del mar y la tierra mediterránea' },

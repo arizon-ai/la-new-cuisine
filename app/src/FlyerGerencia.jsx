@@ -38,7 +38,7 @@ const ScheduleCard = ({ label, day, time, location, code, isOpen }) => (
             alignItems: 'center',
             gap: '8px'
         }}>
-            <i className="fa-regular fa-clock" style={{ color: '#444' }}></i> {time}
+            🕐 {time}
         </div>
         <div style={{
             fontSize: '11px',
@@ -48,7 +48,7 @@ const ScheduleCard = ({ label, day, time, location, code, isOpen }) => (
             alignItems: 'center',
             gap: '5px'
         }}>
-            <i className="fa-solid fa-chalkboard-user" style={{ color: '#666' }}></i> {location}
+            📍 {location}
         </div>
         <div style={{
             marginTop: '15px',
@@ -65,7 +65,7 @@ const ScheduleCard = ({ label, day, time, location, code, isOpen }) => (
     </div>
 );
 
-// Módulo Card
+// Módulo Card - Black/White style
 const ModuleCard = ({ number, title, icon }) => (
     <div style={{
         display: 'flex',
@@ -73,13 +73,13 @@ const ModuleCard = ({ number, title, icon }) => (
         gap: '15px',
         padding: '15px',
         backgroundColor: number % 2 === 0 ? '#f8f9fa' : '#fff',
-        border: '1px solid #e0e0e0',
+        border: '1px solid #000',
         marginBottom: '10px'
     }}>
         <div style={{
             minWidth: '50px',
             height: '50px',
-            backgroundColor: '#1a365d',
+            backgroundColor: '#000',
             color: '#fff',
             borderRadius: '8px',
             display: 'flex',
@@ -95,7 +95,7 @@ const ModuleCard = ({ number, title, icon }) => (
             <div style={{
                 fontSize: '14px',
                 fontWeight: 700,
-                color: '#1a365d',
+                color: '#000',
                 marginBottom: '4px'
             }}>
                 {title}
@@ -105,14 +105,13 @@ const ModuleCard = ({ number, title, icon }) => (
     </div>
 );
 
-// Feature Card
+// Feature Card - Black/White
 const FeatureCard = ({ icon, title, description }) => (
     <div style={{
         textAlign: 'center',
         padding: '20px',
         backgroundColor: '#fff',
-        border: '1px solid #ddd',
-        borderRadius: '8px'
+        border: '1px solid #000'
     }}>
         <div style={{ fontSize: '28px', marginBottom: '10px' }}>{icon}</div>
         <div style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', marginBottom: '5px' }}>{title}</div>
@@ -161,14 +160,14 @@ export default function FlyerGerencia() {
                     overflow: 'hidden',
                     boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)'
                 }}>
-                    {/* Barra superior azul ejecutivo */}
+                    {/* Barra superior negra */}
                     <div style={{
                         position: 'absolute',
                         top: 0,
                         left: 0,
                         width: '100%',
                         height: '12px',
-                        backgroundColor: '#1a365d',
+                        backgroundColor: '#000',
                         zIndex: 20
                     }} />
 
@@ -186,16 +185,6 @@ export default function FlyerGerencia() {
                         }}
                     />
 
-                    {/* Overlay */}
-                    <div style={{
-                        position: 'absolute',
-                        width: '100%',
-                        height: '100%',
-                        background: 'linear-gradient(to bottom, rgba(26,54,93,0.3), rgba(26,54,93,0.5))',
-                        top: 0,
-                        left: 0
-                    }} />
-
                     {/* Cuadro central */}
                     <div className="responsive-card" style={{
                         position: 'relative',
@@ -204,8 +193,8 @@ export default function FlyerGerencia() {
                         padding: '40px 60px',
                         width: '540px',
                         textAlign: 'center',
-                        border: '2px solid #1a365d',
-                        boxShadow: '15px 15px 0px rgba(26,54,93,1)'
+                        border: '2px solid #000',
+                        boxShadow: '15px 15px 0px rgba(0,0,0,1)'
                     }}>
                         <img
                             src="/logo.png"
@@ -213,11 +202,11 @@ export default function FlyerGerencia() {
                             className="responsive-logo"
                             style={{ width: '320px', maxWidth: '80%', height: 'auto', margin: '0 auto 15px' }}
                         />
-                        <h2 style={{ fontSize: '22px', color: '#1a365d', fontWeight: 400, marginTop: 0, letterSpacing: '2px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase' }}>
+                        <h2 style={{ fontSize: '22px', color: '#333', fontWeight: 400, marginTop: 0, letterSpacing: '2px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase' }}>
                             DIPLOMADO EN<br />GERENCIA GASTRONÓMICA
                         </h2>
-                        <hr style={{ border: 0, height: '2px', background: '#1a365d', margin: '25px auto', width: '60px' }} />
-                        <p style={{ fontSize: '13px', fontFamily: "'Azeret Mono'", color: '#1a365d', textTransform: 'uppercase', lineHeight: 1.6, margin: 0 }}>
+                        <hr style={{ border: 0, height: '2px', background: '#000', margin: '25px auto', width: '60px' }} />
+                        <p style={{ fontSize: '13px', fontFamily: "'Azeret Mono'", color: '#000', textTransform: 'uppercase', lineHeight: 1.6, margin: 0 }}>
                             10 Módulos • Liderazgo Estratégico • Sector HORECA
                         </p>
                     </div>
@@ -230,8 +219,7 @@ export default function FlyerGerencia() {
                         fontWeight: 700,
                         textTransform: 'uppercase',
                         marginBottom: '10px',
-                        lineHeight: 1.1,
-                        color: '#1a365d'
+                        lineHeight: 1.1
                     }}>
                         Diplomado en<br />Gerencia Gastronómica
                     </h1>
@@ -241,7 +229,7 @@ export default function FlyerGerencia() {
                         color: '#555',
                         marginBottom: '25px',
                         display: 'block',
-                        borderLeft: '3px solid #1a365d',
+                        borderLeft: '3px solid #000',
                         paddingLeft: '10px'
                     }}>
                         ¡Eleva tu carrera gastronómica y lidera operaciones exitosas!
@@ -249,11 +237,10 @@ export default function FlyerGerencia() {
 
                     {/* DESCRIPCIÓN */}
                     <div style={{
-                        backgroundColor: '#f0f4f8',
+                        backgroundColor: '#f8f9fa',
                         padding: '25px',
                         marginBottom: '25px',
-                        border: '1px solid #1a365d',
-                        borderRadius: '8px'
+                        border: '1px solid #000'
                     }}>
                         <p style={{ fontSize: '14px', lineHeight: 1.7, color: '#333', margin: 0 }}>
                             Este programa integral forma <strong>líderes capaces de dirigir operaciones exitosas</strong>, fusionando visión estratégica con excelencia operativa en el dinámico mundo de la hospitalidad.
@@ -262,11 +249,10 @@ export default function FlyerGerencia() {
 
                     {/* OBJETIVOS ESTRATÉGICOS */}
                     <div style={{
-                        backgroundColor: '#1a365d',
+                        backgroundColor: '#000',
                         color: '#fff',
                         padding: '25px',
-                        marginBottom: '25px',
-                        borderRadius: '8px'
+                        marginBottom: '25px'
                     }}>
                         <h3 style={{
                             fontSize: '16px',
@@ -278,8 +264,7 @@ export default function FlyerGerencia() {
                             alignItems: 'center',
                             gap: '10px'
                         }}>
-                            <i className="fa-solid fa-bullseye"></i>
-                            Objetivos Estratégicos
+                            🎯 Objetivos Estratégicos
                         </h3>
                         <p style={{ fontSize: '14px', lineHeight: 1.7, margin: 0, opacity: 0.95 }}>
                             Desarrolla competencias en <strong>planificación financiera</strong>, gestión de equipos multidisciplinarios y optimización de procesos para maximizar rentabilidad y satisfacción del cliente. Integra tendencias globales como <strong>sostenibilidad, marketing digital y control de costos</strong> en entornos reales de restaurantes y hoteles.
@@ -318,11 +303,9 @@ export default function FlyerGerencia() {
                         marginBottom: '20px',
                         display: 'flex',
                         alignItems: 'center',
-                        gap: '10px',
-                        color: '#1a365d'
+                        gap: '10px'
                     }}>
-                        <i className="fa-solid fa-book-open"></i>
-                        Contenido del Programa - 10 Módulos
+                        📚 Contenido del Programa - 10 Módulos
                     </h3>
                     <div style={{ marginBottom: '25px' }}>
                         {modulos.map((modulo) => (
@@ -343,11 +326,9 @@ export default function FlyerGerencia() {
                         marginBottom: '15px',
                         display: 'flex',
                         alignItems: 'center',
-                        gap: '10px',
-                        color: '#1a365d'
+                        gap: '10px'
                     }}>
-                        <i className="fa-regular fa-calendar-check"></i>
-                        Próximas Fechas
+                        📅 Próximas Fechas
                     </h3>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '25px' }}>
                         <ScheduleCard
@@ -372,7 +353,7 @@ export default function FlyerGerencia() {
                     <div style={{
                         backgroundColor: '#f9f9f9',
                         padding: '20px',
-                        border: '1px solid #1a365d'
+                        border: '1px solid #000'
                     }}>
                         <div style={{
                             fontSize: '14px',
@@ -381,23 +362,21 @@ export default function FlyerGerencia() {
                             marginBottom: '15px',
                             display: 'flex',
                             alignItems: 'center',
-                            gap: '8px',
-                            color: '#1a365d'
+                            gap: '8px'
                         }}>
-                            <i className="fa-solid fa-coins"></i>
-                            Inversión
+                            💰 Inversión
                         </div>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
-                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
-                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#1a365d' }}>50 €</div>
+                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #000' }}>
+                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>50 €</div>
                                 <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
                             </div>
-                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
-                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#1a365d' }}>130 €</div>
+                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #000' }}>
+                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>130 €</div>
                                 <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Mensualidad</div>
                             </div>
-                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
-                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#1a365d' }}>4</div>
+                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #000' }}>
+                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>4</div>
                                 <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Meses</div>
                             </div>
                         </div>
@@ -409,7 +388,7 @@ export default function FlyerGerencia() {
 
                 {/* FOOTER */}
                 <div style={{
-                    backgroundColor: '#1a365d',
+                    backgroundColor: '#000',
                     color: '#fff',
                     padding: '25px',
                     textAlign: 'center',
@@ -417,7 +396,7 @@ export default function FlyerGerencia() {
                 }}>
                     <div style={{
                         backgroundColor: '#fff',
-                        color: '#1a365d',
+                        color: '#000',
                         display: 'inline-block',
                         padding: '12px 25px',
                         fontWeight: 700,
@@ -425,7 +404,7 @@ export default function FlyerGerencia() {
                         fontFamily: "'Azeret Mono', monospace",
                         fontSize: '14px',
                         marginBottom: '15px',
-                        boxShadow: '4px 4px 0px rgba(0,0,0,0.3)',
+                        boxShadow: '4px 4px 0px #333',
                         cursor: 'pointer'
                     }}>
                         ¡LIDERA TU NEGOCIO GASTRONÓMICO!
