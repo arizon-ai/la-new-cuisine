@@ -335,21 +335,27 @@ export default function FlyerGerencia() {
                     textAlign: 'center',
                     marginTop: 'auto'
                 }}>
-                    <div style={{
-                        backgroundColor: '#fff',
-                        color: '#000',
-                        display: 'inline-block',
-                        padding: '12px 25px',
-                        fontWeight: 700,
-                        textTransform: 'uppercase',
-                        fontFamily: "'Azeret Mono', monospace",
-                        fontSize: '14px',
-                        marginBottom: '15px',
-                        boxShadow: '4px 4px 0px #333',
-                        cursor: 'pointer'
-                    }}>
+                    <a
+                        href="https://wa.me/584244635196"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                            backgroundColor: '#fff',
+                            color: '#000',
+                            display: 'inline-block',
+                            padding: '12px 25px',
+                            fontWeight: 700,
+                            textTransform: 'uppercase',
+                            fontFamily: "'Azeret Mono', monospace",
+                            fontSize: '14px',
+                            marginBottom: '15px',
+                            boxShadow: '4px 4px 0px #333',
+                            cursor: 'pointer',
+                            textDecoration: 'none'
+                        }}
+                    >
                         ¡LIDERA EL ÉXITO GASTRONÓMICO!
-                    </div>
+                    </a>
                     <div style={{
                         fontSize: '12px',
                         opacity: 0.8,

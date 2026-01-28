@@ -583,21 +583,27 @@ export default function FlyerPasteleria() {
                     textAlign: 'center',
                     marginTop: 'auto'
                 }}>
-                    <div style={{
-                        backgroundColor: '#fff',
-                        color: '#000',
-                        display: 'inline-block',
-                        padding: '12px 25px',
-                        fontWeight: 700,
-                        textTransform: 'uppercase',
-                        fontFamily: "'Azeret Mono', monospace",
-                        fontSize: '14px',
-                        marginBottom: '15px',
-                        boxShadow: '4px 4px 0px #333',
-                        cursor: 'pointer'
-                    }}>
+                    <a
+                        href="https://wa.me/584244635196"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                            backgroundColor: '#fff',
+                            color: '#000',
+                            display: 'inline-block',
+                            padding: '12px 25px',
+                            fontWeight: 700,
+                            textTransform: 'uppercase',
+                            fontFamily: "'Azeret Mono', monospace",
+                            fontSize: '14px',
+                            marginBottom: '15px',
+                            boxShadow: '4px 4px 0px #333',
+                            cursor: 'pointer',
+                            textDecoration: 'none'
+                        }}
+                    >
                         ¡DOMINA EL ARTE DE LA PASTELERÍA!
-                    </div>
+                    </a>
                     <div style={{
                         fontSize: '12px',
                         opacity: 0.8,
@@ -607,7 +613,7 @@ export default function FlyerPasteleria() {
                         justifyContent: 'center',
                         gap: '8px'
                     }}>
-                        <WhatsappLogo size={16} weight="light" color="#fff" /> +1 786-302-8728 &nbsp;|&nbsp; Valencia, Vzla.
+                        <WhatsappLogo size={16} weight="light" color="#fff" /> +58 424-4635196 &nbsp;|&nbsp; Valencia, Vzla.
                     </div>
                 </div>
 
