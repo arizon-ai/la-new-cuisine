@@ -48,7 +48,7 @@ export default function Talleres() {
             titulo: 'Programa Juvenil',
             icono: Users,
             talleres: [
-                { nombre: 'Taller de Mini Chef', descripcion: 'Cocina divertida para niños y adolescentes' }
+                { nombre: 'Cocina para Niños y Adolescentes', descripcion: 'Cocina divertida para niños de 7 a 16 años' }
             ]
         }
     ];
