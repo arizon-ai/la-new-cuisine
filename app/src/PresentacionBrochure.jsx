@@ -642,7 +642,7 @@ export default function PresentacionBrochure() {
                                 Diplomado en<br />Gerencia<br />Gastronómica
                             </h2>
                             <p className="text-gray-500 mb-8 max-w-md">
-                                Formación integral para chefs, emprendedores y profesionales del sector alimentario.
+                                Lidera y transforma el negocio gastronómico. Gestión estratégica, control financiero y liderazgo.
                             </p>
 
                             <div className="grid grid-cols-3 gap-6">
@@ -655,7 +655,7 @@ export default function PresentacionBrochure() {
                                     <p className="text-xs uppercase">Inscripción</p>
                                 </div>
                                 <div className="text-center p-4 border border-black">
-                                    <p className="text-3xl font-bold">130€</p>
+                                    <p className="text-3xl font-bold">100€</p>
                                     <p className="text-xs uppercase">Mensual</p>
                                 </div>
                             </div>
@@ -666,27 +666,30 @@ export default function PresentacionBrochure() {
                             </div>
                         </div>
 
-                        <div className="w-1/2 p-20 flex flex-col justify-center bg-neutral-50">
-                            <p className="text-xs uppercase tracking-widest text-gray-400 mb-8">Contenido</p>
-                            <ul className="space-y-4 text-lg">
+                        <div className="w-1/2 p-16 flex flex-col justify-center bg-neutral-50">
+                            <p className="text-xs uppercase tracking-widest text-gray-400 mb-6">12 Temas Principales</p>
+                            <ul className="space-y-2 text-sm">
                                 {[
-                                    'Modelo Canvas & Emprendimiento',
-                                    'Marketing Gastronómico',
-                                    'Neuromarketing',
-                                    'Liderazgo & Capital Humano',
-                                    'Diseño de Espacios',
-                                    'Ingeniería del Menú',
-                                    'Presupuestos & Control',
-                                    'Marco Jurídico',
-                                    'Higiene & Salud Ocupacional',
-                                    'Plan de Negocio Final'
+                                    'Planificación estratégica de negocios',
+                                    'Control de costos y presupuesto',
+                                    'Marketing gastronómico y branding',
+                                    'Gestión de personal y liderazgo',
+                                    'Diseño de menús rentables',
+                                    'Control de inventarios',
+                                    'Normativas sanitarias y seguridad',
+                                    'Tendencias de sostenibilidad',
+                                    'Fidelización de clientes',
+                                    'Análisis financiero y proyecciones',
+                                    'Negociación con proveedores',
+                                    'Innovación en servicios gastronómicos'
                                 ].map((item, i) => (
-                                    <li key={i} className="flex items-center gap-4">
-                                        <span className="w-6 h-6 bg-black text-white flex items-center justify-center text-xs">{i + 1}</span>
+                                    <li key={i} className="flex items-center gap-3">
+                                        <span className="w-5 h-5 bg-black text-white flex items-center justify-center text-xs flex-shrink-0">{i + 1}</span>
                                         {item}
                                     </li>
                                 ))}
                             </ul>
+                            <p className="text-xs text-gray-400 mt-6">*Incluye material digital y certificación</p>
                         </div>
                     </section>
 
