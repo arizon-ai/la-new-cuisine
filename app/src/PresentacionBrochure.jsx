@@ -48,7 +48,8 @@ const AnimatedCounter = ({ target, duration = 2000, suffix = '' }) => {
 // Slide names para mini preview
 const slideNames = [
     'Portada', 'Quiénes Somos', 'Carreras', 'Intensivo', 'Programas Cortos',
-    'Diplomado', 'Servicios', 'Talleres', 'Syllabus Cocina', 'Syllabus Pastelería',
+    'Diplomado', 'ABC Molecular', 'Servicios', 'Talleres', 'Syllabus Cocina', 'Syllabus Pastelería',
+    'Asistente Chef', 'Junior Chef', 'Por Qué Elegirnos', 'Calendario 2026',
     'Testimonios', 'Galería', 'Timeline', 'Contacto'
 ];
 
@@ -59,7 +60,7 @@ export default function PresentacionBrochure() {
     const [isAnimating, setIsAnimating] = useState(false);
     const containerRef = useRef(null);
 
-    const totalSlides = 14; // Añadimos testimonios, galería y timeline
+    const totalSlides = 19; // Incluye nuevas slides: Asistente Chef, Junior Chef, Por Qué Elegirnos, Calendario
 
     const nextSlide = useCallback(() => {
         if (isAnimating) return;
@@ -977,12 +978,290 @@ export default function PresentacionBrochure() {
                         </div>
                     </section>
 
-                    {/* ========== SLIDE 11: TESTIMONIOS ========== */}
+                    {/* ========== SLIDE 11: ASISTENTE DE CHEF ========== */}
+                    <section className="print-page h-screen flex bg-white">
+                        <div className="w-2/5 bg-black text-white p-16 flex flex-col justify-center">
+                            <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">11</p>
+                            <h2 className="text-5xl font-serif font-bold leading-tight mb-8">
+                                Asistente<br />de <span className="italic">Chef</span>
+                            </h2>
+                            <p className="text-gray-400 leading-relaxed mb-8">
+                                Tu primer paso hacia la excelencia culinaria. Formación práctica intensiva de 5 meses.
+                            </p>
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="text-center p-4 border border-white/20">
+                                    <p className="text-3xl font-bold">5</p>
+                                    <p className="text-xs text-gray-400 uppercase">Meses</p>
+                                </div>
+                                <div className="text-center p-4 border border-white/20">
+                                    <p className="text-3xl font-bold">15</p>
+                                    <p className="text-xs text-gray-400 uppercase">Temas</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="w-3/5 p-12 flex flex-col justify-center">
+                            <p className="text-xs uppercase tracking-widest text-gray-400 mb-6 font-bold">Contenido del Programa</p>
+                            <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm text-gray-600 mb-8">
+                                {[
+                                    'Buenas Prácticas en Manipulación',
+                                    'Cortes de precisión',
+                                    'Fondos, sopas y cremas',
+                                    'Huevos y sus técnicas',
+                                    'Salsas madres',
+                                    'Pollo: diferentes preparaciones',
+                                    'Ensaladas y vinagretas',
+                                    'Pasta fresca y salsas',
+                                    'Masas quebradas',
+                                    'Verduras y hortalizas',
+                                    'Carnes rojas',
+                                    'Charcutería',
+                                    'Pescados y mariscos',
+                                    'Pastelería básica',
+                                    'Evaluación final'
+                                ].map((item, i) => (
+                                    <div key={i} className="flex items-center gap-2 py-1">
+                                        <span className="w-1.5 h-1.5 bg-black rounded-full flex-shrink-0"></span>
+                                        {item}
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-gray-200">
+                                <div className="text-center p-4 bg-black text-white">
+                                    <p className="text-2xl font-bold">35€</p>
+                                    <p className="text-xs uppercase">Inscripción</p>
+                                </div>
+                                <div className="text-center p-4 border border-black">
+                                    <p className="text-2xl font-bold">110€</p>
+                                    <p className="text-xs uppercase">Mensualidad</p>
+                                </div>
+                                <div className="text-center p-4 border border-black">
+                                    <p className="text-2xl font-bold">70€</p>
+                                    <p className="text-xs uppercase">Kit</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* ========== SLIDE 12: JUNIOR CHEF ========== */}
+                    <section className="print-page h-screen flex bg-neutral-50">
+                        <div className="w-full p-16 flex flex-col justify-center">
+                            <div className="max-w-6xl mx-auto">
+                                <div className="text-center mb-12">
+                                    <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">12</p>
+                                    <h2 className="text-5xl font-serif font-bold">Junior Chef</h2>
+                                    <p className="text-xl text-gray-500 mt-4">Cocina para Niños y Adolescentes</p>
+                                </div>
+
+                                <div className="grid grid-cols-2 gap-12">
+                                    {/* Niños */}
+                                    <div className="bg-white p-10 border-l-4 border-black">
+                                        <h3 className="text-3xl font-serif font-bold mb-2">Niños</h3>
+                                        <p className="text-gray-500 mb-6">7 a 12 años</p>
+
+                                        <div className="space-y-3 text-sm text-gray-600 mb-6">
+                                            <div className="flex items-center gap-2">
+                                                <span className="w-1.5 h-1.5 bg-black rounded-full"></span>
+                                                Introducción a la cocina segura
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                                <span className="w-1.5 h-1.5 bg-black rounded-full"></span>
+                                                Recetas divertidas y saludables
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                                <span className="w-1.5 h-1.5 bg-black rounded-full"></span>
+                                                Postres y decoración
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                                <span className="w-1.5 h-1.5 bg-black rounded-full"></span>
+                                                Trabajo en equipo
+                                            </div>
+                                        </div>
+
+                                        <div className="flex items-baseline gap-2 pt-4 border-t">
+                                            <span className="text-3xl font-bold">80€</span>
+                                            <span className="text-gray-400">/mes</span>
+                                        </div>
+                                    </div>
+
+                                    {/* Adolescentes */}
+                                    <div className="bg-black text-white p-10">
+                                        <h3 className="text-3xl font-serif font-bold mb-2">Adolescentes</h3>
+                                        <p className="text-gray-400 mb-6">13 a 16 años</p>
+
+                                        <div className="space-y-3 text-sm text-gray-300 mb-6">
+                                            <div className="flex items-center gap-2">
+                                                <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+                                                Técnicas culinarias avanzadas
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                                <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+                                                Cocina internacional
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                                <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+                                                Presentación de platos
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                                <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+                                                Proyecto final familiar
+                                            </div>
+                                        </div>
+
+                                        <div className="flex items-baseline gap-2 pt-4 border-t border-white/20">
+                                            <span className="text-3xl font-bold">80€</span>
+                                            <span className="text-gray-400">/mes</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="mt-8 text-center text-sm text-gray-500">
+                                    <p>Duración: 4 meses • Viernes en la tarde • Inscripción: 30€ (incluye uniforme)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* ========== SLIDE 13: POR QUÉ ELEGIRNOS ========== */}
+                    <section className="print-page h-screen flex bg-black text-white">
+                        <div className="w-1/2 p-20 flex flex-col justify-center">
+                            <p className="text-xs uppercase tracking-[0.3em] text-gray-500 mb-4">13</p>
+                            <h2 className="text-6xl font-serif font-bold leading-tight mb-8">
+                                ¿Por qué<br /><span className="italic">elegirnos?</span>
+                            </h2>
+                            <p className="text-xl text-gray-400 leading-relaxed">
+                                Capital humano incomparable, instructores con experiencia real e instalaciones diseñadas para formar profesionales.
+                            </p>
+                        </div>
+
+                        <div className="w-1/2 bg-white text-black p-16 flex flex-col justify-center">
+                            <div className="grid grid-cols-2 gap-6 mb-8">
+                                <div className="text-center p-8 border border-black">
+                                    <p className="text-5xl font-bold mb-2">
+                                        <AnimatedCounter target={22} suffix="+" />
+                                    </p>
+                                    <p className="text-sm text-gray-500 uppercase">Años de Experiencia</p>
+                                </div>
+                                <div className="text-center p-8 border border-black">
+                                    <p className="text-5xl font-bold mb-2">4</p>
+                                    <p className="text-sm text-gray-500 uppercase">Carreras Profesionales</p>
+                                </div>
+                                <div className="text-center p-8 border border-black">
+                                    <p className="text-5xl font-bold mb-2">18+</p>
+                                    <p className="text-sm text-gray-500 uppercase">Talleres Prácticos</p>
+                                </div>
+                                <div className="text-center p-8 bg-black text-white">
+                                    <p className="text-5xl font-bold mb-2">∞</p>
+                                    <p className="text-sm text-gray-400 uppercase">Pasión por Enseñar</p>
+                                </div>
+                            </div>
+
+                            <div className="space-y-3 text-sm">
+                                <div className="flex items-center gap-3 p-3 bg-neutral-100">
+                                    <span className="w-2 h-2 bg-black rounded-full"></span>
+                                    Certificación oficial MPPE No. R-0129-08
+                                </div>
+                                <div className="flex items-center gap-3 p-3 bg-neutral-100">
+                                    <span className="w-2 h-2 bg-black rounded-full"></span>
+                                    Pasantías en hoteles y restaurantes
+                                </div>
+                                <div className="flex items-center gap-3 p-3 bg-neutral-100">
+                                    <span className="w-2 h-2 bg-black rounded-full"></span>
+                                    Instructores con experiencia internacional
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* ========== SLIDE 14: CALENDARIO 2026 ========== */}
+                    <section className="print-page h-screen flex bg-white">
+                        <div className="w-full p-16 flex flex-col justify-center">
+                            <div className="max-w-6xl mx-auto">
+                                <div className="text-center mb-12">
+                                    <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">14</p>
+                                    <h2 className="text-5xl font-serif font-bold">Calendario 2026</h2>
+                                    <p className="text-gray-500 mt-4">Próximas fechas de inicio</p>
+                                </div>
+
+                                <div className="grid grid-cols-3 gap-8">
+                                    {/* Cocina Internacional */}
+                                    <div className="border border-black">
+                                        <div className="bg-black text-white p-4">
+                                            <h3 className="font-bold text-lg">Chef Cocina Internacional</h3>
+                                        </div>
+                                        <div className="p-6 space-y-3 text-sm">
+                                            <div className="flex justify-between">
+                                                <span>Lunes Tarde</span>
+                                                <span className="font-bold">2 Feb</span>
+                                            </div>
+                                            <div className="flex justify-between">
+                                                <span>Martes Tarde</span>
+                                                <span className="font-bold">27 Ene</span>
+                                            </div>
+                                            <div className="flex justify-between">
+                                                <span>Intensivo (Mar-Vie)</span>
+                                                <span className="font-bold">24 Feb</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Pastelería */}
+                                    <div className="border border-black">
+                                        <div className="bg-black text-white p-4">
+                                            <h3 className="font-bold text-lg">Chef Pastelero</h3>
+                                        </div>
+                                        <div className="p-6 space-y-3 text-sm">
+                                            <div className="flex justify-between">
+                                                <span>Mié/Jue Mañana</span>
+                                                <span className="font-bold">25-26 Feb</span>
+                                            </div>
+                                            <div className="flex justify-between">
+                                                <span>Sábado Mañana</span>
+                                                <span className="font-bold">28 Feb</span>
+                                            </div>
+                                            <div className="flex justify-between">
+                                                <span>Lunes Nocturno</span>
+                                                <span className="font-bold">23 Feb</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Otros Programas */}
+                                    <div className="border border-black">
+                                        <div className="bg-black text-white p-4">
+                                            <h3 className="font-bold text-lg">Otros Programas</h3>
+                                        </div>
+                                        <div className="p-6 space-y-3 text-sm">
+                                            <div className="flex justify-between">
+                                                <span>Diplomado Gerencia</span>
+                                                <span className="font-bold">3 Feb</span>
+                                            </div>
+                                            <div className="flex justify-between">
+                                                <span>Chef Panadero</span>
+                                                <span className="font-bold">9 Feb</span>
+                                            </div>
+                                            <div className="flex justify-between">
+                                                <span>Junior Chef</span>
+                                                <span className="font-bold">20 Feb</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p className="text-center text-sm text-gray-400 mt-8">
+                                    * Fechas estimadas sujetas a confirmación. Consulta disponibilidad por WhatsApp.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* ========== SLIDE 15: TESTIMONIOS ========== */}
                     <section className="print-page h-screen flex bg-neutral-50">
                         <div className="w-full p-16 flex flex-col justify-center">
                             <div className="max-w-6xl mx-auto">
                                 <div className="text-center mb-16">
-                                    <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">09</p>
+                                    <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">15</p>
                                     <h2 className="text-5xl font-serif font-bold">Lo que dicen nuestros egresados</h2>
                                 </div>
 
@@ -1022,10 +1301,10 @@ export default function PresentacionBrochure() {
                         </div>
                     </section>
 
-                    {/* ========== SLIDE 12: GALERÍA ========== */}
+                    {/* ========== SLIDE 16: GALERÍA ========== */}
                     <section className="print-page h-screen flex bg-black text-white">
                         <div className="w-2/5 p-16 flex flex-col justify-center">
-                            <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">10</p>
+                            <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">16</p>
                             <h2 className="text-5xl font-serif font-bold leading-tight mb-8">
                                 Nuestras<br /><span className="italic">Instalaciones</span>
                             </h2>
@@ -1060,12 +1339,12 @@ export default function PresentacionBrochure() {
                         </div>
                     </section>
 
-                    {/* ========== SLIDE 13: TIMELINE ========== */}
+                    {/* ========== SLIDE 17: TIMELINE ========== */}
                     <section className="print-page h-screen flex bg-white">
                         <div className="w-full p-16 flex flex-col justify-center">
                             <div className="max-w-6xl mx-auto">
                                 <div className="text-center mb-16">
-                                    <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">11</p>
+                                    <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">17</p>
                                     <h2 className="text-5xl font-serif font-bold">Nuestra Historia</h2>
                                     <p className="text-gray-500 mt-4">Más de dos décadas formando artistas culinarios</p>
                                 </div>
@@ -1112,7 +1391,7 @@ export default function PresentacionBrochure() {
                         </div>
                     </section>
 
-                    {/* ========== SLIDE 14: CONTACTO ========== */}
+                    {/* ========== SLIDE 18: CONTACTO ========== */}
                     <section className="print-page h-screen flex bg-white">
                         <div className="w-1/2 bg-black text-white p-20 flex flex-col justify-center">
                             <h2 className="text-6xl font-serif font-bold leading-tight mb-12">
