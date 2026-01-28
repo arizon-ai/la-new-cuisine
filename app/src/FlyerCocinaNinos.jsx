@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Feature Card - Black/White with emoji
+// Feature Card - Black/White with phosphore emoji
 const FeatureCard = ({ icon, value, label, bgColor = '#fff' }) => (
     <div style={{
         textAlign: 'center',
@@ -8,7 +8,12 @@ const FeatureCard = ({ icon, value, label, bgColor = '#fff' }) => (
         backgroundColor: bgColor,
         border: '1px solid #000'
     }}>
-        <div style={{ fontSize: '28px', marginBottom: '8px' }}>{icon}</div>
+        <div style={{
+            fontSize: '28px',
+            marginBottom: '8px',
+            filter: 'drop-shadow(0 0 8px #00ff88) drop-shadow(0 0 15px #00ff88)',
+            textShadow: '0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 30px #00ff88'
+        }}>{icon}</div>
         <div style={{ fontSize: '18px', fontWeight: 700, color: '#000' }}>{value}</div>
         <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase', marginTop: '4px' }}>{label}</div>
     </div>
@@ -29,7 +34,7 @@ const ContentItem = ({ children }) => (
     </div>
 );
 
-// Benefit Card
+// Benefit Card with phosphore emoji
 const BenefitCard = ({ icon, title }) => (
     <div style={{
         display: 'flex',
@@ -39,7 +44,11 @@ const BenefitCard = ({ icon, title }) => (
         backgroundColor: '#f8f9fa',
         border: '1px solid #000'
     }}>
-        <span style={{ fontSize: '24px' }}>{icon}</span>
+        <span style={{
+            fontSize: '24px',
+            filter: 'drop-shadow(0 0 8px #00ff88) drop-shadow(0 0 15px #00ff88)',
+            textShadow: '0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 30px #00ff88'
+        }}>{icon}</span>
         <span style={{ fontWeight: 700, fontSize: '14px' }}>{title}</span>
     </div>
 );

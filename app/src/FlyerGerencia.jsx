@@ -100,12 +100,16 @@ const ModuleCard = ({ number, title, icon }) => (
             }}>
                 {title}
             </div>
-            <div style={{ fontSize: '20px' }}>{icon}</div>
+            <div style={{
+                fontSize: '20px',
+                filter: 'drop-shadow(0 0 8px #00ff88) drop-shadow(0 0 15px #00ff88)',
+                textShadow: '0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 30px #00ff88'
+            }}>{icon}</div>
         </div>
     </div>
 );
 
-// Feature Card - Black/White
+// Feature Card - Black/White with phosphore emoji
 const FeatureCard = ({ icon, title, description }) => (
     <div style={{
         textAlign: 'center',
@@ -113,7 +117,12 @@ const FeatureCard = ({ icon, title, description }) => (
         backgroundColor: '#fff',
         border: '1px solid #000'
     }}>
-        <div style={{ fontSize: '28px', marginBottom: '10px' }}>{icon}</div>
+        <div style={{
+            fontSize: '28px',
+            marginBottom: '10px',
+            filter: 'drop-shadow(0 0 8px #00ff88) drop-shadow(0 0 15px #00ff88)',
+            textShadow: '0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 30px #00ff88'
+        }}>{icon}</div>
         <div style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', marginBottom: '5px' }}>{title}</div>
         <div style={{ fontSize: '11px', color: '#666', lineHeight: 1.4 }}>{description}</div>
     </div>

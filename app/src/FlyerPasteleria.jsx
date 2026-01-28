@@ -126,7 +126,7 @@ const ContentItem = ({ number, children }) => (
     </div>
 );
 
-// Feature Card - Black/White with emoji
+// Feature Card - Black/White with phosphore emoji
 const FeatureCard = ({ icon, value, label }) => (
     <div style={{
         textAlign: 'center',
@@ -134,7 +134,12 @@ const FeatureCard = ({ icon, value, label }) => (
         backgroundColor: '#fff',
         border: '1px solid #000'
     }}>
-        <div style={{ fontSize: '24px', marginBottom: '8px' }}>{icon}</div>
+        <div style={{
+            fontSize: '24px',
+            marginBottom: '8px',
+            filter: 'drop-shadow(0 0 8px #00ff88) drop-shadow(0 0 15px #00ff88)',
+            textShadow: '0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 30px #00ff88'
+        }}>{icon}</div>
         <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>{value}</div>
         <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase', marginTop: '4px' }}>{label}</div>
     </div>
