@@ -146,7 +146,7 @@ const FeatureCard = ({ icon: Icon, value, label }) => (
         border: '1px solid #000'
     }}>
         <div style={{ marginBottom: '8px', display: 'flex', justifyContent: 'center' }}>
-            <Icon size={28} weight="light" />
+            <Icon size={28} weight="light" color="#000" />
         </div>
         <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>{value}</div>
         <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase', marginTop: '4px' }}>{label}</div>

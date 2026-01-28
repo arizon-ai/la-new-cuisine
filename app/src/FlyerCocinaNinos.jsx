@@ -22,7 +22,7 @@ const FeatureCard = ({ icon: Icon, value, label }) => (
         border: '1px solid #000'
     }}>
         <div style={{ marginBottom: '8px', display: 'flex', justifyContent: 'center' }}>
-            <Icon size={28} weight="light" />
+            <Icon size={28} weight="light" color="#000" />
         </div>
         <div style={{ fontSize: '18px', fontWeight: 700, color: '#000' }}>{value}</div>
         <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase', marginTop: '4px' }}>{label}</div>
@@ -54,7 +54,7 @@ const BenefitCard = ({ icon: Icon, title }) => (
         backgroundColor: '#f8f9fa',
         border: '1px solid #000'
     }}>
-        <Icon size={24} weight="light" />
+        <Icon size={24} weight="light" color="#000" />
         <span style={{ fontWeight: 700, fontSize: '14px' }}>{title}</span>
     </div>
 );
@@ -201,7 +201,7 @@ export default function FlyerCocinaNinos() {
                         alignItems: 'center',
                         gap: '10px'
                     }}>
-                        <Users size={20} weight="light" /> Grupos de Edad
+                        <Users size={20} weight="light" color="#000" /> Grupos de Edad
                     </h3>
                     <div style={{
                         display: 'grid',
@@ -228,7 +228,7 @@ export default function FlyerCocinaNinos() {
                             backgroundColor: '#000',
                             color: '#fff'
                         }}>
-                            <Calendar size={28} weight="light" />
+                            <Calendar size={28} weight="light" color="#fff" />
                             <div>
                                 <div style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase' }}>Duración</div>
                                 <div style={{ fontSize: '18px', fontWeight: 700 }}>4 Meses</div>
@@ -242,7 +242,7 @@ export default function FlyerCocinaNinos() {
                             backgroundColor: '#000',
                             color: '#fff'
                         }}>
-                            <Clock size={28} weight="light" />
+                            <Clock size={28} weight="light" color="#fff" />
                             <div>
                                 <div style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase' }}>Horario</div>
                                 <div style={{ fontSize: '18px', fontWeight: 700 }}>Viernes en la tarde</div>
@@ -261,7 +261,7 @@ export default function FlyerCocinaNinos() {
                             alignItems: 'center',
                             gap: '10px'
                         }}>
-                            <ClipboardText size={20} weight="light" /> Contenido del Curso (15 Sesiones)
+                            <ClipboardText size={20} weight="light" color="#000" /> Contenido del Curso (15 Sesiones)
                         </h3>
                         <div style={{
                             display: 'grid',
@@ -284,7 +284,7 @@ export default function FlyerCocinaNinos() {
                         alignItems: 'center',
                         gap: '10px'
                     }}>
-                        <Star size={20} weight="light" /> Beneficios
+                        <Star size={20} weight="light" color="#000" /> Beneficios
                     </h3>
                     <div style={{
                         display: 'grid',
@@ -312,7 +312,7 @@ export default function FlyerCocinaNinos() {
                             alignItems: 'center',
                             gap: '8px'
                         }}>
-                            <Money size={20} weight="light" /> Inversión
+                            <Money size={20} weight="light" color="#000" /> Inversión
                         </div>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
@@ -366,7 +366,7 @@ export default function FlyerCocinaNinos() {
                         justifyContent: 'center',
                         gap: '8px'
                     }}>
-                        <WhatsappLogo size={16} weight="light" /> +1 786-302-8728 &nbsp;|&nbsp; Valencia, Vzla.
+                        <WhatsappLogo size={16} weight="light" color="#fff" /> +1 786-302-8728 &nbsp;|&nbsp; Valencia, Vzla.
                     </div>
                 </div>
 
