@@ -313,7 +313,7 @@ export default function FlyerCocina() {
                             alignItems: 'center',
                             gap: '10px'
                         }}>
-                            <GraduationCap size={20} weight="light" /> Estructura de la Carrera
+                            <GraduationCap size={20} weight="light" color="#000" /> Estructura de la Carrera
                         </h3>
                         <p style={{ fontSize: '14px', lineHeight: 1.7, color: '#333', margin: 0 }}>
                             La carrera consta de <strong>tres niveles</strong> (Básico, Intermedio y Avanzado), cada uno con duración de <strong>5 meses (20 semanas)</strong>. Las clases son <strong>teórico-prácticas</strong> con evaluación continua, 3 evaluaciones por nivel, y en el nivel avanzado: examen técnico, presentación del <em>Fine Dining</em>, y cumplimiento de <strong>240 horas de pasantías</strong>.
@@ -372,7 +372,7 @@ export default function FlyerCocina() {
                                 backgroundColor: '#000',
                                 color: '#fff'
                             }}>
-                                <Clock size={28} weight="light" />
+                                <Clock size={28} weight="light" color="#fff" />
                                 <div>
                                     <div style={{ fontSize: '12px', opacity: 0.9 }}>Duración del nivel</div>
                                     <div style={{ fontSize: '18px', fontWeight: 700 }}>5 Meses (20 semanas)</div>
@@ -402,7 +402,7 @@ export default function FlyerCocina() {
                                 alignItems: 'center',
                                 gap: '10px'
                             }}>
-                                <ClipboardText size={20} weight="light" /> Detalle del Contenido
+                                <ClipboardText size={20} weight="light" color="#000" /> Detalle del Contenido
                             </h4>
                             <div>
                                 {getActiveContent().map((item, index) => (
@@ -429,7 +429,7 @@ export default function FlyerCocina() {
                                 alignItems: 'center',
                                 gap: '8px'
                             }}>
-                                <Star size={18} weight="light" /> Requisitos para Graduación
+                                <Star size={18} weight="light" color="#000" /> Requisitos para Graduación
                             </h4>
                             <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '13px', lineHeight: 1.8 }}>
                                 <li>Aprobación del examen técnico individual</li>
@@ -456,7 +456,7 @@ export default function FlyerCocina() {
                             alignItems: 'center',
                             gap: '8px'
                         }}>
-                            <Money size={20} weight="light" /> Inversión por Nivel
+                            <Money size={20} weight="light" color="#000" /> Inversión por Nivel
                         </div>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
@@ -510,7 +510,7 @@ export default function FlyerCocina() {
                         justifyContent: 'center',
                         gap: '8px'
                     }}>
-                        <WhatsappLogo size={16} weight="light" /> +1 786-302-8728 &nbsp;|&nbsp; Valencia, Vzla.
+                        <WhatsappLogo size={16} weight="light" color="#fff" /> +1 786-302-8728 &nbsp;|&nbsp; Valencia, Vzla.
                     </div>
                 </div>
 

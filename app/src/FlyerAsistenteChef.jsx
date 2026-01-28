@@ -67,7 +67,7 @@ const DateCard = ({ month, schedule, time, startDate, status, code }) => (
                 alignItems: 'center',
                 gap: '5px'
             }}>
-                <Clock size={14} weight="light" /> {time}
+                <Clock size={14} weight="light" color="#000" /> {time}
             </div>
             <div style={{ marginTop: '8px', fontSize: '12px', display: 'flex', justifyContent: 'space-between' }}>
                 <span><strong>Inicio:</strong> {startDate}</span>
@@ -243,7 +243,7 @@ export default function FlyerAsistenteChef() {
                             backgroundColor: '#000',
                             color: '#fff'
                         }}>
-                            <Calendar size={28} weight="light" />
+                            <Calendar size={28} weight="light" color="#fff" />
                             <div>
                                 <div style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase' }}>Duración</div>
                                 <div style={{ fontSize: '18px', fontWeight: 700 }}>5 Meses</div>
@@ -257,7 +257,7 @@ export default function FlyerAsistenteChef() {
                             backgroundColor: '#000',
                             color: '#fff'
                         }}>
-                            <GraduationCap size={28} weight="light" />
+                            <GraduationCap size={28} weight="light" color="#fff" />
                             <div>
                                 <div style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase' }}>Metodología</div>
                                 <div style={{ fontSize: '18px', fontWeight: 700 }}>Teórico-Práctico</div>
@@ -276,7 +276,7 @@ export default function FlyerAsistenteChef() {
                             alignItems: 'center',
                             gap: '10px'
                         }}>
-                            <ClipboardText size={20} weight="light" /> Detalle del Contenido
+                            <ClipboardText size={20} weight="light" color="#000" /> Detalle del Contenido
                         </h3>
                         <div style={{
                             display: 'grid',
@@ -299,7 +299,7 @@ export default function FlyerAsistenteChef() {
                         alignItems: 'center',
                         gap: '10px'
                     }}>
-                        <Calendar size={20} weight="light" /> Próximas Fechas
+                        <Calendar size={20} weight="light" color="#000" /> Próximas Fechas
                     </h3>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                         <DateCard
@@ -334,7 +334,7 @@ export default function FlyerAsistenteChef() {
                             alignItems: 'center',
                             gap: '8px'
                         }}>
-                            <Money size={20} weight="light" /> Inversión
+                            <Money size={20} weight="light" color="#000" /> Inversión
                         </div>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
@@ -388,7 +388,7 @@ export default function FlyerAsistenteChef() {
                         justifyContent: 'center',
                         gap: '8px'
                     }}>
-                        <WhatsappLogo size={16} weight="light" /> +1 786-302-8728 &nbsp;|&nbsp; Valencia, Vzla.
+                        <WhatsappLogo size={16} weight="light" color="#fff" /> +1 786-302-8728 &nbsp;|&nbsp; Valencia, Vzla.
                     </div>
                 </div>
 

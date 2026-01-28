@@ -24,7 +24,7 @@ const ModuleCard = ({ icon: Icon, title, description }) => (
         border: '1px solid #000'
     }}>
         <div style={{ marginBottom: '15px', display: 'flex', justifyContent: 'flex-start' }}>
-            <Icon size={32} weight="light" />
+            <Icon size={32} weight="light" color="#000" />
         </div>
         <h4 style={{
             fontSize: '16px',
@@ -218,7 +218,7 @@ export default function FlyerGerencia() {
                             backgroundColor: '#000',
                             color: '#fff'
                         }}>
-                            <Calendar size={28} weight="light" />
+                            <Calendar size={28} weight="light" color="#fff" />
                             <div>
                                 <div style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase' }}>Duración</div>
                                 <div style={{ fontSize: '18px', fontWeight: 700 }}>4 Meses</div>
@@ -232,7 +232,7 @@ export default function FlyerGerencia() {
                             backgroundColor: '#000',
                             color: '#fff'
                         }}>
-                            <Certificate size={28} weight="light" />
+                            <Certificate size={28} weight="light" color="#fff" />
                             <div>
                                 <div style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase' }}>Certificación</div>
                                 <div style={{ fontSize: '18px', fontWeight: 700 }}>Diplomado Profesional</div>
@@ -250,7 +250,7 @@ export default function FlyerGerencia() {
                         alignItems: 'center',
                         gap: '10px'
                     }}>
-                        <Briefcase size={20} weight="light" /> Áreas de Enfoque
+                        <Briefcase size={20} weight="light" color="#000" /> Áreas de Enfoque
                     </h3>
                     <div style={{
                         display: 'grid',
@@ -279,7 +279,7 @@ export default function FlyerGerencia() {
                             alignItems: 'center',
                             gap: '10px'
                         }}>
-                            <ClipboardText size={20} weight="light" /> Temas Principales
+                            <ClipboardText size={20} weight="light" color="#000" /> Temas Principales
                         </h3>
                         <div style={{
                             display: 'grid',
@@ -308,7 +308,7 @@ export default function FlyerGerencia() {
                             alignItems: 'center',
                             gap: '8px'
                         }}>
-                            <GraduationCap size={20} weight="light" /> Perfil del Egresado
+                            <GraduationCap size={20} weight="light" color="#000" /> Perfil del Egresado
                         </h4>
                         <div style={{
                             display: 'grid',
@@ -316,15 +316,15 @@ export default function FlyerGerencia() {
                             gap: '15px'
                         }}>
                             <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <ChartPie size={28} weight="light" style={{ margin: '0 auto 8px' }} />
+                                <ChartPie size={28} weight="light" color="#000" style={{ margin: '0 auto 8px' }} />
                                 <div style={{ fontSize: '12px', fontWeight: 700 }}>Análisis Financiero</div>
                             </div>
                             <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <Handshake size={28} weight="light" style={{ margin: '0 auto 8px' }} />
+                                <Handshake size={28} weight="light" color="#000" style={{ margin: '0 auto 8px' }} />
                                 <div style={{ fontSize: '12px', fontWeight: 700 }}>Liderazgo</div>
                             </div>
                             <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <Star size={28} weight="light" style={{ margin: '0 auto 8px' }} />
+                                <Star size={28} weight="light" color="#000" style={{ margin: '0 auto 8px' }} />
                                 <div style={{ fontSize: '12px', fontWeight: 700 }}>Innovación</div>
                             </div>
                         </div>
@@ -345,7 +345,7 @@ export default function FlyerGerencia() {
                             alignItems: 'center',
                             gap: '8px'
                         }}>
-                            <Money size={20} weight="light" /> Inversión
+                            <Money size={20} weight="light" color="#000" /> Inversión
                         </div>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
@@ -395,7 +395,7 @@ export default function FlyerGerencia() {
                         justifyContent: 'center',
                         gap: '8px'
                     }}>
-                        <WhatsappLogo size={16} weight="light" /> +1 786-302-8728 &nbsp;|&nbsp; Valencia, Vzla.
+                        <WhatsappLogo size={16} weight="light" color="#fff" /> +1 786-302-8728 &nbsp;|&nbsp; Valencia, Vzla.
                     </div>
                 </div>
 
