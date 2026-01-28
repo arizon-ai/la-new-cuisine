@@ -1,7 +1,7 @@
 import React from 'react';
 import {
     Briefcase,
-    TrendingUp,
+    TrendUp,
     Globe,
     ClipboardText,
     GraduationCap,
@@ -64,7 +64,7 @@ export default function FlyerGerencia() {
             description: "Planificación y dirección de negocios gastronómicos"
         },
         {
-            icon: TrendingUp,
+            icon: TrendUp,
             title: "Rentabilidad",
             description: "Optimización de costos y maximización de beneficios"
         },
