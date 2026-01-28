@@ -292,43 +292,7 @@ export default function FlyerGerencia() {
                         </div>
                     </div>
 
-                    {/* PERFIL DEL EGRESADO */}
-                    <div style={{
-                        backgroundColor: '#f5f5f5',
-                        padding: '20px',
-                        marginBottom: '25px',
-                        border: '2px solid #000'
-                    }}>
-                        <h4 style={{
-                            fontSize: '14px',
-                            fontWeight: 700,
-                            marginTop: 0,
-                            marginBottom: '15px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '8px'
-                        }}>
-                            <GraduationCap size={20} weight="light" color="#000" /> Perfil del Egresado
-                        </h4>
-                        <div style={{
-                            display: 'grid',
-                            gridTemplateColumns: 'repeat(3, 1fr)',
-                            gap: '15px'
-                        }}>
-                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <ChartPie size={28} weight="light" color="#000" style={{ margin: '0 auto 8px' }} />
-                                <div style={{ fontSize: '12px', fontWeight: 700 }}>Análisis Financiero</div>
-                            </div>
-                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <Handshake size={28} weight="light" color="#000" style={{ margin: '0 auto 8px' }} />
-                                <div style={{ fontSize: '12px', fontWeight: 700 }}>Liderazgo</div>
-                            </div>
-                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <Star size={28} weight="light" color="#000" style={{ margin: '0 auto 8px' }} />
-                                <div style={{ fontSize: '12px', fontWeight: 700 }}>Innovación</div>
-                            </div>
-                        </div>
-                    </div>
+
 
                     {/* INVERSIÓN */}
                     <div style={{
@@ -395,7 +359,7 @@ export default function FlyerGerencia() {
                         justifyContent: 'center',
                         gap: '8px'
                     }}>
-                        <WhatsappLogo size={16} weight="light" color="#fff" /> +1 786-302-8728 &nbsp;|&nbsp; Valencia, Vzla.
+                        <WhatsappLogo size={16} weight="light" color="#fff" /> +58 424-4635196 &nbsp;|&nbsp; Valencia, Vzla.
                     </div>
                 </div>
 
