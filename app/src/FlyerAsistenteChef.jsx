@@ -1,4 +1,13 @@
 import React from 'react';
+import {
+    Clock,
+    Calendar,
+    ClipboardText,
+    Check,
+    GraduationCap,
+    Money,
+    WhatsappLogo
+} from '@phosphor-icons/react';
 
 // Tag para estados
 const StatusBadge = ({ children, dark = false }) => (
@@ -58,7 +67,7 @@ const DateCard = ({ month, schedule, time, startDate, status, code }) => (
                 alignItems: 'center',
                 gap: '5px'
             }}>
-                <i className="fa-regular fa-clock" style={{ color: '#444' }}></i> {time}
+                <Clock size={14} weight="light" /> {time}
             </div>
             <div style={{ marginTop: '8px', fontSize: '12px', display: 'flex', justifyContent: 'space-between' }}>
                 <span><strong>Inicio:</strong> {startDate}</span>
@@ -82,7 +91,7 @@ const ContentItem = ({ children }) => (
         borderBottom: '1px solid #eee',
         fontSize: '14px'
     }}>
-        <i className="fa-solid fa-check" style={{ color: '#000', fontSize: '12px' }}></i>
+        <Check size={14} weight="bold" style={{ color: '#000' }} />
         <span>{children}</span>
     </div>
 );
@@ -98,14 +107,12 @@ export default function FlyerAsistenteChef() {
         "Ensaladas y vinagretas",
         "Pasta fresca y salsas",
         "Masas quebradas",
-        "Panes y pizzas",
-        "Res",
-        "Pollo",
-        "Cerdo",
-        "Pescados",
-        "Mariscos",
-        "Mariscos II",
-        "Dos Exámenes"
+        "Verduras y hortalizas",
+        "Carnes grasas rojas",
+        "Charcutería",
+        "Pescados y mariscos",
+        "Pastelería básica",
+        "Evaluación final"
     ];
 
     return (
@@ -118,7 +125,6 @@ export default function FlyerAsistenteChef() {
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
             <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700;800&family=Azeret+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
             <div className="responsive-container" style={{
                 maxWidth: '1280px',
@@ -166,7 +172,7 @@ export default function FlyerAsistenteChef() {
                         zIndex: 10,
                         backgroundColor: 'rgba(255, 255, 255, 0.95)',
                         padding: '40px 60px',
-                        width: '500px',
+                        width: '540px',
                         textAlign: 'center',
                         border: '2px solid #000',
                         boxShadow: '15px 15px 0px rgba(0,0,0,1)'
@@ -177,12 +183,12 @@ export default function FlyerAsistenteChef() {
                             className="responsive-logo"
                             style={{ width: '320px', maxWidth: '80%', height: 'auto', margin: '0 auto 15px' }}
                         />
-                        <h2 style={{ fontSize: '24px', color: '#333', fontWeight: 400, marginTop: 0, letterSpacing: '2px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase' }}>
+                        <h2 style={{ fontSize: '22px', color: '#333', fontWeight: 400, marginTop: 0, letterSpacing: '2px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase' }}>
                             CURSO ASISTENTE DE CHEF
                         </h2>
                         <hr style={{ border: 0, height: '2px', background: '#000', margin: '25px auto', width: '60px' }} />
-                        <p style={{ fontSize: '14px', fontFamily: "'Azeret Mono'", color: '#000', textTransform: 'uppercase', lineHeight: 1.6, margin: 0 }}>
-                            Habilidades prácticas para cocinas profesionales
+                        <p style={{ fontSize: '13px', fontFamily: "'Azeret Mono'", color: '#000', textTransform: 'uppercase', lineHeight: 1.6, margin: 0 }}>
+                            5 Meses • Formación Práctica Intensiva
                         </p>
                     </div>
                 </div>
@@ -196,52 +202,66 @@ export default function FlyerAsistenteChef() {
                         marginBottom: '10px',
                         lineHeight: 1.1
                     }}>
-                        Curso de<br />Asistente de Chef
+                        Curso de<br />Asistente de Chef 2026
                     </h1>
                     <span style={{
                         fontFamily: "'Azeret Mono', monospace",
                         fontSize: '13px',
                         color: '#555',
-                        marginBottom: '20px',
+                        marginBottom: '25px',
                         display: 'block',
                         borderLeft: '3px solid #000',
                         paddingLeft: '10px'
                     }}>
-                        ¡Conviértete en el Asistente de Chef que todos quieren en su equipo!
+                        Tu primer paso hacia la excelencia culinaria
                     </span>
 
                     {/* DESCRIPCIÓN */}
                     <div style={{
-                        backgroundColor: '#f5f5f5',
-                        padding: '20px',
+                        backgroundColor: '#f8f9fa',
+                        padding: '25px',
                         marginBottom: '25px',
-                        border: '1px solid #e0e0e0',
-                        borderRadius: '4px'
+                        border: '1px solid #000'
                     }}>
-                        <p style={{
-                            fontSize: '14px',
-                            color: '#333',
-                            lineHeight: 1.7,
-                            margin: 0
-                        }}>
-                            En La New Cuisine, nuestro curso te equipa con <strong>habilidades prácticas esenciales</strong> para brillar en cocinas profesionales: desde <em>mise en place</em> impecable hasta apoyo en producción y servicio bajo presión.
+                        <p style={{ fontSize: '14px', lineHeight: 1.7, color: '#333', margin: 0 }}>
+                            El <strong>Curso de Asistente de Chef</strong> es el punto de partida ideal para quienes desean ingresar al mundo de la gastronomía profesional. Durante <strong>5 meses</strong> de formación teórico-práctica, desarrollarás las habilidades esenciales que te convertirán en el apoyo fundamental de cualquier cocina profesional.
                         </p>
                     </div>
 
-                    {/* DURACIÓN */}
+                    {/* CARACTERÍSTICAS */}
                     <div style={{
-                        display: 'flex',
-                        alignItems: 'center',
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(2, 1fr)',
                         gap: '15px',
-                        padding: '15px 20px',
-                        backgroundColor: '#000',
-                        color: '#fff',
                         marginBottom: '25px'
                     }}>
-                        <i className="fa-regular fa-calendar" style={{ fontSize: '24px' }}></i>
-                        <div>
-                            <div style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase', letterSpacing: '1px' }}>Duración</div>
-                            <div style={{ fontSize: '20px', fontWeight: 700 }}>4 Meses</div>
+                        <div style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '15px',
+                            padding: '15px 20px',
+                            backgroundColor: '#000',
+                            color: '#fff'
+                        }}>
+                            <Calendar size={28} weight="light" />
+                            <div>
+                                <div style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase' }}>Duración</div>
+                                <div style={{ fontSize: '18px', fontWeight: 700 }}>5 Meses</div>
+                            </div>
+                        </div>
+                        <div style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '15px',
+                            padding: '15px 20px',
+                            backgroundColor: '#000',
+                            color: '#fff'
+                        }}>
+                            <GraduationCap size={28} weight="light" />
+                            <div>
+                                <div style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase' }}>Metodología</div>
+                                <div style={{ fontSize: '18px', fontWeight: 700 }}>Teórico-Práctico</div>
+                            </div>
                         </div>
                     </div>
 
@@ -256,8 +276,7 @@ export default function FlyerAsistenteChef() {
                             alignItems: 'center',
                             gap: '10px'
                         }}>
-                            <i className="fa-solid fa-utensils" style={{ color: '#000' }}></i>
-                            Detalle del Contenido
+                            <ClipboardText size={20} weight="light" /> Detalle del Contenido
                         </h3>
                         <div style={{
                             display: 'grid',
@@ -270,7 +289,7 @@ export default function FlyerAsistenteChef() {
                         </div>
                     </div>
 
-                    {/* DATES GRID */}
+                    {/* PRÓXIMAS FECHAS */}
                     <h3 style={{
                         fontSize: '16px',
                         fontWeight: 700,
@@ -280,28 +299,20 @@ export default function FlyerAsistenteChef() {
                         alignItems: 'center',
                         gap: '10px'
                     }}>
-                        <i className="fa-regular fa-calendar-check" style={{ color: '#000' }}></i>
-                        Próximas Fechas
+                        <Calendar size={20} weight="light" /> Próximas Fechas
                     </h3>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                         <DateCard
                             month="Feb"
-                            schedule="Lunes / Miércoles"
+                            schedule="Martes y Viernes"
                             time="8:00 am - 12:30 pm"
                             startDate="Por confirmar"
                             status="ABIERTO"
                         />
                         <DateCard
-                            month="Mar"
-                            schedule="Sábados (Mañana)"
+                            month="Feb"
+                            schedule="Sábados"
                             time="8:00 am - 12:30 pm"
-                            startDate="Por confirmar"
-                            status="ABIERTO"
-                        />
-                        <DateCard
-                            month="Mar"
-                            schedule="Martes Nocturno"
-                            time="6:00 pm - 9:30 pm"
                             startDate="Por confirmar"
                             status="ABIERTO"
                         />
@@ -323,25 +334,24 @@ export default function FlyerAsistenteChef() {
                             alignItems: 'center',
                             gap: '8px'
                         }}>
-                            <i className="fa-solid fa-coins" style={{ color: '#000' }}></i>
-                            Inversión
+                            <Money size={20} weight="light" /> Inversión
                         </div>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
-                            <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
-                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>50 €</div>
+                            <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
+                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>35 €</div>
                                 <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
                             </div>
-                            <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
-                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>120 €</div>
+                            <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
+                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>110 €</div>
                                 <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Mensualidad</div>
                             </div>
-                            <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
-                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>90 €</div>
+                            <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
+                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>70 €</div>
                                 <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Kit Estudio</div>
                             </div>
                         </div>
                         <p style={{ fontSize: '10px', color: '#666', marginTop: '10px', marginBottom: 0 }}>
-                            *Kit: filipina, gorro, delantal. Financiamiento 2 cuotas.
+                            *Kit: filipina, gorro, delantal. Financiamiento disponible.
                         </p>
                     </div>
                 </div>
@@ -367,14 +377,18 @@ export default function FlyerAsistenteChef() {
                         boxShadow: '4px 4px 0px #333',
                         cursor: 'pointer'
                     }}>
-                        ¡RESERVA TU CUPO!
+                        ¡COMIENZA TU CARRERA HOY!
                     </div>
                     <div style={{
                         fontSize: '12px',
                         opacity: 0.8,
-                        fontFamily: "'Azeret Mono', monospace"
+                        fontFamily: "'Azeret Mono', monospace",
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '8px'
                     }}>
-                        <i className="fa-brands fa-whatsapp"></i> +1 786-302-8728 &nbsp;|&nbsp; Valencia, Vzla.
+                        <WhatsappLogo size={16} weight="light" /> +1 786-302-8728 &nbsp;|&nbsp; Valencia, Vzla.
                     </div>
                 </div>
 

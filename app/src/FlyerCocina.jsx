@@ -1,4 +1,15 @@
 import React, { useState } from 'react';
+import {
+    GraduationCap,
+    Calendar,
+    Clock,
+    ClipboardText,
+    CookingPot,
+    ListChecks,
+    Star,
+    Money,
+    WhatsappLogo
+} from '@phosphor-icons/react';
 
 // Tag para estados
 const StatusBadge = ({ children, dark = false }) => (
@@ -71,15 +82,17 @@ const ContentItem = ({ number, children }) => (
     </div>
 );
 
-// Feature Card - Black/White with emoji
-const FeatureCard = ({ icon, value, label }) => (
+// Feature Card - Black/White with Phosphor icon
+const FeatureCard = ({ icon: Icon, value, label }) => (
     <div style={{
         textAlign: 'center',
         padding: '20px 15px',
         backgroundColor: '#fff',
         border: '1px solid #000'
     }}>
-        <div style={{ fontSize: '24px', marginBottom: '8px' }}>{icon}</div>
+        <div style={{ marginBottom: '8px', display: 'flex', justifyContent: 'center' }}>
+            <Icon size={28} weight="light" />
+        </div>
         <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>{value}</div>
         <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase', marginTop: '4px' }}>{label}</div>
     </div>
@@ -192,7 +205,6 @@ export default function FlyerCocina() {
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
             <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700;800&family=Azeret+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
             <div className="responsive-container" style={{
                 maxWidth: '1280px',
@@ -301,7 +313,7 @@ export default function FlyerCocina() {
                             alignItems: 'center',
                             gap: '10px'
                         }}>
-                            🎓 Estructura de la Carrera
+                            <GraduationCap size={20} weight="light" /> Estructura de la Carrera
                         </h3>
                         <p style={{ fontSize: '14px', lineHeight: 1.7, color: '#333', margin: 0 }}>
                             La carrera consta de <strong>tres niveles</strong> (Básico, Intermedio y Avanzado), cada uno con duración de <strong>5 meses (20 semanas)</strong>. Las clases son <strong>teórico-prácticas</strong> con evaluación continua, 3 evaluaciones por nivel, y en el nivel avanzado: examen técnico, presentación del <em>Fine Dining</em>, y cumplimiento de <strong>240 horas de pasantías</strong>.
@@ -315,10 +327,10 @@ export default function FlyerCocina() {
                         gap: '10px',
                         marginBottom: '25px'
                     }}>
-                        <FeatureCard icon="📚" value="3" label="Niveles" />
-                        <FeatureCard icon="📅" value="15" label="Meses Total" />
-                        <FeatureCard icon="⏱️" value="240h" label="Pasantías" />
-                        <FeatureCard icon="🎓" value="9" label="Evaluaciones" />
+                        <FeatureCard icon={ListChecks} value="3" label="Niveles" />
+                        <FeatureCard icon={Calendar} value="15" label="Meses Total" />
+                        <FeatureCard icon={Clock} value="240h" label="Pasantías" />
+                        <FeatureCard icon={GraduationCap} value="9" label="Evaluaciones" />
                     </div>
 
                     {/* TABS DE NIVELES */}
@@ -360,7 +372,7 @@ export default function FlyerCocina() {
                                 backgroundColor: '#000',
                                 color: '#fff'
                             }}>
-                                <span style={{ fontSize: '24px' }}>🕐</span>
+                                <Clock size={28} weight="light" />
                                 <div>
                                     <div style={{ fontSize: '12px', opacity: 0.9 }}>Duración del nivel</div>
                                     <div style={{ fontSize: '18px', fontWeight: 700 }}>5 Meses (20 semanas)</div>
@@ -390,7 +402,7 @@ export default function FlyerCocina() {
                                 alignItems: 'center',
                                 gap: '10px'
                             }}>
-                                📋 Detalle del Contenido
+                                <ClipboardText size={20} weight="light" /> Detalle del Contenido
                             </h4>
                             <div>
                                 {getActiveContent().map((item, index) => (
@@ -412,9 +424,12 @@ export default function FlyerCocina() {
                                 fontSize: '14px',
                                 fontWeight: 700,
                                 marginTop: 0,
-                                marginBottom: '10px'
+                                marginBottom: '10px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '8px'
                             }}>
-                                ⭐ Requisitos para Graduación
+                                <Star size={18} weight="light" /> Requisitos para Graduación
                             </h4>
                             <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '13px', lineHeight: 1.8 }}>
                                 <li>Aprobación del examen técnico individual</li>
@@ -441,7 +456,7 @@ export default function FlyerCocina() {
                             alignItems: 'center',
                             gap: '8px'
                         }}>
-                            💰 Inversión por Nivel
+                            <Money size={20} weight="light" /> Inversión por Nivel
                         </div>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
@@ -489,9 +504,13 @@ export default function FlyerCocina() {
                     <div style={{
                         fontSize: '12px',
                         opacity: 0.8,
-                        fontFamily: "'Azeret Mono', monospace"
+                        fontFamily: "'Azeret Mono', monospace",
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '8px'
                     }}>
-                        <i className="fa-brands fa-whatsapp"></i> +1 786-302-8728 &nbsp;|&nbsp; Valencia, Vzla.
+                        <WhatsappLogo size={16} weight="light" /> +1 786-302-8728 &nbsp;|&nbsp; Valencia, Vzla.
                     </div>
                 </div>
 

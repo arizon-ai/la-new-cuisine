@@ -1,14 +1,29 @@
 import React from 'react';
+import {
+    GraduationCap,
+    Calendar,
+    Clock,
+    ClipboardText,
+    Cake,
+    ListChecks,
+    Star,
+    Money,
+    WhatsappLogo,
+    User,
+    Users
+} from '@phosphor-icons/react';
 
-// Feature Card - Black/White with emoji
-const FeatureCard = ({ icon, value, label, bgColor = '#fff' }) => (
+// Feature Card - Black/White with Phosphor icon
+const FeatureCard = ({ icon: Icon, value, label }) => (
     <div style={{
         textAlign: 'center',
         padding: '20px 15px',
-        backgroundColor: bgColor,
+        backgroundColor: '#fff',
         border: '1px solid #000'
     }}>
-        <div style={{ fontSize: '28px', marginBottom: '8px' }}>{icon}</div>
+        <div style={{ marginBottom: '8px', display: 'flex', justifyContent: 'center' }}>
+            <Icon size={28} weight="light" />
+        </div>
         <div style={{ fontSize: '18px', fontWeight: 700, color: '#000' }}>{value}</div>
         <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase', marginTop: '4px' }}>{label}</div>
     </div>
@@ -30,7 +45,7 @@ const ContentItem = ({ children }) => (
 );
 
 // Benefit Card
-const BenefitCard = ({ icon, title }) => (
+const BenefitCard = ({ icon: Icon, title }) => (
     <div style={{
         display: 'flex',
         alignItems: 'center',
@@ -39,7 +54,7 @@ const BenefitCard = ({ icon, title }) => (
         backgroundColor: '#f8f9fa',
         border: '1px solid #000'
     }}>
-        <span style={{ fontSize: '24px' }}>{icon}</span>
+        <Icon size={24} weight="light" />
         <span style={{ fontWeight: 700, fontSize: '14px' }}>{title}</span>
     </div>
 );
@@ -73,7 +88,6 @@ export default function FlyerCocinaNinos() {
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
             <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700;800&family=Azeret+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
             <div className="responsive-container" style={{
                 maxWidth: '1280px',
@@ -187,7 +201,7 @@ export default function FlyerCocinaNinos() {
                         alignItems: 'center',
                         gap: '10px'
                     }}>
-                        👧 Grupos de Edad
+                        <Users size={20} weight="light" /> Grupos de Edad
                     </h3>
                     <div style={{
                         display: 'grid',
@@ -195,8 +209,8 @@ export default function FlyerCocinaNinos() {
                         gap: '15px',
                         marginBottom: '25px'
                     }}>
-                        <FeatureCard icon="👧" value="7 - 12 años" label="Niños" />
-                        <FeatureCard icon="🧑" value="13 - 16 años" label="Adolescentes" />
+                        <FeatureCard icon={User} value="7 - 12 años" label="Niños" />
+                        <FeatureCard icon={User} value="13 - 16 años" label="Adolescentes" />
                     </div>
 
                     {/* CARACTERÍSTICAS */}
@@ -214,7 +228,7 @@ export default function FlyerCocinaNinos() {
                             backgroundColor: '#000',
                             color: '#fff'
                         }}>
-                            <span style={{ fontSize: '24px' }}>📅</span>
+                            <Calendar size={28} weight="light" />
                             <div>
                                 <div style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase' }}>Duración</div>
                                 <div style={{ fontSize: '18px', fontWeight: 700 }}>4 Meses</div>
@@ -228,7 +242,7 @@ export default function FlyerCocinaNinos() {
                             backgroundColor: '#000',
                             color: '#fff'
                         }}>
-                            <span style={{ fontSize: '24px' }}>🕐</span>
+                            <Clock size={28} weight="light" />
                             <div>
                                 <div style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase' }}>Horario</div>
                                 <div style={{ fontSize: '18px', fontWeight: 700 }}>Viernes en la tarde</div>
@@ -247,7 +261,7 @@ export default function FlyerCocinaNinos() {
                             alignItems: 'center',
                             gap: '10px'
                         }}>
-                            📋 Contenido del Curso (15 Sesiones)
+                            <ClipboardText size={20} weight="light" /> Contenido del Curso (15 Sesiones)
                         </h3>
                         <div style={{
                             display: 'grid',
@@ -270,7 +284,7 @@ export default function FlyerCocinaNinos() {
                         alignItems: 'center',
                         gap: '10px'
                     }}>
-                        ⭐ Beneficios
+                        <Star size={20} weight="light" /> Beneficios
                     </h3>
                     <div style={{
                         display: 'grid',
@@ -278,9 +292,9 @@ export default function FlyerCocinaNinos() {
                         gap: '15px',
                         marginBottom: '25px'
                     }}>
-                        <BenefitCard icon="🎨" title="Creatividad" />
-                        <BenefitCard icon="🤝" title="Trabajo en equipo" />
-                        <BenefitCard icon="🥗" title="Hábitos saludables" />
+                        <BenefitCard icon={Star} title="Creatividad" />
+                        <BenefitCard icon={Users} title="Trabajo en equipo" />
+                        <BenefitCard icon={Cake} title="Hábitos saludables" />
                     </div>
 
                     {/* INVERSIÓN */}
@@ -298,7 +312,7 @@ export default function FlyerCocinaNinos() {
                             alignItems: 'center',
                             gap: '8px'
                         }}>
-                            💰 Inversión
+                            <Money size={20} weight="light" /> Inversión
                         </div>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
@@ -346,9 +360,13 @@ export default function FlyerCocinaNinos() {
                     <div style={{
                         fontSize: '12px',
                         opacity: 0.8,
-                        fontFamily: "'Azeret Mono', monospace"
+                        fontFamily: "'Azeret Mono', monospace",
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '8px'
                     }}>
-                        <i className="fa-brands fa-whatsapp"></i> +1 786-302-8728 &nbsp;|&nbsp; Valencia, Vzla.
+                        <WhatsappLogo size={16} weight="light" /> +1 786-302-8728 &nbsp;|&nbsp; Valencia, Vzla.
                     </div>
                 </div>
 
