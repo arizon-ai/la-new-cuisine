@@ -122,7 +122,7 @@ export default function QuienesSomos() {
                                     <div className="inline-flex items-center justify-center w-14 h-14 bg-neutral-100 rounded-full mb-4 group-hover:bg-black group-hover:text-white transition-colors">
                                         <IconComponent className="w-6 h-6" />
                                     </div>
-                                    <p className="font-bold text-sm uppercase tracking-wider">{valor.nombre}</p>
+                                    <p className="font-bold text-xs uppercase tracking-wider break-words">{valor.nombre}</p>
                                 </div>
                             );
                         })}
