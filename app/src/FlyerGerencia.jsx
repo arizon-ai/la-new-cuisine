@@ -1,9 +1,4 @@
 import React from 'react';
-import {
-    Briefcase, ChartLineUp, GlobeHemisphereWest, ChartBar, DeviceMobile, Brain,
-    Users, PaintBrush, ClipboardText, CurrencyDollar, Scales, FirstAid, GraduationCap,
-    Clock, MapPin, CalendarBlank
-} from '@phosphor-icons/react';
 
 // Tarjeta de horario estilo ejecutivo
 const ScheduleCard = ({ label, day, time, location, code, isOpen }) => (
@@ -43,7 +38,7 @@ const ScheduleCard = ({ label, day, time, location, code, isOpen }) => (
             alignItems: 'center',
             gap: '8px'
         }}>
-            <Clock size={16} weight="fill" /> {time}
+            🕐 {time}
         </div>
         <div style={{
             fontSize: '11px',
@@ -53,7 +48,7 @@ const ScheduleCard = ({ label, day, time, location, code, isOpen }) => (
             alignItems: 'center',
             gap: '5px'
         }}>
-            <MapPin size={14} weight="fill" /> {location}
+            📍 {location}
         </div>
         <div style={{
             marginTop: '15px',
@@ -70,8 +65,8 @@ const ScheduleCard = ({ label, day, time, location, code, isOpen }) => (
     </div>
 );
 
-// Módulo Card - Black/White style with Phosphor Icons
-const ModuleCard = ({ number, title, Icon }) => (
+// Módulo Card - Black/White style
+const ModuleCard = ({ number, title, icon }) => (
     <div style={{
         display: 'flex',
         alignItems: 'flex-start',
@@ -105,27 +100,20 @@ const ModuleCard = ({ number, title, Icon }) => (
             }}>
                 {title}
             </div>
-            <div style={{ color: '#00cc66' }}>
-                <Icon size={24} weight="fill" />
-            </div>
+            <div style={{ fontSize: '20px' }}>{icon}</div>
         </div>
     </div>
 );
 
-// Feature Card - Black/White with Phosphor Icons
-const FeatureCard = ({ Icon, title, description }) => (
+// Feature Card - Black/White
+const FeatureCard = ({ icon, title, description }) => (
     <div style={{
         textAlign: 'center',
         padding: '20px',
         backgroundColor: '#fff',
         border: '1px solid #000'
     }}>
-        <div style={{
-            marginBottom: '10px',
-            color: '#00cc66'
-        }}>
-            <Icon size={40} weight="fill" />
-        </div>
+        <div style={{ fontSize: '28px', marginBottom: '10px' }}>{icon}</div>
         <div style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', marginBottom: '5px' }}>{title}</div>
         <div style={{ fontSize: '11px', color: '#666', lineHeight: 1.4 }}>{description}</div>
     </div>
@@ -133,16 +121,16 @@ const FeatureCard = ({ Icon, title, description }) => (
 
 export default function FlyerGerencia() {
     const modulos = [
-        { number: 1, title: "Emprendimiento Modelo Negocio Gastronómico bajo CANVAS", Icon: ChartBar },
-        { number: 2, title: "Marketing Gastronómico", Icon: DeviceMobile },
-        { number: 3, title: "Neuromarketing y Neurogastronomía", Icon: Brain },
-        { number: 4, title: "Capital Humano, Liderazgo y Coaching Organizacional", Icon: Users },
-        { number: 5, title: "Diseño y Ambientación de los Espacios Gastronómicos", Icon: PaintBrush },
-        { number: 6, title: "Ingeniería del Menú y Catering", Icon: ClipboardText },
-        { number: 7, title: "Manejo de Presupuestos de Producción, Planificación y Control Gastronómico", Icon: CurrencyDollar },
-        { number: 8, title: "Marco Jurídico para Negocio Gastronómico", Icon: Scales },
-        { number: 9, title: "Educación Gastronómica en Higiene y Salud Ocupacional en la Manipulación de Alimentos", Icon: FirstAid },
-        { number: 10, title: "Proyecto Final de Negocio Gastronómico bajo CANVAS", Icon: GraduationCap }
+        { number: 1, title: "Emprendimiento Modelo Negocio Gastronómico bajo CANVAS", icon: "📊" },
+        { number: 2, title: "Marketing Gastronómico", icon: "📱" },
+        { number: 3, title: "Neuromarketing y Neurogastronomía", icon: "🧠" },
+        { number: 4, title: "Capital Humano, Liderazgo y Coaching Organizacional", icon: "👥" },
+        { number: 5, title: "Diseño y Ambientación de los Espacios Gastronómicos", icon: "🎨" },
+        { number: 6, title: "Ingeniería del Menú y Catering", icon: "📋" },
+        { number: 7, title: "Manejo de Presupuestos de Producción, Planificación y Control Gastronómico", icon: "💰" },
+        { number: 8, title: "Marco Jurídico para Negocio Gastronómico", icon: "⚖️" },
+        { number: 9, title: "Educación Gastronómica en Higiene y Salud Ocupacional en la Manipulación de Alimentos", icon: "🧤" },
+        { number: 10, title: "Proyecto Final de Negocio Gastronómico bajo CANVAS", icon: "🎓" }
     ];
 
     return (
@@ -185,7 +173,7 @@ export default function FlyerGerencia() {
 
                     {/* Imagen de fondo */}
                     <img
-                        src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2570&auto=format&fit=crop"
+                        src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=2670&auto=format&fit=crop"
                         alt="Gerencia Gastronómica"
                         style={{
                             position: 'absolute',
@@ -218,8 +206,8 @@ export default function FlyerGerencia() {
                             DIPLOMADO EN<br />GERENCIA GASTRONÓMICA
                         </h2>
                         <hr style={{ border: 0, height: '2px', background: '#000', margin: '25px auto', width: '60px' }} />
-                        <p style={{ fontSize: '13px', fontFamily: "'Azeret Mono'", color: '#333', textTransform: 'uppercase', lineHeight: 1.6, margin: 0 }}>
-                            4 Meses • 10 Módulos • Certificación Profesional
+                        <p style={{ fontSize: '13px', fontFamily: "'Azeret Mono'", color: '#000', textTransform: 'uppercase', lineHeight: 1.6, margin: 0 }}>
+                            10 Módulos • Liderazgo Estratégico • Sector HORECA
                         </p>
                     </div>
                 </div>
@@ -233,7 +221,7 @@ export default function FlyerGerencia() {
                         marginBottom: '10px',
                         lineHeight: 1.1
                     }}>
-                        Diplomado en<br />Gerencia Gastronómica 2026
+                        Diplomado en<br />Gerencia Gastronómica
                     </h1>
                     <span style={{
                         fontFamily: "'Azeret Mono', monospace",
@@ -244,7 +232,7 @@ export default function FlyerGerencia() {
                         borderLeft: '3px solid #000',
                         paddingLeft: '10px'
                     }}>
-                        Formación integral para chefs, emprendedores y profesionales del sector alimentario
+                        ¡Eleva tu carrera gastronómica y lidera operaciones exitosas!
                     </span>
 
                     {/* DESCRIPCIÓN */}
@@ -255,11 +243,35 @@ export default function FlyerGerencia() {
                         border: '1px solid #000'
                     }}>
                         <p style={{ fontSize: '14px', lineHeight: 1.7, color: '#333', margin: 0 }}>
-                            El <strong>Diplomado en Gerencia Gastronómica</strong> de La New Cuisine está diseñado para formar líderes capaces de <strong>gestionar negocios gastronómicos rentables y sostenibles</strong>. A través de 10 módulos especializados, desarrollarás competencias en emprendimiento, marketing, finanzas y gestión de equipos. El programa incluye formación en tendencias globales como <strong>sostenibilidad, marketing digital y control de costos</strong> en entornos reales de restaurantes y hoteles.
+                            Este programa integral forma <strong>líderes capaces de dirigir operaciones exitosas</strong>, fusionando visión estratégica con excelencia operativa en el dinámico mundo de la hospitalidad.
                         </p>
                     </div>
 
-                    {/* CARACTERÍSTICAS PRINCIPALES */}
+                    {/* OBJETIVOS ESTRATÉGICOS */}
+                    <div style={{
+                        backgroundColor: '#000',
+                        color: '#fff',
+                        padding: '25px',
+                        marginBottom: '25px'
+                    }}>
+                        <h3 style={{
+                            fontSize: '16px',
+                            fontWeight: 700,
+                            textTransform: 'uppercase',
+                            marginBottom: '15px',
+                            marginTop: 0,
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '10px'
+                        }}>
+                            🎯 Objetivos Estratégicos
+                        </h3>
+                        <p style={{ fontSize: '14px', lineHeight: 1.7, margin: 0, opacity: 0.95 }}>
+                            Desarrolla competencias en <strong>planificación financiera</strong>, gestión de equipos multidisciplinarios y optimización de procesos para maximizar rentabilidad y satisfacción del cliente. Integra tendencias globales como <strong>sostenibilidad, marketing digital y control de costos</strong> en entornos reales de restaurantes y hoteles.
+                        </p>
+                    </div>
+
+                    {/* COMPETENCIAS */}
                     <div style={{
                         display: 'grid',
                         gridTemplateColumns: 'repeat(3, 1fr)',
@@ -267,84 +279,78 @@ export default function FlyerGerencia() {
                         marginBottom: '25px'
                     }}>
                         <FeatureCard
-                            Icon={Briefcase}
+                            icon="💼"
                             title="Visión Estratégica"
                             description="Planificación y dirección de negocios gastronómicos"
                         />
                         <FeatureCard
-                            Icon={ChartLineUp}
+                            icon="📈"
                             title="Rentabilidad"
                             description="Optimización de costos y maximización de beneficios"
                         />
                         <FeatureCard
-                            Icon={GlobeHemisphereWest}
+                            icon="🌍"
                             title="Tendencias Globales"
                             description="Sostenibilidad y marketing digital aplicado"
                         />
                     </div>
 
-                    {/* CONTENIDO DEL PROGRAMA */}
+                    {/* MÓDULOS */}
                     <h3 style={{
                         fontSize: '16px',
                         fontWeight: 700,
                         textTransform: 'uppercase',
-                        marginBottom: '15px',
+                        marginBottom: '20px',
                         display: 'flex',
                         alignItems: 'center',
                         gap: '10px'
                     }}>
-                        <ClipboardText size={20} weight="fill" style={{ color: '#00cc66' }} /> Contenido del Programa - 10 Módulos
+                        📚 Contenido del Programa - 10 Módulos
                     </h3>
-                    <div>
+                    <div style={{ marginBottom: '25px' }}>
                         {modulos.map((modulo) => (
                             <ModuleCard
                                 key={modulo.number}
                                 number={modulo.number}
                                 title={modulo.title}
-                                Icon={modulo.Icon}
+                                icon={modulo.icon}
                             />
                         ))}
                     </div>
 
-                    {/* FECHAS */}
+                    {/* SCHEDULE */}
                     <h3 style={{
                         fontSize: '16px',
                         fontWeight: 700,
                         textTransform: 'uppercase',
-                        marginTop: '25px',
                         marginBottom: '15px',
                         display: 'flex',
                         alignItems: 'center',
                         gap: '10px'
                     }}>
-                        <CalendarBlank size={20} weight="fill" style={{ color: '#00cc66' }} /> Próximas Fechas
+                        📅 Próximas Fechas
                     </h3>
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(2, 1fr)',
-                        gap: '20px'
-                    }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '25px' }}>
                         <ScheduleCard
-                            label="Horario A"
-                            day="Martes (Tarde)"
-                            time="2:00 PM - 6:00 PM"
-                            location="Sede Valencia"
-                            code="ABIERTO"
-                            isOpen={true}
+                            label="Turno Tarde"
+                            day="Martes"
+                            time="2:00 pm - 6:00 pm"
+                            location="Salón de Teoría"
+                            code="INSCRIPCIONES ABIERTAS"
+                            isOpen
                         />
                         <ScheduleCard
-                            label="Horario B"
-                            day="Sábados (Mañana)"
-                            time="8:00 AM - 12:30 PM"
-                            location="Sede Valencia"
-                            code="ABIERTO"
-                            isOpen={true}
+                            label="Turno Sabatino"
+                            day="Sábados"
+                            time="8:00 am - 12:30 pm"
+                            location="Salón de Teoría"
+                            code="INSCRIPCIONES ABIERTAS"
+                            isOpen
                         />
                     </div>
 
                     {/* INVERSIÓN */}
                     <div style={{
-                        marginTop: '25px',
                         backgroundColor: '#f9f9f9',
                         padding: '20px',
                         border: '1px solid #000'
@@ -358,22 +364,25 @@ export default function FlyerGerencia() {
                             alignItems: 'center',
                             gap: '8px'
                         }}>
-                            <CurrencyDollar size={20} weight="fill" style={{ color: '#00cc66' }} /> Inversión
+                            💰 Inversión
                         </div>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
-                            <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>50 €</div>
+                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #000' }}>
+                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>50 €</div>
                                 <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
                             </div>
-                            <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>130 €</div>
+                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #000' }}>
+                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>130 €</div>
                                 <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Mensualidad</div>
                             </div>
-                            <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>Incluido</div>
-                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Material Digital</div>
+                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #000' }}>
+                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>4</div>
+                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Meses</div>
                             </div>
                         </div>
+                        <p style={{ fontSize: '10px', color: '#666', marginTop: '10px', marginBottom: 0 }}>
+                            Formación integral para chefs, emprendedores y profesionales del sector HORECA.
+                        </p>
                     </div>
                 </div>
 
@@ -398,11 +407,11 @@ export default function FlyerGerencia() {
                         boxShadow: '4px 4px 0px #333',
                         cursor: 'pointer'
                     }}>
-                        ¡LIDERA TU PROPIO NEGOCIO GASTRONÓMICO!
+                        ¡LIDERA TU NEGOCIO GASTRONÓMICO!
                     </div>
                     <div style={{
                         fontSize: '12px',
-                        opacity: 0.95,
+                        opacity: 0.9,
                         fontFamily: "'Azeret Mono', monospace"
                     }}>
                         <i className="fa-brands fa-whatsapp"></i> +1 786-302-8728 &nbsp;|&nbsp; Valencia, Vzla.

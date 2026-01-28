@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Bread, CalendarBlank, Timer, GraduationCap, ClipboardText, Clock, Star } from '@phosphor-icons/react';
 
 // Tag para estados
 const StatusBadge = ({ children, dark = false }) => (
@@ -72,17 +71,15 @@ const ContentItem = ({ number, children }) => (
     </div>
 );
 
-// Feature Card - Black/White with Phosphor Icons
-const FeatureCard = ({ Icon, value, label }) => (
+// Feature Card - Black/White with emoji
+const FeatureCard = ({ icon, value, label }) => (
     <div style={{
         textAlign: 'center',
         padding: '20px 15px',
         backgroundColor: '#fff',
         border: '1px solid #000'
     }}>
-        <div style={{ marginBottom: '8px', color: '#00cc66' }}>
-            <Icon size={32} weight="fill" />
-        </div>
+        <div style={{ fontSize: '24px', marginBottom: '8px' }}>{icon}</div>
         <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>{value}</div>
         <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase', marginTop: '4px' }}>{label}</div>
     </div>
@@ -331,7 +328,7 @@ export default function FlyerPanaderia() {
                                 backgroundColor: '#000',
                                 color: '#fff'
                             }}>
-                                <span style={{ color: '#fff' }}><Clock size={28} weight="fill" /></span>
+                                <span style={{ fontSize: '24px' }}>🕐</span>
                                 <div>
                                     <div style={{ fontSize: '12px', opacity: 0.9 }}>Duración del nivel</div>
                                     <div style={{ fontSize: '18px', fontWeight: 700 }}>5 Meses (20 semanas)</div>
