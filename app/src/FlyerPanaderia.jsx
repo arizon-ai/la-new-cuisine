@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Tag para estados
 const StatusBadge = ({ children, dark = false }) => (
@@ -72,7 +72,150 @@ const DateCard = ({ month, schedule, time, startDate, status, code }) => (
     </div>
 );
 
+// Level Tab Component
+const LevelTab = ({ level, title, active, onClick, color }) => (
+    <button
+        onClick={onClick}
+        style={{
+            flex: 1,
+            padding: '15px 20px',
+            backgroundColor: active ? color : '#f5f5f5',
+            color: active ? '#fff' : '#333',
+            border: 'none',
+            cursor: 'pointer',
+            fontWeight: 700,
+            fontSize: '14px',
+            textTransform: 'uppercase',
+            transition: 'all 0.3s ease',
+            fontFamily: "'Arimo', sans-serif",
+            borderBottom: active ? 'none' : '2px solid #000'
+        }}
+    >
+        <div style={{ fontSize: '12px', opacity: 0.8, marginBottom: '4px' }}>{level}</div>
+        {title}
+    </button>
+);
+
+// Content Item
+const ContentItem = ({ number, children }) => (
+    <div style={{
+        display: 'flex',
+        alignItems: 'flex-start',
+        gap: '12px',
+        padding: '12px 0',
+        borderBottom: '1px solid #eee',
+        fontSize: '13px',
+        lineHeight: 1.5
+    }}>
+        <span style={{
+            minWidth: '28px',
+            height: '28px',
+            backgroundColor: '#8B4513',
+            color: '#fff',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontSize: '11px',
+            fontWeight: 700,
+            fontFamily: "'Azeret Mono', monospace"
+        }}>
+            {number}
+        </span>
+        <span style={{ paddingTop: '4px' }}>{children}</span>
+    </div>
+);
+
+// Feature Card
+const FeatureCard = ({ icon, value, label }) => (
+    <div style={{
+        textAlign: 'center',
+        padding: '20px 15px',
+        backgroundColor: '#fff',
+        border: '1px solid #ddd'
+    }}>
+        <div style={{ fontSize: '24px', marginBottom: '8px' }}>{icon}</div>
+        <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>{value}</div>
+        <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase', marginTop: '4px' }}>{label}</div>
+    </div>
+);
+
 export default function FlyerPanaderia() {
+    const [activeLevel, setActiveLevel] = useState('basico');
+
+    const nivelBasico = [
+        "Principios básicos de panificación",
+        "Métodos de elaboración de pan con levadura (trigo, agua, sal, las grasas, huevo)",
+        "Clases de harina",
+        "Fórmulas panaderas",
+        "1era evaluación teórico-práctica",
+        "Oratoria y expresión corporal",
+        "Matemáticas panaderas",
+        "Pan campesino",
+        "Pan canilla",
+        "Pan Piñita, pan lácteo de molde y pan valle de la pascua",
+        "2da evaluación teórico-práctica",
+        "Costos I",
+        "Tortas y ponqué pastelería comerciales",
+        "Cachitos",
+        "Masas Choux Brioche",
+        "Técnicas de emplatado",
+        "Cinnamon",
+        "Masas hojaldradas y preparaciones dulces y saladas, técnicas del mejor croissant",
+        "Etiqueta y protocolo",
+        "Evaluación final del nivel"
+    ];
+
+    const nivelAvanzado = [
+        "Hojaldre",
+        "Pizzas",
+        "Pan de coco",
+        "Pan de jamón",
+        "Pan de queso y tocineta",
+        "Pan guayaba",
+        "Pan de hamburguesa",
+        "Pan francés",
+        "Pan sin amasar",
+        "Pan de mantequilla",
+        "Ciabatta",
+        "Focaccia",
+        "Masa madre",
+        "Costos II",
+        "Nutrición y dietética",
+        "Inglés gastronómico II",
+        "Técnicas avanzadas de panadería",
+        "Técnicas para mejorar la calidad del pan",
+        "Francés gastronómico II",
+        "Informe Final"
+    ];
+
+    const getActiveContent = () => {
+        switch (activeLevel) {
+            case 'basico': return nivelBasico;
+            case 'avanzado': return nivelAvanzado;
+            default: return nivelBasico;
+        }
+    };
+
+    const getLevelDescription = () => {
+        switch (activeLevel) {
+            case 'basico':
+                return "Este nivel establece los principios fundamentales de la panificación, métodos de elaboración, fórmulas panaderas y técnicas esenciales para construir habilidades operativas básicas. Incluye preparación de panes tradicionales y masas especiales.";
+            case 'avanzado':
+                return "Desarrolla competencias profesionales clave para operar en entornos de panadería especializada. Incluye técnicas avanzadas, variedades internacionales de pan, masa madre, y preparación para el examen técnico final y presentación del Fine Dining.";
+            default:
+                return "";
+        }
+    };
+
+    const getLevelColor = () => {
+        switch (activeLevel) {
+            case 'basico': return '#D2691E';
+            case 'avanzado': return '#8B4513';
+            default: return '#8B4513';
+        }
+    };
+
     return (
         <div style={{
             minHeight: '100vh',
@@ -125,13 +268,23 @@ export default function FlyerPanaderia() {
                         }}
                     />
 
-                    {/* Cuadro central REDUCIDO */}
+                    {/* Overlay */}
+                    <div style={{
+                        position: 'absolute',
+                        width: '100%',
+                        height: '100%',
+                        background: 'linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.4))',
+                        top: 0,
+                        left: 0
+                    }} />
+
+                    {/* Cuadro central */}
                     <div className="responsive-card" style={{
                         position: 'relative',
                         zIndex: 10,
                         backgroundColor: 'rgba(255, 255, 255, 0.95)',
                         padding: '40px 60px',
-                        width: '500px',
+                        width: '540px',
                         textAlign: 'center',
                         border: '2px solid #000',
                         boxShadow: '15px 15px 0px rgba(0,0,0,1)'
@@ -145,9 +298,9 @@ export default function FlyerPanaderia() {
                         <h2 style={{ fontSize: '24px', color: '#333', fontWeight: 400, marginTop: 0, letterSpacing: '2px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase' }}>
                             CARRERA CHEF PANADERO
                         </h2>
-                        <hr style={{ border: 0, height: '2px', background: '#000', margin: '25px auto', width: '60px' }} />
-                        <p style={{ fontSize: '14px', fontFamily: "'Azeret Mono'", color: '#000', textTransform: 'uppercase', lineHeight: 1.6, margin: 0 }}>
-                            Técnicas ancestrales y vanguardia en masas
+                        <hr style={{ border: 0, height: '2px', background: '#8B4513', margin: '25px auto', width: '60px' }} />
+                        <p style={{ fontSize: '13px', fontFamily: "'Azeret Mono'", color: '#000', textTransform: 'uppercase', lineHeight: 1.6, margin: 0 }}>
+                            2 Niveles • 10 Meses • 240 Horas de Pasantías
                         </p>
                     </div>
                 </div>
@@ -161,34 +314,185 @@ export default function FlyerPanaderia() {
                         marginBottom: '10px',
                         lineHeight: 1.1
                     }}>
-                        Carrera de<br />Panadería Artesanal
+                        Carrera de<br />Chef Panadero 2026
                     </h1>
                     <span style={{
                         fontFamily: "'Azeret Mono', monospace",
                         fontSize: '13px',
                         color: '#555',
-                        marginBottom: '30px',
+                        marginBottom: '25px',
                         display: 'block',
-                        borderLeft: '3px solid #000',
+                        borderLeft: '3px solid #8B4513',
                         paddingLeft: '10px'
                     }}>
-                        Técnicas ancestrales y vanguardia en masas.
+                        Formación profesional en panadería artesanal
                     </span>
 
+                    {/* ESTRUCTURA DE LA CARRERA */}
+                    <div style={{
+                        backgroundColor: '#fdf6e3',
+                        padding: '25px',
+                        marginBottom: '25px',
+                        border: '1px solid #D2691E'
+                    }}>
+                        <h3 style={{
+                            fontSize: '14px',
+                            fontWeight: 700,
+                            textTransform: 'uppercase',
+                            marginBottom: '15px',
+                            marginTop: 0
+                        }}>
+                            <i className="fa-solid fa-bread-slice" style={{ marginRight: '10px', color: '#8B4513' }}></i>
+                            Estructura de la Carrera
+                        </h3>
+                        <p style={{ fontSize: '14px', lineHeight: 1.7, color: '#333', margin: 0 }}>
+                            La New Cuisine ofrece programas de formación en panadería adaptados a <strong>nivel básico y avanzado</strong>. Cada nivel tiene una duración de <strong>20 semanas (5 meses)</strong>. Las clases son <strong>teórico-prácticas</strong> con evaluación continua, 3 evaluaciones por nivel. En el nivel avanzado: examen técnico, presentación del <em>Fine Dining</em>, y cumplimiento de <strong>240 horas de pasantías</strong>.
+                        </p>
+                    </div>
+
+                    {/* CARACTERÍSTICAS */}
+                    <div style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(4, 1fr)',
+                        gap: '10px',
+                        marginBottom: '25px'
+                    }}>
+                        <FeatureCard icon="🥖" value="2" label="Niveles" />
+                        <FeatureCard icon="📅" value="10" label="Meses Total" />
+                        <FeatureCard icon="⏱️" value="240h" label="Pasantías" />
+                        <FeatureCard icon="🎓" value="6" label="Evaluaciones" />
+                    </div>
+
+                    {/* TABS DE NIVELES */}
+                    <div style={{ marginBottom: '25px' }}>
+                        <div style={{ display: 'flex', border: '2px solid #000', borderBottom: 'none' }}>
+                            <LevelTab
+                                level="Nivel 1"
+                                title="Básico"
+                                active={activeLevel === 'basico'}
+                                onClick={() => setActiveLevel('basico')}
+                                color="#D2691E"
+                            />
+                            <LevelTab
+                                level="Nivel 2"
+                                title="Avanzado"
+                                active={activeLevel === 'avanzado'}
+                                onClick={() => setActiveLevel('avanzado')}
+                                color="#8B4513"
+                            />
+                        </div>
+
+                        {/* Contenido del nivel activo */}
+                        <div style={{
+                            border: '2px solid #000',
+                            borderTop: `4px solid ${getLevelColor()}`,
+                            padding: '25px'
+                        }}>
+                            {/* Duración del nivel */}
+                            <div style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '20px',
+                                marginBottom: '20px',
+                                padding: '15px',
+                                backgroundColor: getLevelColor(),
+                                color: '#fff'
+                            }}>
+                                <i className="fa-regular fa-clock" style={{ fontSize: '24px' }}></i>
+                                <div>
+                                    <div style={{ fontSize: '12px', opacity: 0.9 }}>Duración del nivel</div>
+                                    <div style={{ fontSize: '18px', fontWeight: 700 }}>5 Meses (20 semanas)</div>
+                                </div>
+                            </div>
+
+                            {/* Descripción del nivel */}
+                            <p style={{
+                                fontSize: '14px',
+                                lineHeight: 1.7,
+                                color: '#333',
+                                marginBottom: '20px',
+                                padding: '15px',
+                                backgroundColor: '#fdf6e3',
+                                borderLeft: `4px solid ${getLevelColor()}`
+                            }}>
+                                {getLevelDescription()}
+                            </p>
+
+                            {/* Lista de contenido */}
+                            <h4 style={{
+                                fontSize: '14px',
+                                fontWeight: 700,
+                                textTransform: 'uppercase',
+                                marginBottom: '15px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '10px'
+                            }}>
+                                <i className="fa-solid fa-list-check" style={{ color: getLevelColor() }}></i>
+                                Detalle del Contenido
+                            </h4>
+                            <div>
+                                {getActiveContent().map((item, index) => (
+                                    <ContentItem key={index} number={index + 1}>{item}</ContentItem>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* REQUISITOS NIVEL AVANZADO */}
+                    {activeLevel === 'avanzado' && (
+                        <div style={{
+                            backgroundColor: '#fff3cd',
+                            padding: '20px',
+                            marginBottom: '25px',
+                            border: '1px solid #ffc107',
+                            borderRadius: '4px'
+                        }}>
+                            <h4 style={{
+                                fontSize: '14px',
+                                fontWeight: 700,
+                                marginTop: 0,
+                                marginBottom: '10px',
+                                color: '#856404'
+                            }}>
+                                <i className="fa-solid fa-star" style={{ marginRight: '8px' }}></i>
+                                Requisitos para Graduación
+                            </h4>
+                            <ul style={{ margin: 0, paddingLeft: '20px', color: '#856404', fontSize: '13px', lineHeight: 1.8 }}>
+                                <li>Aprobación del examen técnico individual</li>
+                                <li>Presentación del Fine Dining</li>
+                                <li>Cumplimiento de 240 horas de pasantías</li>
+                                <li>Entrega del informe final</li>
+                            </ul>
+                        </div>
+                    )}
+
                     {/* DATES GRID */}
+                    <h3 style={{
+                        fontSize: '16px',
+                        fontWeight: 700,
+                        textTransform: 'uppercase',
+                        marginBottom: '15px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '10px'
+                    }}>
+                        <i className="fa-regular fa-calendar-check" style={{ color: '#8B4513' }}></i>
+                        Próximas Fechas
+                    </h3>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                         <DateCard
-                            month="Lun"
+                            month="Ene"
                             schedule="Turno Tarde"
                             time="2:00 pm - 5:30 pm"
-                            startDate="Fecha Est."
+                            startDate="Enero 2026"
                             status="ABIERTO"
                         />
                         <DateCard
-                            month="Lun"
+                            month="Ene"
                             schedule="Turno Nocturno"
                             time="6:00 pm - 9:30 pm"
-                            startDate="Fecha Est."
+                            startDate="Enero 2026"
                             status="ABIERTO"
                         />
                     </div>
@@ -210,7 +514,7 @@ export default function FlyerPanaderia() {
                             gap: '8px'
                         }}>
                             <i className="fa-solid fa-coins" style={{ color: '#000' }}></i>
-                            Inversión Nivel Básico
+                            Inversión por Nivel
                         </div>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
@@ -227,7 +531,7 @@ export default function FlyerPanaderia() {
                             </div>
                         </div>
                         <p style={{ fontSize: '10px', color: '#666', marginTop: '10px', marginBottom: 0 }}>
-                            *Kit: filipina, gorro, delantal. Financiamiento 2 cuotas.
+                            *Kit: filipina, gorro, delantal. Financiamiento disponible en 2 cuotas.
                         </p>
                     </div>
                 </div>
@@ -253,14 +557,14 @@ export default function FlyerPanaderia() {
                         boxShadow: '4px 4px 0px #333',
                         cursor: 'pointer'
                     }}>
-                        ¡INÍCIATE EN EL PAN!
+                        ¡INÍCIATE EN EL ARTE DEL PAN!
                     </div>
                     <div style={{
                         fontSize: '12px',
                         opacity: 0.8,
                         fontFamily: "'Azeret Mono', monospace"
                     }}>
-                        <i className="fa-brands fa-whatsapp"></i> +58 424-4635196 &nbsp;|&nbsp; Valencia, Vzla.
+                        <i className="fa-brands fa-whatsapp"></i> +1 786-302-8728 &nbsp;|&nbsp; Valencia, Vzla.
                     </div>
                 </div>
 

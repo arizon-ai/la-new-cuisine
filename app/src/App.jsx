@@ -6,6 +6,8 @@ import FlyerPasteleria from './FlyerPasteleria'
 import FlyerPanaderia from './FlyerPanaderia'
 import FlyerGerencia from './FlyerGerencia'
 import FlyerCocina from './FlyerCocina'
+import FlyerAsistenteChef from './FlyerAsistenteChef'
+import FlyerCocinaNinos from './FlyerCocinaNinos'
 import PresentacionBrochure from './PresentacionBrochure'
 import QuienesSomos from './QuienesSomos'
 import Talleres from './Talleres'
@@ -33,6 +35,8 @@ function Navigation() {
     { path: '/flyer-pasteleria', label: 'Chef Pastelero', icon: '🍰' },
     { path: '/flyer-panaderia', label: 'Chef Panadero', icon: '🥖' },
     { path: '/flyer-gerencia', label: 'Gerencia Gastronómica', icon: '💼' },
+    { path: '/flyer-asistente-chef', label: 'Asistente de Chef', icon: '👨‍🍳' },
+    { path: '/flyer-cocina-ninos', label: 'Cocina Niños', icon: '🧑‍🍳' },
     { path: '/presentacion', label: 'Presentación', icon: '📄' },
   ];
 
@@ -256,6 +260,8 @@ function App() {
         <Route path="/flyer-pasteleria" element={<FlyerPasteleria />} />
         <Route path="/flyer-panaderia" element={<FlyerPanaderia />} />
         <Route path="/flyer-gerencia" element={<FlyerGerencia />} />
+        <Route path="/flyer-asistente-chef" element={<FlyerAsistenteChef />} />
+        <Route path="/flyer-cocina-ninos" element={<FlyerCocinaNinos />} />
         <Route path="/presentacion" element={<PresentacionBrochure />} />
       </Routes>
     </BrowserRouter>
