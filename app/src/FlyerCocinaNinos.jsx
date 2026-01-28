@@ -1,19 +1,17 @@
 import React from 'react';
+import { User, Users, CalendarBlank, Clock, ClipboardText, PaintBrush, Handshake, Carrot, Star, Check } from '@phosphor-icons/react';
 
-// Feature Card - Black/White with phosphore emoji
-const FeatureCard = ({ icon, value, label, bgColor = '#fff' }) => (
+// Feature Card - Black/White with Phosphor Icons
+const FeatureCard = ({ Icon, value, label, bgColor = '#fff' }) => (
     <div style={{
         textAlign: 'center',
         padding: '20px 15px',
         backgroundColor: bgColor,
         border: '1px solid #000'
     }}>
-        <div style={{
-            fontSize: '28px',
-            marginBottom: '8px',
-            filter: 'drop-shadow(0 0 8px #00ff88) drop-shadow(0 0 15px #00ff88)',
-            textShadow: '0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 30px #00ff88'
-        }}>{icon}</div>
+        <div style={{ marginBottom: '8px', color: '#00cc66' }}>
+            <Icon size={32} weight="fill" />
+        </div>
         <div style={{ fontSize: '18px', fontWeight: 700, color: '#000' }}>{value}</div>
         <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase', marginTop: '4px' }}>{label}</div>
     </div>
@@ -29,13 +27,13 @@ const ContentItem = ({ children }) => (
         borderBottom: '1px solid #eee',
         fontSize: '14px'
     }}>
-        <span style={{ color: '#000' }}>✓</span>
+        <span style={{ color: '#00cc66' }}><Check size={16} weight="bold" /></span>
         <span>{children}</span>
     </div>
 );
 
-// Benefit Card with phosphore emoji
-const BenefitCard = ({ icon, title }) => (
+// Benefit Card with Phosphor Icons
+const BenefitCard = ({ Icon, title }) => (
     <div style={{
         display: 'flex',
         alignItems: 'center',
@@ -44,11 +42,9 @@ const BenefitCard = ({ icon, title }) => (
         backgroundColor: '#f8f9fa',
         border: '1px solid #000'
     }}>
-        <span style={{
-            fontSize: '24px',
-            filter: 'drop-shadow(0 0 8px #00ff88) drop-shadow(0 0 15px #00ff88)',
-            textShadow: '0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 30px #00ff88'
-        }}>{icon}</span>
+        <span style={{ color: '#00cc66' }}>
+            <Icon size={28} weight="fill" />
+        </span>
         <span style={{ fontWeight: 700, fontSize: '14px' }}>{title}</span>
     </div>
 );
@@ -196,7 +192,7 @@ export default function FlyerCocinaNinos() {
                         alignItems: 'center',
                         gap: '10px'
                     }}>
-                        👧 Grupos de Edad
+                        <Users size={20} weight="fill" style={{ color: '#00cc66' }} /> Grupos de Edad
                     </h3>
                     <div style={{
                         display: 'grid',
@@ -204,8 +200,8 @@ export default function FlyerCocinaNinos() {
                         gap: '15px',
                         marginBottom: '25px'
                     }}>
-                        <FeatureCard icon="👧" value="7 - 12 años" label="Niños" />
-                        <FeatureCard icon="🧑" value="13 - 16 años" label="Adolescentes" />
+                        <FeatureCard Icon={User} value="7 - 12 años" label="Niños" />
+                        <FeatureCard Icon={Users} value="13 - 16 años" label="Adolescentes" />
                     </div>
 
                     {/* CARACTERÍSTICAS */}
@@ -279,7 +275,7 @@ export default function FlyerCocinaNinos() {
                         alignItems: 'center',
                         gap: '10px'
                     }}>
-                        ⭐ Beneficios
+                        <Star size={20} weight="fill" style={{ color: '#00cc66' }} /> Beneficios
                     </h3>
                     <div style={{
                         display: 'grid',
@@ -287,9 +283,9 @@ export default function FlyerCocinaNinos() {
                         gap: '15px',
                         marginBottom: '25px'
                     }}>
-                        <BenefitCard icon="🎨" title="Creatividad" />
-                        <BenefitCard icon="🤝" title="Trabajo en equipo" />
-                        <BenefitCard icon="🥗" title="Hábitos saludables" />
+                        <BenefitCard Icon={PaintBrush} title="Creatividad" />
+                        <BenefitCard Icon={Handshake} title="Trabajo en equipo" />
+                        <BenefitCard Icon={Carrot} title="Hábitos saludables" />
                     </div>
 
                     {/* INVERSIÓN */}
