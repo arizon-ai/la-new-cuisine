@@ -111,18 +111,18 @@ export default function QuienesSomos() {
                         <h2 className="text-4xl font-serif font-bold">Nuestros Valores</h2>
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                         {valores.map((valor, index) => {
                             const IconComponent = valor.icono;
                             return (
                                 <div
                                     key={index}
-                                    className="text-center p-6 bg-white border border-gray-200 hover:border-black hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 group"
+                                    className="text-center p-8 bg-white border border-gray-200 hover:border-black hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 group"
                                 >
                                     <div className="inline-flex items-center justify-center w-14 h-14 bg-neutral-100 rounded-full mb-4 group-hover:bg-black group-hover:text-white transition-colors">
                                         <IconComponent className="w-6 h-6" />
                                     </div>
-                                    <p className="font-bold text-xs uppercase tracking-wider break-words">{valor.nombre}</p>
+                                    <p className="font-bold text-sm uppercase tracking-wider">{valor.nombre}</p>
                                 </div>
                             );
                         })}
