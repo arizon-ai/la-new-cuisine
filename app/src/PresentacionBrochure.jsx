@@ -233,6 +233,96 @@ export default function PresentacionBrochure() {
           transform: translateY(-5px);
           box-shadow: 0 10px 40px rgba(0,0,0,0.15);
         }
+        
+        /* ===== RESPONSIVE STYLES ===== */
+        @media (max-width: 1024px) {
+          .brochure-container section > div.flex {
+            flex-direction: column !important;
+          }
+          .brochure-container section > div.flex > div {
+            width: 100% !important;
+          }
+        }
+        
+        @media (max-width: 768px) {
+          .brochure-container .grid-cols-2,
+          .brochure-container .grid-cols-3,
+          .brochure-container .grid-cols-4 {
+            grid-template-columns: 1fr !important;
+          }
+          .brochure-container section {
+            overflow-y: auto !important;
+            height: auto !important;
+            min-height: 100vh !important;
+          }
+          .brochure-container .p-20,
+          .brochure-container .p-16 {
+            padding: 1.5rem !important;
+          }
+          .brochure-container .text-5xl,
+          .brochure-container .text-6xl,
+          .brochure-container .text-7xl,
+          .brochure-container .text-8xl {
+            font-size: 2rem !important;
+          }
+          .brochure-container .text-3xl,
+          .brochure-container .text-4xl {
+            font-size: 1.5rem !important;
+          }
+          .brochure-container .w-1\\/2,
+          .brochure-container .w-1\\/3,
+          .brochure-container .w-2\\/3,
+          .brochure-container .w-2\\/5,
+          .brochure-container .w-3\\/5 {
+            width: 100% !important;
+          }
+          .brochure-container .inline-flex {
+            flex-wrap: wrap !important;
+            gap: 1rem !important;
+          }
+          .brochure-container .flex.gap-16,
+          .brochure-container .flex.gap-8 {
+            flex-direction: column !important;
+            gap: 1rem !important;
+          }
+          .fixed.bottom-8 {
+            bottom: 1rem !important;
+            padding: 0.5rem 1rem !important;
+            gap: 0.5rem !important;
+          }
+          .fixed.top-6.right-6 {
+            top: 0.5rem !important;
+            right: 0.5rem !important;
+            gap: 0.25rem !important;
+          }
+          .fixed.top-6.right-6 button {
+            padding: 0.5rem !important;
+          }
+          .fixed.top-6.right-6 button span {
+            display: none !important;
+          }
+          .grid.grid-cols-4 {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .brochure-container .p-8,
+          .brochure-container .p-12 {
+            padding: 1rem !important;
+          }
+          .brochure-container .mb-8,
+          .brochure-container .mb-12,
+          .brochure-container .mb-16 {
+            margin-bottom: 1rem !important;
+          }
+          .fixed.bottom-8 .flex.gap-1\\.5 {
+            display: none !important;
+          }
+          .grid.grid-cols-4 {
+            grid-template-columns: 1fr !important;
+          }
+        }
       `}</style>
 
             {/* Navigation Controls - No Print */}
