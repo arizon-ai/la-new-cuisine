@@ -157,7 +157,7 @@ export default function FlyerCocinaNinos() {
                 </div>
 
                 {/* CONTENT */}
-                <div style={{ padding: '30px' }}>
+                <div className="flyer-content" style={{ padding: '30px' }}>
                     <h1 style={{
                         fontSize: '28px',
                         fontWeight: 700,
@@ -203,7 +203,7 @@ export default function FlyerCocinaNinos() {
                     }}>
                         <Users size={20} weight="light" color="#000" /> Grupos de Edad
                     </h3>
-                    <div style={{
+                    <div className="flyer-grid-2" style={{
                         display: 'grid',
                         gridTemplateColumns: '1fr 1fr',
                         gap: '15px',
@@ -213,8 +213,7 @@ export default function FlyerCocinaNinos() {
                         <FeatureCard icon={User} value="13 - 16 años" label="Adolescentes" />
                     </div>
 
-                    {/* CARACTERÍSTICAS */}
-                    <div style={{
+                    <div className="flyer-grid-2" style={{
                         display: 'grid',
                         gridTemplateColumns: '1fr 1fr',
                         gap: '15px',
@@ -263,7 +262,7 @@ export default function FlyerCocinaNinos() {
                         }}>
                             <ClipboardText size={20} weight="light" color="#000" /> Contenido del Curso (15 Sesiones)
                         </h3>
-                        <div style={{
+                        <div className="flyer-grid-2" style={{
                             display: 'grid',
                             gridTemplateColumns: 'repeat(2, 1fr)',
                             gap: '0 20px'
@@ -286,7 +285,7 @@ export default function FlyerCocinaNinos() {
                     }}>
                         <Star size={20} weight="light" color="#000" /> Beneficios
                     </h3>
-                    <div style={{
+                    <div className="flyer-investment-grid" style={{
                         display: 'grid',
                         gridTemplateColumns: 'repeat(3, 1fr)',
                         gap: '15px',
@@ -314,7 +313,7 @@ export default function FlyerCocinaNinos() {
                         }}>
                             <Money size={20} weight="light" color="#000" /> Inversión
                         </div>
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
+                        <div className="flyer-investment-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
                                 <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>30 €</div>
                                 <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
@@ -335,7 +334,7 @@ export default function FlyerCocinaNinos() {
                 </div>
 
                 {/* FOOTER */}
-                <div style={{
+                <div className="flyer-footer" style={{
                     backgroundColor: '#000',
                     color: '#fff',
                     padding: '25px',

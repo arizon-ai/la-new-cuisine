@@ -297,3 +297,163 @@
 .heading-responsive {
   font-size: clamp(20px, 4vw, 32px);
 }
+
+/* ========================================
+   CLASES RESPONSIVE PARA FLYERS
+   ======================================== */
+
+/* Grid de 4 columnas (FeatureCards) */
+.flyer-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Grid de 2 columnas (Contenido, Características) */
+.flyer-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+/* Grid de inversión (3 columnas) */
+.flyer-investment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* Tabs de niveles */
+.flyer-tabs {
+  display: flex;
+  border: 2px solid #000;
+  border-bottom: none;
+}
+
+/* Contenido principal */
+.flyer-content {
+  padding: 30px;
+}
+
+/* DateCard container */
+.flyer-date-card {
+  border: 1px solid #000;
+  display: flex;
+  align-items: stretch;
+}
+
+/* DateCard mes lateral */
+.flyer-date-month {
+  background-color: #000;
+  color: #fff;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  padding: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 2px;
+  min-width: 40px;
+}
+
+/* ========================================
+   TABLET (768px - 1024px)
+   ======================================== */
+@media (max-width: 1024px) {
+  .flyer-grid-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* ========================================
+   MÓVIL (menos de 768px)
+   ======================================== */
+@media (max-width: 768px) {
+  .flyer-grid-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .flyer-grid-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .flyer-investment-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .flyer-tabs {
+    flex-wrap: wrap !important;
+  }
+
+  .flyer-tabs button {
+    flex: 1 1 45% !important;
+    min-width: 100px !important;
+    padding: 10px 8px !important;
+    font-size: 12px !important;
+  }
+
+  .flyer-content {
+    padding: 15px !important;
+  }
+
+  /* DateCard - hacer horizontal */
+  .flyer-date-card {
+    flex-direction: column !important;
+  }
+
+  .flyer-date-month {
+    writing-mode: horizontal-tb !important;
+    transform: none !important;
+    min-width: auto !important;
+    padding: 8px 12px !important;
+    font-size: 11px !important;
+  }
+
+  /* Títulos más pequeños */
+  .responsive-container h1 {
+    font-size: 22px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Footer más compacto */
+  .flyer-footer {
+    padding: 15px !important;
+  }
+
+  /* Botón CTA más compacto */
+  .flyer-footer a {
+    padding: 10px 15px !important;
+    font-size: 12px !important;
+  }
+}
+
+/* ========================================
+   MÓVIL PEQUEÑO (menos de 480px)
+   ======================================== */
+@media (max-width: 480px) {
+  .flyer-grid-4 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .flyer-tabs {
+    flex-direction: column !important;
+  }
+
+  .flyer-tabs button {
+    flex: 1 1 100% !important;
+    border-bottom: 1px solid #000 !important;
+  }
+
+  .responsive-container h1 {
+    font-size: 18px !important;
+  }
+
+  /* Fuentes más pequeñas */
+  .responsive-container p,
+  .responsive-container span,
+  .responsive-container li {
+    font-size: 13px !important;
+  }
+}

@@ -248,7 +248,7 @@ export default function FlyerPanaderia() {
                 </div>
 
                 {/* CONTENT */}
-                <div style={{ padding: '30px' }}>
+                <div className="flyer-content" style={{ padding: '30px' }}>
                     <h1 style={{
                         fontSize: '28px',
                         fontWeight: 700,
@@ -295,7 +295,7 @@ export default function FlyerPanaderia() {
                     </div>
 
                     {/* CARACTERÍSTICAS */}
-                    <div style={{
+                    <div className="flyer-grid-4" style={{
                         display: 'grid',
                         gridTemplateColumns: 'repeat(4, 1fr)',
                         gap: '10px',
@@ -309,7 +309,7 @@ export default function FlyerPanaderia() {
 
                     {/* TABS DE NIVELES */}
                     <div style={{ marginBottom: '25px' }}>
-                        <div style={{ display: 'flex', border: '2px solid #000', borderBottom: 'none' }}>
+                        <div className="flyer-tabs" style={{ display: 'flex', border: '2px solid #000', borderBottom: 'none' }}>
                             <LevelTab
                                 level="Nivel 1"
                                 title="Básico"
@@ -426,7 +426,7 @@ export default function FlyerPanaderia() {
                         }}>
                             <Money size={20} weight="light" color="#000" /> Inversión por Nivel
                         </div>
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
+                        <div className="flyer-investment-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
                                 <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>50 €</div>
                                 <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
@@ -447,7 +447,7 @@ export default function FlyerPanaderia() {
                 </div>
 
                 {/* FOOTER */}
-                <div style={{
+                <div className="flyer-footer" style={{
                     backgroundColor: '#000',
                     color: '#fff',
                     padding: '25px',

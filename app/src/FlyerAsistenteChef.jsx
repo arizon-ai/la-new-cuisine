@@ -194,7 +194,7 @@ export default function FlyerAsistenteChef() {
                 </div>
 
                 {/* CONTENT */}
-                <div style={{ padding: '30px' }}>
+                <div className="flyer-content" style={{ padding: '30px' }}>
                     <h1 style={{
                         fontSize: '28px',
                         fontWeight: 700,
@@ -229,7 +229,7 @@ export default function FlyerAsistenteChef() {
                     </div>
 
                     {/* CARACTERÍSTICAS */}
-                    <div style={{
+                    <div className="flyer-grid-2" style={{
                         display: 'grid',
                         gridTemplateColumns: 'repeat(2, 1fr)',
                         gap: '15px',
@@ -278,7 +278,7 @@ export default function FlyerAsistenteChef() {
                         }}>
                             <ClipboardText size={20} weight="light" color="#000" /> Detalle del Contenido
                         </h3>
-                        <div style={{
+                        <div className="flyer-grid-2" style={{
                             display: 'grid',
                             gridTemplateColumns: 'repeat(2, 1fr)',
                             gap: '0 20px'
@@ -336,7 +336,7 @@ export default function FlyerAsistenteChef() {
                         }}>
                             <Money size={20} weight="light" color="#000" /> Inversión
                         </div>
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
+                        <div className="flyer-investment-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
                                 <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>35 €</div>
                                 <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
@@ -357,7 +357,7 @@ export default function FlyerAsistenteChef() {
                 </div>
 
                 {/* FOOTER */}
-                <div style={{
+                <div className="flyer-footer" style={{
                     backgroundColor: '#000',
                     color: '#fff',
                     padding: '25px',
