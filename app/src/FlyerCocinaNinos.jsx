@@ -147,38 +147,38 @@ export default function FlyerCocinaNinos() {
                             className="responsive-logo"
                             style={{ width: '320px', maxWidth: '80%', height: 'auto', margin: '0 auto 15px' }}
                         />
-                        <h2 style={{ fontSize: '22px', color: '#333', fontWeight: 400, marginTop: 0, letterSpacing: '2px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase' }}>
-                            COCINA PARA NIÑOS Y<br />ADOLESCENTES
-                        </h2>
+                        <EditableText
+                            id="flyer-ninos-hero-title"
+                            defaultValue="COCINA PARA NIÑOS Y\nADOLESCENTES"
+                            tag="h2"
+                            style={{ fontSize: '22px', color: '#333', fontWeight: 400, marginTop: 0, letterSpacing: '2px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase' }}
+                            multiline={true}
+                        />
                         <hr style={{ border: 0, height: '2px', background: '#000', margin: '25px auto', width: '60px' }} />
-                        <p style={{ fontSize: '13px', fontFamily: "'Azeret Mono'", color: '#000', textTransform: 'uppercase', lineHeight: 1.6, margin: 0 }}>
-                            ¡Descubre el mundo fascinante de la cocina!
-                        </p>
+                        <EditableText
+                            id="flyer-ninos-hero-subtitle"
+                            defaultValue="¡Descubre el mundo fascinante de la cocina!"
+                            tag="p"
+                            style={{ fontSize: '13px', fontFamily: "'Azeret Mono'", color: '#000', textTransform: 'uppercase', lineHeight: 1.6, margin: 0 }}
+                        />
                     </div>
                 </div>
 
                 {/* CONTENT */}
                 <div className="flyer-content" style={{ padding: '30px' }}>
-                    <h1 style={{
-                        fontSize: '28px',
-                        fontWeight: 700,
-                        textTransform: 'uppercase',
-                        marginBottom: '10px',
-                        lineHeight: 1.1
-                    }}>
-                        Curso de Cocina para<br />Niños y Adolescentes
-                    </h1>
-                    <span style={{
-                        fontFamily: "'Azeret Mono', monospace",
-                        fontSize: '13px',
-                        color: '#555',
-                        marginBottom: '25px',
-                        display: 'block',
-                        borderLeft: '3px solid #000',
-                        paddingLeft: '10px'
-                    }}>
-                        Transformamos la diversión en habilidades prácticas
-                    </span>
+                    <EditableText
+                        id="flyer-ninos-main-title"
+                        defaultValue="Curso de Cocina para\nNiños y Adolescentes"
+                        tag="h1"
+                        style={{ fontSize: '28px', fontWeight: 700, textTransform: 'uppercase', marginBottom: '10px', lineHeight: 1.1 }}
+                        multiline={true}
+                    />
+                    <EditableText
+                        id="flyer-ninos-content-subtitle"
+                        defaultValue="Transformamos la diversión en habilidades prácticas"
+                        tag="span"
+                        style={{ fontFamily: "'Azeret Mono', monospace", fontSize: '13px', color: '#555', marginBottom: '25px', display: 'block', borderLeft: '3px solid #000', paddingLeft: '10px' }}
+                    />
 
                     {/* DESCRIPCIÓN */}
                     <div style={{
@@ -312,25 +312,23 @@ export default function FlyerCocinaNinos() {
                             alignItems: 'center',
                             gap: '8px'
                         }}>
-                            <Money size={20} weight="light" color="#000" /> Inversión
+                            <Money size={20} weight="light" color="#000" /> <EditableText id="flyer-ninos-inversion-title" defaultValue="Inversión" tag="span" />
                         </div>
                         <div className="flyer-investment-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>30 €</div>
-                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
+                                <EditableText id="flyer-ninos-precio-inscripcion" defaultValue="30 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="flyer-ninos-label-inscripcion" defaultValue="Inscripción" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>80 €</div>
-                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Mensualidad</div>
+                                <EditableText id="flyer-ninos-precio-mensualidad" defaultValue="80 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="flyer-ninos-label-mensualidad" defaultValue="Mensualidad" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>50 €</div>
-                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Kit Estudio</div>
+                                <EditableText id="flyer-ninos-precio-kit" defaultValue="50 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="flyer-ninos-label-kit" defaultValue="Kit Estudio" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                         </div>
-                        <p style={{ fontSize: '10px', color: '#666', marginTop: '10px', marginBottom: 0 }}>
-                            *Kit incluye delantal, gorro y materiales básicos.
-                        </p>
+                        <EditableText id="flyer-ninos-nota" defaultValue="*Kit incluye delantal, gorro y materiales básicos." tag="p" style={{ fontSize: '10px', color: '#666', marginTop: '10px', marginBottom: 0 }} />
                     </div>
                 </div>
 
@@ -361,7 +359,7 @@ export default function FlyerCocinaNinos() {
                             textDecoration: 'none'
                         }}
                     >
-                        ¡INSCRIBE A TUS HIJOS HOY!
+                        <EditableText id="flyer-ninos-cta-button" defaultValue="¡INSCRIBE A TUS HIJOS HOY!" tag="span" />
                     </a>
                     <div style={{
                         fontSize: '12px',
@@ -372,7 +370,7 @@ export default function FlyerCocinaNinos() {
                         justifyContent: 'center',
                         gap: '8px'
                     }}>
-                        <WhatsappLogo size={16} weight="light" color="#fff" /> +58 424-4635196 &nbsp;|&nbsp; Valencia, Vzla.
+                        <WhatsappLogo size={16} weight="light" color="#fff" /> <EditableText id="flyer-ninos-footer-contact" defaultValue="+58 424-4635196 | Valencia, Vzla." tag="span" />
                     </div>
                 </div>
 

@@ -159,38 +159,38 @@ export default function FlyerGerencia() {
                             className="responsive-logo"
                             style={{ width: '320px', maxWidth: '80%', height: 'auto', margin: '0 auto 15px' }}
                         />
-                        <h2 style={{ fontSize: '22px', color: '#333', fontWeight: 400, marginTop: 0, letterSpacing: '2px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase' }}>
-                            DIPLOMADO EN<br />GERENCIA GASTRONÓMICA
-                        </h2>
+                        <EditableText
+                            id="flyer-gerencia-hero-title"
+                            defaultValue="DIPLOMADO EN\nGERENCIA GASTRONÓMICA"
+                            tag="h2"
+                            style={{ fontSize: '22px', color: '#333', fontWeight: 400, marginTop: 0, letterSpacing: '2px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase' }}
+                            multiline={true}
+                        />
                         <hr style={{ border: 0, height: '2px', background: '#000', margin: '25px auto', width: '60px' }} />
-                        <p style={{ fontSize: '13px', fontFamily: "'Azeret Mono'", color: '#000', textTransform: 'uppercase', lineHeight: 1.6, margin: 0 }}>
-                            4 Meses • Visión Estratégica • Liderazgo
-                        </p>
+                        <EditableText
+                            id="flyer-gerencia-hero-subtitle"
+                            defaultValue="4 Meses • Visión Estratégica • Liderazgo"
+                            tag="p"
+                            style={{ fontSize: '13px', fontFamily: "'Azeret Mono'", color: '#000', textTransform: 'uppercase', lineHeight: 1.6, margin: 0 }}
+                        />
                     </div>
                 </div>
 
                 {/* CONTENT */}
                 <div style={{ padding: '30px' }}>
-                    <h1 style={{
-                        fontSize: '28px',
-                        fontWeight: 700,
-                        textTransform: 'uppercase',
-                        marginBottom: '10px',
-                        lineHeight: 1.1
-                    }}>
-                        Diplomado en<br />Gerencia Gastronómica 2026
-                    </h1>
-                    <span style={{
-                        fontFamily: "'Azeret Mono', monospace",
-                        fontSize: '13px',
-                        color: '#555',
-                        marginBottom: '25px',
-                        display: 'block',
-                        borderLeft: '3px solid #000',
-                        paddingLeft: '10px'
-                    }}>
-                        Lidera y transforma el negocio gastronómico del futuro
-                    </span>
+                    <EditableText
+                        id="flyer-gerencia-main-title"
+                        defaultValue="Diplomado en\nGerencia Gastronómica 2026"
+                        tag="h1"
+                        style={{ fontSize: '28px', fontWeight: 700, textTransform: 'uppercase', marginBottom: '10px', lineHeight: 1.1 }}
+                        multiline={true}
+                    />
+                    <EditableText
+                        id="flyer-gerencia-content-subtitle"
+                        defaultValue="Lidera y transforma el negocio gastronómico del futuro"
+                        tag="span"
+                        style={{ fontFamily: "'Azeret Mono', monospace", fontSize: '13px', color: '#555', marginBottom: '25px', display: 'block', borderLeft: '3px solid #000', paddingLeft: '10px' }}
+                    />
 
                     {/* DESCRIPCIÓN */}
                     <div style={{
@@ -310,21 +310,19 @@ export default function FlyerGerencia() {
                             alignItems: 'center',
                             gap: '8px'
                         }}>
-                            <Money size={20} weight="light" color="#000" /> Inversión
+                            <Money size={20} weight="light" color="#000" /> <EditableText id="flyer-gerencia-inversion-title" defaultValue="Inversión" tag="span" />
                         </div>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>50 €</div>
-                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
+                                <EditableText id="flyer-gerencia-precio-inscripcion" defaultValue="50 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="flyer-gerencia-label-inscripcion" defaultValue="Inscripción" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>100 €</div>
-                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Mensualidad</div>
+                                <EditableText id="flyer-gerencia-precio-mensualidad" defaultValue="100 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="flyer-gerencia-label-mensualidad" defaultValue="Mensualidad" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                         </div>
-                        <p style={{ fontSize: '10px', color: '#666', marginTop: '10px', marginBottom: 0 }}>
-                            *Incluye material de estudio digital y certificación.
-                        </p>
+                        <EditableText id="flyer-gerencia-nota" defaultValue="*Incluye material de estudio digital y certificación." tag="p" style={{ fontSize: '10px', color: '#666', marginTop: '10px', marginBottom: 0 }} />
                     </div>
                 </div>
 
@@ -355,7 +353,7 @@ export default function FlyerGerencia() {
                             textDecoration: 'none'
                         }}
                     >
-                        ¡LIDERA EL ÉXITO GASTRONÓMICO!
+                        <EditableText id="flyer-gerencia-cta-button" defaultValue="¡LIDERA EL ÉXITO GASTRONÓMICO!" tag="span" />
                     </a>
                     <div style={{
                         fontSize: '12px',
@@ -366,7 +364,7 @@ export default function FlyerGerencia() {
                         justifyContent: 'center',
                         gap: '8px'
                     }}>
-                        <WhatsappLogo size={16} weight="light" color="#fff" /> +58 424-4635196 &nbsp;|&nbsp; Valencia, Vzla.
+                        <WhatsappLogo size={16} weight="light" color="#fff" /> <EditableText id="flyer-gerencia-footer-contact" defaultValue="+58 424-4635196 | Valencia, Vzla." tag="span" />
                     </div>
                 </div>
 

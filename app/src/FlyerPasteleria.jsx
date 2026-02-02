@@ -313,38 +313,37 @@ export default function FlyerPasteleria() {
                             className="responsive-logo"
                             style={{ width: '320px', maxWidth: '80%', height: 'auto', margin: '0 auto 15px' }}
                         />
-                        <h2 style={{ fontSize: '22px', color: '#333', fontWeight: 400, marginTop: 0, letterSpacing: '2px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase' }}>
-                            CARRERA CHEF PASTELERO
-                        </h2>
+                        <EditableText
+                            id="flyer-pasteleria-hero-title"
+                            defaultValue="CARRERA CHEF PASTELERO"
+                            tag="h2"
+                            style={{ fontSize: '22px', color: '#333', fontWeight: 400, marginTop: 0, letterSpacing: '2px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase' }}
+                        />
                         <hr style={{ border: 0, height: '2px', background: '#000', margin: '25px auto', width: '60px' }} />
-                        <p style={{ fontSize: '13px', fontFamily: "'Azeret Mono'", color: '#333', textTransform: 'uppercase', lineHeight: 1.6, margin: 0 }}>
-                            3 Niveles • 15 Meses • 240 Horas de Pasantías
-                        </p>
+                        <EditableText
+                            id="flyer-pasteleria-hero-subtitle"
+                            defaultValue="3 Niveles • 15 Meses • 240 Horas de Pasantías"
+                            tag="p"
+                            style={{ fontSize: '13px', fontFamily: "'Azeret Mono'", color: '#333', textTransform: 'uppercase', lineHeight: 1.6, margin: 0 }}
+                        />
                     </div>
                 </div>
 
                 {/* CONTENT */}
                 <div className="flyer-content" style={{ padding: '30px' }}>
-                    <h1 style={{
-                        fontSize: '28px',
-                        fontWeight: 700,
-                        textTransform: 'uppercase',
-                        marginBottom: '10px',
-                        lineHeight: 1.1
-                    }}>
-                        Carrera de<br />Chef Pastelero 2026
-                    </h1>
-                    <span style={{
-                        fontFamily: "'Azeret Mono', monospace",
-                        fontSize: '13px',
-                        color: '#555',
-                        marginBottom: '25px',
-                        display: 'block',
-                        borderLeft: '3px solid #000',
-                        paddingLeft: '10px'
-                    }}>
-                        La alquimia perfecta entre la ciencia exacta y la creatividad sin límites
-                    </span>
+                    <EditableText
+                        id="flyer-pasteleria-main-title"
+                        defaultValue="Carrera de\nChef Pastelero 2026"
+                        tag="h1"
+                        style={{ fontSize: '28px', fontWeight: 700, textTransform: 'uppercase', marginBottom: '10px', lineHeight: 1.1 }}
+                        multiline={true}
+                    />
+                    <EditableText
+                        id="flyer-pasteleria-content-subtitle"
+                        defaultValue="La alquimia perfecta entre la ciencia exacta y la creatividad sin límites"
+                        tag="span"
+                        style={{ fontFamily: "'Azeret Mono', monospace", fontSize: '13px', color: '#555', marginBottom: '25px', display: 'block', borderLeft: '3px solid #000', paddingLeft: '10px' }}
+                    />
 
                     {/* DESCRIPCIÓN */}
                     <div style={{
@@ -375,11 +374,15 @@ export default function FlyerPasteleria() {
                             alignItems: 'center',
                             gap: '10px'
                         }}>
-                            <GraduationCap size={20} weight="light" color="#000" /> Estructura de la Carrera
+                            <GraduationCap size={20} weight="light" color="#000" /> <EditableText id="flyer-pasteleria-estructura-title" defaultValue="Estructura de la Carrera" tag="span" />
                         </h3>
-                        <p style={{ fontSize: '14px', lineHeight: 1.7, color: '#333', margin: 0 }}>
-                            La carrera consta de <strong>tres niveles</strong> (Básico, Intermedio y Avanzado), cada uno con duración de <strong>5 meses (20 semanas)</strong>. Las clases son <strong>teórico-prácticas</strong> con evaluación continua, 3 evaluaciones por nivel. En el nivel avanzado: examen técnico, presentación del <em>Fine Dining</em>, y cumplimiento de <strong>240 horas de pasantías</strong>.
-                        </p>
+                        <EditableText
+                            id="flyer-pasteleria-estructura-desc"
+                            defaultValue="La carrera consta de tres niveles (Básico, Intermedio y Avanzado), cada uno con duración de 5 meses (20 semanas). Las clases son teórico-prácticas con evaluación continua, 3 evaluaciones por nivel. En el nivel avanzado: examen técnico, presentación del Fine Dining, y cumplimiento de 240 horas de pasantías."
+                            tag="p"
+                            style={{ fontSize: '14px', lineHeight: 1.7, color: '#333', margin: 0 }}
+                            multiline={true}
+                        />
                     </div>
 
                     {/* CARACTERÍSTICAS */}
@@ -554,25 +557,23 @@ export default function FlyerPasteleria() {
                             alignItems: 'center',
                             gap: '8px'
                         }}>
-                            <Money size={20} weight="light" color="#000" /> Inversión por Nivel
+                            <Money size={20} weight="light" color="#000" /> <EditableText id="flyer-pasteleria-inversion-title" defaultValue="Inversión por Nivel" tag="span" />
                         </div>
                         <div className="flyer-investment-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>50 €</div>
-                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
+                                <EditableText id="flyer-pasteleria-precio-inscripcion" defaultValue="50 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="flyer-pasteleria-label-inscripcion" defaultValue="Inscripción" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>140 €</div>
-                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Mensualidad</div>
+                                <EditableText id="flyer-pasteleria-precio-mensualidad" defaultValue="140 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="flyer-pasteleria-label-mensualidad" defaultValue="Mensualidad" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>90 €</div>
-                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Kit Estudio</div>
+                                <EditableText id="flyer-pasteleria-precio-kit" defaultValue="90 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="flyer-pasteleria-label-kit" defaultValue="Kit Estudio" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                         </div>
-                        <p style={{ fontSize: '10px', color: '#666', marginTop: '10px', marginBottom: 0 }}>
-                            *Kit: filipina, gorro, delantal. Financiamiento disponible en 2 cuotas.
-                        </p>
+                        <EditableText id="flyer-pasteleria-kit-nota" defaultValue="*Kit: filipina, gorro, delantal. Financiamiento disponible en 2 cuotas." tag="p" style={{ fontSize: '10px', color: '#666', marginTop: '10px', marginBottom: 0 }} />
                     </div>
                 </div>
 
@@ -603,7 +604,7 @@ export default function FlyerPasteleria() {
                             textDecoration: 'none'
                         }}
                     >
-                        ¡DOMINA EL ARTE DE LA PASTELERÍA!
+                        <EditableText id="flyer-pasteleria-cta-button" defaultValue="¡DOMINA EL ARTE DE LA PASTELERÍA!" tag="span" />
                     </a>
                     <div style={{
                         fontSize: '12px',
@@ -614,7 +615,7 @@ export default function FlyerPasteleria() {
                         justifyContent: 'center',
                         gap: '8px'
                     }}>
-                        <WhatsappLogo size={16} weight="light" color="#fff" /> +58 424-4635196 &nbsp;|&nbsp; Valencia, Vzla.
+                        <WhatsappLogo size={16} weight="light" color="#fff" /> <EditableText id="flyer-pasteleria-footer-contact" defaultValue="+58 424-4635196 | Valencia, Vzla." tag="span" />
                     </div>
                 </div>
 

@@ -238,38 +238,37 @@ export default function FlyerPanaderia() {
                             className="responsive-logo"
                             style={{ width: '320px', maxWidth: '80%', height: 'auto', margin: '0 auto 15px' }}
                         />
-                        <h2 style={{ fontSize: '22px', color: '#333', fontWeight: 400, marginTop: 0, letterSpacing: '2px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase' }}>
-                            CARRERA CHEF PANADERO
-                        </h2>
+                        <EditableText
+                            id="flyer-panaderia-hero-title"
+                            defaultValue="CARRERA CHEF PANADERO"
+                            tag="h2"
+                            style={{ fontSize: '22px', color: '#333', fontWeight: 400, marginTop: 0, letterSpacing: '2px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase' }}
+                        />
                         <hr style={{ border: 0, height: '2px', background: '#000', margin: '25px auto', width: '60px' }} />
-                        <p style={{ fontSize: '13px', fontFamily: "'Azeret Mono'", color: '#000', textTransform: 'uppercase', lineHeight: 1.6, margin: 0 }}>
-                            2 Niveles • 10 Meses • 240 Horas de Pasantías
-                        </p>
+                        <EditableText
+                            id="flyer-panaderia-hero-subtitle"
+                            defaultValue="2 Niveles • 10 Meses • 240 Horas de Pasantías"
+                            tag="p"
+                            style={{ fontSize: '13px', fontFamily: "'Azeret Mono'", color: '#000', textTransform: 'uppercase', lineHeight: 1.6, margin: 0 }}
+                        />
                     </div>
                 </div>
 
                 {/* CONTENT */}
                 <div className="flyer-content" style={{ padding: '30px' }}>
-                    <h1 style={{
-                        fontSize: '28px',
-                        fontWeight: 700,
-                        textTransform: 'uppercase',
-                        marginBottom: '10px',
-                        lineHeight: 1.1
-                    }}>
-                        Carrera de<br />Chef Panadero 2026
-                    </h1>
-                    <span style={{
-                        fontFamily: "'Azeret Mono', monospace",
-                        fontSize: '13px',
-                        color: '#555',
-                        marginBottom: '25px',
-                        display: 'block',
-                        borderLeft: '3px solid #000',
-                        paddingLeft: '10px'
-                    }}>
-                        Formación profesional en panadería artesanal
-                    </span>
+                    <EditableText
+                        id="flyer-panaderia-main-title"
+                        defaultValue="Carrera de\nChef Panadero 2026"
+                        tag="h1"
+                        style={{ fontSize: '28px', fontWeight: 700, textTransform: 'uppercase', marginBottom: '10px', lineHeight: 1.1 }}
+                        multiline={true}
+                    />
+                    <EditableText
+                        id="flyer-panaderia-content-subtitle"
+                        defaultValue="Formación profesional en panadería artesanal"
+                        tag="span"
+                        style={{ fontFamily: "'Azeret Mono', monospace", fontSize: '13px', color: '#555', marginBottom: '25px', display: 'block', borderLeft: '3px solid #000', paddingLeft: '10px' }}
+                    />
 
                     {/* ESTRUCTURA DE LA CARRERA */}
                     <div style={{
@@ -288,11 +287,15 @@ export default function FlyerPanaderia() {
                             alignItems: 'center',
                             gap: '10px'
                         }}>
-                            <GraduationCap size={20} weight="light" color="#000" /> Estructura de la Carrera
+                            <GraduationCap size={20} weight="light" color="#000" /> <EditableText id="flyer-panaderia-estructura-title" defaultValue="Estructura de la Carrera" tag="span" />
                         </h3>
-                        <p style={{ fontSize: '14px', lineHeight: 1.7, color: '#333', margin: 0 }}>
-                            La New Cuisine ofrece programas de formación en panadería adaptados a <strong>nivel básico y avanzado</strong>. Cada nivel tiene una duración de <strong>20 semanas (5 meses)</strong>. Las clases son <strong>teórico-prácticas</strong> con evaluación continua, 3 evaluaciones por nivel. En el nivel avanzado: examen técnico, presentación del <em>Fine Dining</em>, y cumplimiento de <strong>240 horas de pasantías</strong>.
-                        </p>
+                        <EditableText
+                            id="flyer-panaderia-estructura-desc"
+                            defaultValue="La New Cuisine ofrece programas de formación en panadería adaptados a nivel básico y avanzado. Cada nivel tiene una duración de 20 semanas (5 meses). Las clases son teórico-prácticas con evaluación continua, 3 evaluaciones por nivel. En el nivel avanzado: examen técnico, presentación del Fine Dining, y cumplimiento de 240 horas de pasantías."
+                            tag="p"
+                            style={{ fontSize: '14px', lineHeight: 1.7, color: '#333', margin: 0 }}
+                            multiline={true}
+                        />
                     </div>
 
                     {/* CARACTERÍSTICAS */}
@@ -425,25 +428,23 @@ export default function FlyerPanaderia() {
                             alignItems: 'center',
                             gap: '8px'
                         }}>
-                            <Money size={20} weight="light" color="#000" /> Inversión por Nivel
+                            <Money size={20} weight="light" color="#000" /> <EditableText id="flyer-panaderia-inversion-title" defaultValue="Inversión por Nivel" tag="span" />
                         </div>
                         <div className="flyer-investment-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>50 €</div>
-                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
+                                <EditableText id="flyer-panaderia-precio-inscripcion" defaultValue="50 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="flyer-panaderia-label-inscripcion" defaultValue="Inscripción" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>140 €</div>
-                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Mensualidad</div>
+                                <EditableText id="flyer-panaderia-precio-mensualidad" defaultValue="140 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="flyer-panaderia-label-mensualidad" defaultValue="Mensualidad" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>90 €</div>
-                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Kit Estudio</div>
+                                <EditableText id="flyer-panaderia-precio-kit" defaultValue="90 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="flyer-panaderia-label-kit" defaultValue="Kit Estudio" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                         </div>
-                        <p style={{ fontSize: '10px', color: '#666', marginTop: '10px', marginBottom: 0 }}>
-                            *Kit: filipina, gorro, delantal. Financiamiento disponible en 2 cuotas.
-                        </p>
+                        <EditableText id="flyer-panaderia-kit-nota" defaultValue="*Kit: filipina, gorro, delantal. Financiamiento disponible en 2 cuotas." tag="p" style={{ fontSize: '10px', color: '#666', marginTop: '10px', marginBottom: 0 }} />
                     </div>
                 </div>
 
@@ -474,7 +475,7 @@ export default function FlyerPanaderia() {
                             textDecoration: 'none'
                         }}
                     >
-                        ¡DOMINA EL ARTE DEL PAN!
+                        <EditableText id="flyer-panaderia-cta-button" defaultValue="¡DOMINA EL ARTE DEL PAN!" tag="span" />
                     </a>
                     <div style={{
                         fontSize: '12px',
@@ -485,7 +486,7 @@ export default function FlyerPanaderia() {
                         justifyContent: 'center',
                         gap: '8px'
                     }}>
-                        <WhatsappLogo size={16} weight="light" color="#fff" /> +58 424-4635196 &nbsp;|&nbsp; Valencia, Vzla.
+                        <WhatsappLogo size={16} weight="light" color="#fff" /> <EditableText id="flyer-panaderia-footer-contact" defaultValue="+58 424-4635196 | Valencia, Vzla." tag="span" />
                     </div>
                 </div>
 

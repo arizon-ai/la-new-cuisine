@@ -273,9 +273,12 @@ export default function FlyerCocina() {
                             multiline={true}
                         />
                         <hr style={{ border: 0, height: '2px', background: '#000', margin: '25px auto', width: '60px' }} />
-                        <p style={{ fontSize: '13px', fontFamily: "'Azeret Mono'", color: '#000', textTransform: 'uppercase', lineHeight: 1.6, margin: 0 }}>
-                            3 Niveles • 15 Meses • 240 Horas de Pasantías
-                        </p>
+                        <EditableText
+                            id="flyer-cocina-hero-subtitle"
+                            defaultValue="3 Niveles • 15 Meses • 240 Horas de Pasantías"
+                            tag="p"
+                            style={{ fontSize: '13px', fontFamily: "'Azeret Mono'", color: '#000', textTransform: 'uppercase', lineHeight: 1.6, margin: 0 }}
+                        />
                     </div>
                 </div>
 
@@ -302,9 +305,13 @@ export default function FlyerCocina() {
                         display: 'block',
                         borderLeft: '3px solid #000',
                         paddingLeft: '10px'
-                    }}>
-                        Formación profesional integral en tres niveles
-                    </span>
+                    } >
+                        <EditableText
+                            id="flyer-cocina-content-subtitle"
+                            defaultValue="Formación profesional integral en tres niveles"
+                            tag="span"
+                            style={{ fontFamily: "'Azeret Mono', monospace", fontSize: '13px', color: '#555', marginBottom: '25px', display: 'block', borderLeft: '3px solid #000', paddingLeft: '10px' }}
+                        />
 
                     {/* ESTRUCTURA DE LA CARRERA */}
                     <div style={{
@@ -323,11 +330,16 @@ export default function FlyerCocina() {
                             alignItems: 'center',
                             gap: '10px'
                         }}>
-                            <GraduationCap size={20} weight="light" color="#000" /> Estructura de la Carrera
+                            <GraduationCap size={20} weight="light" color="#000" /> <EditableText id="flyer-cocina-estructura-title" defaultValue="Estructura de la Carrera" tag="span" />
                         </h3>
-                        <p style={{ fontSize: '14px', lineHeight: 1.7, color: '#333', margin: 0 }}>
-                            La carrera consta de <strong>tres niveles</strong> (Básico, Intermedio y Avanzado), cada uno con duración de <strong>5 meses (20 semanas)</strong>. Las clases son <strong>teórico-prácticas</strong> con evaluación continua, 3 evaluaciones por nivel, y en el nivel avanzado: examen técnico, presentación del <em>Fine Dining</em>, y cumplimiento de <strong>240 horas de pasantías</strong>.
-                        </p>
+                        <EditableText
+                            id="flyer-cocina-estructura-desc"
+                            defaultValue="La carrera consta de tres niveles (Básico, Intermedio y Avanzado), cada uno con duración de 5 meses (20 semanas). Las clases son teórico-prácticas con evaluación continua, 3 evaluaciones por nivel, y en el nivel avanzado: examen técnico, presentación del Fine Dining, y cumplimiento de 240 horas de pasantías."
+                            tag="p"
+                            className=""
+                            style={{ fontSize: '14px', lineHeight: 1.7, color: '#333', margin: 0 }}
+                            multiline={true}
+                        />
                     </div>
 
                     {/* CARACTERÍSTICAS */}
@@ -466,25 +478,23 @@ export default function FlyerCocina() {
                             alignItems: 'center',
                             gap: '8px'
                         }}>
-                            <Money size={20} weight="light" color="#000" /> Inversión por Nivel
+                            <Money size={20} weight="light" color="#000" /> <EditableText id="flyer-cocina-inversion-title" defaultValue="Inversión por Nivel" tag="span" />
                         </div>
                         <div className="flyer-investment-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>50 €</div>
-                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
+                                <EditableText id="flyer-cocina-precio-inscripcion" defaultValue="50 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="flyer-cocina-label-inscripcion" defaultValue="Inscripción" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>160 €</div>
-                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Mensualidad</div>
+                                <EditableText id="flyer-cocina-precio-mensualidad" defaultValue="160 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="flyer-cocina-label-mensualidad" defaultValue="Mensualidad" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>90 €</div>
-                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Kit Estudio</div>
+                                <EditableText id="flyer-cocina-precio-kit" defaultValue="90 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="flyer-cocina-label-kit" defaultValue="Kit Estudio" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                         </div>
-                        <p style={{ fontSize: '10px', color: '#666', marginTop: '10px', marginBottom: 0 }}>
-                            *Kit: filipina, gorro, delantal. Financiamiento disponible en 2 cuotas.
-                        </p>
+                        <EditableText id="flyer-cocina-kit-nota" defaultValue="*Kit: filipina, gorro, delantal. Financiamiento disponible en 2 cuotas." tag="p" style={{ fontSize: '10px', color: '#666', marginTop: '10px', marginBottom: 0 }} />
                     </div>
                 </div>
 
@@ -515,7 +525,7 @@ export default function FlyerCocina() {
                             textDecoration: 'none'
                         }}
                     >
-                        ¡INICIA TU CARRERA PROFESIONAL!
+                        <EditableText id="flyer-cocina-cta-button" defaultValue="¡INICIA TU CARRERA PROFESIONAL!" tag="span" />
                     </a>
                     <div style={{
                         fontSize: '12px',
@@ -526,7 +536,7 @@ export default function FlyerCocina() {
                         justifyContent: 'center',
                         gap: '8px'
                     }}>
-                        <WhatsappLogo size={16} weight="light" color="#fff" /> +58 424-4635196 &nbsp;|&nbsp; Valencia, Vzla.
+                        <WhatsappLogo size={16} weight="light" color="#fff" /> <EditableText id="flyer-cocina-footer-contact" defaultValue="+58 424-4635196 | Valencia, Vzla." tag="span" />
                     </div>
                 </div>
 

@@ -184,38 +184,37 @@ export default function FlyerAsistenteChef() {
                             className="responsive-logo"
                             style={{ width: '320px', maxWidth: '80%', height: 'auto', margin: '0 auto 15px' }}
                         />
-                        <h2 style={{ fontSize: '22px', color: '#333', fontWeight: 400, marginTop: 0, letterSpacing: '2px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase' }}>
-                            CURSO ASISTENTE DE CHEF
-                        </h2>
+                        <EditableText
+                            id="flyer-asistente-hero-title"
+                            defaultValue="CURSO ASISTENTE DE CHEF"
+                            tag="h2"
+                            style={{ fontSize: '22px', color: '#333', fontWeight: 400, marginTop: 0, letterSpacing: '2px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase' }}
+                        />
                         <hr style={{ border: 0, height: '2px', background: '#000', margin: '25px auto', width: '60px' }} />
-                        <p style={{ fontSize: '13px', fontFamily: "'Azeret Mono'", color: '#000', textTransform: 'uppercase', lineHeight: 1.6, margin: 0 }}>
-                            5 Meses • Formación Práctica Intensiva
-                        </p>
+                        <EditableText
+                            id="flyer-asistente-hero-subtitle"
+                            defaultValue="5 Meses • Formación Práctica Intensiva"
+                            tag="p"
+                            style={{ fontSize: '13px', fontFamily: "'Azeret Mono'", color: '#000', textTransform: 'uppercase', lineHeight: 1.6, margin: 0 }}
+                        />
                     </div>
                 </div>
 
                 {/* CONTENT */}
                 <div className="flyer-content" style={{ padding: '30px' }}>
-                    <h1 style={{
-                        fontSize: '28px',
-                        fontWeight: 700,
-                        textTransform: 'uppercase',
-                        marginBottom: '10px',
-                        lineHeight: 1.1
-                    }}>
-                        Curso de<br />Asistente de Chef 2026
-                    </h1>
-                    <span style={{
-                        fontFamily: "'Azeret Mono', monospace",
-                        fontSize: '13px',
-                        color: '#555',
-                        marginBottom: '25px',
-                        display: 'block',
-                        borderLeft: '3px solid #000',
-                        paddingLeft: '10px'
-                    }}>
-                        Tu primer paso hacia la excelencia culinaria
-                    </span>
+                    <EditableText
+                        id="flyer-asistente-main-title"
+                        defaultValue="Curso de\nAsistente de Chef 2026"
+                        tag="h1"
+                        style={{ fontSize: '28px', fontWeight: 700, textTransform: 'uppercase', marginBottom: '10px', lineHeight: 1.1 }}
+                        multiline={true}
+                    />
+                    <EditableText
+                        id="flyer-asistente-content-subtitle"
+                        defaultValue="Tu primer paso hacia la excelencia culinaria"
+                        tag="span"
+                        style={{ fontFamily: "'Azeret Mono', monospace", fontSize: '13px', color: '#555', marginBottom: '25px', display: 'block', borderLeft: '3px solid #000', paddingLeft: '10px' }}
+                    />
 
                     {/* DESCRIPCIÓN */}
                     <div style={{
@@ -335,25 +334,23 @@ export default function FlyerAsistenteChef() {
                             alignItems: 'center',
                             gap: '8px'
                         }}>
-                            <Money size={20} weight="light" color="#000" /> Inversión
+                            <Money size={20} weight="light" color="#000" /> <EditableText id="flyer-asistente-inversion-title" defaultValue="Inversión" tag="span" />
                         </div>
                         <div className="flyer-investment-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>35 €</div>
-                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
+                                <EditableText id="flyer-asistente-precio-inscripcion" defaultValue="35 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="flyer-asistente-label-inscripcion" defaultValue="Inscripción" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>110 €</div>
-                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Mensualidad</div>
+                                <EditableText id="flyer-asistente-precio-mensualidad" defaultValue="110 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="flyer-asistente-label-mensualidad" defaultValue="Mensualidad" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <div style={{ fontSize: '20px', fontWeight: 700, color: '#000' }}>70 €</div>
-                                <div style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }}>Kit Estudio</div>
+                                <EditableText id="flyer-asistente-precio-kit" defaultValue="70 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="flyer-asistente-label-kit" defaultValue="Kit Estudio" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                         </div>
-                        <p style={{ fontSize: '10px', color: '#666', marginTop: '10px', marginBottom: 0 }}>
-                            *Kit: filipina, gorro, delantal. Financiamiento disponible.
-                        </p>
+                        <EditableText id="flyer-asistente-nota" defaultValue="*Kit: filipina, gorro, delantal. Financiamiento disponible." tag="p" style={{ fontSize: '10px', color: '#666', marginTop: '10px', marginBottom: 0 }} />
                     </div>
                 </div>
 
@@ -384,7 +381,7 @@ export default function FlyerAsistenteChef() {
                             textDecoration: 'none'
                         }}
                     >
-                        ¡COMIENZA TU CARRERA HOY!
+                        <EditableText id="flyer-asistente-cta-button" defaultValue="¡COMIENZA TU CARRERA HOY!" tag="span" />
                     </a>
                     <div style={{
                         fontSize: '12px',
@@ -395,7 +392,7 @@ export default function FlyerAsistenteChef() {
                         justifyContent: 'center',
                         gap: '8px'
                     }}>
-                        <WhatsappLogo size={16} weight="light" color="#fff" /> +58 424-4635196 &nbsp;|&nbsp; Valencia, Vzla.
+                        <WhatsappLogo size={16} weight="light" color="#fff" /> <EditableText id="flyer-asistente-footer-contact" defaultValue="+58 424-4635196 | Valencia, Vzla." tag="span" />
                     </div>
                 </div>
 
