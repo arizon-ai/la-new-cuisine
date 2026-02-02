@@ -70,7 +70,7 @@ export default function QuienesSomos() {
                                 <div className="bg-black text-white p-3 rounded-full">
                                     <Target className="w-6 h-6" />
                                 </div>
-                                <h3 className="text-3xl font-serif font-bold">Misión</h3>
+                                <EditableText id="qs-mision-titulo" defaultValue="Misión" tag="h3" className="text-3xl font-serif font-bold" />
                             </div>
                             <EditableText
                                 id="qs-mision"
@@ -87,7 +87,7 @@ export default function QuienesSomos() {
                                 <div className="bg-white text-black p-3 rounded-full">
                                     <Eye className="w-6 h-6" />
                                 </div>
-                                <h3 className="text-3xl font-serif font-bold">Visión</h3>
+                                <EditableText id="qs-vision-titulo" defaultValue="Visión" tag="h3" className="text-3xl font-serif font-bold" />
                             </div>
                             <EditableText
                                 id="qs-vision"

@@ -457,7 +457,7 @@ export default function PresentacionBrochure() {
                                     <EditableText id="pres-portada-anos-label" defaultValue="Años" tag="p" className="text-xs uppercase tracking-[0.3em] mt-2" />
                                 </div>
                                 <div className="text-left text-white pl-8">
-                                    <p className="text-6xl font-serif font-bold">2026</p>
+                                    <EditableText id="pres-portada-anio" defaultValue="2026" tag="p" className="text-6xl font-serif font-bold" />
                                     <EditableText id="pres-portada-temporada-label" defaultValue="Temporada" tag="p" className="text-xs uppercase tracking-[0.3em] mt-2" />
                                 </div>
                             </div>
@@ -485,12 +485,12 @@ export default function PresentacionBrochure() {
                             <EditableText id="pres-qs-descripcion" defaultValue="Centro de Capacitación Gastronómica reconocido por el Ministerio de Educación bajo el registro No. R-0129-08." tag="p" className="text-gray-400 leading-relaxed mb-8" />
                             <div className="grid grid-cols-2 gap-4 mt-auto">
                                 <div className="text-center p-4 border border-white/20">
-                                    <p className="text-3xl font-bold">22+</p>
-                                    <p className="text-xs text-gray-400 uppercase">Años</p>
+                                    <EditableText id="pres-qs-anos-num" defaultValue="22+" tag="p" className="text-3xl font-bold" />
+                                    <EditableText id="pres-qs-anos-label" defaultValue="Años" tag="p" className="text-xs text-gray-400 uppercase" />
                                 </div>
                                 <div className="text-center p-4 border border-white/20">
-                                    <p className="text-3xl font-bold">4</p>
-                                    <p className="text-xs text-gray-400 uppercase">Carreras</p>
+                                    <EditableText id="pres-qs-carreras-num" defaultValue="4" tag="p" className="text-3xl font-bold" />
+                                    <EditableText id="pres-qs-carreras-label" defaultValue="Carreras" tag="p" className="text-xs text-gray-400 uppercase" />
                                 </div>
                             </div>
                         </div>
@@ -499,19 +499,19 @@ export default function PresentacionBrochure() {
                             <div className="grid grid-cols-2 gap-8 mb-12">
                                 {/* Misión */}
                                 <div className="p-8 border border-black">
-                                    <h3 className="text-2xl font-serif font-bold mb-4">Misión</h3>
+                                    <EditableText id="pres-qs-mision-titulo" defaultValue="Misión" tag="h3" className="text-2xl font-serif font-bold mb-4" />
                                     <EditableText id="pres-qs-mision" defaultValue="Formar profesionales de la gastronomía con competencias para la industria gastronómica y el turismo, aplicando métodos y tecnología de vanguardia." tag="p" className="text-gray-600 text-sm leading-relaxed" />
                                 </div>
                                 {/* Visión */}
                                 <div className="p-8 bg-black text-white">
-                                    <h3 className="text-2xl font-serif font-bold mb-4">Visión</h3>
+                                    <EditableText id="pres-qs-vision-titulo" defaultValue="Visión" tag="h3" className="text-2xl font-serif font-bold mb-4" />
                                     <EditableText id="pres-qs-vision" defaultValue="Ser el centro de capacitación gastronómico líder en Venezuela y Latino América en la formación de cocineros, panaderos y pasteleros." tag="p" className="text-gray-300 text-sm leading-relaxed" />
                                 </div>
                             </div>
 
                             {/* Valores */}
                             <div>
-                                <p className="text-xs uppercase tracking-widest text-gray-400 mb-4">Nuestros Valores</p>
+                                <EditableText id="pres-qs-valores-titulo" defaultValue="Nuestros Valores" tag="p" className="text-xs uppercase tracking-widest text-gray-400 mb-4" />
                                 <div className="flex flex-wrap gap-3">
                                     {['Responsabilidad', 'Honestidad', 'Compromiso', 'Lealtad', 'Ética', 'Innovación'].map((valor, i) => (
                                         <span key={i} className="px-4 py-2 bg-neutral-100 text-sm font-bold uppercase tracking-wider">
@@ -746,7 +746,7 @@ export default function PresentacionBrochure() {
                         </div>
 
                         <div className="w-1/2 p-16 flex flex-col justify-center bg-neutral-50">
-                            <p className="text-xs uppercase tracking-widest text-gray-400 mb-6">12 Temas Principales</p>
+                            <EditableText id="pres-diplomado-temas-titulo" defaultValue="12 Temas Principales" tag="p" className="text-xs uppercase tracking-widest text-gray-400 mb-6" />
                             <ul className="space-y-2 text-sm">
                                 {[
                                     'Planificación estratégica de negocios',
@@ -888,19 +888,17 @@ export default function PresentacionBrochure() {
                             <h2 className="text-5xl font-serif font-bold leading-tight mb-8">
                                 Talleres<br /><span className="italic">Gastronómicos</span>
                             </h2>
-                            <p className="text-gray-400 leading-relaxed mb-8">
-                                Capacitación intensiva en talleres prácticos de un día. Incluye certificado e insumos.
-                            </p>
+                            <EditableText id="pres-talleres-desc" defaultValue="Capacitación intensiva en talleres prácticos de un día. Incluye certificado e insumos." tag="p" className="text-gray-400 leading-relaxed mb-8" />
                             <div className="text-center p-6 border border-white/20">
-                                <p className="text-4xl font-bold">18+</p>
-                                <p className="text-xs text-gray-400 uppercase mt-2">Talleres disponibles</p>
+                                <EditableText id="pres-talleres-num" defaultValue="18+" tag="p" className="text-4xl font-bold" />
+                                <EditableText id="pres-talleres-label" defaultValue="Talleres disponibles" tag="p" className="text-xs text-gray-400 uppercase mt-2" />
                             </div>
                         </div>
 
                         <div className="w-3/5 p-12 flex flex-col justify-center">
                             <div className="grid grid-cols-2 gap-x-12 gap-y-4 text-sm">
                                 <div className="mb-6">
-                                    <p className="text-xs uppercase tracking-widest text-gray-400 mb-3 font-bold">Cocina Internacional</p>
+                                    <EditableText id="pres-talleres-cat1" defaultValue="Cocina Internacional" tag="p" className="text-xs uppercase tracking-widest text-gray-400 mb-3 font-bold" />
                                     <ul className="space-y-1 text-gray-600">
                                         <li>• Italiana</li>
                                         <li>• Asiática</li>
@@ -914,21 +912,21 @@ export default function PresentacionBrochure() {
                                     </ul>
                                 </div>
                                 <div className="mb-6">
-                                    <p className="text-xs uppercase tracking-widest text-gray-400 mb-3 font-bold">Panadería & Repostería</p>
+                                    <EditableText id="pres-talleres-cat2" defaultValue="Panadería & Repostería" tag="p" className="text-xs uppercase tracking-widest text-gray-400 mb-3 font-bold" />
                                     <ul className="space-y-1 text-gray-600">
                                         <li>• Panadería artesanal</li>
                                         <li>• Repostería francesa</li>
                                     </ul>
                                 </div>
                                 <div className="mb-6">
-                                    <p className="text-xs uppercase tracking-widest text-gray-400 mb-3 font-bold">Cocina Latinoamericana</p>
+                                    <EditableText id="pres-talleres-cat3" defaultValue="Cocina Latinoamericana" tag="p" className="text-xs uppercase tracking-widest text-gray-400 mb-3 font-bold" />
                                     <ul className="space-y-1 text-gray-600">
                                         <li>• Venezolana</li>
                                         <li>• Navideña</li>
                                     </ul>
                                 </div>
                                 <div className="mb-6">
-                                    <p className="text-xs uppercase tracking-widest text-gray-400 mb-3 font-bold">Especialidades</p>
+                                    <EditableText id="pres-talleres-cat4" defaultValue="Especialidades" tag="p" className="text-xs uppercase tracking-widest text-gray-400 mb-3 font-bold" />
                                     <ul className="space-y-1 text-gray-600">
                                         <li>• Pasapalos</li>
                                         <li>• Conservas</li>
@@ -937,7 +935,7 @@ export default function PresentacionBrochure() {
                                     </ul>
                                 </div>
                                 <div>
-                                    <p className="text-xs uppercase tracking-widest text-gray-400 mb-3 font-bold">Programa Juvenil</p>
+                                    <EditableText id="pres-talleres-cat5" defaultValue="Programa Juvenil" tag="p" className="text-xs uppercase tracking-widest text-gray-400 mb-3 font-bold" />
                                     <ul className="space-y-1 text-gray-600">
                                         <li>• Mini Chef (niños y adolescentes)</li>
                                     </ul>
