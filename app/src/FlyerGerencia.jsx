@@ -15,6 +15,7 @@ import {
     Handshake,
     Certificate
 } from '@phosphor-icons/react';
+import EditableText from './components/EditableText';
 
 // Module Card - Black/White with Phosphor icon
 const ModuleCard = ({ icon: Icon, title, description }) => (

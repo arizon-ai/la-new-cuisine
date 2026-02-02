@@ -10,6 +10,7 @@ import {
     Money,
     WhatsappLogo
 } from '@phosphor-icons/react';
+import EditableText from './components/EditableText';
 
 // Tag para estados
 const StatusBadge = ({ children, dark = false }) => (
@@ -263,9 +264,14 @@ export default function FlyerCocina() {
                             className="responsive-logo"
                             style={{ width: '320px', maxWidth: '80%', height: 'auto', margin: '0 auto 15px' }}
                         />
-                        <h2 style={{ fontSize: '22px', color: '#333', fontWeight: 400, marginTop: 0, letterSpacing: '2px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase' }}>
-                            Carrera de Chef de<br />Cocina Internacional
-                        </h2>
+                        <EditableText
+                            id="flyer-cocina-hero-title"
+                            defaultValue="Carrera de Chef de\nCocina Internacional"
+                            tag="h2"
+                            className=""
+                            style={{ fontSize: '22px', color: '#333', fontWeight: 400, marginTop: 0, letterSpacing: '2px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase' }}
+                            multiline={true}
+                        />
                         <hr style={{ border: 0, height: '2px', background: '#000', margin: '25px auto', width: '60px' }} />
                         <p style={{ fontSize: '13px', fontFamily: "'Azeret Mono'", color: '#000', textTransform: 'uppercase', lineHeight: 1.6, margin: 0 }}>
                             3 Niveles • 15 Meses • 240 Horas de Pasantías
@@ -275,15 +281,19 @@ export default function FlyerCocina() {
 
                 {/* CONTENT */}
                 <div className="flyer-content" style={{ padding: '30px' }}>
-                    <h1 style={{
-                        fontSize: '28px',
-                        fontWeight: 700,
-                        textTransform: 'uppercase',
-                        marginBottom: '10px',
-                        lineHeight: 1.1
-                    }}>
-                        Carrera de Chef de<br />Cocina Internacional 2026
-                    </h1>
+                    <EditableText
+                        id="flyer-cocina-main-title"
+                        defaultValue="Carrera de Chef de\nCocina Internacional 2026"
+                        tag="h1"
+                        style={{
+                            fontSize: '28px',
+                            fontWeight: 700,
+                            textTransform: 'uppercase',
+                            marginBottom: '10px',
+                            lineHeight: 1.1
+                        }}
+                        multiline={true}
+                    />
                     <span style={{
                         fontFamily: "'Azeret Mono', monospace",
                         fontSize: '13px',

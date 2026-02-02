@@ -12,6 +12,7 @@ import {
     User,
     Users
 } from '@phosphor-icons/react';
+import EditableText from './components/EditableText';
 
 // Feature Card - Black/White with Phosphor icon
 const FeatureCard = ({ icon: Icon, value, label }) => (

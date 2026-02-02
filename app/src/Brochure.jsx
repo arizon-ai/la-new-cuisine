@@ -230,6 +230,7 @@ const courses = [
 
 const CourseCard = ({ course, index }) => {
     const isEven = index % 2 === 0;
+    const id = course.id;
 
     return (
         <article className={`flex flex-col md:flex-row ${isEven ? '' : 'md:flex-row-reverse'} border-b border-black last:border-0`}>
@@ -242,16 +243,31 @@ const CourseCard = ({ course, index }) => {
                     className="w-full h-full object-cover transition-all duration-1000 scale-100 group-hover:scale-105"
                 />
                 <div className="absolute top-6 left-6 z-20 bg-white px-4 py-1 border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                    <span className="text-xs font-serif font-bold tracking-[0.2em] uppercase">{course.subtitle}</span>
+                    <EditableText
+                        id={`course-${id}-subtitle`}
+                        defaultValue={course.subtitle}
+                        tag="span"
+                        className="text-xs font-serif font-bold tracking-[0.2em] uppercase"
+                    />
                 </div>
             </div>
 
             {/* Contenido */}
             <div className={`md:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center bg-white ${!isEven ? 'md:border-r border-black' : ''}`}>
-                <h3 className="text-4xl lg:text-5xl font-serif mb-4 leading-tight">{course.title}</h3>
-                <p className="text-gray-600 font-serif italic mb-8 text-base md:text-lg border-l-2 border-black pl-4">
-                    "{course.description}"
-                </p>
+                <EditableText
+                    id={`course-${id}-title`}
+                    defaultValue={course.title}
+                    tag="h3"
+                    className="text-4xl lg:text-5xl font-serif mb-4 leading-tight"
+                />
+                <div className="text-gray-600 font-serif italic mb-8 text-base md:text-lg border-l-2 border-black pl-4">
+                    <EditableText
+                        id={`course-${id}-desc`}
+                        defaultValue={`"${course.description}"`}
+                        tag="p"
+                        multiline={true}
+                    />
+                </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8">
                     <div>
@@ -261,14 +277,30 @@ const CourseCard = ({ course, index }) => {
                         </div>
                         <ul className="space-y-3 text-base">
                             <li className="font-bold text-black flex items-center">
-                                <Calendar className="w-3 h-3 mr-2" /> Inicio: {course.details.start}
+                                <Calendar className="w-3 h-3 mr-2" /> Inicio:
+                                <EditableText
+                                    id={`course-${id}-start`}
+                                    defaultValue={course.details.start}
+                                    tag="span"
+                                    className="ml-1"
+                                />
                             </li>
                             {course.details.schedule.map((s, i) => (
                                 <li key={i} className="text-gray-600 pl-5 relative before:content-['•'] before:absolute before:left-0 before:text-black">
-                                    {s}
+                                    <EditableText
+                                        id={`course-${id}-schedule-${i}`}
+                                        defaultValue={s}
+                                        tag="span"
+                                    />
                                 </li>
                             ))}
-                            <li className="text-sm text-gray-400 mt-2 italic">Duración: {course.details.duration}</li>
+                            <li className="text-sm text-gray-400 mt-2 italic">
+                                Duración: <EditableText
+                                    id={`course-${id}-duration`}
+                                    defaultValue={course.details.duration}
+                                    tag="span"
+                                />
+                            </li>
                         </ul>
                     </div>
 
@@ -281,10 +313,27 @@ const CourseCard = ({ course, index }) => {
                             {course.details.investment.map((inv, i) => (
                                 <li key={i} className="flex flex-col">
                                     <div className="flex justify-between border-b border-dotted border-gray-300 pb-1">
-                                        <span className="text-gray-600">{inv.label}</span>
-                                        <span className="font-bold">{inv.price}</span>
+                                        <EditableText
+                                            id={`course-${id}-inv-${i}-label`}
+                                            defaultValue={inv.label}
+                                            tag="span"
+                                            className="text-gray-600"
+                                        />
+                                        <EditableText
+                                            id={`course-${id}-inv-${i}-price`}
+                                            defaultValue={inv.price}
+                                            tag="span"
+                                            className="font-bold"
+                                        />
                                     </div>
-                                    {inv.note && <span className="text-xs text-gray-500 mt-0.5">{inv.note}</span>}
+                                    {inv.note && (
+                                        <EditableText
+                                            id={`course-${id}-inv-${i}-note`}
+                                            defaultValue={inv.note}
+                                            tag="span"
+                                            className="text-xs text-gray-500 mt-0.5"
+                                        />
+                                    )}
                                 </li>
                             ))}
                         </ul>
@@ -302,9 +351,13 @@ const CourseCard = ({ course, index }) => {
                             </div>
                             <div className="flex flex-wrap gap-2">
                                 {course.syllabusBasico.map((topic, i) => (
-                                    <span key={i} className="px-3 py-1.5 bg-neutral-100 text-sm text-gray-700 rounded-sm">
-                                        {topic}
-                                    </span>
+                                    <EditableText
+                                        key={i}
+                                        id={`course-${id}-basico-${i}`}
+                                        defaultValue={topic}
+                                        tag="span"
+                                        className="px-3 py-1.5 bg-neutral-100 text-sm text-gray-700 rounded-sm"
+                                    />
                                 ))}
                             </div>
                         </div>
@@ -318,9 +371,13 @@ const CourseCard = ({ course, index }) => {
                             </div>
                             <div className="flex flex-wrap gap-2">
                                 {course.syllabusIntermedio.map((topic, i) => (
-                                    <span key={i} className="px-3 py-1.5 bg-gray-200 text-sm text-gray-700 rounded-sm">
-                                        {topic}
-                                    </span>
+                                    <EditableText
+                                        key={i}
+                                        id={`course-${id}-intermedio-${i}`}
+                                        defaultValue={topic}
+                                        tag="span"
+                                        className="px-3 py-1.5 bg-gray-200 text-sm text-gray-700 rounded-sm"
+                                    />
                                 ))}
                             </div>
                         </div>
@@ -334,9 +391,13 @@ const CourseCard = ({ course, index }) => {
                             </div>
                             <div className="flex flex-wrap gap-2">
                                 {course.syllabusAvanzado.map((topic, i) => (
-                                    <span key={i} className="px-3 py-1.5 bg-gray-300 text-sm text-gray-700 rounded-sm">
-                                        {topic}
-                                    </span>
+                                    <EditableText
+                                        key={i}
+                                        id={`course-${id}-avanzado-${i}`}
+                                        defaultValue={topic}
+                                        tag="span"
+                                        className="px-3 py-1.5 bg-gray-300 text-sm text-gray-700 rounded-sm"
+                                    />
                                 ))}
                             </div>
                         </div>
@@ -424,10 +485,10 @@ export default function Brochure() {
                 <div className="p-12 lg:p-16 border-b md:border-b-0 md:border-r border-black bg-neutral-100 flex flex-col justify-between">
                     <div>
                         <div className="flex justify-between items-start mb-6">
-                            <h3 className="text-5xl font-serif">Junior Chef</h3>
-                            <span className="border border-black text-black text-xs px-3 py-1 font-bold uppercase tracking-widest">Niños y Jóvenes</span>
+                            <EditableText id="junior-title" defaultValue="Junior Chef" tag="h3" className="text-5xl font-serif" />
+                            <EditableText id="junior-badge" defaultValue="Niños y Jóvenes" tag="span" className="border border-black text-black text-xs px-3 py-1 font-bold uppercase tracking-widest" />
                         </div>
-                        <p className="mb-4 text-gray-600 text-xl">Programa especial diseñado para el desarrollo de nuevos talentos gastronómicos.</p>
+                        <EditableText id="junior-desc" defaultValue="Programa especial diseñado para el desarrollo de nuevos talentos gastronómicos." tag="p" className="mb-4 text-gray-600 text-xl" multiline={true} />
                         <div className="flex flex-wrap gap-2 mb-4">
                             <span className="px-2 py-1 bg-white text-xs text-gray-700 rounded-sm">Técnicas de cortes</span>
                             <span className="px-2 py-1 bg-white text-xs text-gray-700 rounded-sm">Salsas</span>
@@ -471,10 +532,10 @@ export default function Brochure() {
                     </div>
                     <div className="relative z-10">
                         <div className="flex justify-between items-start mb-6">
-                            <h3 className="text-5xl font-serif">Cocina Molecular</h3>
-                            <span className="bg-white text-black text-xs px-3 py-1 font-bold uppercase tracking-widest">Masterclass</span>
+                            <EditableText id="molecular-title" defaultValue="Cocina Molecular" tag="h3" className="text-5xl font-serif" />
+                            <EditableText id="molecular-badge" defaultValue="Masterclass" tag="span" className="bg-white text-black text-xs px-3 py-1 font-bold uppercase tracking-widest" />
                         </div>
-                        <p className="mb-8 text-gray-400 text-xl">El ABC de la vanguardia con el Chef Jesús Gil. Aprende esferificaciones que estallan, aires y geles.</p>
+                        <EditableText id="molecular-desc" defaultValue="El ABC de la vanguardia con el Chef Jesús Gil. Aprende esferificaciones que estallan, aires y geles." tag="p" className="mb-8 text-gray-400 text-xl" multiline={true} />
                     </div>
 
                     <div className="relative z-10 border border-white/30 p-6 bg-white/5 backdrop-blur-sm">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChefHat, Cake, Globe, Utensils, FlameKindling, Users, Sparkles } from 'lucide-react';
+import EditableText from './components/EditableText';
 
 export default function Talleres() {
     const categorias = [

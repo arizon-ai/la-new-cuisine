@@ -10,6 +10,7 @@ import {
     Money,
     WhatsappLogo
 } from '@phosphor-icons/react';
+import EditableText from './components/EditableText';
 
 // Tag para estados
 const StatusBadge = ({ children, dark = false }) => (
