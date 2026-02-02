@@ -1,5 +1,6 @@
 import React from 'react';
 import { Award, Target, Eye, Heart, Users, Sparkles, History, Building } from 'lucide-react';
+import EditableText from './components/EditableText';
 
 export default function QuienesSomos() {
     const valores = [
@@ -16,14 +17,25 @@ export default function QuienesSomos() {
             {/* Hero Section */}
             <section className="relative bg-black text-white py-24 px-6">
                 <div className="max-w-5xl mx-auto text-center">
-                    <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-6">Desde 2002</p>
+                    <EditableText
+                        id="qs-hero-year"
+                        defaultValue="Desde 2002"
+                        tag="p"
+                        className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-6"
+                    />
                     <h1 className="text-5xl md:text-7xl font-serif font-bold mb-8">
-                        Formando Artistas<br /><span className="italic">Culinarios</span>
+                        <EditableText
+                            id="qs-hero-title"
+                            defaultValue="Formando Artistas Culinarios"
+                            tag="span"
+                        />
                     </h1>
-                    <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-                        El Centro de Capacitación Gastronómica La New Cuisine es una institución reconocida
-                        por el Ministerio de Educación bajo el registro No. R-0129-08.
-                    </p>
+                    <EditableText
+                        id="qs-hero-subtitle"
+                        defaultValue="El Centro de Capacitación Gastronómica La New Cuisine es una institución reconocida por el Ministerio de Educación bajo el registro No. R-0129-08."
+                        tag="p"
+                        className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
+                    />
                 </div>
             </section>
 
@@ -76,11 +88,13 @@ export default function QuienesSomos() {
                                 </div>
                                 <h3 className="text-3xl font-serif font-bold">Misión</h3>
                             </div>
-                            <p className="text-gray-600 leading-relaxed text-lg">
-                                Formar a profesionales de la gastronomía con competencias para la industria
-                                gastronómica y el turismo, aplicando métodos y tecnología de vanguardia
-                                orientados hacia la excelencia y manteniendo estándares de calidad.
-                            </p>
+                            <EditableText
+                                id="qs-mision"
+                                defaultValue="Formar a profesionales de la gastronomía con competencias para la industria gastronómica y el turismo, aplicando métodos y tecnología de vanguardia orientados hacia la excelencia y manteniendo estándares de calidad."
+                                tag="p"
+                                className="text-gray-600 leading-relaxed text-lg"
+                                multiline={true}
+                            />
                         </div>
 
                         {/* Visión */}
@@ -91,13 +105,19 @@ export default function QuienesSomos() {
                                 </div>
                                 <h3 className="text-3xl font-serif font-bold">Visión</h3>
                             </div>
-                            <p className="text-gray-300 leading-relaxed text-lg">
-                                Ser el centro de capacitación gastronómico líder en Venezuela y Latino América
-                                en la formación de cocineros, panaderos y pasteleros para el desarrollo de la industria.
-                            </p>
-                            <p className="mt-6 text-xl font-serif italic text-white">
-                                "FORMANDO ARTISTAS CULINARIOS"
-                            </p>
+                            <EditableText
+                                id="qs-vision"
+                                defaultValue="Ser el centro de capacitación gastronómico líder en Venezuela y Latino América en la formación de cocineros, panaderos y pasteleros para el desarrollo de la industria."
+                                tag="p"
+                                className="text-gray-300 leading-relaxed text-lg"
+                                multiline={true}
+                            />
+                            <EditableText
+                                id="qs-slogan"
+                                defaultValue='"FORMANDO ARTISTAS CULINARIOS"'
+                                tag="p"
+                                className="mt-6 text-xl font-serif italic text-white"
+                            />
                         </div>
                     </div>
                 </div>

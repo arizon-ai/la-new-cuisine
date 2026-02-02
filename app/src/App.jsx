@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { User } from 'lucide-react'
 import Brochure from './Brochure'
 import OfertaAcademica from './OfertaAcademica'
 import FlyerPasteleria from './FlyerPasteleria'
@@ -11,12 +12,21 @@ import FlyerCocinaNinos from './FlyerCocinaNinos'
 import PresentacionBrochure from './PresentacionBrochure'
 import QuienesSomos from './QuienesSomos'
 import Talleres from './Talleres'
+import AdminLogin from './AdminLogin'
+import AdminToolbar from './components/AdminToolbar'
+import { useAuth } from './context/AuthContext'
 
 // Glassmorphism Navigation
 function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const { isAuthenticated } = useAuth();
+
+  // Hide navigation on admin page
+  if (location.pathname === '/admin') {
+    return null;
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -129,6 +139,43 @@ function Navigation() {
             {item.label}
           </Link>
         ))}
+
+        {/* Separador antes del login */}
+        <div style={{
+          width: '1px',
+          height: '24px',
+          background: 'rgba(0,0,0,0.15)',
+          marginLeft: '6px',
+        }} />
+
+        {/* Login/Admin Button */}
+        <Link
+          to="/admin"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '36px',
+            height: '36px',
+            borderRadius: '50%',
+            backgroundColor: isAuthenticated ? 'rgba(0, 0, 0, 0.9)' : 'transparent',
+            color: isAuthenticated ? '#fff' : '#333',
+            transition: 'all 0.25s ease',
+          }}
+          onMouseEnter={(e) => {
+            if (!isAuthenticated) {
+              e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.08)';
+            }
+          }}
+          onMouseLeave={(e) => {
+            if (!isAuthenticated) {
+              e.currentTarget.style.backgroundColor = 'transparent';
+            }
+          }}
+          title={isAuthenticated ? 'Admin conectado' : 'Iniciar sesión'}
+        >
+          <User style={{ width: '18px', height: '18px' }} />
+        </Link>
       </nav>
 
       {/* Mobile Glassmorphism Nav */}
@@ -237,6 +284,39 @@ function Navigation() {
                 {item.label}
               </Link>
             ))}
+
+            {/* Login Button in Mobile Menu */}
+            <Link
+              to="/admin"
+              onClick={() => setMobileMenuOpen(false)}
+              style={{
+                width: '100%',
+                padding: '18px 24px',
+                backgroundColor: isAuthenticated
+                  ? 'rgba(0, 0, 0, 0.9)'
+                  : 'rgba(255, 255, 255, 0.6)',
+                color: isAuthenticated ? '#fff' : '#333',
+                textDecoration: 'none',
+                fontWeight: 600,
+                fontSize: '15px',
+                fontFamily: "'Inter', sans-serif",
+                borderRadius: '16px',
+                textAlign: 'center',
+                boxShadow: '0 2px 12px rgba(0,0,0,0.08)',
+                border: '1px solid rgba(0,0,0,0.05)',
+                opacity: mobileMenuOpen ? 1 : 0,
+                transform: mobileMenuOpen ? 'translateY(0)' : 'translateY(20px)',
+                transition: 'all 0.4s ease',
+                transitionDelay: mobileMenuOpen ? `${0.15 + menuItems.length * 0.05}s` : '0s',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '8px',
+              }}
+            >
+              <User style={{ width: '18px', height: '18px' }} />
+              {isAuthenticated ? 'Admin' : 'Login'}
+            </Link>
           </nav>
         </div>
       </div>
@@ -250,6 +330,7 @@ function App() {
       {/* Spacer for fixed header */}
       <div style={{ height: '90px' }} className="hide-mobile" />
       <Navigation />
+      <AdminToolbar />
       <Routes>
         <Route path="/" element={<Brochure />} />
         <Route path="/quienes-somos" element={<QuienesSomos />} />
@@ -262,6 +343,7 @@ function App() {
         <Route path="/flyer-asistente-chef" element={<FlyerAsistenteChef />} />
         <Route path="/flyer-cocina-ninos" element={<FlyerCocinaNinos />} />
         <Route path="/presentacion" element={<PresentacionBrochure />} />
+        <Route path="/admin" element={<AdminLogin />} />
       </Routes>
     </BrowserRouter>
   )
