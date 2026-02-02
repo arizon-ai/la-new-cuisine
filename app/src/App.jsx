@@ -399,7 +399,7 @@ function Navigation() {
               maxWidth: '300px',
             }}
           >
-            {menuItems.map((item, index) => (
+            {[...mainMenuItems, ...programasItems, ...rightMenuItems].map((item, index) => (
               <Link
                 key={item.path}
                 to={item.path}
