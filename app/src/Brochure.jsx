@@ -273,7 +273,7 @@ const CourseCard = ({ course, index }) => {
                     <div>
                         <div className="flex items-center mb-4 border-b border-gray-200 pb-2">
                             <Clock className="w-4 h-4 mr-2" />
-                            <h4 className="font-bold text-sm uppercase tracking-widest">Horarios y Fechas</h4>
+                            <EditableText id="brochure-horarios-titulo" defaultValue="Horarios y Fechas" tag="h4" className="font-bold text-sm uppercase tracking-widest" />
                         </div>
                         <ul className="space-y-3 text-base">
                             <li className="font-bold text-black flex items-center">
@@ -307,7 +307,7 @@ const CourseCard = ({ course, index }) => {
                     <div>
                         <div className="flex items-center mb-4 border-b border-gray-200 pb-2">
                             <Star className="w-4 h-4 mr-2" />
-                            <h4 className="font-bold text-sm uppercase tracking-widest">Inversión</h4>
+                            <EditableText id="brochure-inversion-titulo" defaultValue="Inversión" tag="h4" className="font-bold text-sm uppercase tracking-widest" />
                         </div>
                         <ul className="space-y-2 text-base">
                             {course.details.investment.map((inv, i) => (
@@ -341,7 +341,7 @@ const CourseCard = ({ course, index }) => {
                 </div>
 
                 <div>
-                    <h4 className="font-bold text-sm uppercase tracking-widest mb-3">Contenido Académico por Nivel</h4>
+                    <EditableText id="brochure-contenido-titulo" defaultValue="Contenido Académico por Nivel" tag="h4" className="font-bold text-sm uppercase tracking-widest mb-3" />
 
                     {/* Nivel Básico */}
                     {course.syllabusBasico && (
@@ -500,7 +500,7 @@ export default function Brochure() {
                         </div>
                     </div>
                     <div className="bg-white p-6 border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                        <h4 className="font-bold text-base uppercase mb-3">Ficha Técnica</h4>
+                        <EditableText id="brochure-ficha-titulo" defaultValue="Ficha Técnica" tag="h4" className="font-bold text-base uppercase mb-3" />
                         <div className="space-y-2 text-base text-gray-700">
                             <p className="flex justify-between border-b border-gray-100 pb-1">
                                 <span>Inicio:</span> <EditableText id="junior-inicio" defaultValue="Viernes 20 de Febrero 2026" tag="span" className="font-bold" />
