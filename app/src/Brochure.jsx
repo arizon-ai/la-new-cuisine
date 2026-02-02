@@ -503,19 +503,19 @@ export default function Brochure() {
                         <h4 className="font-bold text-base uppercase mb-3">Ficha Técnica</h4>
                         <div className="space-y-2 text-base text-gray-700">
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Inicio:</span> <span className="font-bold">Viernes 20 de Febrero 2026</span>
+                                <span>Inicio:</span> <EditableText id="junior-inicio" defaultValue="Viernes 20 de Febrero 2026" tag="span" className="font-bold" />
                             </p>
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Horario:</span> <span className="font-bold">Viernes 2:00 PM - 6:00 PM</span>
+                                <span>Horario:</span> <EditableText id="junior-horario" defaultValue="Viernes 2:00 PM - 6:00 PM" tag="span" className="font-bold" />
                             </p>
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Duración:</span> <span className="font-bold">4 meses</span>
+                                <span>Duración:</span> <EditableText id="junior-duracion" defaultValue="4 meses" tag="span" className="font-bold" />
                             </p>
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Inscripción:</span> <span className="font-bold">50 € (incluye uniforme)</span>
+                                <span>Inscripción:</span> <EditableText id="junior-inscripcion" defaultValue="50 € (incluye uniforme)" tag="span" className="font-bold" />
                             </p>
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Mensualidad:</span> <span className="font-bold">150 €</span>
+                                <span>Mensualidad:</span> <EditableText id="junior-mensualidad" defaultValue="150 €" tag="span" className="font-bold" />
                             </p>
                             <p className="text-xs text-gray-500 pt-2 italic">
                                 *Incluye ingredientes, recetas y certificado. 2 platos salados + 1 postre por clase.
@@ -542,16 +542,16 @@ export default function Brochure() {
                         <div className="grid grid-cols-2 gap-4 text-base">
                             <div>
                                 <p className="text-gray-400 text-xs uppercase mb-1">Fecha</p>
-                                <p className="font-bold text-lg">3 de Febrero 2026</p>
-                                <p className="text-gray-400 text-sm">2:00 PM - 6:00 PM</p>
+                                <EditableText id="molecular-fecha" defaultValue="3 de Febrero 2026" tag="p" className="font-bold text-lg" />
+                                <EditableText id="molecular-horario" defaultValue="2:00 PM - 6:00 PM" tag="p" className="text-gray-400 text-sm" />
                             </div>
                             <div>
                                 <p className="text-gray-400 text-xs uppercase mb-1">Inversión</p>
-                                <p className="font-bold text-lg">40 €</p>
+                                <EditableText id="molecular-precio" defaultValue="40 €" tag="p" className="font-bold text-lg" />
                             </div>
                             <div className="col-span-2 pt-4 border-t border-white/20">
                                 <p className="flex items-center text-gray-300">
-                                    <Check className="w-4 h-4 mr-2" /> Incluye Certificado e Insumos
+                                    <Check className="w-4 h-4 mr-2" /> <EditableText id="molecular-nota" defaultValue="Incluye Certificado e Insumos" tag="span" />
                                 </p>
                             </div>
                         </div>
@@ -862,7 +862,7 @@ export default function Brochure() {
 
                     {/* Mapa de ubicación */}
                     <div className="mt-12 mb-8">
-                        <h3 className="text-center font-bold text-lg uppercase tracking-widest mb-6">📍 Nuestra Ubicación</h3>
+                        <EditableText id="footer-ubicacion-title" defaultValue="📍 Nuestra Ubicación" tag="h3" className="text-center font-bold text-lg uppercase tracking-widest mb-6" />
                         <div style={{
                             width: '100%',
                             minHeight: '250px',
@@ -883,13 +883,11 @@ export default function Brochure() {
                                 title="Ubicación La New Cuisine"
                             ></iframe>
                         </div>
-                        <p className="text-center text-sm text-gray-500 mt-4">
-                            Av. 107, Casa 128-11, Urb. Sabana Larga • Frente al C.C. Mediterranean Plaza
-                        </p>
+                        <EditableText id="footer-direccion" defaultValue="Av. 107, Casa 128-11, Urb. Sabana Larga • Frente al C.C. Mediterranean Plaza" tag="p" className="text-center text-sm text-gray-500 mt-4" />
                     </div>
 
                     <div className="border-t border-black pt-8 flex flex-col md:flex-row justify-between items-center text-xs uppercase tracking-widest font-bold text-gray-500">
-                        <p>© 2026 La New Cuisine</p>
+                        <EditableText id="footer-copyright" defaultValue="© 2026 La New Cuisine" tag="p" />
                         <p className="mt-2 md:mt-0 flex items-center gap-2">
                             <Award className="w-4 h-4" />
                             Escuela de Arte Culinario del Año

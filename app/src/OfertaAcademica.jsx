@@ -112,13 +112,9 @@ export default function OfertaAcademica() {
                         className="responsive-logo"
                         style={{ width: '320px', maxWidth: '80%', height: 'auto', margin: '0 auto 15px' }}
                     />
-                    <h2 style={{ fontSize: '24px', color: '#333', fontWeight: 400, marginTop: 0, letterSpacing: '2px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase' }}>
-                        OFERTA ACADÉMICA & PREINSCRIPCIONES
-                    </h2>
+                    <EditableText id="oa-portada-title" defaultValue="OFERTA ACADÉMICA & PREINSCRIPCIONES" tag="h2" style={{ fontSize: '24px', color: '#333', fontWeight: 400, marginTop: 0, letterSpacing: '2px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase' }} />
                     <hr style={{ border: 0, height: '2px', background: '#000', margin: '25px auto', width: '60px' }} />
-                    <p style={{ fontSize: '14px', fontFamily: "'Azeret Mono'", color: '#000', textTransform: 'uppercase', lineHeight: 1.6, margin: 0 }}>
-                        Formando Artistas Culinarios
-                    </p>
+                    <EditableText id="oa-portada-slogan" defaultValue="Formando Artistas Culinarios" tag="p" style={{ fontSize: '14px', fontFamily: "'Azeret Mono'", color: '#000', textTransform: 'uppercase', lineHeight: 1.6, margin: 0 }} />
                 </div>
             </Slide>
 
@@ -140,9 +136,7 @@ export default function OfertaAcademica() {
                 <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '12px', backgroundColor: '#000', zIndex: 2 }} />
 
                 <div className="slide-content" style={{ padding: '80px', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
-                    <h2 style={{ fontSize: '42px', fontWeight: 700, marginBottom: '10px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase', color: '#000', letterSpacing: '-0.5px' }}>
-                        COCINA INTERNACIONAL
-                    </h2>
+                    <EditableText id="oa-cocina-title" defaultValue="COCINA INTERNACIONAL" tag="h2" style={{ fontSize: '42px', fontWeight: 700, marginBottom: '10px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase', color: '#000', letterSpacing: '-0.5px' }} />
                     <p style={{ fontSize: '16px', fontFamily: "'Azeret Mono'", marginBottom: '30px', color: '#555', lineHeight: 1.6 }}>
                         // DATOS DE INICIO 2026
                     </p>
@@ -194,15 +188,15 @@ export default function OfertaAcademica() {
                         </h4>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '15px' }}>
                             <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
-                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>50 €</div>
+                                <EditableText id="oa-cocina-insc" defaultValue="50 €" tag="div" style={{ fontSize: '24px', fontWeight: 700, color: '#000' }} />
                                 <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
                             </div>
                             <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
-                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>140 €</div>
+                                <EditableText id="oa-cocina-mens" defaultValue="140 €" tag="div" style={{ fontSize: '24px', fontWeight: 700, color: '#000' }} />
                                 <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Mensualidad</div>
                             </div>
                             <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
-                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>130 €</div>
+                                <EditableText id="oa-cocina-kit" defaultValue="130 €" tag="div" style={{ fontSize: '24px', fontWeight: 700, color: '#000' }} />
                                 <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Kit de Estudio</div>
                             </div>
                         </div>
@@ -247,9 +241,7 @@ export default function OfertaAcademica() {
                 />
 
                 <div className="slide-content" style={{ padding: '80px', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
-                    <h2 style={{ fontSize: '38px', fontWeight: 700, marginBottom: '20px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase', color: '#000', letterSpacing: '-0.5px' }}>
-                        PASTELERÍA: INICIOS
-                    </h2>
+                    <EditableText id="oa-past-title" defaultValue="PASTELERÍA: INICIOS" tag="h2" style={{ fontSize: '38px', fontWeight: 700, marginBottom: '20px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase', color: '#000', letterSpacing: '-0.5px' }} />
 
                     <ul style={{ listStyle: 'none', padding: 0, width: '100%' }}>
                         {/* Febrero - Mañana/Tarde */}
@@ -294,15 +286,15 @@ export default function OfertaAcademica() {
                         </h4>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '15px' }}>
                             <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
-                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>50 €</div>
+                                <EditableText id="oa-past-insc" defaultValue="50 €" tag="div" style={{ fontSize: '24px', fontWeight: 700, color: '#000' }} />
                                 <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
                             </div>
                             <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
-                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>140 €</div>
+                                <EditableText id="oa-past-mens" defaultValue="140 €" tag="div" style={{ fontSize: '24px', fontWeight: 700, color: '#000' }} />
                                 <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Mensualidad</div>
                             </div>
                             <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
-                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>90 €</div>
+                                <EditableText id="oa-past-kit" defaultValue="90 €" tag="div" style={{ fontSize: '24px', fontWeight: 700, color: '#000' }} />
                                 <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Kit de Estudio</div>
                             </div>
                         </div>
@@ -413,12 +405,8 @@ export default function OfertaAcademica() {
                 <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '12px', backgroundColor: '#000', zIndex: 2 }} />
 
                 <div className="slide-content" style={{ padding: '80px', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
-                    <h2 style={{ fontSize: '40px', fontWeight: 700, marginBottom: '20px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase', color: '#000', letterSpacing: '-0.5px' }}>
-                        DIPLOMADO EN GERENCIA
-                    </h2>
-                    <p style={{ fontSize: '18px', marginBottom: '30px', color: '#333', lineHeight: 1.6 }}>
-                        Gestión estratégica de negocios gastronómicos.
-                    </p>
+                    <EditableText id="oa-diplo-title" defaultValue="DIPLOMADO EN GERENCIA" tag="h2" style={{ fontSize: '40px', fontWeight: 700, marginBottom: '20px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase', color: '#000', letterSpacing: '-0.5px' }} />
+                    <EditableText id="oa-diplo-desc" defaultValue="Gestión estratégica de negocios gastronómicos." tag="p" style={{ fontSize: '18px', marginBottom: '30px', color: '#333', lineHeight: 1.6 }} />
 
                     <div style={{ background: 'white', padding: '25px', border: '1px solid #000', marginBottom: '20px', boxShadow: '5px 5px 0px #000' }}>
                         <strong style={{ fontSize: '20px', display: 'block', textTransform: 'uppercase' }}>Martes (Tarde)</strong>
@@ -443,11 +431,11 @@ export default function OfertaAcademica() {
                         </h4>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
                             <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
-                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>50 €</div>
+                                <EditableText id="oa-diplo-insc" defaultValue="50 €" tag="div" style={{ fontSize: '24px', fontWeight: 700, color: '#000' }} />
                                 <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
                             </div>
                             <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
-                                <div style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>130 €</div>
+                                <EditableText id="oa-diplo-mens" defaultValue="130 €" tag="div" style={{ fontSize: '24px', fontWeight: 700, color: '#000' }} />
                                 <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Mensualidad</div>
                             </div>
                         </div>
