@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { ChefHat, Clock, MapPin, Phone, Mail, ArrowRight, ArrowLeft, Printer, ChevronDown, Maximize, Minimize, X, Quote, Camera, History, Star, Users, Award, Building } from 'lucide-react';
+import EditableText from './components/EditableText';
 
 // ============================================
 // PRESENTACIÓN BROCHURE - LA NEW CUISINE
@@ -453,17 +454,17 @@ export default function PresentacionBrochure() {
                                     <p className="text-6xl font-serif font-bold">
                                         <AnimatedCounter target={22} suffix="+" />
                                     </p>
-                                    <p className="text-xs uppercase tracking-[0.3em] mt-2">Años</p>
+                                    <EditableText id="pres-portada-anos-label" defaultValue="Años" tag="p" className="text-xs uppercase tracking-[0.3em] mt-2" />
                                 </div>
                                 <div className="text-left text-white pl-8">
                                     <p className="text-6xl font-serif font-bold">2026</p>
-                                    <p className="text-xs uppercase tracking-[0.3em] mt-2">Temporada</p>
+                                    <EditableText id="pres-portada-temporada-label" defaultValue="Temporada" tag="p" className="text-xs uppercase tracking-[0.3em] mt-2" />
                                 </div>
                             </div>
                             <div className="mt-16">
                                 <span className="inline-flex items-center gap-3 text-white">
                                     <span className="w-20 h-px bg-white"></span>
-                                    <span className="text-sm uppercase tracking-[0.4em]">Escuela de Alta Cocina</span>
+                                    <EditableText id="pres-portada-slogan" defaultValue="Escuela de Alta Cocina" tag="span" className="text-sm uppercase tracking-[0.4em]" />
                                     <span className="w-20 h-px bg-white"></span>
                                 </span>
                             </div>
@@ -477,13 +478,11 @@ export default function PresentacionBrochure() {
                     {/* ========== SLIDE 2: QUIÉNES SOMOS ========== */}
                     <section className="print-page h-screen flex bg-white">
                         <div className="w-2/5 bg-black text-white p-16 flex flex-col justify-center">
-                            <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">Desde 2002</p>
+                            <EditableText id="pres-qs-desde" defaultValue="Desde 2002" tag="p" className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4" />
                             <h2 className="text-5xl font-serif font-bold leading-tight mb-8">
                                 Formando<br />Artistas<br /><span className="italic">Culinarios</span>
                             </h2>
-                            <p className="text-gray-400 leading-relaxed mb-8">
-                                Centro de Capacitación Gastronómica reconocido por el Ministerio de Educación bajo el registro No. R-0129-08.
-                            </p>
+                            <EditableText id="pres-qs-descripcion" defaultValue="Centro de Capacitación Gastronómica reconocido por el Ministerio de Educación bajo el registro No. R-0129-08." tag="p" className="text-gray-400 leading-relaxed mb-8" />
                             <div className="grid grid-cols-2 gap-4 mt-auto">
                                 <div className="text-center p-4 border border-white/20">
                                     <p className="text-3xl font-bold">22+</p>
@@ -501,16 +500,12 @@ export default function PresentacionBrochure() {
                                 {/* Misión */}
                                 <div className="p-8 border border-black">
                                     <h3 className="text-2xl font-serif font-bold mb-4">Misión</h3>
-                                    <p className="text-gray-600 text-sm leading-relaxed">
-                                        Formar profesionales de la gastronomía con competencias para la industria gastronómica y el turismo, aplicando métodos y tecnología de vanguardia.
-                                    </p>
+                                    <EditableText id="pres-qs-mision" defaultValue="Formar profesionales de la gastronomía con competencias para la industria gastronómica y el turismo, aplicando métodos y tecnología de vanguardia." tag="p" className="text-gray-600 text-sm leading-relaxed" />
                                 </div>
                                 {/* Visión */}
                                 <div className="p-8 bg-black text-white">
                                     <h3 className="text-2xl font-serif font-bold mb-4">Visión</h3>
-                                    <p className="text-gray-300 text-sm leading-relaxed">
-                                        Ser el centro de capacitación gastronómico líder en Venezuela y Latino América en la formación de cocineros, panaderos y pasteleros.
-                                    </p>
+                                    <EditableText id="pres-qs-vision" defaultValue="Ser el centro de capacitación gastronómico líder en Venezuela y Latino América en la formación de cocineros, panaderos y pasteleros." tag="p" className="text-gray-300 text-sm leading-relaxed" />
                                 </div>
                             </div>
 
@@ -535,9 +530,7 @@ export default function PresentacionBrochure() {
                             <h2 className="text-5xl font-serif font-bold leading-tight mb-8">
                                 Carreras<br />Profesionales
                             </h2>
-                            <p className="text-gray-400 leading-relaxed">
-                                Formación integral con certificación oficial del Ministerio de Educación.
-                            </p>
+                            <EditableText id="pres-carreras-descripcion" defaultValue="Formación integral con certificación oficial del Ministerio de Educación." tag="p" className="text-gray-400 leading-relaxed" />
                         </div>
 
                         <div className="w-2/3 p-16 flex flex-col justify-center">
@@ -550,7 +543,7 @@ export default function PresentacionBrochure() {
                                             <p className="text-gray-500 mt-2">15 meses + pasantías • 3 niveles</p>
                                         </div>
                                         <div className="text-right">
-                                            <p className="text-4xl font-bold">140€</p>
+                                            <EditableText id="pres-carreras-cocina-precio" defaultValue="140€" tag="p" className="text-4xl font-bold" />
                                             <p className="text-xs text-gray-400 uppercase">mensual</p>
                                         </div>
                                     </div>
@@ -569,7 +562,7 @@ export default function PresentacionBrochure() {
                                             <p className="text-gray-500 mt-2">Niveles progresivos • Pastelería francesa</p>
                                         </div>
                                         <div className="text-right">
-                                            <p className="text-4xl font-bold">140€</p>
+                                            <EditableText id="pres-carreras-past-precio" defaultValue="140€" tag="p" className="text-4xl font-bold" />
                                             <p className="text-xs text-gray-400 uppercase">mensual</p>
                                         </div>
                                     </div>
@@ -588,7 +581,7 @@ export default function PresentacionBrochure() {
                                             <p className="text-gray-500 mt-2">8 meses • Masa madre, ciabatta, focaccia</p>
                                         </div>
                                         <div className="text-right">
-                                            <p className="text-4xl font-bold">140€</p>
+                                            <EditableText id="pres-carreras-pan-precio" defaultValue="140€" tag="p" className="text-4xl font-bold" />
                                             <p className="text-xs text-gray-400 uppercase">mensual</p>
                                         </div>
                                     </div>
@@ -599,7 +592,7 @@ export default function PresentacionBrochure() {
                                 </div>
                             </div>
 
-                            <p className="text-xs text-gray-400 mt-8">* Inscripción: 50€ para todos los programas</p>
+                            <EditableText id="pres-carreras-nota" defaultValue="* Inscripción: 50€ para todos los programas" tag="p" className="text-xs text-gray-400 mt-8" />
                         </div>
                     </section>
 
@@ -610,9 +603,7 @@ export default function PresentacionBrochure() {
                             <h2 className="text-6xl font-serif font-bold leading-tight mb-8">
                                 Programa<br /><span className="italic">Intensivo</span>
                             </h2>
-                            <p className="text-xl text-gray-400 mb-12 max-w-md leading-relaxed">
-                                Formación acelerada de martes a viernes. Completa los 3 niveles en tiempo récord.
-                            </p>
+                            <EditableText id="pres-intensivo-descripcion" defaultValue="Formación acelerada de martes a viernes. Completa los 3 niveles en tiempo récord." tag="p" className="text-xl text-gray-400 mb-12 max-w-md leading-relaxed" />
 
                             <div className="space-y-6">
                                 <div className="flex items-baseline gap-4">
@@ -629,8 +620,8 @@ export default function PresentacionBrochure() {
                         <div className="w-1/2 bg-white text-black p-20 flex flex-col justify-center">
                             <div className="max-w-sm">
                                 <p className="text-xs uppercase tracking-widest text-gray-400 mb-8">Inversión</p>
-                                <p className="text-8xl font-bold mb-4">2,640€</p>
-                                <p className="text-gray-500 mb-12">Inscripción 100€ + 2 cuotas de 1,320€</p>
+                                <EditableText id="pres-intensivo-precio" defaultValue="2,640€" tag="p" className="text-8xl font-bold mb-4" />
+                                <EditableText id="pres-intensivo-detalle" defaultValue="Inscripción 100€ + 2 cuotas de 1,320€" tag="p" className="text-gray-500 mb-12" />
 
                                 <div className="space-y-4 text-lg">
                                     <div className="flex items-center gap-4">
@@ -1606,24 +1597,24 @@ export default function PresentacionBrochure() {
                             <div className="space-y-12">
                                 <div>
                                     <p className="text-xs text-gray-400 uppercase tracking-widest mb-3">WhatsApp</p>
-                                    <p className="text-3xl font-bold">+58 424-4635196</p>
+                                    <EditableText id="pres-contacto-telefono" defaultValue="+58 424-4635196" tag="p" className="text-3xl font-bold" />
                                 </div>
 
                                 <div>
                                     <p className="text-xs text-gray-400 uppercase tracking-widest mb-3">Ubicación</p>
-                                    <p className="text-xl">Av. 107, Casa 128-11</p>
-                                    <p className="text-xl">Urb. Sabana Larga</p>
-                                    <p className="text-gray-500">Frente a Mediterranean Plaza • Valencia</p>
+                                    <EditableText id="pres-contacto-direccion1" defaultValue="Av. 107, Casa 128-11" tag="p" className="text-xl" />
+                                    <EditableText id="pres-contacto-direccion2" defaultValue="Urb. Sabana Larga" tag="p" className="text-xl" />
+                                    <EditableText id="pres-contacto-referencia" defaultValue="Frente a Mediterranean Plaza • Valencia" tag="p" className="text-gray-500" />
                                 </div>
 
                                 <div>
                                     <p className="text-xs text-gray-400 uppercase tracking-widest mb-3">Email</p>
-                                    <p className="text-xl">info@lanewcuisine.com</p>
+                                    <EditableText id="pres-contacto-email" defaultValue="info@lanewcuisine.com" tag="p" className="text-xl" />
                                 </div>
 
                                 <div>
                                     <p className="text-xs text-gray-400 uppercase tracking-widest mb-3">Redes Sociales</p>
-                                    <p className="text-xl">@lanewcuisine</p>
+                                    <EditableText id="pres-contacto-redes" defaultValue="@lanewcuisine" tag="p" className="text-xl" />
                                 </div>
                             </div>
 
