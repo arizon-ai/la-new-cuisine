@@ -23,11 +23,6 @@ function Navigation() {
   const location = useLocation();
   const { isAuthenticated } = useAuth();
 
-  // Hide navigation on admin page
-  if (location.pathname === '/admin') {
-    return null;
-  }
-
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 30);
@@ -35,6 +30,11 @@ function Navigation() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Hide navigation on admin page - MUST be after all hooks
+  if (location.pathname === '/admin') {
+    return null;
+  }
 
   const menuItems = [
     { path: '/', label: 'Home' },
