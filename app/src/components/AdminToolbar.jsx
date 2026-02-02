@@ -12,8 +12,8 @@ export default function AdminToolbar() {
         return null;
     }
 
-    const handleExport = () => {
-        const content = exportContent();
+    const handleExport = async () => {
+        const content = await exportContent();
         const blob = new Blob([content], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -35,7 +35,7 @@ export default function AdminToolbar() {
             if (file) {
                 try {
                     const text = await file.text();
-                    const success = importContent(text);
+                    const success = await importContent(text);
                     if (success) {
                         setImportStatus('✓ Contenido importado');
                         setTimeout(() => {
@@ -79,8 +79,8 @@ export default function AdminToolbar() {
                 <button
                     onClick={toggleEditMode}
                     className={`flex items-center gap-2 px-5 py-3 rounded-full font-bold text-sm uppercase tracking-wider shadow-lg transition-all ${isEditMode
-                            ? 'bg-yellow-400 text-black hover:bg-yellow-500'
-                            : 'bg-black text-white hover:bg-gray-800'
+                        ? 'bg-yellow-400 text-black hover:bg-yellow-500'
+                        : 'bg-black text-white hover:bg-gray-800'
                         }`}
                     title={isEditMode ? 'Desactivar modo edición' : 'Activar modo edición'}
                 >

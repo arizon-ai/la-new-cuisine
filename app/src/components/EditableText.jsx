@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useAuth } from '../context/AuthContext';
-import { getContent, setContent } from '../utils/contentStore';
+import { getContent, getContentSync, setContent } from '../utils/contentStore';
 import { Pencil, Check, X } from 'lucide-react';
 
 /**
@@ -22,15 +22,20 @@ export default function EditableText({
     style = {}
 }) {
     const { isEditMode } = useAuth();
-    const [value, setValue] = useState(defaultValue);
+    // Use sync version for initial render (from cache/localStorage)
+    const [value, setValue] = useState(() => getContentSync(id, defaultValue));
     const [isEditing, setIsEditing] = useState(false);
     const [tempValue, setTempValue] = useState('');
+    const [isSaving, setIsSaving] = useState(false);
     const inputRef = useRef(null);
 
-    // Load stored content on mount
+    // Load stored content from Supabase on mount
     useEffect(() => {
-        const storedValue = getContent(id, defaultValue);
-        setValue(storedValue);
+        const loadContent = async () => {
+            const storedValue = await getContent(id, defaultValue);
+            setValue(storedValue);
+        };
+        loadContent();
     }, [id, defaultValue]);
 
     // Focus input when editing starts
@@ -49,9 +54,11 @@ export default function EditableText({
         setIsEditing(true);
     };
 
-    const saveEdit = () => {
+    const saveEdit = async () => {
+        setIsSaving(true);
         setValue(tempValue);
-        setContent(id, tempValue);
+        await setContent(id, tempValue);
+        setIsSaving(false);
         setIsEditing(false);
     };
 
