@@ -59,14 +59,11 @@ export default function Talleres() {
             {/* Hero Section */}
             <section className="relative bg-black text-white py-24 px-6">
                 <div className="max-w-5xl mx-auto text-center">
-                    <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-6">Formación Práctica</p>
+                    <EditableText id="talleres-hero-label" defaultValue="Formación Práctica" tag="p" className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-6" />
                     <h1 className="text-5xl md:text-7xl font-serif font-bold mb-8">
-                        Talleres<br /><span className="italic">Gastronómicos</span>
+                        <EditableText id="talleres-hero-title" defaultValue="Talleres" tag="span" /><br /><span className="italic"><EditableText id="talleres-hero-title2" defaultValue="Gastronómicos" tag="span" /></span>
                     </h1>
-                    <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-                        Capacitación intensiva en talleres prácticos. Aprende técnicas específicas de
-                        cocina internacional, repostería, panadería y mucho más.
-                    </p>
+                    <EditableText id="talleres-hero-desc" defaultValue="Capacitación intensiva en talleres prácticos. Aprende técnicas específicas de cocina internacional, repostería, panadería y mucho más." tag="p" className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed" multiline={true} />
                 </div>
             </section>
 
@@ -110,26 +107,22 @@ export default function Talleres() {
             <section className="py-16 px-6 bg-neutral-100 border-t border-gray-200">
                 <div className="max-w-3xl mx-auto text-center">
                     <Sparkles className="w-12 h-12 mx-auto mb-6" />
-                    <h3 className="text-3xl font-serif font-bold mb-4">¿Interesado en algún taller?</h3>
-                    <p className="text-gray-600 mb-8 text-lg">
-                        Contáctanos para conocer fechas disponibles, precios y contenido de cada taller.
-                    </p>
+                    <EditableText id="talleres-cta-title" defaultValue="¿Interesado en algún taller?" tag="h3" className="text-3xl font-serif font-bold mb-4" />
+                    <EditableText id="talleres-cta-desc" defaultValue="Contáctanos para conocer fechas disponibles, precios y contenido de cada taller." tag="p" className="text-gray-600 mb-8 text-lg" />
                     <a
                         href="https://wa.me/584244635196"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-3 bg-black text-white px-8 py-4 font-bold uppercase tracking-widest text-sm hover:bg-gray-800 transition-colors"
                     >
-                        Consultar Disponibilidad
+                        <EditableText id="talleres-cta-button" defaultValue="Consultar Disponibilidad" tag="span" />
                     </a>
                 </div>
             </section>
 
             {/* Nota */}
             <section className="py-8 px-6 bg-black text-white text-center">
-                <p className="text-sm text-gray-400">
-                    Los talleres incluyen certificado de asistencia e insumos. Consulta por talleres personalizados para grupos.
-                </p>
+                <EditableText id="talleres-nota" defaultValue="Los talleres incluyen certificado de asistencia e insumos. Consulta por talleres personalizados para grupos." tag="p" className="text-sm text-gray-400" />
             </section>
         </div>
     );

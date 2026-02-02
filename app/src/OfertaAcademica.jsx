@@ -1,4 +1,5 @@
 import React from 'react';
+import EditableText from './components/EditableText';
 
 // Componente para los slides
 const Slide = ({ children, className = '', id }) => (

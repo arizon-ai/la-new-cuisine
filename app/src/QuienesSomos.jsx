@@ -111,8 +111,8 @@ export default function QuienesSomos() {
             <section className="py-20 px-6 border-b border-gray-200">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-16">
-                        <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">Lo que nos define</p>
-                        <h2 className="text-4xl font-serif font-bold">Nuestros Valores</h2>
+                        <EditableText id="qs-valores-label" defaultValue="Lo que nos define" tag="p" className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4" />
+                        <EditableText id="qs-valores-title" defaultValue="Nuestros Valores" tag="h2" className="text-4xl font-serif font-bold" />
                     </div>
 
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
@@ -139,30 +139,26 @@ export default function QuienesSomos() {
                 <div className="max-w-5xl mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
-                            <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">¿Por qué elegirnos?</p>
-                            <h2 className="text-4xl font-serif font-bold mb-6">Nuestra Diferenciación</h2>
-                            <p className="text-gray-400 leading-relaxed text-lg">
-                                Podemos mencionar que contamos con un capital humano incomparable, un staff de
-                                instructores con gran experiencia en el área culinaria y en el área de la docencia,
-                                y sobre todo, unas instalaciones diseñadas especialmente para formar profesionales.
-                            </p>
+                            <EditableText id="qs-diferencia-label" defaultValue="¿Por qué elegirnos?" tag="p" className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4" />
+                            <EditableText id="qs-diferencia-title" defaultValue="Nuestra Diferenciación" tag="h2" className="text-4xl font-serif font-bold mb-6" />
+                            <EditableText id="qs-diferencia-desc" defaultValue="Podemos mencionar que contamos con un capital humano incomparable, un staff de instructores con gran experiencia en el área culinaria y en el área de la docencia, y sobre todo, unas instalaciones diseñadas especialmente para formar profesionales." tag="p" className="text-gray-400 leading-relaxed text-lg" multiline={true} />
                         </div>
                         <div className="grid grid-cols-2 gap-6">
                             <div className="text-center p-8 border border-white/20">
-                                <p className="text-5xl font-bold mb-2">22+</p>
-                                <p className="text-sm text-gray-400 uppercase tracking-wider">Años de Experiencia</p>
+                                <EditableText id="qs-stat-1-value" defaultValue="22+" tag="p" className="text-5xl font-bold mb-2" />
+                                <EditableText id="qs-stat-1-label" defaultValue="Años de Experiencia" tag="p" className="text-sm text-gray-400 uppercase tracking-wider" />
                             </div>
                             <div className="text-center p-8 border border-white/20">
-                                <p className="text-5xl font-bold mb-2">4</p>
-                                <p className="text-sm text-gray-400 uppercase tracking-wider">Carreras Profesionales</p>
+                                <EditableText id="qs-stat-2-value" defaultValue="4" tag="p" className="text-5xl font-bold mb-2" />
+                                <EditableText id="qs-stat-2-label" defaultValue="Carreras Profesionales" tag="p" className="text-sm text-gray-400 uppercase tracking-wider" />
                             </div>
                             <div className="text-center p-8 border border-white/20">
-                                <p className="text-5xl font-bold mb-2">15+</p>
-                                <p className="text-sm text-gray-400 uppercase tracking-wider">Talleres Prácticos</p>
+                                <EditableText id="qs-stat-3-value" defaultValue="15+" tag="p" className="text-5xl font-bold mb-2" />
+                                <EditableText id="qs-stat-3-label" defaultValue="Talleres Prácticos" tag="p" className="text-sm text-gray-400 uppercase tracking-wider" />
                             </div>
                             <div className="text-center p-8 border border-white/20">
-                                <p className="text-5xl font-bold mb-2">∞</p>
-                                <p className="text-sm text-gray-400 uppercase tracking-wider">Pasión por Enseñar</p>
+                                <EditableText id="qs-stat-4-value" defaultValue="∞" tag="p" className="text-5xl font-bold mb-2" />
+                                <EditableText id="qs-stat-4-label" defaultValue="Pasión por Enseñar" tag="p" className="text-sm text-gray-400 uppercase tracking-wider" />
                             </div>
                         </div>
                     </div>
@@ -173,11 +169,9 @@ export default function QuienesSomos() {
             <section className="py-16 px-6 bg-neutral-100">
                 <div className="max-w-3xl mx-auto text-center">
                     <Award className="w-16 h-16 mx-auto mb-6 text-black" />
-                    <p className="text-sm uppercase tracking-widest text-gray-500 mb-4">Institución Certificada</p>
-                    <h3 className="text-2xl font-serif font-bold mb-4">
-                        Registro Ministerio de Educación y Deportes
-                    </h3>
-                    <p className="text-4xl font-mono font-bold">No. R-0129-08</p>
+                    <EditableText id="qs-registro-label" defaultValue="Institución Certificada" tag="p" className="text-sm uppercase tracking-widest text-gray-500 mb-4" />
+                    <EditableText id="qs-registro-title" defaultValue="Registro Ministerio de Educación y Deportes" tag="h3" className="text-2xl font-serif font-bold mb-4" />
+                    <EditableText id="qs-registro-number" defaultValue="No. R-0129-08" tag="p" className="text-4xl font-mono font-bold" />
                 </div>
             </section>
         </div>
