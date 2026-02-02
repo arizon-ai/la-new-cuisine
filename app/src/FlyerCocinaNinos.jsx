@@ -230,8 +230,8 @@ export default function FlyerCocinaNinos() {
                         }}>
                             <Calendar size={28} weight="light" color="#fff" />
                             <div>
-                                <div style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase' }}>Duración</div>
-                                <div style={{ fontSize: '18px', fontWeight: 700 }}>4 Meses</div>
+                                <EditableText id="flyer-ninos-duracion-label" defaultValue="Duración" tag="div" style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase' }} />
+                                <EditableText id="flyer-ninos-duracion-valor" defaultValue="4 Meses" tag="div" style={{ fontSize: '18px', fontWeight: 700 }} />
                             </div>
                         </div>
                         <div style={{
@@ -244,8 +244,8 @@ export default function FlyerCocinaNinos() {
                         }}>
                             <Clock size={28} weight="light" color="#fff" />
                             <div>
-                                <div style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase' }}>Horario</div>
-                                <div style={{ fontSize: '18px', fontWeight: 700 }}>Viernes en la tarde</div>
+                                <EditableText id="flyer-ninos-horario-label" defaultValue="Horario" tag="div" style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase' }} />
+                                <EditableText id="flyer-ninos-horario-valor" defaultValue="Viernes en la tarde" tag="div" style={{ fontSize: '18px', fontWeight: 700 }} />
                             </div>
                         </div>
                     </div>

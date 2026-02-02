@@ -245,8 +245,8 @@ export default function FlyerAsistenteChef() {
                         }}>
                             <Calendar size={28} weight="light" color="#fff" />
                             <div>
-                                <div style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase' }}>Duración</div>
-                                <div style={{ fontSize: '18px', fontWeight: 700 }}>5 Meses</div>
+                                <EditableText id="flyer-asistente-duracion-label" defaultValue="Duración" tag="div" style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase' }} />
+                                <EditableText id="flyer-asistente-duracion-valor" defaultValue="5 Meses" tag="div" style={{ fontSize: '18px', fontWeight: 700 }} />
                             </div>
                         </div>
                         <div style={{
@@ -259,8 +259,8 @@ export default function FlyerAsistenteChef() {
                         }}>
                             <GraduationCap size={28} weight="light" color="#fff" />
                             <div>
-                                <div style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase' }}>Metodología</div>
-                                <div style={{ fontSize: '18px', fontWeight: 700 }}>Teórico-Práctico</div>
+                                <EditableText id="flyer-asistente-metodo-label" defaultValue="Metodología" tag="div" style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase' }} />
+                                <EditableText id="flyer-asistente-metodo-valor" defaultValue="Teórico-Práctico" tag="div" style={{ fontSize: '18px', fontWeight: 700 }} />
                             </div>
                         </div>
                     </div>

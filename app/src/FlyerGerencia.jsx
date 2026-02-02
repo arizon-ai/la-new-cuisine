@@ -221,8 +221,8 @@ export default function FlyerGerencia() {
                         }}>
                             <Calendar size={28} weight="light" color="#fff" />
                             <div>
-                                <div style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase' }}>Duración</div>
-                                <div style={{ fontSize: '18px', fontWeight: 700 }}>4 Meses</div>
+                                <EditableText id="flyer-gerencia-duracion-label" defaultValue="Duración" tag="div" style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase' }} />
+                                <EditableText id="flyer-gerencia-duracion-valor" defaultValue="4 Meses" tag="div" style={{ fontSize: '18px', fontWeight: 700 }} />
                             </div>
                         </div>
                         <div style={{
@@ -235,8 +235,8 @@ export default function FlyerGerencia() {
                         }}>
                             <Certificate size={28} weight="light" color="#fff" />
                             <div>
-                                <div style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase' }}>Certificación</div>
-                                <div style={{ fontSize: '18px', fontWeight: 700 }}>Diplomado Profesional</div>
+                                <EditableText id="flyer-gerencia-cert-label" defaultValue="Certificación" tag="div" style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase' }} />
+                                <EditableText id="flyer-gerencia-cert-valor" defaultValue="Diplomado Profesional" tag="div" style={{ fontSize: '18px', fontWeight: 700 }} />
                             </div>
                         </div>
                     </div>

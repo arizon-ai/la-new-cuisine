@@ -439,8 +439,8 @@ export default function FlyerPasteleria() {
                             }}>
                                 <Clock size={28} weight="light" color="#fff" />
                                 <div>
-                                    <div style={{ fontSize: '12px', opacity: 0.9 }}>Duración del nivel</div>
-                                    <div style={{ fontSize: '18px', fontWeight: 700 }}>5 Meses (20 semanas)</div>
+                                    <EditableText id="flyer-past-duracion-label" defaultValue="Duración del nivel" tag="div" style={{ fontSize: '12px', opacity: 0.9 }} />
+                                    <EditableText id="flyer-past-duracion-valor" defaultValue="5 Meses (20 semanas)" tag="div" style={{ fontSize: '18px', fontWeight: 700 }} />
                                 </div>
                             </div>
 
@@ -508,10 +508,10 @@ export default function FlyerPasteleria() {
                                 <Star size={18} weight="light" color="#000" /> Requisitos para Graduación
                             </h4>
                             <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '13px', lineHeight: 1.8 }}>
-                                <li>Aprobación del examen técnico individual</li>
-                                <li>Presentación del Fine Dining</li>
-                                <li>Cumplimiento de 240 horas de pasantías</li>
-                                <li>Entrega del informe final</li>
+                                <li><EditableText id="flyer-past-req-1" defaultValue="Aprobación del examen técnico individual" tag="span" /></li>
+                                <li><EditableText id="flyer-past-req-2" defaultValue="Presentación del Fine Dining" tag="span" /></li>
+                                <li><EditableText id="flyer-past-req-3" defaultValue="Cumplimiento de 240 horas de pasantías" tag="span" /></li>
+                                <li><EditableText id="flyer-past-req-4" defaultValue="Entrega del informe final" tag="span" /></li>
                             </ul>
                         </div>
                     )}
