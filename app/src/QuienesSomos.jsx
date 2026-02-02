@@ -44,33 +44,17 @@ export default function QuienesSomos() {
                 <div className="max-w-5xl mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-4xl font-serif font-bold mb-6">Quiénes Somos</h2>
+                            <EditableText id="qs-quienes-title" defaultValue="Quiénes Somos" tag="h2" className="text-4xl font-serif font-bold mb-6" />
                             <div className="space-y-4 text-gray-600 leading-relaxed text-lg">
-                                <p>
-                                    El Centro de Capacitación Gastronómica La New Cuisine es una empresa fundada
-                                    en el año 2002 la cual ofrece estudios especializados de Chef de Cocina
-                                    Internacional, Chef Pastelero, Panadería y Diplomados en Gerencia Gastronómica.
-                                </p>
-                                <p>
-                                    También ofrece capacitación en talleres prácticos de cocina asiática,
-                                    mediterránea, appetizers, italiana, tailandesa, mexicana, árabe, light,
-                                    navideña, panadería, pastelería y para niños el curso de mini-chef, entre otros.
-                                </p>
-                                <p>
-                                    Contamos con amplios espacios y equipos de alta tecnología en cocina para
-                                    realizar nuestras clases prácticas y teóricas.
-                                </p>
+                                <EditableText id="qs-quienes-p1" defaultValue="El Centro de Capacitación Gastronómica La New Cuisine es una empresa fundada en el año 2002 la cual ofrece estudios especializados de Chef de Cocina Internacional, Chef Pastelero, Panadería y Diplomados en Gerencia Gastronómica." tag="p" multiline={true} />
+                                <EditableText id="qs-quienes-p2" defaultValue="También ofrece capacitación en talleres prácticos de cocina asiática, mediterránea, appetizers, italiana, tailandesa, mexicana, árabe, light, navideña, panadería, pastelería y para niños el curso de mini-chef, entre otros." tag="p" multiline={true} />
+                                <EditableText id="qs-quienes-p3" defaultValue="Contamos con amplios espacios y equipos de alta tecnología en cocina para realizar nuestras clases prácticas y teóricas." tag="p" multiline={true} />
                             </div>
                         </div>
                         <div className="bg-neutral-100 p-8 border-l-4 border-black">
                             <History className="w-12 h-12 mb-6" />
-                            <h3 className="text-2xl font-serif font-bold mb-4">Nuestra Historia</h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                Cada día estamos en búsqueda de mejoras continuas para optimizar los procesos
-                                operativos y garantizar el mejor funcionamiento como centro de capacitación
-                                gastronómica de cocina nacional e internacional, y así continuar formando
-                                artistas culinarios.
-                            </p>
+                            <EditableText id="qs-historia-title" defaultValue="Nuestra Historia" tag="h3" className="text-2xl font-serif font-bold mb-4" />
+                            <EditableText id="qs-historia-desc" defaultValue="Cada día estamos en búsqueda de mejoras continuas para optimizar los procesos operativos y garantizar el mejor funcionamiento como centro de capacitación gastronómica de cocina nacional e internacional, y así continuar formando artistas culinarios." tag="p" className="text-gray-600 leading-relaxed" multiline={true} />
                         </div>
                     </div>
                 </div>
