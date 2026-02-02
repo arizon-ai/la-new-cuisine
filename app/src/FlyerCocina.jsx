@@ -297,21 +297,12 @@ export default function FlyerCocina() {
                         }}
                         multiline={true}
                     />
-                    <span style={{
-                        fontFamily: "'Azeret Mono', monospace",
-                        fontSize: '13px',
-                        color: '#555',
-                        marginBottom: '25px',
-                        display: 'block',
-                        borderLeft: '3px solid #000',
-                        paddingLeft: '10px'
-                    } >
-                        <EditableText
-                            id="flyer-cocina-content-subtitle"
-                            defaultValue="Formación profesional integral en tres niveles"
-                            tag="span"
-                            style={{ fontFamily: "'Azeret Mono', monospace", fontSize: '13px', color: '#555', marginBottom: '25px', display: 'block', borderLeft: '3px solid #000', paddingLeft: '10px' }}
-                        />
+                    <EditableText
+                        id="flyer-cocina-content-subtitle"
+                        defaultValue="Formación profesional integral en tres niveles"
+                        tag="span"
+                        style={{ fontFamily: "'Azeret Mono', monospace", fontSize: '13px', color: '#555', marginBottom: '25px', display: 'block', borderLeft: '3px solid #000', paddingLeft: '10px' }}
+                    />
 
                     {/* ESTRUCTURA DE LA CARRERA */}
                     <div style={{
