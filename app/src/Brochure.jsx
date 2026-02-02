@@ -2,6 +2,7 @@ import React from 'react';
 import {
     Calendar, Clock, MapPin, Star, Phone, Mail, Quote, Check, Award, Scissors, Facebook, Instagram, Video
 } from 'lucide-react';
+import EditableText from './components/EditableText';
 
 // --- DATA ---
 const courses = [
@@ -361,9 +362,12 @@ export default function Brochure() {
                         className="mx-auto mb-8 animate-in fade-in duration-1000"
                         style={{ width: '480px', maxWidth: '90%', height: 'auto' }}
                     />
-                    <h2 className="text-2xl md:text-3xl font-serif font-bold tracking-tighter leading-none mb-12 text-gray-600">
-                        Escuela de Alta Cocina
-                    </h2>
+                    <EditableText
+                        id="brochure-subtitle"
+                        defaultValue="Escuela de Alta Cocina"
+                        tag="h2"
+                        className="text-2xl md:text-3xl font-serif font-bold tracking-tighter leading-none mb-12 text-gray-600"
+                    />
 
                     <div className="max-w-5xl mx-auto border-y border-black py-8 bg-neutral-50">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 divide-y md:divide-y-0 md:divide-x divide-black">
@@ -394,9 +398,13 @@ export default function Brochure() {
             <section className="bg-white py-20 px-6 border-b border-black">
                 <div className="max-w-3xl mx-auto text-center">
                     <Quote className="w-12 h-12 mx-auto mb-8 text-black opacity-20 rotate-180" />
-                    <p className="text-3xl md:text-5xl font-serif leading-tight text-gray-900 mb-8">
-                        "Formamos artistas culinarios desde 2002. No solo enseñamos recetas, enseñamos a <span className="bg-black text-white px-2 italic">entender</span> el alimento, respetar la técnica y gestionar el negocio."
-                    </p>
+                    <EditableText
+                        id="brochure-manifiesto"
+                        defaultValue='"Formamos artistas culinarios desde 2002. No solo enseñamos recetas, enseñamos a entender el alimento, respetar la técnica y gestionar el negocio."'
+                        tag="p"
+                        className="text-3xl md:text-5xl font-serif leading-tight text-gray-900 mb-8"
+                        multiline={true}
+                    />
                     <div className="flex justify-center gap-1">
                         {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-4 h-4 fill-black text-black" />)}
                     </div>
@@ -718,7 +726,12 @@ export default function Brochure() {
             {/* --- FOOTER / CONTRAPORTADA --- */}
             <footer className="bg-white py-24 px-6 text-center">
                 <div className="max-w-4xl mx-auto">
-                    <h2 className="text-5xl md:text-6xl font-serif font-bold mb-8">Comienza tu Legado</h2>
+                    <EditableText
+                        id="brochure-footer-title"
+                        defaultValue="Comienza tu Legado"
+                        tag="h2"
+                        className="text-5xl md:text-6xl font-serif font-bold mb-8"
+                    />
                     <p className="text-gray-600 mb-16 text-xl max-w-2xl mx-auto">
                         Estamos listos para recibirte. Agenda una visita guiada a nuestras instalaciones o formaliza tu inscripción hoy mismo.
                     </p>
