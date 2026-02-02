@@ -352,7 +352,7 @@ export default function FlyerPanaderia() {
                             </div>
 
                             {/* Descripción del nivel */}
-                            <p style={{
+                            <div style={{
                                 fontSize: '14px',
                                 lineHeight: 1.7,
                                 color: '#333',
@@ -361,8 +361,13 @@ export default function FlyerPanaderia() {
                                 backgroundColor: '#f9f9f9',
                                 borderLeft: '4px solid #000'
                             }}>
-                                {getLevelDescription()}
-                            </p>
+                                <EditableText
+                                    id={`flyer-panaderia-${activeLevel}-desc`}
+                                    defaultValue={getLevelDescription()}
+                                    tag="p"
+                                    style={{ margin: 0 }}
+                                />
+                            </div>
 
                             {/* Lista de contenido */}
                             <h4 style={{
@@ -378,7 +383,13 @@ export default function FlyerPanaderia() {
                             </h4>
                             <div>
                                 {getActiveContent().map((item, index) => (
-                                    <ContentItem key={index} number={index + 1}>{item}</ContentItem>
+                                    <ContentItem key={index} number={index + 1}>
+                                        <EditableText
+                                            id={`flyer-panaderia-${activeLevel}-${index}`}
+                                            defaultValue={item}
+                                            tag="span"
+                                        />
+                                    </ContentItem>
                                 ))}
                             </div>
                         </div>
