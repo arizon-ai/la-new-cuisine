@@ -433,22 +433,22 @@ export default function Brochure() {
                     <div className="max-w-5xl mx-auto border-y border-black py-8 bg-neutral-50">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 divide-y md:divide-y-0 md:divide-x divide-black">
                             <div className="text-center pt-4 md:pt-0">
-                                <p className="text-xs font-bold uppercase text-gray-500 mb-1">Temporada Académica</p>
-                                <p className="text-xl font-serif font-bold">Enero / Febrero 2026</p>
+                                <EditableText id="header-temporada-label" defaultValue="Temporada Académica" tag="p" className="text-xs font-bold uppercase text-gray-500 mb-1" />
+                                <EditableText id="header-temporada-value" defaultValue="Enero / Febrero 2026" tag="p" className="text-xl font-serif font-bold" />
                             </div>
                             <div className="text-center pt-4 md:pt-0">
-                                <p className="text-xs font-bold uppercase text-gray-500 mb-1">Estado de Admisión</p>
+                                <EditableText id="header-admision-label" defaultValue="Estado de Admisión" tag="p" className="text-xs font-bold uppercase text-gray-500 mb-1" />
                                 <div className="inline-flex items-center gap-2">
                                     <span className="relative flex h-3 w-3">
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-black opacity-75"></span>
                                         <span className="relative inline-flex rounded-full h-3 w-3 bg-black"></span>
                                     </span>
-                                    <p className="text-xl font-serif font-bold">Inscripciones Abiertas</p>
+                                    <EditableText id="header-admision-value" defaultValue="Inscripciones Abiertas" tag="p" className="text-xl font-serif font-bold" />
                                 </div>
                             </div>
                             <div className="text-center pt-4 md:pt-0 pb-4 md:pb-0">
-                                <p className="text-xs font-bold uppercase text-gray-500 mb-1">Registro Ministerio</p>
-                                <p className="text-xl font-serif font-bold">No. R-0129-08</p>
+                                <EditableText id="header-registro-label" defaultValue="Registro Ministerio" tag="p" className="text-xs font-bold uppercase text-gray-500 mb-1" />
+                                <EditableText id="header-registro-value" defaultValue="No. R-0129-08" tag="p" className="text-xl font-serif font-bold" />
                             </div>
                         </div>
                     </div>
@@ -565,32 +565,30 @@ export default function Brochure() {
                 <div className="p-12 lg:p-16 border-b md:border-b-0 md:border-r border-black bg-white flex flex-col justify-between">
                     <div>
                         <div className="flex justify-between items-start mb-6">
-                            <h3 className="text-4xl font-serif">Asistente de Chef</h3>
-                            <span className="border border-black text-black text-xs px-3 py-1 font-bold uppercase tracking-widest">4 Meses</span>
+                            <EditableText id="asistente-title" defaultValue="Asistente de Chef" tag="h3" className="text-4xl font-serif" />
+                            <EditableText id="asistente-badge" defaultValue="4 Meses" tag="span" className="border border-black text-black text-xs px-3 py-1 font-bold uppercase tracking-widest" />
                         </div>
-                        <p className="mb-4 text-gray-600 text-lg">Programa práctico para quienes desean iniciarse en el mundo culinario profesional.</p>
+                        <EditableText id="asistente-desc" defaultValue="Programa práctico para quienes desean iniciarse en el mundo culinario profesional." tag="p" className="mb-4 text-gray-600 text-lg" multiline={true} />
                     </div>
                     <div className="bg-neutral-50 p-6 border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                        <h4 className="font-bold text-base uppercase mb-3">Ficha Técnica</h4>
+                        <EditableText id="asistente-ficha-title" defaultValue="Ficha Técnica" tag="h4" className="font-bold text-base uppercase mb-3" />
                         <div className="space-y-2 text-base text-gray-700">
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Inicio:</span> <span className="font-bold">Viernes 18 de Febrero 2026</span>
+                                <span>Inicio:</span> <EditableText id="asistente-inicio" defaultValue="Viernes 18 de Febrero 2026" tag="span" className="font-bold" />
                             </p>
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Horario:</span> <span className="font-bold">Viernes 6:00 PM - 9:30 PM</span>
+                                <span>Horario:</span> <EditableText id="asistente-horario" defaultValue="Viernes 6:00 PM - 9:30 PM" tag="span" className="font-bold" />
                             </p>
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Inscripción:</span> <span className="font-bold">50 €</span>
+                                <span>Inscripción:</span> <EditableText id="asistente-inscripcion" defaultValue="50 €" tag="span" className="font-bold" />
                             </p>
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Mensualidad:</span> <span className="font-bold">120 €</span>
+                                <span>Mensualidad:</span> <EditableText id="asistente-mensualidad" defaultValue="120 €" tag="span" className="font-bold" />
                             </p>
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Kit de Estudio:</span> <span className="font-bold">130 €</span>
+                                <span>Kit de Estudio:</span> <EditableText id="asistente-kit" defaultValue="130 €" tag="span" className="font-bold" />
                             </p>
-                            <p className="text-xs text-gray-500 pt-2 italic">
-                                *Kit incluye filipina, gorro, delantal, set de 2 cuchillos. Financiamiento 2 cuotas.
-                            </p>
+                            <EditableText id="asistente-nota" defaultValue="*Kit incluye filipina, gorro, delantal, set de 2 cuchillos. Financiamiento 2 cuotas." tag="p" className="text-xs text-gray-500 pt-2 italic" />
                         </div>
                     </div>
                 </div>
@@ -602,27 +600,27 @@ export default function Brochure() {
                     </div>
                     <div className="relative z-10">
                         <div className="flex justify-between items-start mb-6">
-                            <h3 className="text-4xl font-serif">Cocina Internacional Intensivo</h3>
-                            <span className="bg-white text-black text-xs px-3 py-1 font-bold uppercase tracking-widest">Intensivo</span>
+                            <EditableText id="intensivo-title" defaultValue="Cocina Internacional Intensivo" tag="h3" className="text-4xl font-serif" />
+                            <EditableText id="intensivo-badge" defaultValue="Intensivo" tag="span" className="bg-white text-black text-xs px-3 py-1 font-bold uppercase tracking-widest" />
                         </div>
-                        <p className="mb-8 text-gray-400 text-lg">Formación acelerada de martes a viernes. Ideal para quienes buscan una inmersión total en las artes culinarias.</p>
+                        <EditableText id="intensivo-desc" defaultValue="Formación acelerada de martes a viernes. Ideal para quienes buscan una inmersión total en las artes culinarias." tag="p" className="mb-8 text-gray-400 text-lg" multiline={true} />
                     </div>
 
                     <div className="relative z-10 border border-white/30 p-6 bg-white/5 backdrop-blur-sm">
                         <div className="grid grid-cols-2 gap-4 text-base">
                             <div>
-                                <p className="text-gray-400 text-xs uppercase mb-1">Inicio</p>
-                                <p className="font-bold text-lg">24 de Febrero 2026</p>
-                                <p className="text-gray-400 text-sm">Mar-Vie 6:00 PM - 9:30 PM</p>
+                                <EditableText id="intensivo-inicio-label" defaultValue="Inicio" tag="p" className="text-gray-400 text-xs uppercase mb-1" />
+                                <EditableText id="intensivo-inicio-fecha" defaultValue="24 de Febrero 2026" tag="p" className="font-bold text-lg" />
+                                <EditableText id="intensivo-horario" defaultValue="Mar-Vie 6:00 PM - 9:30 PM" tag="p" className="text-gray-400 text-sm" />
                             </div>
                             <div>
-                                <p className="text-gray-400 text-xs uppercase mb-1">Inversión</p>
-                                <p className="font-bold text-lg">100 € Inscripción</p>
-                                <p className="text-gray-400 text-sm">2 cuotas de 1.320 €</p>
+                                <EditableText id="intensivo-inversion-label" defaultValue="Inversión" tag="p" className="text-gray-400 text-xs uppercase mb-1" />
+                                <EditableText id="intensivo-inscripcion" defaultValue="100 € Inscripción" tag="p" className="font-bold text-lg" />
+                                <EditableText id="intensivo-cuotas" defaultValue="2 cuotas de 1.320 €" tag="p" className="text-gray-400 text-sm" />
                             </div>
                             <div className="col-span-2 pt-4 border-t border-white/20">
                                 <p className="flex items-center text-gray-300">
-                                    <Check className="w-4 h-4 mr-2" /> Programa completo: Básico + Intermedio + Avanzado
+                                    <Check className="w-4 h-4 mr-2" /> <EditableText id="intensivo-nota" defaultValue="Programa completo: Básico + Intermedio + Avanzado" tag="span" />
                                 </p>
                             </div>
                         </div>
@@ -636,28 +634,28 @@ export default function Brochure() {
                 <div className="p-12 lg:p-16 border-b md:border-b-0 md:border-r border-black bg-white flex flex-col justify-between">
                     <div>
                         <div className="flex justify-between items-start mb-6">
-                            <h3 className="text-4xl font-serif">Asesorías Gastronómicas</h3>
-                            <span className="border border-black text-black text-xs px-3 py-1 font-bold uppercase tracking-widest">Servicios</span>
+                            <EditableText id="asesorias-title" defaultValue="Asesorías Gastronómicas" tag="h3" className="text-4xl font-serif" />
+                            <EditableText id="asesorias-badge" defaultValue="Servicios" tag="span" className="border border-black text-black text-xs px-3 py-1 font-bold uppercase tracking-widest" />
                         </div>
-                        <p className="mb-6 text-gray-600 text-lg">Potencia tu negocio gastronómico con nuestra asesoría especializada.</p>
+                        <EditableText id="asesorias-desc" defaultValue="Potencia tu negocio gastronómico con nuestra asesoría especializada." tag="p" className="mb-6 text-gray-600 text-lg" multiline={true} />
                     </div>
                     <div className="bg-neutral-50 p-6 border border-black">
-                        <h4 className="font-bold text-base uppercase mb-4">Nuestros Servicios</h4>
+                        <EditableText id="asesorias-servicios-title" defaultValue="Nuestros Servicios" tag="h4" className="font-bold text-base uppercase mb-4" />
                         <ul className="space-y-3 text-gray-700">
                             <li className="flex items-start gap-2">
                                 <Check className="w-5 h-5 mt-0.5 text-black flex-shrink-0" />
-                                <span><strong>Formulación de Productos:</strong> Desarrollo de recetas y fichas técnicas</span>
+                                <EditableText id="asesorias-servicio-1" defaultValue="Formulación de Productos: Desarrollo de recetas y fichas técnicas" tag="span" />
                             </li>
                             <li className="flex items-start gap-2">
                                 <Check className="w-5 h-5 mt-0.5 text-black flex-shrink-0" />
-                                <span><strong>Maquila de Productos:</strong> Producción a escala de tus creaciones</span>
+                                <EditableText id="asesorias-servicio-2" defaultValue="Maquila de Productos: Producción a escala de tus creaciones" tag="span" />
                             </li>
                             <li className="flex items-start gap-2">
                                 <Check className="w-5 h-5 mt-0.5 text-black flex-shrink-0" />
-                                <span><strong>Consultoría:</strong> Optimización de operaciones y menús</span>
+                                <EditableText id="asesorias-servicio-3" defaultValue="Consultoría: Optimización de operaciones y menús" tag="span" />
                             </li>
                         </ul>
-                        <p className="text-sm text-gray-500 mt-4 italic">Contáctanos para cotización personalizada</p>
+                        <EditableText id="asesorias-cta" defaultValue="Contáctanos para cotización personalizada" tag="p" className="text-sm text-gray-500 mt-4 italic" />
                     </div>
                 </div>
 
@@ -666,28 +664,28 @@ export default function Brochure() {
                     <div className="absolute top-4 right-4 text-6xl opacity-10">🎂</div>
                     <div className="relative z-10">
                         <div className="flex justify-between items-start mb-6">
-                            <h3 className="text-4xl font-serif">Celebración de Cumpleaños</h3>
-                            <span className="bg-black text-white text-xs px-3 py-1 font-bold uppercase tracking-widest">Eventos</span>
+                            <EditableText id="cumple-title" defaultValue="Celebración de Cumpleaños" tag="h3" className="text-4xl font-serif" />
+                            <EditableText id="cumple-badge" defaultValue="Eventos" tag="span" className="bg-black text-white text-xs px-3 py-1 font-bold uppercase tracking-widest" />
                         </div>
-                        <p className="mb-6 text-gray-600 text-lg">Celebra tu día especial en nuestras instalaciones con una experiencia culinaria única.</p>
+                        <EditableText id="cumple-desc" defaultValue="Celebra tu día especial en nuestras instalaciones con una experiencia culinaria única." tag="p" className="mb-6 text-gray-600 text-lg" multiline={true} />
                     </div>
                     <div className="relative z-10 bg-white p-6 border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                        <h4 className="font-bold text-base uppercase mb-4">¿Qué incluye?</h4>
+                        <EditableText id="cumple-incluye-title" defaultValue="¿Qué incluye?" tag="h4" className="font-bold text-base uppercase mb-4" />
                         <ul className="space-y-2 text-gray-700">
                             <li className="flex items-center gap-2">
                                 <span className="text-lg">👨‍🍳</span>
-                                <span>Experiencia de cocina grupal</span>
+                                <EditableText id="cumple-item-1" defaultValue="Experiencia de cocina grupal" tag="span" />
                             </li>
                             <li className="flex items-center gap-2">
                                 <span className="text-lg">🎉</span>
-                                <span>Espacio exclusivo para tu evento</span>
+                                <EditableText id="cumple-item-2" defaultValue="Espacio exclusivo para tu evento" tag="span" />
                             </li>
                             <li className="flex items-center gap-2">
                                 <span className="text-lg">🍽️</span>
-                                <span>Menú personalizado</span>
+                                <EditableText id="cumple-item-3" defaultValue="Menú personalizado" tag="span" />
                             </li>
                         </ul>
-                        <p className="text-sm text-gray-500 mt-4 italic">Consulta disponibilidad y paquetes</p>
+                        <EditableText id="cumple-cta" defaultValue="Consulta disponibilidad y paquetes" tag="p" className="text-sm text-gray-500 mt-4 italic" />
                     </div>
                 </div>
             </section>
@@ -696,9 +694,9 @@ export default function Brochure() {
             <section className="bg-neutral-100 py-20 px-6">
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-12">
-                        <span className="text-xs uppercase tracking-widest text-gray-500 mb-4 block">Proceso Oficial</span>
-                        <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">Protocolo de Preinscripción</h2>
-                        <p className="text-gray-600">Formalización de Inscripción Administrativa y Académica</p>
+                        <EditableText id="protocolo-label" defaultValue="Proceso Oficial" tag="span" className="text-xs uppercase tracking-widest text-gray-500 mb-4 block" />
+                        <EditableText id="protocolo-title" defaultValue="Protocolo de Preinscripción" tag="h2" className="text-3xl md:text-4xl font-serif font-bold mb-4" />
+                        <EditableText id="protocolo-subtitle" defaultValue="Formalización de Inscripción Administrativa y Académica" tag="p" className="text-gray-600" />
                     </div>
 
                     <div className="space-y-6">
@@ -707,8 +705,8 @@ export default function Brochure() {
                             <div className="flex items-start gap-4">
                                 <div className="bg-black text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
                                 <div>
-                                    <h3 className="font-bold text-lg mb-2">Enviar Datos de Preinscripción</h3>
-                                    <p className="text-gray-600 mb-3">Envía los datos del aspirante preinscrito junto con el soporte de pago a los siguientes correos:</p>
+                                    <EditableText id="protocolo-paso1-title" defaultValue="Enviar Datos de Preinscripción" tag="h3" className="font-bold text-lg mb-2" />
+                                    <EditableText id="protocolo-paso1-desc" defaultValue="Envía los datos del aspirante preinscrito junto con el soporte de pago a los siguientes correos:" tag="p" className="text-gray-600 mb-3" />
                                     <div className="space-y-1 text-sm">
                                         <p><strong>📧 Administración:</strong> <a href="mailto:administracion@lanewcuisine.com.ve" className="text-blue-600 hover:underline">administracion@lanewcuisine.com.ve</a></p>
                                         <p><strong>📧 Gerencia:</strong> <a href="mailto:gerencia.escuela@gmail.com" className="text-blue-600 hover:underline">gerencia.escuela@gmail.com</a></p>
@@ -722,15 +720,15 @@ export default function Brochure() {
                             <div className="flex items-start gap-4">
                                 <div className="bg-black text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
                                 <div>
-                                    <h3 className="font-bold text-lg mb-2">Formalizar Inscripción</h3>
+                                    <EditableText id="protocolo-paso2-title" defaultValue="Formalizar Inscripción" tag="h3" className="font-bold text-lg mb-2" />
                                     <div className="space-y-3 text-gray-600">
                                         <div className="pl-4 border-l-2 border-gray-200">
-                                            <p className="font-semibold text-black">2.1 Inscripción Administrativa</p>
-                                            <p className="text-sm">Administración valida el pago, registra en el sistema y remite listado a la gerencia de escuela.</p>
+                                            <EditableText id="protocolo-paso2-1-title" defaultValue="2.1 Inscripción Administrativa" tag="p" className="font-semibold text-black" />
+                                            <EditableText id="protocolo-paso2-1-desc" defaultValue="Administración valida el pago, registra en el sistema y remite listado a la gerencia de escuela." tag="p" className="text-sm" />
                                         </div>
                                         <div className="pl-4 border-l-2 border-gray-200">
-                                            <p className="font-semibold text-black">2.2 Inscripción Académica</p>
-                                            <p className="text-sm">Se cargan datos en el sistema, se crea el usuario dentro del sistema LNC y el aula virtual, se coloca en estatus activo después de completar el proceso de admisión.</p>
+                                            <EditableText id="protocolo-paso2-2-title" defaultValue="2.2 Inscripción Académica" tag="p" className="font-semibold text-black" />
+                                            <EditableText id="protocolo-paso2-2-desc" defaultValue="Se cargan datos en el sistema, se crea el usuario dentro del sistema LNC y el aula virtual, se coloca en estatus activo después de completar el proceso de admisión." tag="p" className="text-sm" multiline={true} />
                                         </div>
                                     </div>
                                 </div>
@@ -742,20 +740,20 @@ export default function Brochure() {
                             <div className="flex items-start gap-4">
                                 <div className="bg-black text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
                                 <div>
-                                    <h3 className="font-bold text-lg mb-2">Acudir a la Escuela</h3>
-                                    <p className="text-gray-600 mb-3">Los aspirantes deben acudir a la escuela para formalizar el proceso de admisión:</p>
+                                    <EditableText id="protocolo-paso3-title" defaultValue="Acudir a la Escuela" tag="h3" className="font-bold text-lg mb-2" />
+                                    <EditableText id="protocolo-paso3-desc" defaultValue="Los aspirantes deben acudir a la escuela para formalizar el proceso de admisión:" tag="p" className="text-gray-600 mb-3" />
                                     <div className="space-y-2 text-sm">
                                         <p className="flex items-center gap-2">
                                             <span className="text-lg">🕐</span>
-                                            <strong>Horario:</strong> Lunes a Viernes de 9:00 a 11:00 am y de 2:00 a 4:00 pm
+                                            <span><strong>Horario:</strong> <EditableText id="protocolo-horario" defaultValue="Lunes a Viernes de 9:00 a 11:00 am y de 2:00 a 4:00 pm" tag="span" /></span>
                                         </p>
                                         <p className="flex items-center gap-2">
                                             <span className="text-lg">📄</span>
-                                            <strong>Documentos:</strong> Copia de cédula de identidad
+                                            <span><strong>Documentos:</strong> <EditableText id="protocolo-documentos" defaultValue="Copia de cédula de identidad" tag="span" /></span>
                                         </p>
                                         <p className="flex items-center gap-2">
                                             <span className="text-lg">✍️</span>
-                                            <strong>Firmar:</strong> Planilla de inscripción
+                                            <span><strong>Firmar:</strong> <EditableText id="protocolo-firmar" defaultValue="Planilla de inscripción" tag="span" /></span>
                                         </p>
                                     </div>
                                 </div>
@@ -793,9 +791,13 @@ export default function Brochure() {
                         tag="h2"
                         className="text-5xl md:text-6xl font-serif font-bold mb-8"
                     />
-                    <p className="text-gray-600 mb-16 text-xl max-w-2xl mx-auto">
-                        Estamos listos para recibirte. Agenda una visita guiada a nuestras instalaciones o formaliza tu inscripción hoy mismo.
-                    </p>
+                    <EditableText
+                        id="footer-desc"
+                        defaultValue="Estamos listos para recibirte. Agenda una visita guiada a nuestras instalaciones o formaliza tu inscripción hoy mismo."
+                        tag="p"
+                        className="text-gray-600 mb-16 text-xl max-w-2xl mx-auto"
+                        multiline={true}
+                    />
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20 text-left md:text-center">
 
@@ -804,9 +806,9 @@ export default function Brochure() {
                             <div className="inline-block border-2 border-black p-4 mb-4 rounded-full group-hover:bg-black group-hover:text-white transition-colors">
                                 <Phone className="w-6 h-6" />
                             </div>
-                            <p className="font-bold text-sm uppercase tracking-widest mb-3">WhatsApp</p>
+                            <EditableText id="footer-whatsapp-label" defaultValue="WhatsApp" tag="p" className="font-bold text-sm uppercase tracking-widest mb-3" />
                             <div className="text-base text-gray-500 space-y-1">
-                                <p className="text-lg font-semibold text-black">+58 424-4635196</p>
+                                <EditableText id="footer-whatsapp-number" defaultValue="+58 424-4635196" tag="p" className="text-lg font-semibold text-black" />
                             </div>
                         </div>
 
@@ -815,12 +817,12 @@ export default function Brochure() {
                             <div className="inline-block border-2 border-black p-4 mb-4 rounded-full group-hover:bg-black group-hover:text-white transition-colors">
                                 <MapPin className="w-6 h-6" />
                             </div>
-                            <p className="font-bold text-sm uppercase tracking-widest mb-3">Visítanos</p>
+                            <EditableText id="footer-visitanos-label" defaultValue="Visítanos" tag="p" className="font-bold text-sm uppercase tracking-widest mb-3" />
                             <div className="text-base text-gray-500 max-w-xs mx-auto">
-                                <p className="font-semibold text-black mb-1">Urb. Sabana Larga</p>
-                                <p>Av. 107, Casa 128-11</p>
-                                <p>Frente al C.C. Mediterranean Plaza</p>
-                                <p>Valencia, Edo. Carabobo</p>
+                                <EditableText id="footer-direccion-1" defaultValue="Urb. Sabana Larga" tag="p" className="font-semibold text-black mb-1" />
+                                <EditableText id="footer-direccion-2" defaultValue="Av. 107, Casa 128-11" tag="p" />
+                                <EditableText id="footer-direccion-3" defaultValue="Frente al C.C. Mediterranean Plaza" tag="p" />
+                                <EditableText id="footer-direccion-4" defaultValue="Valencia, Edo. Carabobo" tag="p" />
                             </div>
                         </div>
 
@@ -829,10 +831,10 @@ export default function Brochure() {
                             <div className="inline-block border-2 border-black p-4 mb-4 rounded-full group-hover:bg-black group-hover:text-white transition-colors">
                                 <Mail className="w-6 h-6" />
                             </div>
-                            <p className="font-bold text-sm uppercase tracking-widest mb-3">Escríbenos</p>
-                            <p className="text-base text-gray-500 mb-2">info@lanewcuisine.com</p>
+                            <EditableText id="footer-email-label" defaultValue="Escríbenos" tag="p" className="font-bold text-sm uppercase tracking-widest mb-3" />
+                            <EditableText id="footer-email" defaultValue="info@lanewcuisine.com" tag="p" className="text-base text-gray-500 mb-2" />
                             <div className="border-t border-gray-200 w-16 mx-auto my-2"></div>
-                            <p className="text-xs text-gray-400">Reg. Ministerio de Educación No. R-0129-08</p>
+                            <EditableText id="footer-registro" defaultValue="Reg. Ministerio de Educación No. R-0129-08" tag="p" className="text-xs text-gray-400" />
                         </div>
                     </div>
 
