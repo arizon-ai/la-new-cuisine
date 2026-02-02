@@ -36,19 +36,125 @@ function Navigation() {
     return null;
   }
 
-  const menuItems = [
+  // Main menu items (reduced)
+  const mainMenuItems = [
     { path: '/', label: 'Home' },
     { path: '/quienes-somos', label: 'Quiénes Somos' },
     { path: '/oferta', label: 'Oferta Académica' },
-    { path: '/talleres', label: 'Talleres' },
-    { path: '/flyer-cocina', label: 'Cocina Internacional' },
+  ];
+
+  // Programas dropdown items
+  const programasItems = [
+    { path: '/flyer-cocina', label: 'Chef Cocina Internacional' },
     { path: '/flyer-pasteleria', label: 'Chef Pastelero' },
     { path: '/flyer-panaderia', label: 'Chef Panadero' },
-    { path: '/flyer-gerencia', label: 'Gerencia Gastronómica' },
+    { path: '/flyer-gerencia', label: 'Diplomado Gerencia' },
     { path: '/flyer-asistente-chef', label: 'Asistente de Chef' },
-    { path: '/flyer-cocina-ninos', label: 'Cocina Niños' },
+    { path: '/flyer-cocina-ninos', label: 'Junior Chef' },
+  ];
+
+  // Right side menu items
+  const rightMenuItems = [
+    { path: '/talleres', label: 'Talleres' },
     { path: '/presentacion', label: 'Presentación' },
   ];
+
+  // Check if current path is in programas
+  const isInProgramas = programasItems.some(item => location.pathname === item.path);
+
+  // Dropdown component
+  const ProgramasDropdown = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    return (
+      <div
+        style={{ position: 'relative' }}
+        onMouseEnter={() => setIsOpen(true)}
+        onMouseLeave={() => setIsOpen(false)}
+      >
+        <button
+          style={{
+            padding: '10px 16px',
+            backgroundColor: isInProgramas ? 'rgba(0, 0, 0, 0.9)' : 'transparent',
+            color: isInProgramas ? '#fff' : '#333',
+            textDecoration: 'none',
+            fontWeight: 600,
+            fontSize: '12px',
+            letterSpacing: '0.01em',
+            transition: 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
+            borderRadius: '0',
+            whiteSpace: 'nowrap',
+            border: 'none',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '4px',
+            fontFamily: "'Inter', sans-serif",
+          }}
+        >
+          Programas
+          <span style={{
+            fontSize: '8px',
+            transition: 'transform 0.2s',
+            transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)'
+          }}>▼</span>
+        </button>
+
+        {/* Dropdown menu */}
+        <div
+          style={{
+            position: 'absolute',
+            top: '100%',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            marginTop: '8px',
+            background: 'rgba(255, 255, 255, 0.95)',
+            backdropFilter: 'blur(20px)',
+            WebkitBackdropFilter: 'blur(20px)',
+            borderRadius: '0',
+            padding: '8px 0',
+            minWidth: '220px',
+            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
+            border: '1px solid rgba(0, 0, 0, 0.08)',
+            opacity: isOpen ? 1 : 0,
+            visibility: isOpen ? 'visible' : 'hidden',
+            transform: isOpen ? 'translateX(-50%) translateY(0)' : 'translateX(-50%) translateY(-10px)',
+            transition: 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
+          }}
+        >
+          {programasItems.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              style={{
+                display: 'block',
+                padding: '10px 20px',
+                backgroundColor: location.pathname === item.path ? 'rgba(0, 0, 0, 0.9)' : 'transparent',
+                color: location.pathname === item.path ? '#fff' : '#333',
+                textDecoration: 'none',
+                fontWeight: 500,
+                fontSize: '13px',
+                transition: 'all 0.2s ease',
+                whiteSpace: 'nowrap',
+              }}
+              onMouseEnter={(e) => {
+                if (location.pathname !== item.path) {
+                  e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.05)';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (location.pathname !== item.path) {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }
+              }}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    );
+  };
 
   return (
     <>
@@ -107,7 +213,45 @@ function Navigation() {
           marginRight: '6px',
         }} />
 
-        {menuItems.map((item) => (
+        {/* Main menu items */}
+        {mainMenuItems.map((item) => (
+          <Link
+            key={item.path}
+            to={item.path}
+            style={{
+              padding: '10px 16px',
+              backgroundColor: location.pathname === item.path
+                ? 'rgba(0, 0, 0, 0.9)'
+                : 'transparent',
+              color: location.pathname === item.path ? '#fff' : '#333',
+              textDecoration: 'none',
+              fontWeight: 600,
+              fontSize: '12px',
+              letterSpacing: '0.01em',
+              transition: 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
+              borderRadius: '0',
+              whiteSpace: 'nowrap',
+            }}
+            onMouseEnter={(e) => {
+              if (location.pathname !== item.path) {
+                e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.08)';
+              }
+            }}
+            onMouseLeave={(e) => {
+              if (location.pathname !== item.path) {
+                e.currentTarget.style.backgroundColor = 'transparent';
+              }
+            }}
+          >
+            {item.label}
+          </Link>
+        ))}
+
+        {/* Programas Dropdown */}
+        <ProgramasDropdown />
+
+        {/* Right side menu items */}
+        {rightMenuItems.map((item) => (
           <Link
             key={item.path}
             to={item.path}
