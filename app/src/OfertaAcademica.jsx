@@ -192,11 +192,11 @@ export default function OfertaAcademica() {
                                 <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
                             </div>
                             <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
-                                <EditableText id="oa-cocina-mens" defaultValue="140 €" tag="div" style={{ fontSize: '24px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="oa-cocina-mens" defaultValue="130 €" tag="div" style={{ fontSize: '24px', fontWeight: 700, color: '#000' }} />
                                 <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Mensualidad</div>
                             </div>
                             <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
-                                <EditableText id="oa-cocina-kit" defaultValue="130 €" tag="div" style={{ fontSize: '24px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="oa-cocina-kit" defaultValue="100 €" tag="div" style={{ fontSize: '24px', fontWeight: 700, color: '#000' }} />
                                 <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Kit de Estudio</div>
                             </div>
                         </div>
@@ -275,6 +275,16 @@ export default function OfertaAcademica() {
                             </div>
                             <div style={{ fontSize: '16px', marginTop: '5px', color: '#333', lineHeight: 1.6 }}>
                                 Lunes 6:00 - 9:30 pm | <strong>Inicio: 23 Feb</strong>
+                            </div>
+                        </li>
+                        {/* Marzo - Viernes Mañana */}
+                        <li style={{ marginBottom: '20px', borderBottom: '1px solid #eee', paddingBottom: '15px' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                <strong style={{ color: '#000', fontSize: '20px' }}>VIERNES</strong>
+                                <Tag variant="outline">ESTIMADO</Tag>
+                            </div>
+                            <div style={{ fontSize: '16px', marginTop: '5px', color: '#333', lineHeight: 1.6 }}>
+                                8:00 - 12:30 pm (Mañana) | <strong>Inicio: 6 Mar</strong>
                             </div>
                         </li>
                     </ul>
@@ -451,6 +461,69 @@ export default function OfertaAcademica() {
                     alt="Gerente de restaurante con tablet"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
+            </div>
+
+            {/* Slide 6: Diplomado Online */}
+            <div className="slide-container" style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                padding: 0,
+                alignItems: 'center',
+                backgroundColor: '#1a1a2e',
+                minHeight: '500px',
+                width: '100%',
+                maxWidth: '1280px',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5)',
+                position: 'relative',
+                overflow: 'hidden'
+            }} id="slide6">
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '12px', backgroundColor: '#4a90d9', zIndex: 2 }} />
+
+                <div className="slide-content" style={{ padding: '80px', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '15px' }}>
+                        <Tag variant="black">🆕 NUEVO PROGRAMA</Tag>
+                        <Tag variant="outline">PROMOCIÓN</Tag>
+                    </div>
+                    <EditableText id="oa-diplo-online-title" defaultValue="DIPLOMADO ONLINE" tag="h2" style={{ fontSize: '40px', fontWeight: 700, marginBottom: '10px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase', color: '#fff', letterSpacing: '-0.5px' }} />
+                    <EditableText id="oa-diplo-online-subtitle" defaultValue="Gerencia Gastronómica" tag="p" style={{ fontSize: '24px', marginBottom: '20px', color: '#4a90d9', fontWeight: 500 }} />
+                    <EditableText id="oa-diplo-online-desc" defaultValue="Formación 100% virtual en gestión estratégica de negocios gastronómicos. Accede desde cualquier lugar con clases en vivo y material digital." tag="p" style={{ fontSize: '16px', marginBottom: '30px', color: '#ccc', lineHeight: 1.7 }} />
+
+                    <div style={{ background: 'rgba(255,255,255,0.1)', padding: '25px', border: '1px solid rgba(255,255,255,0.2)', marginBottom: '20px', borderRadius: '8px' }}>
+                        <strong style={{ fontSize: '18px', display: 'block', textTransform: 'uppercase', color: '#fff' }}>💻 Modalidad 100% Online</strong>
+                        <span style={{ fontSize: '14px', color: '#aaa' }}>Clases en vivo + Material digital + Certificación</span><br />
+                        <div style={{ marginTop: '15px' }}>
+                            <Tag variant="black">DURACIÓN: 4 MESES</Tag>
+                        </div>
+                    </div>
+
+                    {/* Inversión Diplomado Online */}
+                    <div style={{ marginTop: '15px', backgroundColor: 'rgba(74, 144, 217, 0.15)', padding: '20px', border: '2px solid #4a90d9', borderRadius: '8px' }}>
+                        <h4 style={{ margin: '0 0 15px 0', fontSize: '14px', textTransform: 'uppercase', fontWeight: 700, letterSpacing: '1px', color: '#4a90d9' }}>
+                            🎉 PROMOCIÓN ESPECIAL
+                        </h4>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
+                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '4px' }}>
+                                <EditableText id="oa-diplo-online-insc" defaultValue="30 €" tag="div" style={{ fontSize: '28px', fontWeight: 700, color: '#4a90d9' }} />
+                                <div style={{ fontSize: '11px', color: '#aaa', textTransform: 'uppercase' }}>Inscripción</div>
+                            </div>
+                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '4px' }}>
+                                <EditableText id="oa-diplo-online-mens" defaultValue="80 €" tag="div" style={{ fontSize: '28px', fontWeight: 700, color: '#4a90d9' }} />
+                                <div style={{ fontSize: '11px', color: '#aaa', textTransform: 'uppercase' }}>Mensualidad (4 cuotas)</div>
+                            </div>
+                        </div>
+                        <p style={{ fontSize: '12px', color: '#888', marginTop: '15px', marginBottom: 0, textAlign: 'center' }}>
+                            Inversión Total: 350$ (30€ inscripción + 4 cuotas de 80€) • Sin kit requerido
+                        </p>
+                    </div>
+                </div>
+
+                <div style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', padding: '60px' }}>
+                    <div style={{ textAlign: 'center', color: '#fff' }}>
+                        <div style={{ fontSize: '80px', marginBottom: '20px' }}>🌐</div>
+                        <p style={{ fontSize: '24px', fontWeight: 700, marginBottom: '10px' }}>100% Online</p>
+                        <p style={{ fontSize: '14px', color: '#aaa' }}>Estudia desde cualquier lugar</p>
+                    </div>
+                </div>
             </div>
         </div>
     );

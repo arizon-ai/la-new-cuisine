@@ -488,11 +488,11 @@ export default function FlyerCocina() {
                                 <EditableText id="flyer-cocina-label-inscripcion" defaultValue="Inscripción" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <EditableText id="flyer-cocina-precio-mensualidad" defaultValue="160 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="flyer-cocina-precio-mensualidad" defaultValue="130 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
                                 <EditableText id="flyer-cocina-label-mensualidad" defaultValue="Mensualidad" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <EditableText id="flyer-cocina-precio-kit" defaultValue="90 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="flyer-cocina-precio-kit" defaultValue="100 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
                                 <EditableText id="flyer-cocina-label-kit" defaultValue="Kit Estudio" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                         </div>

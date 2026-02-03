@@ -22,8 +22,8 @@ const courses = [
             ],
             investment: [
                 { label: 'Inscripción Básico', price: '50 €' },
-                { label: 'Mensualidad Básico', price: '140 €' },
-                { label: 'Kit de Estudio', price: '130 €', note: '*Incluye filipina, gorro, delantal, set de 2 cuchillos (puntilla y cebollero). Financiamiento 2 cuotas' }
+                { label: 'Mensualidad Básico', price: '130 €' },
+                { label: 'Kit de Estudio', price: '100 €', note: '*Incluye filipina, gorro, delantal, set de 2 cuchillos (puntilla y cebollero). Financiamiento 2 cuotas' }
             ]
         },
         syllabusBasico: [
@@ -220,6 +220,41 @@ const courses = [
             'Manejo y Control Gastronómico',
             'Educación Gastronómica en Higiene y Salud Ocupacional',
             'Manipulación de Alimentos',
+            'Plan de Negocios Final'
+        ]
+    },
+    {
+        id: 'diplomado-online',
+        title: 'Diplomado Online en Gerencia Gastronómica',
+        subtitle: 'ONLINE • PROMOCIÓN',
+        image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80',
+        description: 'Formación 100% virtual en gestión estratégica de negocios gastronómicos. Accede desde cualquier lugar con clases en vivo y material digital.',
+        details: {
+            duration: '4 Meses',
+            start: 'Próximamente',
+            schedule: [
+                'Clases en vivo online',
+                'Material digital disponible 24/7'
+            ],
+            investment: [
+                { label: 'Inscripción', price: '30 €' },
+                { label: 'Mensualidad (4 cuotas)', price: '80 €' },
+                { label: 'Kit', price: 'N/A' }
+            ]
+        },
+        syllabusBasico: [
+            'Emprendimiento del Modelo de Negocios Gastronómico',
+            'Lienzo Canvas',
+            'Marketing Gastronómico Digital'
+        ],
+        syllabusIntermedio: [
+            'Neuromarketing y Neurogastronomía',
+            'Capital Humano, Liderazgo y Coaching Organizacional',
+            'Ingeniería del Menú y Catering'
+        ],
+        syllabusAvanzado: [
+            'Manejo y Control Gastronómico',
+            'Gestión de Redes Sociales para Restaurantes',
             'Plan de Negocios Final'
         ]
     }
