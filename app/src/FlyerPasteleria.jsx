@@ -576,15 +576,15 @@ export default function FlyerPasteleria() {
                                 <EditableText id="flyer-pasteleria-label-inscripcion" defaultValue="Inscripción" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <EditableText id="flyer-pasteleria-precio-mensualidad" defaultValue="140 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
-                                <EditableText id="flyer-pasteleria-label-mensualidad" defaultValue="Mensualidad" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
+                                <EditableText id="flyer-pasteleria-precio-mensualidad" defaultValue="130 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="flyer-pasteleria-label-mensualidad" defaultValue="Mens. Básico" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                             <div style={{ textAlign: 'center', padding: '12px', backgroundColor: '#fff', border: '1px solid #000' }}>
-                                <EditableText id="flyer-pasteleria-precio-kit" defaultValue="90 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="flyer-pasteleria-precio-kit" defaultValue="100 €" tag="div" style={{ fontSize: '20px', fontWeight: 700, color: '#000' }} />
                                 <EditableText id="flyer-pasteleria-label-kit" defaultValue="Kit Estudio" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                         </div>
-                        <EditableText id="flyer-pasteleria-kit-nota" defaultValue="*Kit: filipina, gorro, delantal. Financiamiento disponible en 2 cuotas." tag="p" style={{ fontSize: '10px', color: '#666', marginTop: '10px', marginBottom: 0 }} />
+                        <EditableText id="flyer-pasteleria-kit-nota" defaultValue="*Mensualidad Intermedio/Avanzado: 150€. Kit: filipina, gorro, delantal. Financiamiento 2 cuotas." tag="p" style={{ fontSize: '10px', color: '#666', marginTop: '10px', marginBottom: 0 }} />
                     </div>
                 </div>
 

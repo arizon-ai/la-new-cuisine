@@ -23,7 +23,7 @@ const courses = [
             investment: [
                 { label: 'Inscripción Básico', price: '50 €' },
                 { label: 'Mensualidad Básico', price: '130 €' },
-                { label: 'Kit de Estudio', price: '100 €', note: '*Incluye filipina, gorro, delantal, set de 2 cuchillos (puntilla y cebollero). Financiamiento 2 cuotas' }
+                { label: 'Kit de Estudio', price: '100 €', note: '*Mens. Int/Avanzado: 150€. Incluye filipina, gorro, delantal, set cuchillos. Financiamiento 2 cuotas' }
             ]
         },
         syllabusBasico: [
@@ -82,8 +82,8 @@ const courses = [
             ],
             investment: [
                 { label: 'Inscripción Básico', price: '50 €' },
-                { label: 'Mensualidad Básico', price: '140 €' },
-                { label: 'Kit de Estudio', price: '90 €', note: '*Incluye filipina, gorro, delantal. Financiamiento 2 cuotas' }
+                { label: 'Mensualidad Básico', price: '130 €' },
+                { label: 'Kit de Estudio', price: '100 €', note: '*Mens. Avanzado: 150€. Incluye filipina, gorro, delantal. Financiamiento 2 cuotas' }
             ]
         },
         syllabusBasico: [
@@ -138,8 +138,8 @@ const courses = [
             ],
             investment: [
                 { label: 'Inscripción Básico', price: '50 €' },
-                { label: 'Mensualidad Básico', price: '140 €' },
-                { label: 'Kit de Estudio', price: '90 €', note: '*Incluye filipina, gorro, delantal. Financiamiento 2 cuotas' }
+                { label: 'Mensualidad Básico', price: '130 €' },
+                { label: 'Kit de Estudio', price: '100 €', note: '*Mens. Int/Avanzado: 150€. Incluye filipina, gorro, delantal. Financiamiento 2 cuotas' }
             ]
         },
         syllabusBasico: [

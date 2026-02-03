@@ -201,7 +201,7 @@ export default function OfertaAcademica() {
                             </div>
                         </div>
                         <p style={{ fontSize: '11px', color: '#666', marginTop: '10px', marginBottom: 0 }}>
-                            *Kit incluye: filipina, gorro, delantal, set de 2 cuchillos (puntilla y cebollero). Financiamiento 2 cuotas.
+                            *Mensualidad Intermedio/Avanzado: 150€. Kit incluye: filipina, gorro, delantal, set de 2 cuchillos. Financiamiento 2 cuotas.
                         </p>
                     </div>
 
@@ -300,16 +300,16 @@ export default function OfertaAcademica() {
                                 <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
                             </div>
                             <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
-                                <EditableText id="oa-past-mens" defaultValue="140 €" tag="div" style={{ fontSize: '24px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="oa-past-mens" defaultValue="130 €" tag="div" style={{ fontSize: '24px', fontWeight: 700, color: '#000' }} />
                                 <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Mensualidad</div>
                             </div>
                             <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
-                                <EditableText id="oa-past-kit" defaultValue="90 €" tag="div" style={{ fontSize: '24px', fontWeight: 700, color: '#000' }} />
+                                <EditableText id="oa-past-kit" defaultValue="100 €" tag="div" style={{ fontSize: '24px', fontWeight: 700, color: '#000' }} />
                                 <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Kit de Estudio</div>
                             </div>
                         </div>
                         <p style={{ fontSize: '11px', color: '#666', marginTop: '10px', marginBottom: 0 }}>
-                            *Kit incluye: filipina, gorro, delantal. Financiamiento 2 cuotas.
+                            *Mensualidad Intermedio/Avanzado: 150€. Kit incluye: filipina, gorro, delantal. Financiamiento 2 cuotas.
                         </p>
                     </div>
                 </div>

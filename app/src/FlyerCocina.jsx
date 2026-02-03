@@ -496,7 +496,7 @@ export default function FlyerCocina() {
                                 <EditableText id="flyer-cocina-label-kit" defaultValue="Kit Estudio" tag="div" style={{ fontSize: '10px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                         </div>
-                        <EditableText id="flyer-cocina-kit-nota" defaultValue="*Kit: filipina, gorro, delantal. Financiamiento disponible en 2 cuotas." tag="p" style={{ fontSize: '10px', color: '#666', marginTop: '10px', marginBottom: 0 }} />
+                        <EditableText id="flyer-cocina-kit-nota" defaultValue="*Mensualidad Intermedio/Avanzado: 150€. Kit: filipina, gorro, delantal, set cuchillos. Financiamiento 2 cuotas." tag="p" style={{ fontSize: '10px', color: '#666', marginTop: '10px', marginBottom: 0 }} />
                     </div>
                 </div>
 
