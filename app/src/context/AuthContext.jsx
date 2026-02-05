@@ -1,10 +1,18 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 
-// Auth configuration - Change these credentials as needed
-const ADMIN_CREDENTIALS = {
-    username: 'admin',
-    password: 'Lnc2026!'
-};
+// Auth configuration - Multiple users with same permissions
+const ADMIN_CREDENTIALS = [
+    {
+        username: 'admin',
+        password: 'Lnc2026!',
+        role: 'admin'
+    },
+    {
+        username: 'direccion',
+        password: 'Dir2026Lnc!',
+        role: 'admin'  // Same permissions as admin
+    }
+];
 
 const AUTH_KEY = 'lnc_admin_auth';
 const EDIT_MODE_KEY = 'lnc_edit_mode';
@@ -30,7 +38,11 @@ export function AuthProvider({ children }) {
 
     // Login function
     const login = (username, password) => {
-        if (username === ADMIN_CREDENTIALS.username && password === ADMIN_CREDENTIALS.password) {
+        const user = ADMIN_CREDENTIALS.find(
+            cred => cred.username === username && cred.password === password
+        );
+
+        if (user) {
             setIsAuthenticated(true);
             localStorage.setItem(AUTH_KEY, 'true');
             return { success: true };
