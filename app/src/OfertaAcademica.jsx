@@ -469,7 +469,7 @@ export default function OfertaAcademica() {
                 gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
                 padding: 0,
                 alignItems: 'center',
-                backgroundColor: '#1a1a2e',
+                backgroundColor: '#fff',
                 minHeight: '500px',
                 width: '100%',
                 maxWidth: '1280px',
@@ -477,51 +477,51 @@ export default function OfertaAcademica() {
                 position: 'relative',
                 overflow: 'hidden'
             }} id="slide6">
-                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '12px', backgroundColor: '#4a90d9', zIndex: 2 }} />
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '12px', backgroundColor: '#000', zIndex: 2 }} />
 
                 <div className="slide-content" style={{ padding: '80px', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '15px' }}>
                         <Tag variant="black">🆕 NUEVO PROGRAMA</Tag>
                         <Tag variant="outline">PROMOCIÓN</Tag>
                     </div>
-                    <EditableText id="oa-diplo-online-title" defaultValue="DIPLOMADO ONLINE" tag="h2" style={{ fontSize: '40px', fontWeight: 700, marginBottom: '10px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase', color: '#fff', letterSpacing: '-0.5px' }} />
-                    <EditableText id="oa-diplo-online-subtitle" defaultValue="Gerencia Gastronómica" tag="p" style={{ fontSize: '24px', marginBottom: '20px', color: '#4a90d9', fontWeight: 500 }} />
-                    <EditableText id="oa-diplo-online-desc" defaultValue="Formación 100% virtual en gestión estratégica de negocios gastronómicos. Accede desde cualquier lugar con clases en vivo y material digital." tag="p" style={{ fontSize: '16px', marginBottom: '30px', color: '#ccc', lineHeight: 1.7 }} />
+                    <EditableText id="oa-diplo-online-title" defaultValue="DIPLOMADO ONLINE" tag="h2" style={{ fontSize: '40px', fontWeight: 700, marginBottom: '10px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase', color: '#000', letterSpacing: '-0.5px' }} />
+                    <EditableText id="oa-diplo-online-subtitle" defaultValue="Gerencia Gastronómica" tag="p" style={{ fontSize: '24px', marginBottom: '20px', color: '#333', fontWeight: 500, fontStyle: 'italic' }} />
+                    <EditableText id="oa-diplo-online-desc" defaultValue="Formación 100% virtual en gestión estratégica de negocios gastronómicos. Accede desde cualquier lugar con clases en vivo y material digital." tag="p" style={{ fontSize: '16px', marginBottom: '30px', color: '#555', lineHeight: 1.7 }} />
 
-                    <div style={{ background: 'rgba(255,255,255,0.1)', padding: '25px', border: '1px solid rgba(255,255,255,0.2)', marginBottom: '20px', borderRadius: '8px' }}>
-                        <strong style={{ fontSize: '18px', display: 'block', textTransform: 'uppercase', color: '#fff' }}>💻 Modalidad 100% Online</strong>
-                        <span style={{ fontSize: '14px', color: '#aaa' }}>Clases en vivo + Material digital + Certificación</span><br />
+                    <div style={{ background: 'white', padding: '25px', border: '1px solid #000', marginBottom: '20px', boxShadow: '5px 5px 0px #000' }}>
+                        <strong style={{ fontSize: '18px', display: 'block', textTransform: 'uppercase', color: '#000' }}>💻 Modalidad 100% Online</strong>
+                        <span style={{ fontSize: '14px', color: '#555' }}>Clases en vivo + Material digital + Certificación</span><br />
                         <div style={{ marginTop: '15px' }}>
                             <Tag variant="black">DURACIÓN: 4 MESES</Tag>
                         </div>
                     </div>
 
                     {/* Inversión Diplomado Online */}
-                    <div style={{ marginTop: '15px', backgroundColor: 'rgba(74, 144, 217, 0.15)', padding: '20px', border: '2px solid #4a90d9', borderRadius: '8px' }}>
-                        <h4 style={{ margin: '0 0 15px 0', fontSize: '14px', textTransform: 'uppercase', fontWeight: 700, letterSpacing: '1px', color: '#4a90d9' }}>
+                    <div style={{ marginTop: '15px', backgroundColor: '#f9f9f9', padding: '20px', border: '1px solid #000' }}>
+                        <h4 style={{ margin: '0 0 15px 0', fontSize: '14px', textTransform: 'uppercase', fontWeight: 700, letterSpacing: '1px', color: '#000' }}>
                             🎉 PROMOCIÓN ESPECIAL
                         </h4>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
-                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '4px' }}>
-                                <EditableText id="oa-diplo-online-insc" defaultValue="30 €" tag="div" style={{ fontSize: '28px', fontWeight: 700, color: '#4a90d9' }} />
-                                <div style={{ fontSize: '11px', color: '#aaa', textTransform: 'uppercase' }}>Inscripción</div>
+                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
+                                <EditableText id="oa-diplo-online-insc" defaultValue="30 €" tag="div" style={{ fontSize: '28px', fontWeight: 700, color: '#000' }} />
+                                <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
                             </div>
-                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '4px' }}>
-                                <EditableText id="oa-diplo-online-mens" defaultValue="80 €" tag="div" style={{ fontSize: '28px', fontWeight: 700, color: '#4a90d9' }} />
-                                <div style={{ fontSize: '11px', color: '#aaa', textTransform: 'uppercase' }}>Mensualidad (4 cuotas)</div>
+                            <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
+                                <EditableText id="oa-diplo-online-mens" defaultValue="80 €" tag="div" style={{ fontSize: '28px', fontWeight: 700, color: '#000' }} />
+                                <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Mensualidad (4 cuotas)</div>
                             </div>
                         </div>
-                        <p style={{ fontSize: '12px', color: '#888', marginTop: '15px', marginBottom: 0, textAlign: 'center' }}>
+                        <p style={{ fontSize: '12px', color: '#666', marginTop: '15px', marginBottom: 0, textAlign: 'center' }}>
                             Inversión Total: 350$ (30€ inscripción + 4 cuotas de 80€) • Sin kit requerido
                         </p>
                     </div>
                 </div>
 
-                <div style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', padding: '60px' }}>
-                    <div style={{ textAlign: 'center', color: '#fff' }}>
+                <div style={{ background: '#f4f4f4', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', padding: '60px', borderLeft: '1px solid #eee' }}>
+                    <div style={{ textAlign: 'center', color: '#000' }}>
                         <div style={{ fontSize: '80px', marginBottom: '20px' }}>🌐</div>
-                        <p style={{ fontSize: '24px', fontWeight: 700, marginBottom: '10px' }}>100% Online</p>
-                        <p style={{ fontSize: '14px', color: '#aaa' }}>Estudia desde cualquier lugar</p>
+                        <p style={{ fontSize: '24px', fontWeight: 700, marginBottom: '10px', color: '#000' }}>100% Online</p>
+                        <p style={{ fontSize: '14px', color: '#666' }}>Estudia desde cualquier lugar</p>
                     </div>
                 </div>
             </div>

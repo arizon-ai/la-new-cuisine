@@ -12,6 +12,7 @@ import FlyerCocinaNinos from './FlyerCocinaNinos'
 import PresentacionBrochure from './PresentacionBrochure'
 import QuienesSomos from './QuienesSomos'
 import Talleres from './Talleres'
+import CarteleraMarzo from './CarteleraMarzo'
 import AdminLogin from './AdminLogin'
 import AdminToolbar from './components/AdminToolbar'
 import { useAuth } from './context/AuthContext'
@@ -56,6 +57,7 @@ function Navigation() {
   // Right side menu items
   const rightMenuItems = [
     { path: '/talleres', label: 'Talleres' },
+    { path: '/cartelera-marzo', label: 'Marzo 2026' },
     { path: '/presentacion', label: 'Presentación' },
   ];
 
@@ -480,6 +482,7 @@ function App() {
         <Route path="/quienes-somos" element={<QuienesSomos />} />
         <Route path="/oferta" element={<OfertaAcademica />} />
         <Route path="/talleres" element={<Talleres />} />
+        <Route path="/cartelera-marzo" element={<CarteleraMarzo />} />
         <Route path="/flyer-cocina" element={<FlyerCocina />} />
         <Route path="/flyer-pasteleria" element={<FlyerPasteleria />} />
         <Route path="/flyer-panaderia" element={<FlyerPanaderia />} />
