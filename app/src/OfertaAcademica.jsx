@@ -152,31 +152,31 @@ export default function OfertaAcademica() {
                         <tbody>
                             <tr>
                                 <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>
-                                    <strong>Lunes</strong><br /><span style={{ fontSize: '12px', color: '#666' }}>Cód: CR 1655</span>
+                                    <strong>Viernes</strong><br /><span style={{ fontSize: '12px', color: '#666' }}>Turno Mañana</span>
                                 </td>
-                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>2:00 - 5:30 pm</td>
-                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}><Tag variant="outline">2 FEB</Tag></td>
-                            </tr>
-                            <tr>
-                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>
-                                    <strong>Martes</strong><br /><span style={{ fontSize: '12px', color: '#666' }}>Cód: CR 1656</span>
-                                </td>
-                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>2:00 - 5:30 pm</td>
-                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}><Tag variant="outline">27 ENE</Tag></td>
+                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>8:00 - 12:00 pm</td>
+                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}><Tag variant="outline">ÚLT. SEM. MAR</Tag></td>
                             </tr>
                             <tr>
                                 <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>
                                     <strong>Sábado</strong><br /><span style={{ fontSize: '12px', color: '#666' }}>Turno Mañana</span>
                                 </td>
-                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>8:00 - 12:30 pm</td>
-                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}><Tag variant="gray">Fecha Est.</Tag></td>
+                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>8:00 - 12:00 pm</td>
+                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}><Tag variant="outline">ÚLT. SEM. MAR</Tag></td>
+                            </tr>
+                            <tr>
+                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>
+                                    <strong>Sábado</strong><br /><span style={{ fontSize: '12px', color: '#666' }}>Turno Mañana</span>
+                                </td>
+                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>8:00 - 12:00 pm</td>
+                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}><Tag variant="outline">ÚLT. SEM. MAR</Tag></td>
                             </tr>
                             <tr>
                                 <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>
                                     <strong>Lunes Nocturno</strong><br /><span style={{ fontSize: '12px', color: '#666' }}>Turno Noche</span>
                                 </td>
-                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>6:00 - 9:30 pm</td>
-                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}><Tag variant="gray">Fecha Est.</Tag></td>
+                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>6:30 - 11:00 pm</td>
+                                <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}><Tag variant="outline">ÚLT. SEM. MAR</Tag></td>
                             </tr>
                         </tbody>
                     </table>
@@ -244,49 +244,40 @@ export default function OfertaAcademica() {
                     <EditableText id="oa-past-title" defaultValue="PASTELERÍA: INICIOS" tag="h2" style={{ fontSize: '38px', fontWeight: 700, marginBottom: '20px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase', color: '#000', letterSpacing: '-0.5px' }} />
 
                     <ul style={{ listStyle: 'none', padding: 0, width: '100%' }}>
-                        {/* Febrero - Mañana/Tarde */}
+                        {/* Marzo - Jueves */}
                         <li style={{ marginBottom: '20px', borderBottom: '1px solid #eee', paddingBottom: '15px' }}>
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                <strong style={{ color: '#000', fontSize: '20px' }}>FEBRERO</strong>
-                                <Tag variant="outline">ESTIMADO</Tag>
+                                <strong style={{ color: '#000', fontSize: '20px' }}>JUEVES</strong>
+                                <Tag variant="outline">ÚLT. SEM. MARZO</Tag>
                             </div>
                             <div style={{ fontSize: '16px', marginTop: '5px', color: '#333', lineHeight: 1.6 }}>
-                                Mié/Jue 8:00 - 12:30 pm | <strong>Inicio: 25-26 Feb</strong>
+                                8:00 - 12:00 pm | <strong>Mañana</strong>
                             </div>
                             <div style={{ fontSize: '14px', marginTop: '5px', color: '#555', lineHeight: 1.6 }}>
-                                Mié/Jue 2:00 - 5:30 pm (Turno Tarde)
+                                2:00 - 6:00 pm (Turno Tarde)
                             </div>
                         </li>
-                        {/* Febrero - Sábado */}
-                        <li style={{ marginBottom: '20px', borderBottom: '1px solid #eee', paddingBottom: '15px' }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                <strong style={{ color: '#000', fontSize: '20px' }}>SÁBADO</strong>
-                                <Tag variant="outline">ESTIMADO</Tag>
-                            </div>
-                            <div style={{ fontSize: '16px', marginTop: '5px', color: '#333', lineHeight: 1.6 }}>
-                                8:00 - 12:30 pm | <strong>Inicio: 28 Feb</strong>
-                            </div>
-                        </li>
-                        {/* Febrero - Nocturno */}
-                        <li style={{ marginBottom: '20px', borderBottom: '1px solid #eee', paddingBottom: '15px' }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                <strong style={{ color: '#000', fontSize: '20px' }}>NOCTURNO</strong>
-                                <Tag variant="outline">ESTIMADO</Tag>
-                            </div>
-                            <div style={{ fontSize: '16px', marginTop: '5px', color: '#333', lineHeight: 1.6 }}>
-                                Lunes 6:00 - 9:30 pm | <strong>Inicio: 23 Feb</strong>
-                            </div>
-                        </li>
-                        {/* Marzo - Viernes Mañana */}
+                        {/* Marzo - Viernes */}
                         <li style={{ marginBottom: '20px', borderBottom: '1px solid #eee', paddingBottom: '15px' }}>
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                 <strong style={{ color: '#000', fontSize: '20px' }}>VIERNES</strong>
-                                <Tag variant="outline">ESTIMADO</Tag>
+                                <Tag variant="outline">ÚLT. SEM. MARZO</Tag>
                             </div>
                             <div style={{ fontSize: '16px', marginTop: '5px', color: '#333', lineHeight: 1.6 }}>
-                                8:00 - 12:30 pm (Mañana) | <strong>Inicio: 6 Mar</strong>
+                                8:00 - 12:30 pm | <strong>Mañana</strong>
                             </div>
                         </li>
+                        {/* Marzo - Sábado */}
+                        <li style={{ marginBottom: '20px', borderBottom: '1px solid #eee', paddingBottom: '15px' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                <strong style={{ color: '#000', fontSize: '20px' }}>SÁBADO</strong>
+                                <Tag variant="outline">ÚLT. SEM. MARZO</Tag>
+                            </div>
+                            <div style={{ fontSize: '16px', marginTop: '5px', color: '#333', lineHeight: 1.6 }}>
+                                8:00 - 12:30 pm | <strong>Mañana</strong>
+                            </div>
+                        </li>
+
                     </ul>
 
                     {/* Inversión Pastelería */}
@@ -371,7 +362,7 @@ export default function OfertaAcademica() {
                             <p style={{ color: '#666', fontStyle: 'italic', lineHeight: 1.6 }}>Transforma tu pasión por el pan en una profesión.</p>
 
                             <div style={{ background: '#f4f4f4', padding: '15px', borderLeft: '3px solid #000', marginTop: '20px' }}>
-                                <strong>Inicio:</strong> Lunes 9 de Febrero 2026<br />
+                                <strong>Inicio:</strong> Última semana de Marzo 2026<br />
                                 <span style={{ fontSize: '12px', color: '#666' }}>Tarde: 2:00 - 5:30 pm | Nocturno: 6:00 - 9:30 pm</span>
                             </div>
 
@@ -422,7 +413,7 @@ export default function OfertaAcademica() {
                         <strong style={{ fontSize: '20px', display: 'block', textTransform: 'uppercase' }}>Martes (Tarde)</strong>
                         <span style={{ fontSize: '16px', color: '#333' }}>2:00 pm - 6:00 pm</span><br />
                         <div style={{ marginTop: '10px' }}>
-                            <Tag variant="black">INICIO: 3 FEBRERO</Tag>
+                            <Tag variant="black">INICIO: ÚLT. SEM. MARZO</Tag>
                         </div>
                     </div>
 
@@ -430,7 +421,7 @@ export default function OfertaAcademica() {
                         <strong style={{ fontSize: '20px', display: 'block', textTransform: 'uppercase' }}>Sábado (Mañana)</strong>
                         <span style={{ fontSize: '16px', color: '#333' }}>8:00 am - 12:30 pm</span><br />
                         <div style={{ marginTop: '10px' }}>
-                            <Tag variant="outline">INICIO: 28 FEBRERO</Tag>
+                            <Tag variant="outline">INICIO: ÚLT. SEM. MARZO</Tag>
                         </div>
                     </div>
 

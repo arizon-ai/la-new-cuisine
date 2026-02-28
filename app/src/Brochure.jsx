@@ -14,11 +14,11 @@ const courses = [
         description: 'Nuestra formación insignia. Un recorrido integral desde las técnicas fundamentales hasta la vanguardia molecular. Duración: 15 meses más pasantías.',
         details: {
             duration: '15 Meses + Pasantías',
-            start: 'Lunes 2 Feb / 24 Feb 2026',
+            start: 'Viernes / Sábado - Últ. sem. Marzo 2026',
             schedule: [
                 'Lunes y Martes: 2:00 PM - 5:30 PM',
                 'Sábados: 8:00 AM - 12:30 PM',
-                'Nocturno Lunes: 6:00 PM - 9:30 PM (23 Feb)'
+                'Nocturno Lunes: 6:30 PM - 11:00 PM (Últ. sem. Marzo)'
             ],
             investment: [
                 { label: 'Inscripción Básico', price: '50 €' },
@@ -75,7 +75,7 @@ const courses = [
         description: 'Transforma tu pasión por el pan en una profesión con aroma a éxito. Formación integral para chefs, emprendedores y profesionales del sector alimentario.',
         details: {
             duration: '2 Niveles',
-            start: 'Lunes 9 Febrero 2026',
+            start: 'Última semana de Marzo 2026',
             schedule: [
                 'Lunes (Tarde): 2:00 PM - 5:30 PM',
                 'Lunes (Nocturno): 6:00 PM - 9:30 PM'
@@ -129,12 +129,12 @@ const courses = [
         description: 'Precisión y dulzura. Especialízate en las técnicas de la pastelería francesa, chocolatería fina y arte del emplatado.',
         details: {
             duration: '3 Niveles + Pasantía',
-            start: 'Mié/Jue 25-26 Feb 2026',
+            start: 'Jue/Vie/Sáb Últ. sem. Marzo 2026',
             schedule: [
                 'Mié/Jue: 8:00 AM - 12:30 PM',
                 'Mié/Jue: 2:00 PM - 5:30 PM',
-                'Sábados: 8:00 AM - 12:30 PM (28 Feb)',
-                'Nocturno Lunes: 6:00 PM - 9:30 PM (23 Feb)'
+                'Sábados: 8:00 AM - 12:30 PM (Últ. sem. Marzo)',
+                'Viernes: 8:00 AM - 12:30 PM (Últ. sem. Marzo)'
             ],
             investment: [
                 { label: 'Inscripción Básico', price: '50 €' },
@@ -195,7 +195,7 @@ const courses = [
         description: 'Formación integral para chefs, emprendedores y profesionales del sector alimentario. Visión estratégica para gestionar negocios gastronómicos rentables.',
         details: {
             duration: '4 Meses Intensivos',
-            start: 'Martes 3 Feb / Sábado 28 Feb 2026',
+            start: 'Martes Últ. sem. Marzo 2026',
             schedule: [
                 'Martes (Tarde): 2:00 PM - 6:00 PM',
                 'Sábados: 8:00 AM - 12:30 PM'
@@ -469,7 +469,7 @@ export default function Brochure() {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 divide-y md:divide-y-0 md:divide-x divide-black">
                             <div className="text-center pt-4 md:pt-0">
                                 <EditableText id="header-temporada-label" defaultValue="Temporada Académica" tag="p" className="text-xs font-bold uppercase text-gray-500 mb-1" />
-                                <EditableText id="header-temporada-value" defaultValue="Enero / Febrero 2026" tag="p" className="text-xl font-serif font-bold" />
+                                <EditableText id="header-temporada-value" defaultValue="Marzo 2026" tag="p" className="text-xl font-serif font-bold" />
                             </div>
                             <div className="text-center pt-4 md:pt-0">
                                 <EditableText id="header-admision-label" defaultValue="Estado de Admisión" tag="p" className="text-xs font-bold uppercase text-gray-500 mb-1" />
@@ -538,7 +538,7 @@ export default function Brochure() {
                         <EditableText id="brochure-ficha-titulo" defaultValue="Ficha Técnica" tag="h4" className="font-bold text-base uppercase mb-3" />
                         <div className="space-y-2 text-base text-gray-700">
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Inicio:</span> <EditableText id="junior-inicio" defaultValue="Viernes 20 de Febrero 2026" tag="span" className="font-bold" />
+                                <span>Inicio:</span> <EditableText id="junior-inicio" defaultValue="Última semana de Marzo 2026" tag="span" className="font-bold" />
                             </p>
                             <p className="flex justify-between border-b border-gray-100 pb-1">
                                 <span>Horario:</span> <EditableText id="junior-horario" defaultValue="Viernes 2:00 PM - 6:00 PM" tag="span" className="font-bold" />
@@ -577,7 +577,7 @@ export default function Brochure() {
                         <div className="grid grid-cols-2 gap-4 text-base">
                             <div>
                                 <p className="text-gray-400 text-xs uppercase mb-1">Fecha</p>
-                                <EditableText id="molecular-fecha" defaultValue="3 de Febrero 2026" tag="p" className="font-bold text-lg" />
+                                <EditableText id="molecular-fecha" defaultValue="5 de Marzo 2026" tag="p" className="font-bold text-lg" />
                                 <EditableText id="molecular-horario" defaultValue="2:00 PM - 6:00 PM" tag="p" className="text-gray-400 text-sm" />
                             </div>
                             <div>
@@ -609,7 +609,7 @@ export default function Brochure() {
                         <EditableText id="asistente-ficha-title" defaultValue="Ficha Técnica" tag="h4" className="font-bold text-base uppercase mb-3" />
                         <div className="space-y-2 text-base text-gray-700">
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Inicio:</span> <EditableText id="asistente-inicio" defaultValue="Viernes 18 de Febrero 2026" tag="span" className="font-bold" />
+                                <span>Inicio:</span> <EditableText id="asistente-inicio" defaultValue="Última semana de Marzo 2026" tag="span" className="font-bold" />
                             </p>
                             <p className="flex justify-between border-b border-gray-100 pb-1">
                                 <span>Horario:</span> <EditableText id="asistente-horario" defaultValue="Viernes 6:00 PM - 9:30 PM" tag="span" className="font-bold" />
@@ -645,7 +645,7 @@ export default function Brochure() {
                         <div className="grid grid-cols-2 gap-4 text-base">
                             <div>
                                 <EditableText id="intensivo-inicio-label" defaultValue="Inicio" tag="p" className="text-gray-400 text-xs uppercase mb-1" />
-                                <EditableText id="intensivo-inicio-fecha" defaultValue="24 de Febrero 2026" tag="p" className="font-bold text-lg" />
+                                <EditableText id="intensivo-inicio-fecha" defaultValue="Última semana de Marzo 2026" tag="p" className="font-bold text-lg" />
                                 <EditableText id="intensivo-horario" defaultValue="Mar-Vie 6:00 PM - 9:30 PM" tag="p" className="text-gray-400 text-sm" />
                             </div>
                             <div>

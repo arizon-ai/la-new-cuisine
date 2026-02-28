@@ -530,23 +530,23 @@ export default function FlyerPasteleria() {
                     </h3>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                         <DateCard
-                            month="Feb"
-                            schedule="Miércoles / Jueves"
-                            time="8:00 am - 12:30 pm / 2:00 - 5:30 pm"
+                            month="Mar"
+                            schedule="Jueves"
+                            time="8:00 am - 12:00 pm / 2:00 - 6:00 pm"
                             startDate="Por confirmar"
                             status="ABIERTO"
                         />
                         <DateCard
-                            month="Feb"
-                            schedule="Sábados (Mañana)"
+                            month="Mar"
+                            schedule="Viernes (Mañana)"
                             time="8:00 am - 12:30 pm"
                             startDate="Por confirmar"
                             status="ABIERTO"
                         />
                         <DateCard
-                            month="Feb"
-                            schedule="Lunes Nocturno"
-                            time="6:00 pm - 9:30 pm"
+                            month="Mar"
+                            schedule="Sábados (Mañana)"
+                            time="8:00 am - 12:30 pm"
                             startDate="Por confirmar"
                             status="ABIERTO"
                         />

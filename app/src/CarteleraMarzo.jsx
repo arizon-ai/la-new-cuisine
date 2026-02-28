@@ -604,7 +604,7 @@ export default function CarteleraMarzo() {
                                 <p style={{ fontSize: '13px', color: '#555', margin: 0, lineHeight: 1.6 }}>
                                     Berenjena Parmesana y Cannoli
                                 </p>
-                                <div style={{ marginTop: '8px' }}><Tag variant="outline">19 Mar</Tag></div>
+                                <div style={{ marginTop: '8px' }}><Tag variant="outline">09 Mar</Tag></div>
                             </div>
 
                             <div style={{ padding: '20px', backgroundColor: '#fff', border: '1px solid #000' }}>
@@ -619,7 +619,7 @@ export default function CarteleraMarzo() {
                                 <p style={{ fontSize: '13px', color: '#555', margin: 0, lineHeight: 1.6 }}>
                                     Raviolis, Linguinis, Pesto y Bolognesa, Tiramisú
                                 </p>
-                                <div style={{ marginTop: '8px' }}><Tag variant="outline">26 Mar</Tag></div>
+                                <div style={{ marginTop: '8px' }}><Tag variant="outline">16 Mar</Tag></div>
                             </div>
 
                             <div style={{ padding: '20px', backgroundColor: '#fff', border: '1px solid #000' }}>
@@ -634,7 +634,7 @@ export default function CarteleraMarzo() {
                                 <p style={{ fontSize: '13px', color: '#555', margin: 0, lineHeight: 1.6 }}>
                                     Capeletti, Ñoquis, Carbonara y Panna Cotta
                                 </p>
-                                <div style={{ marginTop: '8px' }}><Tag variant="outline">9 Abr</Tag></div>
+                                <div style={{ marginTop: '8px' }}><Tag variant="outline">23 Mar</Tag></div>
                             </div>
 
                             <div style={{ padding: '20px', backgroundColor: '#fff', border: '1px solid #000' }}>
@@ -649,7 +649,7 @@ export default function CarteleraMarzo() {
                                 <p style={{ fontSize: '13px', color: '#555', margin: 0, lineHeight: 1.6 }}>
                                     Pizza, Focaccia, Salsa Napolitana y Sfogliatelle
                                 </p>
-                                <div style={{ marginTop: '8px' }}><Tag variant="outline">16 Abr</Tag></div>
+                                <div style={{ marginTop: '8px' }}><Tag variant="outline">30 Mar</Tag></div>
                             </div>
                         </div>
                     </div>
@@ -661,7 +661,7 @@ export default function CarteleraMarzo() {
                         gap: '10px',
                         marginBottom: '20px'
                     }}>
-                        <InfoPill icon={Calendar} label="Inicio" value="19 de Marzo 2026" />
+                        <InfoPill icon={Calendar} label="Inicio" value="09 de Marzo 2026" />
                         <InfoPill icon={Clock} label="Hora" value="Jueves 2 a 6 PM" />
                         <InfoPill icon={MapPin} label="Lugar" value="La New Cuisine" />
                         <InfoPill icon={Certificate} label="Incluye" value="Certificado" />

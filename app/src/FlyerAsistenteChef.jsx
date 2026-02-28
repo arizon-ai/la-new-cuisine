@@ -303,17 +303,17 @@ export default function FlyerAsistenteChef() {
                     </h3>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                         <DateCard
-                            month="Feb"
-                            schedule="Martes y Viernes"
+                            month="Mar"
+                            schedule="Viernes"
                             time="8:00 am - 12:30 pm"
-                            startDate="Por confirmar"
+                            startDate="Últ. sem. Marzo"
                             status="ABIERTO"
                         />
                         <DateCard
-                            month="Feb"
-                            schedule="Sábados"
+                            month="Mar"
+                            schedule="Viernes"
                             time="8:00 am - 12:30 pm"
-                            startDate="Por confirmar"
+                            startDate="Últ. sem. Marzo"
                             status="ABIERTO"
                         />
                     </div>

@@ -548,8 +548,8 @@ export default function PresentacionBrochure() {
                                         </div>
                                     </div>
                                     <div className="flex gap-6 text-sm text-gray-600">
-                                        <EditableText id="pres-carreras-cocina-fecha" defaultValue="📅 Lun 02/02 • Mar 10/02" tag="span" />
-                                        <EditableText id="pres-carreras-cocina-noche" defaultValue="🌙 Nocturno 23 Feb" tag="span" />
+                                        <EditableText id="pres-carreras-cocina-fecha" defaultValue="📅 Vie/Sáb Últ. sem. Mar" tag="span" />
+                                        <EditableText id="pres-carreras-cocina-noche" defaultValue="🌙 Nocturno Lun Últ. sem. Mar" tag="span" />
                                         <EditableText id="pres-carreras-cocina-kit" defaultValue="📦 Kit: 130€" tag="span" />
                                     </div>
                                 </div>
@@ -567,8 +567,8 @@ export default function PresentacionBrochure() {
                                         </div>
                                     </div>
                                     <div className="flex gap-6 text-sm text-gray-600">
-                                        <EditableText id="pres-carreras-past-fecha" defaultValue="📅 Mié/Jue 25-26 Feb" tag="span" />
-                                        <EditableText id="pres-carreras-past-noche" defaultValue="🌙 Nocturno Lun 23 Feb" tag="span" />
+                                        <EditableText id="pres-carreras-past-fecha" defaultValue="📅 Jue/Vie/Sáb Últ. sem. Mar" tag="span" />
+                                        <EditableText id="pres-carreras-past-noche" defaultValue="📦 Kit: 90€" tag="span" />
                                         <EditableText id="pres-carreras-past-kit" defaultValue="📦 Kit: 90€" tag="span" />
                                     </div>
                                 </div>
@@ -608,7 +608,7 @@ export default function PresentacionBrochure() {
                             <div className="space-y-6">
                                 <div className="flex items-baseline gap-4">
                                     <EditableText id="pres-intensivo-dia" defaultValue="24" tag="span" className="text-5xl font-bold" />
-                                    <EditableText id="pres-intensivo-mes" defaultValue="Febrero 2026" tag="span" className="text-gray-500" />
+                                    <EditableText id="pres-intensivo-mes" defaultValue="Marzo 2026" tag="span" className="text-gray-500" />
                                 </div>
                                 <div className="flex items-baseline gap-4">
                                     <EditableText id="pres-intensivo-hora" defaultValue="6:00" tag="span" className="text-5xl font-bold" />
@@ -657,7 +657,7 @@ export default function PresentacionBrochure() {
                                         <div className="grid grid-cols-2 gap-4 mb-6">
                                             <div>
                                                 <p className="text-xs text-gray-400 uppercase">Inicio</p>
-                                                <EditableText id="pres-junior-inicio" defaultValue="Vie 20 Feb 2026" tag="p" className="font-bold" />
+                                                <EditableText id="pres-junior-inicio" defaultValue="Vie Últ. sem. Mar 2026" tag="p" className="font-bold" />
                                             </div>
                                             <div>
                                                 <p className="text-xs text-gray-400 uppercase">Horario</p>
@@ -688,7 +688,7 @@ export default function PresentacionBrochure() {
                                         <div className="grid grid-cols-2 gap-4 mb-6">
                                             <div>
                                                 <p className="text-xs text-gray-400 uppercase">Inicio</p>
-                                                <EditableText id="pres-asist-inicio" defaultValue="Vie 18 Feb 2026" tag="p" className="font-bold" />
+                                                <EditableText id="pres-asist-inicio" defaultValue="Vie Últ. sem. Mar 2026" tag="p" className="font-bold" />
                                             </div>
                                             <div>
                                                 <p className="text-xs text-gray-400 uppercase">Horario</p>
@@ -740,8 +740,8 @@ export default function PresentacionBrochure() {
                             </div>
 
                             <div className="mt-8 text-sm text-gray-500">
-                                <EditableText id="pres-diplomado-fecha1" defaultValue="📅 Martes 3 Feb: 2:00 - 6:00 PM" tag="p" />
-                                <EditableText id="pres-diplomado-fecha2" defaultValue="📅 Sábado 31 Ene: 8:00 - 12:30" tag="p" />
+                                <EditableText id="pres-diplomado-fecha1" defaultValue="📅 Martes Últ. sem. Mar: 2:00 - 6:00 PM" tag="p" />
+                                <EditableText id="pres-diplomado-fecha2" defaultValue="📅 Sábado Últ. sem. Mar: 8:00 - 12:30" tag="p" />
                             </div>
                         </div>
 
@@ -789,7 +789,7 @@ export default function PresentacionBrochure() {
                                     </div>
                                     <div>
                                         <p className="text-xs text-gray-500 uppercase mb-2">Fecha</p>
-                                        <EditableText id="pres-molecular-fecha" defaultValue="3 Feb 2026" tag="p" className="text-2xl font-bold" />
+                                        <EditableText id="pres-molecular-fecha" defaultValue="5 Mar 2026" tag="p" className="text-2xl font-bold" />
                                     </div>
                                     <div>
                                         <p className="text-xs text-gray-500 uppercase mb-2">Horario</p>
@@ -1370,16 +1370,16 @@ export default function PresentacionBrochure() {
                                         </div>
                                         <div className="p-6 space-y-3 text-sm">
                                             <div className="flex justify-between">
-                                                <span>Lunes Tarde</span>
-                                                <span className="font-bold">2 Feb</span>
+                                                <span>Viernes Mañana</span>
+                                                <span className="font-bold">Últ. sem. Mar</span>
                                             </div>
                                             <div className="flex justify-between">
-                                                <span>Martes Tarde</span>
-                                                <span className="font-bold">27 Ene</span>
+                                                <span>Sábado Mañana</span>
+                                                <span className="font-bold">Últ. sem. Mar</span>
                                             </div>
                                             <div className="flex justify-between">
-                                                <span>Intensivo (Mar-Vie)</span>
-                                                <span className="font-bold">24 Feb</span>
+                                                <span>Nocturno (Lunes)</span>
+                                                <span className="font-bold">Últ. sem. Mar</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1391,16 +1391,16 @@ export default function PresentacionBrochure() {
                                         </div>
                                         <div className="p-6 space-y-3 text-sm">
                                             <div className="flex justify-between">
-                                                <span>Mié/Jue Mañana</span>
-                                                <span className="font-bold">25-26 Feb</span>
+                                                <span>Jueves Mañana/Tarde</span>
+                                                <span className="font-bold">Últ. sem. Mar</span>
+                                            </div>
+                                            <div className="flex justify-between">
+                                                <span>Viernes Mañana</span>
+                                                <span className="font-bold">Últ. sem. Mar</span>
                                             </div>
                                             <div className="flex justify-between">
                                                 <span>Sábado Mañana</span>
-                                                <span className="font-bold">28 Feb</span>
-                                            </div>
-                                            <div className="flex justify-between">
-                                                <span>Lunes Nocturno</span>
-                                                <span className="font-bold">23 Feb</span>
+                                                <span className="font-bold">Últ. sem. Mar</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1413,15 +1413,15 @@ export default function PresentacionBrochure() {
                                         <div className="p-6 space-y-3 text-sm">
                                             <div className="flex justify-between">
                                                 <span>Diplomado Gerencia</span>
-                                                <span className="font-bold">3 Feb</span>
+                                                <span className="font-bold">Últ. sem. Mar</span>
                                             </div>
                                             <div className="flex justify-between">
                                                 <span>Chef Panadero</span>
-                                                <span className="font-bold">9 Feb</span>
+                                                <span className="font-bold">Últ. sem. Mar</span>
                                             </div>
                                             <div className="flex justify-between">
                                                 <span>Junior Chef</span>
-                                                <span className="font-bold">20 Feb</span>
+                                                <span className="font-bold">Últ. sem. Mar</span>
                                             </div>
                                         </div>
                                     </div>
