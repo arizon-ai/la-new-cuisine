@@ -54,13 +54,17 @@ export async function initializeContentTable() {
 }
 
 /**
- * Get all content from Supabase, with localStorage fallback
+ * Get all content from Supabase, merged with localStorage
+ * localStorage serves as the base layer; Supabase overlays on top
  */
 export async function getAllContent() {
     // Check cache first
     if (contentCache && cacheTimestamp && (Date.now() - cacheTimestamp < CACHE_DURATION)) {
         return contentCache;
     }
+
+    // Always start with localStorage as the base
+    const localContent = getLocalContent();
 
     try {
         const { data, error } = await supabase
@@ -69,29 +73,32 @@ export async function getAllContent() {
             .eq('site_id', SITE_ID);
 
         if (error) {
-            console.warn('Supabase error, falling back to localStorage:', error.message);
-            return getLocalContent();
+            console.warn('Supabase error, using localStorage only:', error.message);
+            contentCache = localContent;
+            cacheTimestamp = Date.now();
+            return localContent;
         }
 
-        // Convert array to object
-        const content = {};
-        if (data) {
+        // Merge: start with localStorage, overlay Supabase data on top
+        const merged = { ...localContent };
+        if (data && data.length > 0) {
             data.forEach(row => {
-                content[row.content_key] = row.content_value;
+                merged[row.content_key] = row.content_value;
             });
+            // Only update localStorage when Supabase actually has data
+            localStorage.setItem(CONTENT_KEY, JSON.stringify(merged));
         }
 
         // Update cache
-        contentCache = content;
+        contentCache = merged;
         cacheTimestamp = Date.now();
 
-        // Also update localStorage as backup
-        localStorage.setItem(CONTENT_KEY, JSON.stringify(content));
-
-        return content;
+        return merged;
     } catch (err) {
         console.error('Error fetching content:', err);
-        return getLocalContent();
+        contentCache = localContent;
+        cacheTimestamp = Date.now();
+        return localContent;
     }
 }
 

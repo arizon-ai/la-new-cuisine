@@ -29,14 +29,19 @@ export default function EditableText({
     const [isSaving, setIsSaving] = useState(false);
     const inputRef = useRef(null);
 
-    // Load stored content from Supabase on mount
+    // Load stored content from Supabase on mount (only re-run when id changes)
     useEffect(() => {
+        let cancelled = false;
         const loadContent = async () => {
             const storedValue = await getContent(id, defaultValue);
-            setValue(storedValue);
+            if (!cancelled && storedValue !== undefined) {
+                setValue(storedValue);
+            }
         };
         loadContent();
-    }, [id, defaultValue]);
+        return () => { cancelled = true; };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [id]);
 
     // Focus input when editing starts
     useEffect(() => {
