@@ -382,7 +382,7 @@ const CourseCard = ({ course, index }) => {
                     {course.syllabusBasico && (
                         <div className="mb-4">
                             <div className="flex items-center gap-2 mb-2">
-                                <span className="bg-black text-white text-xs px-2 py-1 font-bold">BÁSICO</span>
+                                <EditableText id={`course-${id}-basico-badge`} defaultValue="BÁSICO" tag="span" className="bg-black text-white text-xs px-2 py-1 font-bold" />
                             </div>
                             <div className="flex flex-wrap gap-2">
                                 {course.syllabusBasico.map((topic, i) => (
@@ -402,7 +402,7 @@ const CourseCard = ({ course, index }) => {
                     {course.syllabusIntermedio && (
                         <div className="mb-4">
                             <div className="flex items-center gap-2 mb-2">
-                                <span className="bg-gray-600 text-white text-xs px-2 py-1 font-bold">INTERMEDIO</span>
+                                <EditableText id={`course-${id}-intermedio-badge`} defaultValue="INTERMEDIO" tag="span" className="bg-gray-600 text-white text-xs px-2 py-1 font-bold" />
                             </div>
                             <div className="flex flex-wrap gap-2">
                                 {course.syllabusIntermedio.map((topic, i) => (
@@ -422,7 +422,7 @@ const CourseCard = ({ course, index }) => {
                     {course.syllabusAvanzado && (
                         <div className="mb-4">
                             <div className="flex items-center gap-2 mb-2">
-                                <span className="bg-neutral-800 text-white text-xs px-2 py-1 font-bold">AVANZADO</span>
+                                <EditableText id={`course-${id}-avanzado-badge`} defaultValue="AVANZADO" tag="span" className="bg-neutral-800 text-white text-xs px-2 py-1 font-bold" />
                             </div>
                             <div className="flex flex-wrap gap-2">
                                 {course.syllabusAvanzado.map((topic, i) => (
@@ -525,36 +525,34 @@ export default function Brochure() {
                         </div>
                         <EditableText id="junior-desc" defaultValue="Programa especial diseñado para el desarrollo de nuevos talentos gastronómicos." tag="p" className="mb-4 text-gray-600 text-xl" multiline={true} />
                         <div className="flex flex-wrap gap-2 mb-4">
-                            <span className="px-2 py-1 bg-white text-xs text-gray-700 rounded-sm">Técnicas de cortes</span>
-                            <span className="px-2 py-1 bg-white text-xs text-gray-700 rounded-sm">Salsas</span>
-                            <span className="px-2 py-1 bg-white text-xs text-gray-700 rounded-sm">Pastas</span>
-                            <span className="px-2 py-1 bg-white text-xs text-gray-700 rounded-sm">Cocina Italiana</span>
-                            <span className="px-2 py-1 bg-white text-xs text-gray-700 rounded-sm">Japonesa</span>
-                            <span className="px-2 py-1 bg-white text-xs text-gray-700 rounded-sm">Venezolana</span>
-                            <span className="px-2 py-1 bg-white text-xs text-gray-700 rounded-sm">Arroz Chino</span>
+                            <EditableText id="junior-tag-1" defaultValue="Técnicas de cortes" tag="span" className="px-2 py-1 bg-white text-xs text-gray-700 rounded-sm" />
+                            <EditableText id="junior-tag-2" defaultValue="Salsas" tag="span" className="px-2 py-1 bg-white text-xs text-gray-700 rounded-sm" />
+                            <EditableText id="junior-tag-3" defaultValue="Pastas" tag="span" className="px-2 py-1 bg-white text-xs text-gray-700 rounded-sm" />
+                            <EditableText id="junior-tag-4" defaultValue="Cocina Italiana" tag="span" className="px-2 py-1 bg-white text-xs text-gray-700 rounded-sm" />
+                            <EditableText id="junior-tag-5" defaultValue="Japonesa" tag="span" className="px-2 py-1 bg-white text-xs text-gray-700 rounded-sm" />
+                            <EditableText id="junior-tag-6" defaultValue="Venezolana" tag="span" className="px-2 py-1 bg-white text-xs text-gray-700 rounded-sm" />
+                            <EditableText id="junior-tag-7" defaultValue="Arroz Chino" tag="span" className="px-2 py-1 bg-white text-xs text-gray-700 rounded-sm" />
                         </div>
                     </div>
                     <div className="bg-white p-6 border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                         <EditableText id="brochure-ficha-titulo" defaultValue="Ficha Técnica" tag="h4" className="font-bold text-base uppercase mb-3" />
                         <div className="space-y-2 text-base text-gray-700">
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Inicio:</span> <EditableText id="junior-inicio" defaultValue="Última semana de Marzo 2026" tag="span" className="font-bold" />
+                                <EditableText id="junior-inicio-label" defaultValue="Inicio:" tag="span" /> <EditableText id="junior-inicio" defaultValue="Última semana de Marzo 2026" tag="span" className="font-bold" />
                             </p>
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Horario:</span> <EditableText id="junior-horario" defaultValue="Viernes 2:00 PM - 6:00 PM" tag="span" className="font-bold" />
+                                <EditableText id="junior-horario-label" defaultValue="Horario:" tag="span" /> <EditableText id="junior-horario" defaultValue="Viernes 2:00 PM - 6:00 PM" tag="span" className="font-bold" />
                             </p>
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Duración:</span> <EditableText id="junior-duracion" defaultValue="4 meses" tag="span" className="font-bold" />
+                                <EditableText id="junior-duracion-label" defaultValue="Duración:" tag="span" /> <EditableText id="junior-duracion" defaultValue="4 meses" tag="span" className="font-bold" />
                             </p>
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Inscripción:</span> <EditableText id="junior-inscripcion" defaultValue="50 € (incluye uniforme)" tag="span" className="font-bold" />
+                                <EditableText id="junior-inscripcion-label" defaultValue="Inscripción:" tag="span" /> <EditableText id="junior-inscripcion" defaultValue="50 € (incluye uniforme)" tag="span" className="font-bold" />
                             </p>
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Mensualidad:</span> <EditableText id="junior-mensualidad" defaultValue="150 €" tag="span" className="font-bold" />
+                                <EditableText id="junior-mensualidad-label" defaultValue="Mensualidad:" tag="span" /> <EditableText id="junior-mensualidad" defaultValue="150 €" tag="span" className="font-bold" />
                             </p>
-                            <p className="text-xs text-gray-500 pt-2 italic">
-                                *Incluye ingredientes, recetas y certificado. 2 platos salados + 1 postre por clase.
-                            </p>
+                            <EditableText id="junior-nota" defaultValue="*Incluye ingredientes, recetas y certificado. 2 platos salados + 1 postre por clase." tag="p" className="text-xs text-gray-500 pt-2 italic" />
                         </div>
                     </div>
                 </div>
@@ -576,12 +574,12 @@ export default function Brochure() {
                     <div className="relative z-10 border border-white/30 p-6 bg-white/5 backdrop-blur-sm">
                         <div className="grid grid-cols-2 gap-4 text-base">
                             <div>
-                                <p className="text-gray-400 text-xs uppercase mb-1">Fecha</p>
+                                <EditableText id="molecular-fecha-label" defaultValue="Fecha" tag="p" className="text-gray-400 text-xs uppercase mb-1" />
                                 <EditableText id="molecular-fecha" defaultValue="5 de Marzo 2026" tag="p" className="font-bold text-lg" />
                                 <EditableText id="molecular-horario" defaultValue="2:00 PM - 6:00 PM" tag="p" className="text-gray-400 text-sm" />
                             </div>
                             <div>
-                                <p className="text-gray-400 text-xs uppercase mb-1">Inversión</p>
+                                <EditableText id="molecular-inversion-label" defaultValue="Inversión" tag="p" className="text-gray-400 text-xs uppercase mb-1" />
                                 <EditableText id="molecular-precio" defaultValue="40 €" tag="p" className="font-bold text-lg" />
                             </div>
                             <div className="col-span-2 pt-4 border-t border-white/20">
@@ -609,19 +607,19 @@ export default function Brochure() {
                         <EditableText id="asistente-ficha-title" defaultValue="Ficha Técnica" tag="h4" className="font-bold text-base uppercase mb-3" />
                         <div className="space-y-2 text-base text-gray-700">
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Inicio:</span> <EditableText id="asistente-inicio" defaultValue="Última semana de Marzo 2026" tag="span" className="font-bold" />
+                                <EditableText id="asistente-inicio-label" defaultValue="Inicio:" tag="span" /> <EditableText id="asistente-inicio" defaultValue="Última semana de Marzo 2026" tag="span" className="font-bold" />
                             </p>
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Horario:</span> <EditableText id="asistente-horario" defaultValue="Viernes 6:00 PM - 9:30 PM" tag="span" className="font-bold" />
+                                <EditableText id="asistente-horario-label" defaultValue="Horario:" tag="span" /> <EditableText id="asistente-horario" defaultValue="Viernes 6:00 PM - 9:30 PM" tag="span" className="font-bold" />
                             </p>
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Inscripción:</span> <EditableText id="asistente-inscripcion" defaultValue="50 €" tag="span" className="font-bold" />
+                                <EditableText id="asistente-inscripcion-label" defaultValue="Inscripción:" tag="span" /> <EditableText id="asistente-inscripcion" defaultValue="50 €" tag="span" className="font-bold" />
                             </p>
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Mensualidad:</span> <EditableText id="asistente-mensualidad" defaultValue="120 €" tag="span" className="font-bold" />
+                                <EditableText id="asistente-mensualidad-label" defaultValue="Mensualidad:" tag="span" /> <EditableText id="asistente-mensualidad" defaultValue="120 €" tag="span" className="font-bold" />
                             </p>
                             <p className="flex justify-between border-b border-gray-100 pb-1">
-                                <span>Kit de Estudio:</span> <EditableText id="asistente-kit" defaultValue="130 €" tag="span" className="font-bold" />
+                                <EditableText id="asistente-kit-label" defaultValue="Kit de Estudio:" tag="span" /> <EditableText id="asistente-kit" defaultValue="130 €" tag="span" className="font-bold" />
                             </p>
                             <EditableText id="asistente-nota" defaultValue="*Kit incluye filipina, gorro, delantal, set de 2 cuchillos. Financiamiento 2 cuotas." tag="p" className="text-xs text-gray-500 pt-2 italic" />
                         </div>
@@ -812,7 +810,7 @@ export default function Brochure() {
                             </svg>
                             Descargar Planilla de Inscripción 2026
                         </a>
-                        <p className="text-gray-500 text-xs mt-3">Formato PDF • Imprimir y llenar antes de acudir</p>
+                        <EditableText id="brochure-planilla-nota" defaultValue="Formato PDF • Imprimir y llenar antes de acudir" tag="p" className="text-gray-500 text-xs mt-3" />
                     </div>
                 </div>
             </section>
@@ -879,19 +877,19 @@ export default function Brochure() {
                             <div className="border-2 border-black p-4 rounded-full group-hover:bg-black group-hover:text-white transition-colors mb-2">
                                 <Facebook className="w-6 h-6" />
                             </div>
-                            <span className="text-xs uppercase tracking-wider">Facebook</span>
+                            <EditableText id="footer-social-fb" defaultValue="Facebook" tag="span" className="text-xs uppercase tracking-wider" />
                         </a>
                         <a href="https://www.instagram.com/lanewcuisine" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center" title="Instagram">
                             <div className="border-2 border-black p-4 rounded-full group-hover:bg-black group-hover:text-white transition-colors mb-2">
                                 <Instagram className="w-6 h-6" />
                             </div>
-                            <span className="text-xs uppercase tracking-wider">Instagram</span>
+                            <EditableText id="footer-social-ig" defaultValue="Instagram" tag="span" className="text-xs uppercase tracking-wider" />
                         </a>
                         <a href="#" className="group flex flex-col items-center" title="TikTok">
                             <div className="border-2 border-black p-4 rounded-full group-hover:bg-black group-hover:text-white transition-colors mb-2">
                                 <Video className="w-6 h-6" />
                             </div>
-                            <span className="text-xs uppercase tracking-wider">TikTok</span>
+                            <EditableText id="footer-social-tt" defaultValue="TikTok" tag="span" className="text-xs uppercase tracking-wider" />
                         </a>
                     </div>
 

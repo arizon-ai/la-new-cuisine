@@ -368,7 +368,7 @@ export default function PresentacionBrochure() {
                     >
                         <X className="w-6 h-6" />
                     </button>
-                    <h2 className="text-white text-3xl font-serif font-bold mb-8 text-center">Vista Previa de Slides</h2>
+                    <EditableText id="pres-preview-title" defaultValue="Vista Previa de Slides" tag="h2" className="text-white text-3xl font-serif font-bold mb-8 text-center" />
                     <div className="grid grid-cols-4 gap-6 max-w-6xl mx-auto">
                         {slideNames.map((name, i) => (
                             <button
@@ -479,9 +479,7 @@ export default function PresentacionBrochure() {
                     <section className="print-page h-screen flex bg-white">
                         <div className="w-2/5 bg-black text-white p-16 flex flex-col justify-center">
                             <EditableText id="pres-qs-desde" defaultValue="Desde 2002" tag="p" className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4" />
-                            <h2 className="text-5xl font-serif font-bold leading-tight mb-8">
-                                Formando<br />Artistas<br /><span className="italic">Culinarios</span>
-                            </h2>
+                            <EditableText id="pres-qs-hero-title" defaultValue="Formando Artistas Culinarios" tag="h2" className="text-5xl font-serif font-bold leading-tight mb-8" />
                             <EditableText id="pres-qs-descripcion" defaultValue="Centro de Capacitación Gastronómica reconocido por el Ministerio de Educación bajo el registro No. R-0129-08." tag="p" className="text-gray-400 leading-relaxed mb-8" />
                             <div className="grid grid-cols-2 gap-4 mt-auto">
                                 <div className="text-center p-4 border border-white/20">
@@ -544,7 +542,7 @@ export default function PresentacionBrochure() {
                                         </div>
                                         <div className="text-right">
                                             <EditableText id="pres-carreras-cocina-precio" defaultValue="140€" tag="p" className="text-4xl font-bold" />
-                                            <p className="text-xs text-gray-400 uppercase">mensual</p>
+                                            <EditableText id="pres-carreras-cocina-mensual" defaultValue="mensual" tag="p" className="text-xs text-gray-400 uppercase" />
                                         </div>
                                     </div>
                                     <div className="flex gap-6 text-sm text-gray-600">
@@ -563,7 +561,7 @@ export default function PresentacionBrochure() {
                                         </div>
                                         <div className="text-right">
                                             <EditableText id="pres-carreras-past-precio" defaultValue="140€" tag="p" className="text-4xl font-bold" />
-                                            <p className="text-xs text-gray-400 uppercase">mensual</p>
+                                            <EditableText id="pres-carreras-past-mensual" defaultValue="mensual" tag="p" className="text-xs text-gray-400 uppercase" />
                                         </div>
                                     </div>
                                     <div className="flex gap-6 text-sm text-gray-600">
@@ -582,7 +580,7 @@ export default function PresentacionBrochure() {
                                         </div>
                                         <div className="text-right">
                                             <EditableText id="pres-carreras-pan-precio" defaultValue="140€" tag="p" className="text-4xl font-bold" />
-                                            <p className="text-xs text-gray-400 uppercase">mensual</p>
+                                            <EditableText id="pres-carreras-pan-mensual" defaultValue="mensual" tag="p" className="text-xs text-gray-400 uppercase" />
                                         </div>
                                     </div>
                                     <div className="flex gap-6 text-sm text-gray-600">
@@ -600,9 +598,7 @@ export default function PresentacionBrochure() {
                     <section className="print-page h-screen flex bg-black text-white">
                         <div className="w-1/2 p-20 flex flex-col justify-center">
                             <p className="text-xs uppercase tracking-[0.3em] text-gray-500 mb-4">02</p>
-                            <h2 className="text-6xl font-serif font-bold leading-tight mb-8">
-                                Programa<br /><span className="italic">Intensivo</span>
-                            </h2>
+                            <EditableText id="pres-intensivo-hero-title" defaultValue="Programa Intensivo" tag="h2" className="text-6xl font-serif font-bold leading-tight mb-8" />
                             <EditableText id="pres-intensivo-descripcion" defaultValue="Formación acelerada de martes a viernes. Completa los 3 niveles en tiempo récord." tag="p" className="text-xl text-gray-400 mb-12 max-w-md leading-relaxed" />
 
                             <div className="space-y-6">
@@ -619,7 +615,7 @@ export default function PresentacionBrochure() {
 
                         <div className="w-1/2 bg-white text-black p-20 flex flex-col justify-center">
                             <div className="max-w-sm">
-                                <p className="text-xs uppercase tracking-widest text-gray-400 mb-8">Inversión</p>
+                                <EditableText id="pres-intensivo-inversion-label" defaultValue="Inversión" tag="p" className="text-xs uppercase tracking-widest text-gray-400 mb-8" />
                                 <EditableText id="pres-intensivo-precio" defaultValue="2,640€" tag="p" className="text-8xl font-bold mb-4" />
                                 <EditableText id="pres-intensivo-detalle" defaultValue="Inscripción 100€ + 2 cuotas de 1,320€" tag="p" className="text-gray-500 mb-12" />
 
@@ -639,10 +635,10 @@ export default function PresentacionBrochure() {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section >
 
                     {/* ========== SLIDE 4: PROGRAMAS CORTOS ========== */}
-                    <section className="print-page h-screen flex bg-neutral-50">
+                    < section className="print-page h-screen flex bg-neutral-50" >
                         <div className="w-full p-20 flex flex-col justify-center">
                             <div className="max-w-6xl mx-auto">
                                 <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">03</p>
@@ -656,19 +652,19 @@ export default function PresentacionBrochure() {
 
                                         <div className="grid grid-cols-2 gap-4 mb-6">
                                             <div>
-                                                <p className="text-xs text-gray-400 uppercase">Inicio</p>
+                                                <EditableText id="pres-junior-inicio-label" defaultValue="Inicio" tag="p" className="text-xs text-gray-400 uppercase" />
                                                 <EditableText id="pres-junior-inicio" defaultValue="Vie Últ. sem. Mar 2026" tag="p" className="font-bold" />
                                             </div>
                                             <div>
-                                                <p className="text-xs text-gray-400 uppercase">Horario</p>
+                                                <EditableText id="pres-junior-horario-label" defaultValue="Horario" tag="p" className="text-xs text-gray-400 uppercase" />
                                                 <EditableText id="pres-junior-horario" defaultValue="2:00 - 6:00 PM" tag="p" className="font-bold" />
                                             </div>
                                             <div>
-                                                <p className="text-xs text-gray-400 uppercase">Duración</p>
+                                                <EditableText id="pres-junior-duracion-label" defaultValue="Duración" tag="p" className="text-xs text-gray-400 uppercase" />
                                                 <EditableText id="pres-junior-duracion" defaultValue="4 meses" tag="p" className="font-bold" />
                                             </div>
                                             <div>
-                                                <p className="text-xs text-gray-400 uppercase">Incluye</p>
+                                                <EditableText id="pres-junior-incluye-label" defaultValue="Incluye" tag="p" className="text-xs text-gray-400 uppercase" />
                                                 <EditableText id="pres-junior-incluye" defaultValue="Ingredientes + Certificado" tag="p" className="font-bold" />
                                             </div>
                                         </div>
@@ -687,19 +683,19 @@ export default function PresentacionBrochure() {
 
                                         <div className="grid grid-cols-2 gap-4 mb-6">
                                             <div>
-                                                <p className="text-xs text-gray-400 uppercase">Inicio</p>
+                                                <EditableText id="pres-asist-inicio-label" defaultValue="Inicio" tag="p" className="text-xs text-gray-400 uppercase" />
                                                 <EditableText id="pres-asist-inicio" defaultValue="Vie Últ. sem. Mar 2026" tag="p" className="font-bold" />
                                             </div>
                                             <div>
-                                                <p className="text-xs text-gray-400 uppercase">Horario</p>
+                                                <EditableText id="pres-asist-horario-label" defaultValue="Horario" tag="p" className="text-xs text-gray-400 uppercase" />
                                                 <EditableText id="pres-asist-horario" defaultValue="6:00 - 9:30 PM" tag="p" className="font-bold" />
                                             </div>
                                             <div>
-                                                <p className="text-xs text-gray-400 uppercase">Duración</p>
+                                                <EditableText id="pres-asist-duracion-label" defaultValue="Duración" tag="p" className="text-xs text-gray-400 uppercase" />
                                                 <EditableText id="pres-asist-duracion" defaultValue="4 meses" tag="p" className="font-bold" />
                                             </div>
                                             <div>
-                                                <p className="text-xs text-gray-400 uppercase">Kit</p>
+                                                <EditableText id="pres-asist-kit-label" defaultValue="Kit" tag="p" className="text-xs text-gray-400 uppercase" />
                                                 <EditableText id="pres-asist-kit" defaultValue="130€ (2 cuchillos)" tag="p" className="font-bold" />
                                             </div>
                                         </div>
@@ -713,10 +709,10 @@ export default function PresentacionBrochure() {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section >
 
                     {/* ========== SLIDE 5: DIPLOMADO ========== */}
-                    <section className="print-page h-screen flex bg-white">
+                    < section className="print-page h-screen flex bg-white" >
                         <div className="w-1/2 p-20 flex flex-col justify-center border-r border-gray-200">
                             <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">04</p>
                             <h2 className="text-5xl font-serif font-bold leading-tight mb-8">
@@ -727,15 +723,15 @@ export default function PresentacionBrochure() {
                             <div className="grid grid-cols-3 gap-6">
                                 <div className="text-center p-4 bg-black text-white">
                                     <EditableText id="pres-diplomado-meses" defaultValue="4" tag="p" className="text-3xl font-bold" />
-                                    <p className="text-xs uppercase">Meses</p>
+                                    <EditableText id="pres-diplomado-meses-label" defaultValue="Meses" tag="p" className="text-xs uppercase" />
                                 </div>
                                 <div className="text-center p-4 border border-black">
                                     <EditableText id="pres-diplomado-inscripcion" defaultValue="50€" tag="p" className="text-3xl font-bold" />
-                                    <p className="text-xs uppercase">Inscripción</p>
+                                    <EditableText id="pres-diplomado-inscripcion-label" defaultValue="Inscripción" tag="p" className="text-xs uppercase" />
                                 </div>
                                 <div className="text-center p-4 border border-black">
                                     <EditableText id="pres-diplomado-mensual" defaultValue="100€" tag="p" className="text-3xl font-bold" />
-                                    <p className="text-xs uppercase">Mensual</p>
+                                    <EditableText id="pres-diplomado-mensual-label" defaultValue="Mensual" tag="p" className="text-xs uppercase" />
                                 </div>
                             </div>
 
@@ -770,10 +766,10 @@ export default function PresentacionBrochure() {
                             </ul>
                             <EditableText id="pres-diplomado-nota" defaultValue="*Incluye material digital y certificación" tag="p" className="text-xs text-gray-400 mt-6" />
                         </div>
-                    </section>
+                    </section >
 
                     {/* ========== SLIDE 6: TALLER MOLECULAR ========== */}
-                    <section className="print-page h-screen flex bg-black text-white">
+                    < section className="print-page h-screen flex bg-black text-white" >
                         <div className="w-full p-20 flex items-center justify-center">
                             <div className="text-center max-w-3xl">
                                 <p className="text-xs uppercase tracking-[0.3em] text-gray-500 mb-8">05 • Masterclass</p>
@@ -784,19 +780,19 @@ export default function PresentacionBrochure() {
 
                                 <div className="inline-flex items-center gap-16 text-left">
                                     <div>
-                                        <p className="text-xs text-gray-500 uppercase mb-2">Chef</p>
+                                        <EditableText id="pres-molecular-chef-label" defaultValue="Chef" tag="p" className="text-xs text-gray-500 uppercase mb-2" />
                                         <EditableText id="pres-molecular-chef" defaultValue="Jesús Gil" tag="p" className="text-2xl font-bold" />
                                     </div>
                                     <div>
-                                        <p className="text-xs text-gray-500 uppercase mb-2">Fecha</p>
+                                        <EditableText id="pres-molecular-fecha-label" defaultValue="Fecha" tag="p" className="text-xs text-gray-500 uppercase mb-2" />
                                         <EditableText id="pres-molecular-fecha" defaultValue="5 Mar 2026" tag="p" className="text-2xl font-bold" />
                                     </div>
                                     <div>
-                                        <p className="text-xs text-gray-500 uppercase mb-2">Horario</p>
+                                        <EditableText id="pres-molecular-horario-label" defaultValue="Horario" tag="p" className="text-xs text-gray-500 uppercase mb-2" />
                                         <EditableText id="pres-molecular-horario" defaultValue="2:00 - 6:00 PM" tag="p" className="text-2xl font-bold" />
                                     </div>
                                     <div>
-                                        <p className="text-xs text-gray-500 uppercase mb-2">Inversión</p>
+                                        <EditableText id="pres-molecular-inversion-label" defaultValue="Inversión" tag="p" className="text-xs text-gray-500 uppercase mb-2" />
                                         <EditableText id="pres-molecular-precio" defaultValue="40€" tag="p" className="text-2xl font-bold" />
                                     </div>
                                 </div>
@@ -804,10 +800,10 @@ export default function PresentacionBrochure() {
                                 <EditableText id="pres-molecular-nota" defaultValue="Incluye certificado e insumos" tag="p" className="mt-12 text-sm text-gray-500" />
                             </div>
                         </div>
-                    </section>
+                    </section >
 
                     {/* ========== SLIDE 7: SERVICIOS ========== */}
-                    <section className="print-page h-screen flex bg-neutral-50">
+                    < section className="print-page h-screen flex bg-neutral-50" >
                         <div className="w-full p-20 flex flex-col justify-center">
                             <div className="max-w-6xl mx-auto">
                                 <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">06</p>
@@ -879,10 +875,10 @@ export default function PresentacionBrochure() {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section >
 
                     {/* ========== SLIDE 8: TALLERES ========== */}
-                    <section className="print-page h-screen flex bg-white">
+                    < section className="print-page h-screen flex bg-white" >
                         <div className="w-2/5 bg-black text-white p-16 flex flex-col justify-center">
                             <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">07</p>
                             <h2 className="text-5xl font-serif font-bold leading-tight mb-8">
@@ -942,10 +938,10 @@ export default function PresentacionBrochure() {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section >
 
                     {/* ========== SLIDE 9: SYLLABUS COCINA ========== */}
-                    <section className="print-page h-screen flex bg-neutral-50">
+                    < section className="print-page h-screen flex bg-neutral-50" >
                         <div className="w-full p-16 flex flex-col justify-center">
                             <div className="max-w-6xl mx-auto">
                                 <div className="flex justify-between items-start mb-12">
@@ -958,7 +954,7 @@ export default function PresentacionBrochure() {
 
                                 <div className="grid grid-cols-3 gap-8">
                                     <div className="p-6 bg-white border-t-4 border-black">
-                                        <span className="bg-black text-white text-xs px-3 py-1 font-bold">BÁSICO</span>
+                                        <EditableText id="pres-syl-cocina-basico-badge" defaultValue="BÁSICO" tag="span" className="bg-black text-white text-xs px-3 py-1 font-bold" />
                                         <ul className="mt-4 text-sm text-gray-600 space-y-1">
                                             <li>• Técnicas de Cortes</li>
                                             <li>• Fondos, Caldos, Sopas</li>
@@ -972,7 +968,7 @@ export default function PresentacionBrochure() {
                                     </div>
 
                                     <div className="p-6 bg-white border-t-4 border-gray-400">
-                                        <span className="bg-gray-600 text-white text-xs px-3 py-1 font-bold">INTERMEDIO</span>
+                                        <EditableText id="pres-syl-cocina-intermedio-badge" defaultValue="INTERMEDIO" tag="span" className="bg-gray-600 text-white text-xs px-3 py-1 font-bold" />
                                         <ul className="mt-4 text-sm text-gray-600 space-y-1">
                                             <li>• Aves I y II</li>
                                             <li>• Pato y Pavo</li>
@@ -986,7 +982,7 @@ export default function PresentacionBrochure() {
                                     </div>
 
                                     <div className="p-6 bg-black text-white">
-                                        <span className="bg-white text-black text-xs px-3 py-1 font-bold">AVANZADO</span>
+                                        <EditableText id="pres-syl-cocina-avanzado-badge" defaultValue="AVANZADO" tag="span" className="bg-white text-black text-xs px-3 py-1 font-bold" />
                                         <ul className="mt-4 text-sm text-gray-300 space-y-1">
                                             <li>• Charcutería</li>
                                             <li>• Panadería</li>
@@ -1001,10 +997,10 @@ export default function PresentacionBrochure() {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section >
 
                     {/* ========== SLIDE 10: SYLLABUS PASTELERÍA ========== */}
-                    <section className="print-page h-screen flex bg-white">
+                    < section className="print-page h-screen flex bg-white" >
                         <div className="w-full p-16 flex flex-col justify-center">
                             <div className="max-w-6xl mx-auto">
                                 <div className="grid grid-cols-2 gap-16">
@@ -1014,16 +1010,16 @@ export default function PresentacionBrochure() {
                                         <EditableText id="pres-syl-past-desc" defaultValue="3 Niveles + Pasantía" tag="p" className="text-gray-500 mb-6" />
                                         <div className="space-y-4">
                                             <div className="p-4 bg-neutral-50 border-l-4 border-black">
-                                                <span className="text-xs font-bold uppercase">Básico</span>
-                                                <p className="text-sm text-gray-600 mt-1">Pastelería base, Cremas, Decoración, Brownies, Cheesecake</p>
+                                                <EditableText id="pres-syl-past-basico-badge" defaultValue="Básico" tag="span" className="text-xs font-bold uppercase" />
+                                                <EditableText id="pres-syl-past-basico-desc" defaultValue="Pastelería base, Cremas, Decoración, Brownies, Cheesecake" tag="p" className="text-sm text-gray-600 mt-1" />
                                             </div>
                                             <div className="p-4 bg-neutral-50 border-l-4 border-gray-400">
                                                 <span className="text-xs font-bold uppercase">Intermedio</span>
                                                 <p className="text-sm text-gray-600 mt-1">Hojaldre, Bombonería, Chocolate, Tortas clásicas</p>
                                             </div>
                                             <div className="p-4 bg-black text-white">
-                                                <span className="text-xs font-bold uppercase">Avanzado</span>
-                                                <p className="text-sm text-gray-300 mt-1">Pastelería Internacional, Entremets, Técnicas avanzadas</p>
+                                                <EditableText id="pres-syl-past-avanzado-badge" defaultValue="Avanzado" tag="span" className="text-xs font-bold uppercase" />
+                                                <EditableText id="pres-syl-past-avanzado-desc" defaultValue="Pastelería Internacional, Entremets, Técnicas avanzadas" tag="p" className="text-sm text-gray-300 mt-1" />
                                             </div>
                                         </div>
                                     </div>
@@ -1034,12 +1030,12 @@ export default function PresentacionBrochure() {
                                         <EditableText id="pres-syl-pan-desc" defaultValue="2 Niveles" tag="p" className="text-gray-500 mb-6" />
                                         <div className="space-y-4">
                                             <div className="p-4 bg-neutral-50 border-l-4 border-black">
-                                                <span className="text-xs font-bold uppercase">Básico</span>
-                                                <p className="text-sm text-gray-600 mt-1">Principios de panificación, Harinas, Pan canilla, Ciabatta, Croissants</p>
+                                                <EditableText id="pres-syl-pan-basico-badge-2" defaultValue="Básico" tag="span" className="text-xs font-bold uppercase" />
+                                                <EditableText id="pres-syl-pan-basico-desc-2" defaultValue="Principios de panificación, Harinas, Pan canilla, Ciabatta, Croissants" tag="p" className="text-sm text-gray-600 mt-1" />
                                             </div>
                                             <div className="p-4 bg-neutral-50 border-l-4 border-gray-400">
-                                                <span className="text-xs font-bold uppercase">Intermedio</span>
-                                                <p className="text-sm text-gray-600 mt-1">Masa madre, Focaccia, Brioche, Panes especiales, Pan de ajo</p>
+                                                <EditableText id="pres-syl-pan-intermedio-badge-2" defaultValue="Intermedio" tag="span" className="text-xs font-bold uppercase" />
+                                                <EditableText id="pres-syl-pan-intermedio-desc-2" defaultValue="Masa madre, Focaccia, Brioche, Panes especiales, Pan de ajo" tag="p" className="text-sm text-gray-600 mt-1" />
                                             </div>
                                         </div>
 
@@ -1054,10 +1050,10 @@ export default function PresentacionBrochure() {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section >
 
                     {/* ========== SLIDE 12: SYLLABUS PANADERÍA ========== */}
-                    <section className="print-page h-screen flex bg-white">
+                    < section className="print-page h-screen flex bg-white" >
                         <div className="w-2/5 bg-black text-white p-16 flex flex-col justify-center">
                             <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">12</p>
                             <h2 className="text-5xl font-serif font-bold leading-tight mb-8">
@@ -1068,20 +1064,20 @@ export default function PresentacionBrochure() {
                             </p>
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="text-center p-4 border border-white/20">
-                                    <p className="text-3xl font-bold">2</p>
-                                    <p className="text-xs text-gray-400 uppercase">Niveles</p>
+                                    <EditableText id="pres-pan-niveles-num" defaultValue="2" tag="p" className="text-3xl font-bold" />
+                                    <EditableText id="pres-pan-niveles-label" defaultValue="Niveles" tag="p" className="text-xs text-gray-400 uppercase" />
                                 </div>
                                 <div className="text-center p-4 border border-white/20">
-                                    <p className="text-3xl font-bold">10</p>
-                                    <p className="text-xs text-gray-400 uppercase">Meses</p>
+                                    <EditableText id="pres-pan-meses-num" defaultValue="10" tag="p" className="text-3xl font-bold" />
+                                    <EditableText id="pres-pan-meses-label" defaultValue="Meses" tag="p" className="text-xs text-gray-400 uppercase" />
                                 </div>
                                 <div className="text-center p-4 border border-white/20">
-                                    <p className="text-3xl font-bold">240h</p>
-                                    <p className="text-xs text-gray-400 uppercase">Pasantías</p>
+                                    <EditableText id="pres-pan-pasantias-num" defaultValue="240h" tag="p" className="text-3xl font-bold" />
+                                    <EditableText id="pres-pan-pasantias-label" defaultValue="Pasantías" tag="p" className="text-xs text-gray-400 uppercase" />
                                 </div>
                                 <div className="text-center p-4 border border-white/20">
-                                    <p className="text-3xl font-bold">42</p>
-                                    <p className="text-xs text-gray-400 uppercase">Temas</p>
+                                    <EditableText id="pres-pan-temas-num" defaultValue="42" tag="p" className="text-3xl font-bold" />
+                                    <EditableText id="pres-pan-temas-label" defaultValue="Temas" tag="p" className="text-xs text-gray-400 uppercase" />
                                 </div>
                             </div>
                         </div>
@@ -1154,10 +1150,10 @@ export default function PresentacionBrochure() {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section >
 
                     {/* ========== SLIDE 13: ASISTENTE DE CHEF ========== */}
-                    <section className="print-page h-screen flex bg-white">
+                    < section className="print-page h-screen flex bg-white" >
                         <div className="w-2/5 bg-black text-white p-16 flex flex-col justify-center">
                             <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">13</p>
                             <h2 className="text-5xl font-serif font-bold leading-tight mb-8">
@@ -1220,10 +1216,10 @@ export default function PresentacionBrochure() {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section >
 
                     {/* ========== SLIDE 14: JUNIOR CHEF ========== */}
-                    <section className="print-page h-screen flex bg-neutral-50">
+                    < section className="print-page h-screen flex bg-neutral-50" >
                         <div className="w-full p-16 flex flex-col justify-center">
                             <div className="max-w-6xl mx-auto">
                                 <div className="text-center mb-12">
@@ -1299,10 +1295,10 @@ export default function PresentacionBrochure() {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section >
 
                     {/* ========== SLIDE 15: POR QUÉ ELEGIRNOS ========== */}
-                    <section className="print-page h-screen flex bg-black text-white">
+                    < section className="print-page h-screen flex bg-black text-white" >
                         <div className="w-1/2 p-20 flex flex-col justify-center">
                             <p className="text-xs uppercase tracking-[0.3em] text-gray-500 mb-4">15</p>
                             <h2 className="text-6xl font-serif font-bold leading-tight mb-8">
@@ -1350,10 +1346,10 @@ export default function PresentacionBrochure() {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section >
 
                     {/* ========== SLIDE 16: CALENDARIO 2026 ========== */}
-                    <section className="print-page h-screen flex bg-white">
+                    < section className="print-page h-screen flex bg-white" >
                         <div className="w-full p-16 flex flex-col justify-center">
                             <div className="max-w-6xl mx-auto">
                                 <div className="text-center mb-12">
@@ -1430,10 +1426,10 @@ export default function PresentacionBrochure() {
                                 <EditableText id="pres-calendario-nota" defaultValue="* Fechas estimadas sujetas a confirmación. Consulta disponibilidad por WhatsApp." tag="p" className="text-center text-sm text-gray-400 mt-8" />
                             </div>
                         </div>
-                    </section>
+                    </section >
 
                     {/* ========== SLIDE 17: TESTIMONIOS ========== */}
-                    <section className="print-page h-screen flex bg-neutral-50">
+                    < section className="print-page h-screen flex bg-neutral-50" >
                         <div className="w-full p-16 flex flex-col justify-center">
                             <div className="max-w-6xl mx-auto">
                                 <div className="text-center mb-16">
@@ -1475,10 +1471,10 @@ export default function PresentacionBrochure() {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section >
 
                     {/* ========== SLIDE 18: GALERÍA ========== */}
-                    <section className="print-page h-screen flex bg-black text-white">
+                    < section className="print-page h-screen flex bg-black text-white" >
                         <div className="w-2/5 p-16 flex flex-col justify-center">
                             <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-4">18</p>
                             <h2 className="text-5xl font-serif font-bold leading-tight mb-8">
@@ -1513,10 +1509,10 @@ export default function PresentacionBrochure() {
                                 </div>
                             ))}
                         </div>
-                    </section>
+                    </section >
 
                     {/* ========== SLIDE 19: TIMELINE ========== */}
-                    <section className="print-page h-screen flex bg-white">
+                    < section className="print-page h-screen flex bg-white" >
                         <div className="w-full p-16 flex flex-col justify-center">
                             <div className="max-w-6xl mx-auto">
                                 <div className="text-center mb-16">
@@ -1565,10 +1561,10 @@ export default function PresentacionBrochure() {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section >
 
                     {/* ========== SLIDE 20: CONTACTO ========== */}
-                    <section className="print-page h-screen flex bg-white">
+                    < section className="print-page h-screen flex bg-white" >
                         <div className="w-1/2 bg-black text-white p-20 flex flex-col justify-center">
                             <h2 className="text-6xl font-serif font-bold leading-tight mb-12">
                                 Comienza<br />tu legado<br /><span className="italic">culinario</span>
@@ -1616,7 +1612,7 @@ export default function PresentacionBrochure() {
                                 </p>
                             </div>
                         </div>
-                    </section>
+                    </section >
 
                 </div >
             </div >

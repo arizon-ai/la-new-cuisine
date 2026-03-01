@@ -144,36 +144,36 @@ export default function OfertaAcademica() {
                     <table style={{ width: '100%', borderCollapse: 'collapse', backgroundColor: 'white', borderTop: '2px solid #000', borderBottom: '2px solid #000' }}>
                         <thead>
                             <tr>
-                                <th style={{ backgroundColor: '#000', color: '#fff', fontWeight: 500, textTransform: 'uppercase', textAlign: 'left', padding: '18px', letterSpacing: '1px', fontSize: '14px' }}>Turno</th>
-                                <th style={{ backgroundColor: '#000', color: '#fff', fontWeight: 500, textTransform: 'uppercase', textAlign: 'left', padding: '18px', letterSpacing: '1px', fontSize: '14px' }}>Horario</th>
-                                <th style={{ backgroundColor: '#000', color: '#fff', fontWeight: 500, textTransform: 'uppercase', textAlign: 'left', padding: '18px', letterSpacing: '1px', fontSize: '14px' }}>Inicio (Estimado)</th>
+                                <th style={{ backgroundColor: '#000', color: '#fff', fontWeight: 500, textTransform: 'uppercase', textAlign: 'left', padding: '18px', letterSpacing: '1px', fontSize: '14px' }}><EditableText id="oa-th-turno" defaultValue="Turno" tag="span" /></th>
+                                <th style={{ backgroundColor: '#000', color: '#fff', fontWeight: 500, textTransform: 'uppercase', textAlign: 'left', padding: '18px', letterSpacing: '1px', fontSize: '14px' }}><EditableText id="oa-th-horario" defaultValue="Horario" tag="span" /></th>
+                                <th style={{ backgroundColor: '#000', color: '#fff', fontWeight: 500, textTransform: 'uppercase', textAlign: 'left', padding: '18px', letterSpacing: '1px', fontSize: '14px' }}><EditableText id="oa-th-inicio" defaultValue="Inicio (Estimado)" tag="span" /></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>
-                                    <strong>Viernes</strong><br /><span style={{ fontSize: '12px', color: '#666' }}>Turno Mañana</span>
+                                    <EditableText id="oa-row1-dia" defaultValue="Viernes" tag="strong" /><br /><EditableText id="oa-row1-turno" defaultValue="Turno Mañana" tag="span" style={{ fontSize: '12px', color: '#666' }} />
                                 </td>
                                 <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>8:00 - 12:00 pm</td>
                                 <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}><Tag variant="outline">ÚLT. SEM. MAR</Tag></td>
                             </tr>
                             <tr>
                                 <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>
-                                    <strong>Sábado</strong><br /><span style={{ fontSize: '12px', color: '#666' }}>Turno Mañana</span>
+                                    <EditableText id="oa-row2-dia" defaultValue="Sábado" tag="strong" /><br /><EditableText id="oa-row2-turno" defaultValue="Turno Mañana" tag="span" style={{ fontSize: '12px', color: '#666' }} />
                                 </td>
                                 <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>8:00 - 12:00 pm</td>
                                 <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}><Tag variant="outline">ÚLT. SEM. MAR</Tag></td>
                             </tr>
                             <tr>
                                 <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>
-                                    <strong>Sábado</strong><br /><span style={{ fontSize: '12px', color: '#666' }}>Turno Mañana</span>
+                                    <EditableText id="oa-row3-dia" defaultValue="Sábado" tag="strong" /><br /><EditableText id="oa-row3-turno" defaultValue="Turno Mañana" tag="span" style={{ fontSize: '12px', color: '#666' }} />
                                 </td>
                                 <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>8:00 - 12:00 pm</td>
                                 <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}><Tag variant="outline">ÚLT. SEM. MAR</Tag></td>
                             </tr>
                             <tr>
                                 <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>
-                                    <strong>Lunes Nocturno</strong><br /><span style={{ fontSize: '12px', color: '#666' }}>Turno Noche</span>
+                                    <EditableText id="oa-row4-dia" defaultValue="Lunes Nocturno" tag="strong" /><br /><EditableText id="oa-row4-turno" defaultValue="Turno Noche" tag="span" style={{ fontSize: '12px', color: '#666' }} />
                                 </td>
                                 <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}>6:30 - 11:00 pm</td>
                                 <td style={{ padding: '20px 18px', borderBottom: '1px solid #ddd', fontSize: '18px', verticalAlign: 'middle', color: '#000' }}><Tag variant="outline">ÚLT. SEM. MAR</Tag></td>
@@ -189,25 +189,21 @@ export default function OfertaAcademica() {
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '15px' }}>
                             <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
                                 <EditableText id="oa-cocina-insc" defaultValue="50 €" tag="div" style={{ fontSize: '24px', fontWeight: 700, color: '#000' }} />
-                                <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
+                                <EditableText id="oa-cocina-insc-label" defaultValue="Inscripción" tag="div" style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                             <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
                                 <EditableText id="oa-cocina-mens" defaultValue="130 €" tag="div" style={{ fontSize: '24px', fontWeight: 700, color: '#000' }} />
-                                <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Mensualidad</div>
+                                <EditableText id="oa-cocina-mens-label" defaultValue="Mensualidad" tag="div" style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                             <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
                                 <EditableText id="oa-cocina-kit" defaultValue="100 €" tag="div" style={{ fontSize: '24px', fontWeight: 700, color: '#000' }} />
-                                <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Kit de Estudio</div>
+                                <EditableText id="oa-cocina-kit-label" defaultValue="Kit de Estudio" tag="div" style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                         </div>
-                        <p style={{ fontSize: '11px', color: '#666', marginTop: '10px', marginBottom: 0 }}>
-                            *Mensualidad Intermedio/Avanzado: 150€. Kit incluye: filipina, gorro, delantal, set de 2 cuchillos. Financiamiento 2 cuotas.
-                        </p>
+                        <EditableText id="oa-cocina-nota" defaultValue="*Mensualidad Intermedio/Avanzado: 150€. Kit incluye: filipina, gorro, delantal, set de 2 cuchillos. Financiamiento 2 cuotas." tag="p" style={{ fontSize: '11px', color: '#666', marginTop: '10px', marginBottom: 0 }} />
                     </div>
 
-                    <p style={{ marginTop: '15px', fontSize: '12px', color: '#666', borderLeft: '2px solid #000', paddingLeft: '10px', lineHeight: 1.6 }}>
-                        Duración: 15 meses + pasantías. Se ofertan 3 turnos para su comodidad.
-                    </p>
+                    <EditableText id="oa-cocina-duracion-nota" defaultValue="Duración: 15 meses + pasantías. Se ofertan 3 turnos para su comodidad." tag="p" style={{ marginTop: '15px', fontSize: '12px', color: '#666', borderLeft: '2px solid #000', paddingLeft: '10px', lineHeight: 1.6 }} />
                 </div>
                 <img
                     className="hide-mobile"
@@ -332,7 +328,7 @@ export default function OfertaAcademica() {
                             <h3 style={{ marginTop: 0, display: 'flex', alignItems: 'center', gap: '10px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase', color: '#000', letterSpacing: '-0.5px' }}>
                                 <i className="fa-solid fa-child" style={{ color: '#000' }}></i> CHEF JUNIOR
                             </h3>
-                            <p style={{ color: '#666', fontStyle: 'italic', lineHeight: 1.6 }}>Programa especial para jóvenes.</p>
+                            <EditableText id="oa-junior-desc" defaultValue="Programa especial para jóvenes." tag="p" style={{ color: '#666', fontStyle: 'italic', lineHeight: 1.6 }} />
 
                             <div style={{ background: '#f4f4f4', padding: '15px', borderLeft: '3px solid #000', marginTop: '20px' }}>
                                 <strong>Duración:</strong> 4 meses (1 clase por semana)
@@ -359,11 +355,11 @@ export default function OfertaAcademica() {
                             <h3 style={{ marginTop: 0, display: 'flex', alignItems: 'center', gap: '10px', fontFamily: "'Arimo', sans-serif", textTransform: 'uppercase', color: '#000', letterSpacing: '-0.5px' }}>
                                 <i className="fa-solid fa-bread-slice" style={{ color: '#000' }}></i> CHEF PANADERO
                             </h3>
-                            <p style={{ color: '#666', fontStyle: 'italic', lineHeight: 1.6 }}>Transforma tu pasión por el pan en una profesión.</p>
+                            <EditableText id="oa-panadero-desc" defaultValue="Transforma tu pasión por el pan en una profesión." tag="p" style={{ color: '#666', fontStyle: 'italic', lineHeight: 1.6 }} />
 
                             <div style={{ background: '#f4f4f4', padding: '15px', borderLeft: '3px solid #000', marginTop: '20px' }}>
                                 <strong>Inicio:</strong> Última semana de Marzo 2026<br />
-                                <span style={{ fontSize: '12px', color: '#666' }}>Tarde: 2:00 - 5:30 pm | Nocturno: 6:00 - 9:30 pm</span>
+                                <EditableText id="oa-panadero-horarios" defaultValue="Tarde: 2:00 - 5:30 pm | Nocturno: 6:00 - 9:30 pm" tag="span" style={{ fontSize: '12px', color: '#666' }} />
                             </div>
 
                             <ul style={{ listStyle: 'none', padding: 0, marginTop: '20px', fontSize: '14px', color: '#333' }}>
@@ -481,7 +477,7 @@ export default function OfertaAcademica() {
 
                     <div style={{ background: 'white', padding: '25px', border: '1px solid #000', marginBottom: '20px', boxShadow: '5px 5px 0px #000' }}>
                         <strong style={{ fontSize: '18px', display: 'block', textTransform: 'uppercase', color: '#000' }}>💻 Modalidad 100% Online</strong>
-                        <span style={{ fontSize: '14px', color: '#555' }}>Clases en vivo + Material digital + Certificación</span><br />
+                        <EditableText id="oa-online-modalidad-desc" defaultValue="Clases en vivo + Material digital + Certificación" tag="span" style={{ fontSize: '14px', color: '#555' }} /><br />
                         <div style={{ marginTop: '15px' }}>
                             <Tag variant="black">DURACIÓN: 4 MESES</Tag>
                         </div>
@@ -495,11 +491,11 @@ export default function OfertaAcademica() {
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
                             <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
                                 <EditableText id="oa-diplo-online-insc" defaultValue="30 €" tag="div" style={{ fontSize: '28px', fontWeight: 700, color: '#000' }} />
-                                <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Inscripción</div>
+                                <EditableText id="oa-diplo-online-insc-label" defaultValue="Inscripción" tag="div" style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                             <div style={{ textAlign: 'center', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd' }}>
                                 <EditableText id="oa-diplo-online-mens" defaultValue="80 €" tag="div" style={{ fontSize: '28px', fontWeight: 700, color: '#000' }} />
-                                <div style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }}>Mensualidad (4 cuotas)</div>
+                                <EditableText id="oa-diplo-online-mens-label" defaultValue="Mensualidad (4 cuotas)" tag="div" style={{ fontSize: '11px', color: '#666', textTransform: 'uppercase' }} />
                             </div>
                         </div>
                         <p style={{ fontSize: '12px', color: '#666', marginTop: '15px', marginBottom: 0, textAlign: 'center' }}>
@@ -511,8 +507,8 @@ export default function OfertaAcademica() {
                 <div style={{ background: '#f4f4f4', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', padding: '60px', borderLeft: '1px solid #eee' }}>
                     <div style={{ textAlign: 'center', color: '#000' }}>
                         <div style={{ fontSize: '80px', marginBottom: '20px' }}>🌐</div>
-                        <p style={{ fontSize: '24px', fontWeight: 700, marginBottom: '10px', color: '#000' }}>100% Online</p>
-                        <p style={{ fontSize: '14px', color: '#666' }}>Estudia desde cualquier lugar</p>
+                        <EditableText id="oa-online-100" defaultValue="100% Online" tag="p" style={{ fontSize: '24px', fontWeight: 700, marginBottom: '10px', color: '#000' }} />
+                        <EditableText id="oa-online-lugar" defaultValue="Estudia desde cualquier lugar" tag="p" style={{ fontSize: '14px', color: '#666' }} />
                     </div>
                 </div>
             </div>
