@@ -453,7 +453,7 @@ function Navigation() {
                 opacity: mobileMenuOpen ? 1 : 0,
                 transform: mobileMenuOpen ? 'translateY(0)' : 'translateY(20px)',
                 transition: 'all 0.4s ease',
-                transitionDelay: mobileMenuOpen ? `${0.15 + menuItems.length * 0.05}s` : '0s',
+                transitionDelay: mobileMenuOpen ? `${0.15 + [...mainMenuItems, ...programasItems, ...rightMenuItems].length * 0.05}s` : '0s',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
