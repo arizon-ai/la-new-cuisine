@@ -131,6 +131,7 @@ export function getContentSync(id, defaultValue = '') {
 
 /**
  * Save content by ID to Supabase
+ * Returns true if saved successfully to Supabase, false if only saved to localStorage
  */
 export async function setContent(id, value) {
     // Update cache immediately
@@ -138,10 +139,16 @@ export async function setContent(id, value) {
     contentCache[id] = value;
     cacheTimestamp = Date.now();
 
-    // Update localStorage as backup
-    const localContent = getLocalContent();
-    localContent[id] = value;
-    localStorage.setItem(CONTENT_KEY, JSON.stringify(localContent));
+    // Update localStorage as backup (always succeeds)
+    let localSaved = false;
+    try {
+        const localContent = getLocalContent();
+        localContent[id] = value;
+        localStorage.setItem(CONTENT_KEY, JSON.stringify(localContent));
+        localSaved = true;
+    } catch (localErr) {
+        console.error(`[contentStore] Error guardando en localStorage (key="${id}"):`, localErr);
+    }
 
     try {
         const { error } = await supabase
@@ -156,13 +163,14 @@ export async function setContent(id, value) {
             });
 
         if (error) {
-            console.warn('Supabase save error:', error.message);
-            return false;
+            console.error(`[contentStore] Supabase upsert falló (key="${id}"):`, error.message, error.details || '', error.hint || '');
+            // Return true if at least localStorage succeeded — data is preserved locally
+            return localSaved;
         }
         return true;
     } catch (err) {
-        console.error('Error saving content:', err);
-        return false;
+        console.error(`[contentStore] Excepción al guardar en Supabase (key="${id}"):`, err);
+        return localSaved;
     }
 }
 
